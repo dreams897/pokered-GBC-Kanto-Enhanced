@@ -9,6 +9,7 @@ Currently in developement, but is entirely playable if you build it.
 
 * Smooth 60fps added!
 * New ENBY (non-binary) player choice added in addtion to boy/girl!
+* Girl/Green/Leaf sprite changed to fit gen 1
 * Only original 151 Pokémon are obtainable and will not be changed or expanded
 * Dark, Steel and Fairy type added for moves and a few Pokémon
 * Most text has been decapitalized except for Stats, the word "Pokémon", and HM moves
