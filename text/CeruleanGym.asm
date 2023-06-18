@@ -19,7 +19,7 @@ _MistyPreBattleText::
 
 _TM11ExplanationText::
 	text "TM11 teaches"
-	line "BUBBLEBEAM!"
+	line "Bubblebeam!"
 
 	para "Use it on an"
 	line "aquatic #MON!"
@@ -70,7 +70,7 @@ _CeruleanGymBattleText1::
 	text "I'm more than good"
 	line "enough for you!"
 
-	para "MISTY can wait!"
+	para "Misty can wait!"
 	done
 
 _CeruleanGymEndBattleText1::
@@ -98,7 +98,7 @@ _CeruleanGymEndBattleText2::
 	prompt
 
 _CeruleanGymAfterBattleText2::
-	text "MISTY is going to"
+	text "Misty is going to"
 	line "keep improving!"
 
 	para "She won't lose to"
@@ -111,7 +111,7 @@ _CeruleanGymGuidePreBattleText::
 
 	para "Here's my advice!"
 
-	para "The LEADER, MISTY,"
+	para "The Leader, Misty,"
 	line "is a pro who uses"
 	cont "water #MON!"
 
@@ -124,7 +124,7 @@ _CeruleanGymGuidePreBattleText::
 	done
 
 _CeruleanGymGuidePostBattleText::
-	text "You beat MISTY!"
+	text "You beat Misty!"
 	line "What'd I tell ya?"
 
 	para "You and me kid,"

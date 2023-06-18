@@ -17,9 +17,9 @@ SetDefaultNamesBeforeTitlescreen::
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
-	ld a, BANK(Music_TitleScreen)
-	ld [wAudioROMBank], a
-	ld [wAudioSavedROMBank], a
+;	ld a, 0 ; BANK(Music_TitleScreen)
+;	ld [wAudioROMBank], a
+;	ld [wAudioSavedROMBank], a
 
 DisplayTitleScreen:
 	call GBPalWhiteOut
@@ -119,10 +119,10 @@ DisplayTitleScreen:
 	call EnableLCD
 
 IF DEF(_RED)
-	ld a, STARTER1 ; which Pokemon to show first on the title screen
+	ld a, CHARIZARD ; which Pokemon to show first on the title screen
 ENDC
 IF DEF(_BLUE)
-	ld a, STARTER2 ; which Pokemon to show first on the title screen
+	ld a, BLASTOISE ; which Pokemon to show first on the title screen
 ENDC
 	ld [wTitleMonSpecies], a
 	call LoadTitleMonSprite
@@ -213,8 +213,8 @@ ENDC
 	call Delay3
 	call WaitForSoundToFinish
 	ld a, MUSIC_TITLE_SCREEN
-	ld [wNewSoundID], a
-	call PlaySound
+;	ld [wNewSoundID], a
+	call PlayMusic
 	xor a
 	ld [wUnusedCC5B], a
 

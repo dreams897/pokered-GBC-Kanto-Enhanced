@@ -169,6 +169,9 @@ ENDC
 	ld de, wLoadedMonOTID
 	lb bc, LEADING_ZEROES | 2, 5
 	call PrintNumber ; ID Number
+	ld a, [wLoadedMonSpecies]
+	ld [wGenderTemp], a
+	call PrintGenderStatusScreen
 	ld d, $0
 	call PrintStatsBox
 	call Delay3
@@ -247,6 +250,28 @@ DrawLineBox:
 	dec c
 	jr nz, .PrintHorizLine
 	ld [hl], $6f ; ← (halfarrow ending)
+	ret
+	
+PrintGenderStatusScreen: ; called on status screen
+	; get gender
+	ld de, wLoadedMonDVs
+	farcall GetMonGender
+	ld a, [wGenderTemp]
+	and a
+	jr z, .noGender
+	dec a
+	jr z, .male
+	; else female
+	ld a, "♀"
+	jr .printSymbol
+.male
+	ld a, "♂"
+	jr .printSymbol
+.noGender
+	ld a, " "
+.printSymbol
+	coord hl, 17, 2
+	ld [hl], a
 	ret
 
 PTile: INCBIN "gfx/font/P.1bpp"

@@ -83,6 +83,16 @@ ItemPrices::
 	bcd3 0     ; MAX_ETHER
 	bcd3 0     ; ELIXER
 	bcd3 0     ; MAX_ELIXER
+	bcd3 10    ; ORAN_BERRY
+	bcd3 10    ; SITRUS_BERRY
+	bcd3 10    ; LEPPA_BERRY
+	bcd3 10    ; PECHA_BERRY
+	bcd3 10    ; RAWST_BERRY
+	bcd3 10    ; ASPEAR_BERRY
+	bcd3 10    ; CHESTO_BERRY
+	bcd3 10    ; CHERI_BERRY
+	bcd3 10    ; LUM_BERRY
+	bcd3 10    ; ACAI_BERRY
 	assert_table_length NUM_ITEMS
 	bcd3 0     ; FLOOR_B2F
 	bcd3 0     ; FLOOR_B1F

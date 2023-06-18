@@ -12,10 +12,22 @@ ENDC
 GetRedPalID:
 	call ClearScreen
 IF GEN_2_GRAPHICS
-	ld a, PAL_HERO
+	ld a, [wPlayerGender]
+	and a
+	jr z, .male
+	cp a, $02
+	jr z, .AreEnby
+	ld a, PAL_GREEN
+	jr .ContinueWithLoading
+.AreEnby
+	ld a, PAL_ORANGE
+.male
+	ld a, PAL_RED
 ELSE
 	ld a, PAL_REDMON
 ENDC
+.female
+.ContinueWithLoading
 	jr GotPalID
 
 GetRivalPalID:

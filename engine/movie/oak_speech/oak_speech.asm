@@ -34,7 +34,7 @@ SetDefaultNames:
 OakSpeech:
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
-	ld a, BANK(Music_Routes2)
+	ld a, 0 ; BANK(Music_Routes2)
 	ld c, a
 	ld a, MUSIC_ROUTES2
 	call PlayMusic
@@ -43,7 +43,7 @@ OakSpeech:
 	call SetDefaultNames
 	predef InitPlayerData2
 	ld hl, wNumBoxItems
-	ld a, POTION
+	ld a, MASTER_BALL
 	ld [wcf91], a
 	ld a, 1
 	ld [wItemQuantity], a
@@ -65,6 +65,12 @@ ENDC
 	;ld a, [wd732]
 	;bit 1, a ; possibly a debug mode bit
 	;jp nz, .skipChoosingNames
+	ld hl, BoyGirlText  ; added to the same file as the other oak text
+  	call PrintText     ; show this text
+ 	call BoyGirlChoice ; added routine at the end of this file
+   	ld a, [wCurrentMenuItem]
+   	ld [wPlayerGender], a ; store player's gender. 00 for boy, 01 for girl, 02 for enby
+   	call ClearScreen ; clear the screen before resuming normal intro
 	ld de, ProfOakPic
 	lb bc, BANK(ProfOakPic), $00
 	call IntroDisplayPicCenteredOrUpperRight
@@ -87,65 +93,112 @@ ENDC
 	call GetRedPalID ; HAX
 	ld de, RedPicFront
 	lb bc, BANK(RedPicFront), $00
+	ld a, [wPlayerGender] 	; load gender
+	and a      				; check gender - and a is equivalent to `cp a, 0` (but faster)
+						; if a=0->gender=male, ergo jump to the vanilla part of the code
+	jr z, .ContinueWithOakIntro1
+	cp a, 2					; check gender: if a=2->gender=enby, jump to the Orange subroutine, otherwise continue below
+	jp z, .LoadOrangePicFront1
+	ld de, GreenPicFront
+	lb bc, BANK(GreenPicFront), $00
+	jr .ContinueWithOakIntro1
+.LoadOrangePicFront1
+	ld de, OrangePicFront
+	lb bc, BANK(OrangePicFront), $00
+.ContinueWithOakIntro1:
 	call IntroDisplayPicCenteredOrUpperRight
 	call MovePicLeft
-	ld hl, IntroducePlayerText
+	ld hl,IntroducePlayerText
 	call PrintText
 	call ChoosePlayerName
 	call GBFadeOutToWhite
 	call GetRivalPalID ; HAX
-	ld de, Rival1Pic
-	lb bc, BANK(Rival1Pic), $00
+	ld de,Rival1Pic
+	lb bc, Bank(Rival1Pic), $00
 	call IntroDisplayPicCenteredOrUpperRight
 	call FadeInIntroPic
-	ld hl, IntroduceRivalText
+	ld hl,IntroduceRivalText
 	call PrintText
 	call ChooseRivalName
 .skipChoosingNames
 	call GBFadeOutToWhite
 	call GetRedPalID ; HAX
-	ld de, RedPicFront
-	lb bc, BANK(RedPicFront), $00
+	ld de,RedPicFront
+	lb bc, Bank(RedPicFront), $00
+	ld a, [wPlayerGender] ; check gender
+	and a      ; check gender -> if male, jump to vanilla code
+	jr z, .ContinueWithOakIntro2
+	cp a, 2
+	jp z, .LoadOrangePicFront2
+	ld de, GreenPicFront
+	lb bc, BANK(GreenPicFront), $00
+	jr .ContinueWithOakIntro2
+.LoadOrangePicFront2
+	ld de, OrangePicFront
+	lb bc, BANK(OrangePicFront), $00
+.ContinueWithOakIntro2:
 	call IntroDisplayPicCenteredOrUpperRight
 	call GBFadeInFromWhite
-	ld a, [wd72d]
+	ld a,[wd72d]
 	and a
-	jr nz, .next
-	ld hl, OakSpeechText3
+	jr nz,.next
+	ld hl,OakSpeechText3
 	call PrintText
 .next
-	ldh a, [hLoadedROMBank]
+	ld a,[hLoadedROMBank]
 	push af
 	ld a, SFX_SHRINK
 	call PlaySound
 	pop af
-	ldh [hLoadedROMBank], a
-	ld [MBC1RomBank], a
+	ld [hLoadedROMBank],a
+	ld [MBC1RomBank],a
 	ld c, 4
 	call DelayFrames
-	ld de, RedSprite
+	ld de,RedSprite
 	ld hl, vSprites
 	lb bc, BANK(RedSprite), $0C
+	ld a, [wPlayerGender] ; check gender
+	and a      ; check gender
+	jr z, .NotGreen3
+	ld de,GreenSprite
+	lb bc, BANK(GreenSprite), $0C
+.NotGreen3:
+	ld hl,vSprites
+	ld a, [wPlayerGender] ; check gender
+	and a      ; check gender -> if male, jump to vanilla code
+	jr z, .ContinueWithOakIntro3
+	cp a, 2
+	jp z, .LoadOrangePicFront3
+	ld de, GreenSprite
+	lb bc, BANK(GreenSprite), $0C
+	jr .ContinueWithOakIntro3
+.LoadOrangePicFront3
+	ld de, OrangeSprite
+	lb bc, BANK(OrangeSprite), $0C
+.ContinueWithOakIntro3:
+	ld hl,vSprites
 	call CopyVideoData
-	ld de, ShrinkPic1
+	ld de,ShrinkPic1
 	lb bc, BANK(ShrinkPic1), $00
 	call IntroDisplayPicCenteredOrUpperRight
-	ld c, 4
+	ld c,4
 	call DelayFrames
-	ld de, ShrinkPic2
+	ld de,ShrinkPic2
 	lb bc, BANK(ShrinkPic2), $00
 	call IntroDisplayPicCenteredOrUpperRight
+	callfar LoadOverworldSpritePalettes
 	call ResetPlayerSpriteData
-	ldh a, [hLoadedROMBank]
+	ld a,[hLoadedROMBank]
 	push af
-	ld a, BANK(Music_PalletTown)
-	ld [wAudioROMBank], a
-	ld [wAudioSavedROMBank], a
+;	ld a, 0 ; BANK(Music_PalletTown)
+;	ld [wAudioROMBank], a
+;	ld [wAudioSavedROMBank], a
+
 	ld a, 10
-	ld [wAudioFadeOutControl], a
-	ld a, SFX_STOP_ALL_MUSIC
-	ld [wNewSoundID], a
-	call PlaySound
+	ld [wMusicFade], a
+	xor a
+	ld [wMusicFadeID], a
+
 	pop af
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
@@ -167,7 +220,7 @@ OakSpeechText1:
 	text_end
 OakSpeechText2:
 	text_far _OakSpeechText2A
-	sound_cry_nidorina
+	sound_cry_nidorino
 	text_far _OakSpeechText2B
 	text_end
 IntroducePlayerText:
@@ -178,6 +231,10 @@ IntroduceRivalText:
 	text_end
 OakSpeechText3:
 	text_far _OakSpeechText3
+	text_end
+	
+BoyGirlText: ; This is new so we had to add a reference to get it to compile
+	text_far _BoyGirlText
 	text_end
 
 FadeInIntroPic:
@@ -241,3 +298,38 @@ IntroDisplayPicCenteredOrUpperRight:
 	xor a
 	ldh [hStartTileID], a
 	predef_jump CopyUncompressedPicToTilemap
+	
+; displays boy/girl choice
+BoyGirlChoice::
+	call SaveScreenTilesToBuffer1
+	jr DisplayBoyGirlNoChoice
+
+DisplayBoyGirlNoChoice::
+	ld a, BOY_GIRL_NO
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	ld hl, wTopMenuItemY
+	ld a, 7
+	ld [hli], a ; top menu item Y
+	ld a, 14
+	ld [hli], a ; top menu item X
+	xor a
+	ld [hli], a ; current menu item ID
+	inc hl
+	ld a, $2
+	ld [hli], a ; wMaxMenuItem
+	ld a, B_BUTTON | A_BUTTON
+	ld [hli], a ; wMenuWatchedKeys
+	xor a
+	ld [hl], a ; wLastMenuItem
+	call HandleMenuInput
+	bit BIT_B_BUTTON, a
+	jr nz, .defaultOption ; if B was pressed, assign enby
+; A was pressed
+	call PlaceUnfilledArrowMenuCursor
+	ld a, [wCurrentMenuItem]
+	jp LoadScreenTilesFromBuffer1
+.defaultOption
+	ld a, $02
+	ld [wCurrentMenuItem], a
+	jp LoadScreenTilesFromBuffer1

@@ -3,3 +3,7 @@ _Route5Text1::
 	line "CERULEAN CITY -"
 	cont "VERMILION CITY"
 	done
+	
+_DaycareSign::
+	text "#MON Day Care"
+	done

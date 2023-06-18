@@ -10,6 +10,7 @@ Route5_Object:
 
 	def_bg_events
 	bg_event 17, 29, 1 ; Route5Text1
+	bg_event 7,  21, 2 ; Route5DaycareSign
 
 	def_object_events
 

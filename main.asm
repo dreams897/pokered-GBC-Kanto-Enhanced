@@ -13,14 +13,12 @@ INCLUDE "engine/gfx/sprite_oam.asm"
 INCLUDE "engine/gfx/oam_dma.asm"
 INCLUDE "engine/link/print_waiting_text.asm"
 INCLUDE "engine/overworld/sprite_collisions.asm"
-INCLUDE "engine/debug/debug_menu.asm"
 INCLUDE "engine/events/pick_up_item.asm"
 INCLUDE "engine/overworld/movement.asm"
 INCLUDE "engine/link/cable_club.asm"
 INCLUDE "engine/menus/main_menu.asm"
 INCLUDE "engine/movie/oak_speech/oak_speech.asm"
 INCLUDE "engine/overworld/special_warps.asm"
-INCLUDE "engine/debug/debug_party.asm"
 INCLUDE "engine/menus/naming_screen.asm"
 INCLUDE "engine/movie/oak_speech/oak_speech2.asm"
 INCLUDE "engine/items/subtract_paid_money.asm"
@@ -37,7 +35,6 @@ INCLUDE "engine/battle/move_effects/drain_hp.asm"
 INCLUDE "engine/menus/players_pc.asm"
 INCLUDE "engine/pokemon/remove_mon.asm"
 INCLUDE "engine/events/display_pokedex.asm"
-
 
 ; Hooks for color hack
 INCLUDE "color/cable_club.asm"
@@ -101,11 +98,7 @@ INCLUDE "engine/menus/start_sub_menus.asm"
 INCLUDE "engine/items/tms.asm"
 INCLUDE "engine/battle/end_of_battle.asm"
 INCLUDE "engine/battle/wild_encounters.asm"
-INCLUDE "engine/battle/move_effects/recoil.asm"
-INCLUDE "engine/battle/move_effects/conversion.asm"
-INCLUDE "engine/battle/move_effects/haze.asm"
 INCLUDE "engine/battle/get_trainer_name.asm"
-INCLUDE "engine/math/random.asm"
 
 INCLUDE "color/status_screen.asm"
 
@@ -122,12 +115,14 @@ INCLUDE "engine/overworld/map_sprites.asm"
 INCLUDE "engine/overworld/emotion_bubbles.asm"
 INCLUDE "engine/events/evolve_trade.asm"
 INCLUDE "engine/battle/move_effects/substitute.asm"
-INCLUDE "engine/menus/pc.asm"
 
 
 SECTION "Play Time", ROMX
 
 INCLUDE "engine/play_time.asm"
+INCLUDE "engine/menus/pc.asm"
+INCLUDE "engine/debug/debug_party.asm"
+INCLUDE "engine/debug/debug_menu.asm"
 
 
 SECTION "Doors and Ledges", ROMX
@@ -142,6 +137,8 @@ SECTION "Pokémon Names", ROMX
 INCLUDE "data/pokemon/names.asm"
 INCLUDE "engine/movie/oak_speech/clear_save.asm"
 INCLUDE "engine/events/elevator.asm"
+INCLUDE "engine/movie/evolution.asm"
+INCLUDE "engine/overworld/elevator.asm"
 
 
 SECTION "Hidden Objects 1", ROMX
@@ -171,6 +168,7 @@ INCLUDE "engine/battle/move_effects/focus_energy.asm"
 SECTION "Battle Engine 4", ROMX
 
 INCLUDE "engine/battle/move_effects/leech_seed.asm"
+INCLUDE "engine/battle/move_effects/recoil.asm"
 
 
 SECTION "Battle Engine 5", ROMX
@@ -185,8 +183,9 @@ INCLUDE "engine/slots/game_corner_slots2.asm"
 
 SECTION "Battle Engine 6", ROMX
 
-INCLUDE "engine/battle/move_effects/mist.asm"
-INCLUDE "engine/battle/move_effects/one_hit_ko.asm"
+INCLUDE "engine/math/random.asm"
+INCLUDE "engine/battle/move_effects/conversion.asm"
+INCLUDE "engine/battle/move_effects/haze.asm"
 
 
 SECTION "Slot Machines", ROMX
@@ -213,6 +212,7 @@ INCLUDE "engine/pokemon/evos_moves.asm"
 INCLUDE "engine/battle/move_effects/heal.asm"
 INCLUDE "engine/battle/move_effects/transform.asm"
 INCLUDE "engine/battle/move_effects/reflect_light_screen.asm"
+INCLUDE "engine/pokemon/mon_gender.asm"
 
 INCLUDE "color/draw_hud_pokeball_gfx.asm"
 
@@ -242,6 +242,7 @@ INCLUDE "engine/events/pokedex_rating.asm"
 SECTION "Hidden Objects Core", ROMX
 
 INCLUDE "engine/overworld/hidden_objects.asm"
+INCLUDE "engine/overworld/berrytree.asm"
 
 
 SECTION "Screen Effects", ROMX
@@ -273,6 +274,8 @@ INCLUDE "engine/events/hidden_objects/indigo_plateau_hq.asm"
 SECTION "Battle Engine 9", ROMX
 
 INCLUDE "engine/battle/experience.asm"
+INCLUDE "engine/battle/move_effects/mist.asm"
+INCLUDE "engine/battle/move_effects/one_hit_ko.asm"
 
 
 SECTION "Diploma", ROMX
@@ -389,8 +392,6 @@ INCLUDE "gfx/fishing.asm"
 INCLUDE "data/moves/animations.asm"
 INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
-INCLUDE "engine/movie/evolution.asm"
-INCLUDE "engine/overworld/elevator.asm"
 INCLUDE "engine/items/tm_prices.asm"
 
 INCLUDE "color/animations.asm"

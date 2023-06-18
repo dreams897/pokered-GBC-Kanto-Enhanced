@@ -33,7 +33,7 @@ AnimateHallOfFame:
 .skipInc
 	ld a, $90
 	ldh [hWY], a
-	ld c, BANK(Music_HallOfFame)
+	ld c, 0 ; BANK(Music_HallOfFame)
 	ld a, MUSIC_HALL_OF_FAME
 	call PlayMusic
 	ld hl, wPartySpecies
@@ -183,8 +183,22 @@ HoFMonInfoText:
 	next "TYPE2/@"
 
 HoFLoadPlayerPics:
+	ld a, [wPlayerGender] 	; load gender
+	and a      				; check if male
+	jr z, .BoyStuff1
+	cp a, 2					; check if enby
+	jr z, .EnbyStuff1
+	ld de, GreenPicFront
+	ld a, BANK(GreenPicFront)
+	jr .Routine ; skip the enby and boy stuff and go to main routine1
+.EnbyStuff1
+	ld de, OrangePicFront
+	ld a, BANK(OrangePicFront)
+	jr .Routine ; skip the boy stuff and go to main routine1
+.BoyStuff1
 	ld de, RedPicFront
 	ld a, BANK(RedPicFront)
+.Routine ; resume original routine
 	call UncompressSpriteFromDE
 	ld hl, sSpriteBuffer1
 	ld de, sSpriteBuffer0
@@ -192,9 +206,23 @@ HoFLoadPlayerPics:
 	call CopyData
 	ld de, vFrontPic
 	call InterlaceMergeSpriteBuffers
+	ld a, [wPlayerGender]	; load gender
+	and a					; check if male
+	jr z, .BoyStuff2
+	cp a, 2					; check if enby
+	jr z, .EnbyStuff2
+	ld de, GreenPicBack
+	ld a, BANK(GreenPicBack)
+	jr .Routine2 ; skip the enby and boy stuff and go to the main routine2
+.EnbyStuff2
+	ld de, OrangePicBack
+	ld a, BANK(OrangePicBack)
+	jr .Routine2 ; skip the boy stuff and go to the main routine2
+.BoyStuff2
 	ld de, RedPicBack
 	ld a, BANK(RedPicBack)
-	call UncompressSpriteFromDE
+.Routine2 ; original routine
+	call UncompressSpriteFromDE ; end of new gender stuff
 
 IF GEN_2_GRAPHICS ; Use uncompressed red sprite
 	ld a, $66
@@ -293,8 +321,7 @@ HoFRecordMonInfo:
 
 HoFFadeOutScreenAndMusic:
 	ld a, 10
-	ld [wAudioFadeOutCounterReloadValue], a
-	ld [wAudioFadeOutCounter], a
-	ld a, $ff
-	ld [wAudioFadeOutControl], a
+	ld [wMusicFade], a
+	xor a
+	ld [wMusicFadeID], a
 	jp GBFadeOutToWhite

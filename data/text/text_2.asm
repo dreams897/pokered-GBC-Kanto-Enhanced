@@ -295,9 +295,8 @@ _PushStartText::
 	done
 
 _SaveOptionText::
-	text "The SAVE option is"
-	line "on the MENU"
-	cont "screen."
+	text "Hold down 'B'"
+	line "to run!"
 	done
 
 _StrengthsAndWeaknessesText::
@@ -331,25 +330,25 @@ _CinnabarGymQuizIntroText::
 	para "If you want to"
 	line "conserve your"
 	cont "#MON for the"
-	cont "GYM LEADER..."
+	cont "Gym Leader..."
 
 	para "Then get it right!"
 	line "Here we go!"
 	prompt
 
 _CinnabarQuizQuestionsText1::
-	text "CATERPIE evolves"
-	line "into BUTTERFREE?"
+	text "Caterpie evolves"
+	line "into Butterfree?"
 	done
 
 _CinnabarQuizQuestionsText2::
 	text "There are 9"
 	line "certified #MON"
-	cont "LEAGUE BADGEs?"
+	cont "League Badges?"
 	done
 
 _CinnabarQuizQuestionsText3::
-	text "POLIWAG evolves 3"
+	text "Poliwag evolves 3"
 	line "times?"
 	done
 
@@ -404,7 +403,7 @@ _BillsHouseInitiatedText::
 	text_end
 
 _BillsHousePokemonListText1::
-	text "BILL's favorite"
+	text "Bill's favorite"
 	line "#MON list!"
 	prompt
 
@@ -423,7 +422,7 @@ _OakLabEmailText::
 	line "#MON trainers!"
 
 	para "The elite trainers"
-	line "of #MON LEAGUE"
+	line "of #MON League"
 	cont "are ready to take"
 	cont "on all comers!"
 
@@ -432,7 +431,7 @@ _OakLabEmailText::
 	cont "how you rate as a"
 	cont "trainer!"
 
-	para "#MON LEAGUE HQ"
+	para "#MON League HQ"
 	line "INDIGO PLATEAU"
 
 	para "PS: PROF.OAK,"
@@ -546,13 +545,13 @@ _ViridianSchoolNotebookText4::
 	line "#MON trainers"
 	cont "is to beat the "
 	cont "top 8 #MON"
-	cont "GYM LEADERs."
+	cont "Gym Leaders."
 
 	para "Do so to earn the"
 	line "right to face..."
 
 	para "The ELITE FOUR of"
-	line "#MON LEAGUE!"
+	line "#MON League!"
 	prompt
 
 _EnemiesOnEverySideText::
@@ -571,7 +570,7 @@ _FightingDojoText::
 
 _IndigoPlateauHQText::
 	text "INDIGO PLATEAU"
-	line "#MON LEAGUE HQ"
+	line "#MON League HQ"
 	done
 
 _RedBedroomSNESText::
@@ -591,13 +590,13 @@ _Route15UpstairsBinocularsText::
 	done
 
 _AerodactylFossilText::
-	text "AERODACTYL Fossil"
+	text "Aerodactyl Fossil"
 	line "A primitive and"
 	cont "rare #MON."
 	done
 
 _KabutopsFossilText::
-	text "KABUTOPS Fossil"
+	text "Kabutops Fossil"
 	line "A primitive and"
 	cont "rare #MON."
 	done
@@ -707,7 +706,7 @@ _ViridianBlackboardFrozenText::
 	line "even after the"
 	cont "battle ends."
 
-	para "Use ICE HEAL to"
+	para "Use Ice Heal to"
 	line "thaw out #MON!"
 	prompt
 
@@ -788,13 +787,13 @@ _IndigoPlateauStatuesText1::
 _IndigoPlateauStatuesText2::
 	text "The ultimate goal"
 	line "of trainers!"
-	cont "#MON LEAGUE HQ"
+	cont "#MON League HQ"
 	done
 
 _IndigoPlateauStatuesText3::
 	text "The highest"
 	line "#MON authority"
-	cont "#MON LEAGUE HQ"
+	cont "#MON League HQ"
 	done
 
 _PokemonBooksText::
@@ -1539,7 +1538,7 @@ _TossHowManyText::
 
 _AccessedHoFPCText::
 	text "Accessed #MON"
-	line "LEAGUE's site."
+	line "League's site."
 
 	para "Accessed the HALL"
 	line "OF FAME List."
@@ -1788,3 +1787,8 @@ _TextIDErrorText::
 _ContCharText::
 	text "<_CONT>@"
 	text_end
+	
+_BoyGirlText::
+	text "Play as a boy or"
+	line "as a girl?"
+	done

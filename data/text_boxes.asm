@@ -33,19 +33,19 @@ TextBoxTextAndCoordTable:
 	text_box_text SWITCH_STATS_CANCEL_MENU_TEMPLATE, 11, 11, 19, 17, SwitchStatsCancelText,   13, 12
 	text_box_text BUY_SELL_QUIT_MENU_TEMPLATE,        0,  0, 10,  6, BuySellQuitText,          2,  1
 	text_box_text MONEY_BOX_TEMPLATE,                11,  0, 19,  2, MoneyText,               13,  0
-	text_box_text JP_AH_MENU_TEMPLATE,                7,  6, 11, 10, JapaneseAhText,           8,  8
+	text_box_text BOY_GIRL_NO,                       13,  6, 19, 12, BoyGirlNoText,           15,  7
 	text_box_text JP_POKEDEX_MENU_TEMPLATE,          11,  8, 19, 17, JapanesePokedexMenu,     12, 10
 
 BuySellQuitText:
-	db   "BUY"
-	next "SELL"
-	next "QUIT@"
+	db   "Buy"
+	next "Sell"
+	next "Quit@"
 
 	db "@" ; unused
 
 UseTossText:
-	db   "USE"
-	next "TOSS@"
+	db   "Use"
+	next "Toss@"
 
 JapaneseSaveMessageText:
 	db   "きろく"
@@ -66,20 +66,22 @@ JapaneseMainMenuText:
 	next "さいしょから@"
 
 BattleMenuText:
-	db   "FIGHT <PK><MN>"
-	next "ITEM  RUN@"
+	db   "Fight <PK><MN>"
+	next "Pack  Run@"
 
 SafariZoneBattleMenuText:
-	db   "BALL×       BAIT"
-	next "THROW ROCK  RUN@"
+	db   "Ball×       Bait"
+	next "Throw Rock  Run@"
 
 SwitchStatsCancelText:
-	db   "SWITCH"
-	next "STATS"
-	next "CANCEL@"
+	db   "Switch"
+	next "Stats"
+	next "Cancel@"
 
-JapaneseAhText:
-	db "アッ！@"
+BoyGirlNoText:
+	db   "BOY"
+	next "GIRL"
+	next "ENBY@"
 
 JapanesePokedexMenu:
 	db   "データをみる"

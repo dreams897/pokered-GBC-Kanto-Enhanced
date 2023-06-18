@@ -100,6 +100,16 @@ ItemUsePtrTable:
 	dw ItemUsePPRestore  ; MAX_ETHER
 	dw ItemUsePPRestore  ; ELIXER
 	dw ItemUsePPRestore  ; MAX_ELIXER
+	dw ItemUseMedicine   ; ORAN_BERRY
+	dw ItemUseMedicine   ; SITRUS_BERRY
+	dw ItemUsePPRestore  ; LEPPA_BERRY
+	dw ItemUseMedicine   ; PECHA_BERRY
+	dw ItemUseMedicine   ; RAWST_BERRY
+	dw ItemUseMedicine   ; ASPEAR_BERRY
+	dw ItemUseMedicine   ; CHESTO_BERRY
+	dw ItemUseMedicine   ; CHERI_BERRY
+	dw ItemUseMedicine   ; LUM_BERRY
+	dw ItemUseVitamin    ; ACAI_BERRY
 
 ItemUseBall:
 
@@ -856,14 +866,20 @@ ItemUseMedicine:
 	jr z, ItemUseMedicine ; if so, force another choice
 .checkItemType
 	ld a, [wcf91]
+	cp ACAI_BERRY
+	jp nc,.useVitamin
+	cp PECHA_BERRY
+	jr z, .cureStatusAilment
+	cp ORAN_BERRY
+	jp nc,.healHP
 	cp REVIVE
-	jr nc, .healHP ; if it's a Revive or Max Revive
+	jp nc,.healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
 	jr z, .cureStatusAilment ; if it's a Full Heal
 	cp HP_UP
 	jp nc, .useVitamin ; if it's a vitamin or Rare Candy
 	cp FULL_RESTORE
-	jr nc, .healHP ; if it's a Full Restore or one of the potions
+	jp nc,.healHP ; if it's a Full Restore or one of the potions
 ; fall through if it's one of the status-specific healing items
 .cureStatusAilment
 	ld bc, wPartyMon1Status - wPartyMon1
@@ -872,17 +888,27 @@ ItemUseMedicine:
 	lb bc, ANTIDOTE_MSG, 1 << PSN
 	cp ANTIDOTE
 	jr z, .checkMonStatus
+	cp PECHA_BERRY
+	jr z, .checkMonStatus
 	lb bc, BURN_HEAL_MSG, 1 << BRN
 	cp BURN_HEAL
+	jr z, .checkMonStatus
+	cp RAWST_BERRY
 	jr z, .checkMonStatus
 	lb bc, ICE_HEAL_MSG, 1 << FRZ
 	cp ICE_HEAL
 	jr z, .checkMonStatus
+	cp ASPEAR_BERRY
+	jr z, .checkMonStatus
 	lb bc, AWAKENING_MSG, SLP_MASK
 	cp AWAKENING
 	jr z, .checkMonStatus
+	cp CHESTO_BERRY
+	jr z, .checkMonStatus
 	lb bc, PARALYZ_HEAL_MSG, 1 << PAR
 	cp PARLYZ_HEAL
+	jr z, .checkMonStatus
+	cp CHERI_BERRY
 	jr z, .checkMonStatus
 	lb bc, FULL_HEAL_MSG, $ff ; Full Heal
 .checkMonStatus
@@ -991,7 +1017,7 @@ ItemUseMedicine:
 .notFullHP ; if the pokemon's current HP doesn't equal its max HP
 	xor a
 	ld [wLowHealthAlarm], a ;disable low health alarm
-	ld [wChannelSoundIDs + CHAN5], a
+;	ld [wChannelSoundIDs + CHAN5], a
 	push hl
 	push de
 	ld bc, wPartyMon1MaxHP - (wPartyMon1HP + 1)
@@ -1074,6 +1100,12 @@ ItemUseMedicine:
 	jr .addHealAmount
 .notUsingSoftboiled2
 	ld a, [wcf91]
+	cp SITRUS_BERRY
+	ld b, 30
+	jr z, .addHealAmount
+	cp ORAN_BERRY
+	ld b, 10
+	jr z, .addHealAmount
 	cp SODA_POP
 	ld b, 60 ; Soda Pop heal amount
 	jr z, .addHealAmount
@@ -1195,6 +1227,8 @@ ItemUseMedicine:
 	pop hl
 .skipRemovingItem
 	ld a, [wcf91]
+	cp PECHA_BERRY
+	jr nc, .playStatusAilmentCuringSound
 	cp FULL_RESTORE
 	jr c, .playStatusAilmentCuringSound
 	cp FULL_HEAL
@@ -1269,6 +1303,8 @@ ItemUseMedicine:
 	pop hl
 	ld a, [wcf91]
 	cp RARE_CANDY
+	jp z, .useRareCandy
+	cp ACAI_BERRY
 	jp z, .useRareCandy
 	push hl
 	sub HP_UP
@@ -1730,11 +1766,16 @@ ItemUsePokeflute:
 	and $80
 	jr nz, .skipMusic
 	call WaitForSoundToFinish ; wait for sound to end
-	farcall Music_PokeFluteInBattle ; play in-battle pokeflute music
-.musicWaitLoop ; wait for music to finish playing
-	ld a, [wChannelSoundIDs + CHAN7]
-	and a ; music off?
-	jr nz, .musicWaitLoop
+
+	ld a, SFX_POKEFLUTE_IN_BATTLE
+	call PlaySound
+	call WaitForSoundToFinish
+;	farcall Music_PokeFluteInBattle ; play in-battle pokeflute music
+;.musicWaitLoop ; wait for music to finish playing
+;	ld a, [wChannelSoundIDs + CHAN7]
+;	and a ; music off?
+;	jr nz, .musicWaitLoop
+
 .skipMusic
 	ld hl, FluteWokeUpText
 	jp PrintText
@@ -1796,12 +1837,12 @@ PlayedFluteHadEffectText:
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
 	ld a, SFX_POKEFLUTE
-	ld c, BANK(SFX_Pokeflute)
-	call PlayMusic
-.musicWaitLoop ; wait for music to finish playing
-	ld a, [wChannelSoundIDs + CHAN3]
-	cp SFX_POKEFLUTE
-	jr z, .musicWaitLoop
+	ld c, 0 ; BANK(SFX_Pokeflute)
+	call PlaySound
+;.musicWaitLoop ; wait for music to finish playing
+;	ld a, [wChannelSoundIDs + CHAN3]
+;	cp SFX_POKEFLUTE
+;	jr z, .musicWaitLoop
 	call PlayDefaultMusic ; start playing normal music again
 .done
 	jp TextScriptEnd ; end text
@@ -2284,6 +2325,11 @@ ItemUseNotYoursToUse:
 	jr ItemUseFailed
 
 ThrowBallAtTrainerMon:
+IF DEF(GREAT_BALL)
+	ld e, 0
+	farcall LoadSGBPalette
+	ld d, PAL_BLUEMON
+	ENDC
 	call RunDefaultPaletteCommand
 	call LoadScreenTilesFromBuffer1 ; restore saved screen
 	call Delay3

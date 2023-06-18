@@ -783,15 +783,24 @@ FaintEnemyPokemon:
 	ld a, [wIsInBattle]
 	dec a
 	jr z, .wild_win
-	xor a
-	ld [wFrequencyModifier], a
-	ld [wTempoModifier], a
+
+	call WaitForSoundToFinish
+	ld bc, $00
+	ld de, $80
 	ld a, SFX_FAINT_FALL
-	call PlaySoundWaitForCurrent
-.sfxwait
-	ld a, [wChannelSoundIDs + CHAN5]
-	cp SFX_FAINT_FALL
-	jr z, .sfxwait
+	call PlayBattleSound
+;	xor a
+;	ld [wFrequencyModifier], a
+;	ld [wTempoModifier], a
+;	ld a, SFX_FAINT_FALL
+;	call PlaySoundWaitForCurrent
+
+	call WaitForSoundToFinish
+;.sfxwait
+;	ld a, [wChannelSoundIDs + CHAN5]
+;	cp SFX_FAINT_FALL
+;	jr z, .sfxwait
+
 	ld a, SFX_FAINT_THUD
 	call PlaySound
 	call WaitForSoundToFinish
@@ -873,7 +882,7 @@ EndLowHealthAlarm:
 ; the low health alarm and prevents it from reactivating until the next battle.
 	xor a
 	ld [wLowHealthAlarm], a ; turn off low health alarm
-	ld [wChannelSoundIDs + CHAN5], a
+;	ld [wChannelSoundIDs + CHAN5], a
 	inc a
 	ld [wLowHealthAlarmDisabled], a ; prevent it from reactivating
 	ret
@@ -966,9 +975,9 @@ TrainerDefeatedText:
 PlayBattleVictoryMusic:
 	push af
 	ld a, SFX_STOP_ALL_MUSIC
-	ld [wNewSoundID], a
+;	ld [wNewSoundID], a
 	call PlaySoundWaitForCurrent
-	ld c, BANK(Music_DefeatedTrainer)
+	ld c, 0 ; BANK(Music_DefeatedTrainer)
 	pop af
 	call PlayMusic
 	jp Delay3
@@ -1830,10 +1839,12 @@ DrawPlayerHUDAndHPBar:
 	hlcoord 10, 7
 IF GEN_2_GRAPHICS
 	call PlaceString ; Note: "CenterMonName" not called to be consistent with gen 2
+	call PrintPlayerMonGender
 	call PrintEXPBarAt1711
 ELSE
 	call CenterMonName
 	call PlaceString
+	call PrintPlayerMonGender
 ENDC
 	ld hl, wBattleMonSpecies
 	ld de, wLoadedMon
@@ -1876,7 +1887,7 @@ ENDC
 	ld [hl], $0
 	ret z
 	xor a
-	ld [wChannelSoundIDs + CHAN5], a
+;	ld [wChannelSoundIDs + CHAN5], a
 	ret
 .setLowHealthAlarm
 	ld hl, wLowHealthAlarm
@@ -1894,6 +1905,7 @@ DrawEnemyHUDAndHPBar:
 	hlcoord 1, 0
 	call CenterMonName
 	call PlaceString
+	call PrintEnemyMonGender
 IF GEN_2_GRAPHICS
 	hlcoord 6, 1
 ELSE
@@ -6335,15 +6347,28 @@ SwapPlayerAndEnemyLevels:
 ; (for use when scrolling the player sprite and enemy's silhouettes on screen)
 LoadPlayerBackPic:
 	ld a, [wBattleType]
-	dec a ; is it the old man tutorial?
-	ld de, RedPicBack
-	jr nz, .next
+	dec a
 	ld de, OldManPicBack
+	jr z, .next
+	ld a, [wPlayerGender]
+	and a
+	jr z, .RedBack
+	cp a, 2			; check if enby
+	jr z, .OrangeBack
+	ld de, GreenPicBack
+	jr .next
+.OrangeBack
+	ld de, OrangePicBack
+	jr .next
+.RedBack
+	ld de, RedPicBack
 .next
 	ld a, BANK(RedPicBack)
 	ASSERT BANK(RedPicBack) == BANK(OldManPicBack)
+	ASSERT BANK(GreenPicBack) == BANK(OldManPicBack)
+	ASSERT BANK(OrangePicBack) == BANK(OldManPicBack)
 	call UncompressSpriteFromDE
-
+	
 IF GEN_2_GRAPHICS
 	call LoadMonBackSpriteHook ; No pixelated backsprites
 	nop
@@ -6952,8 +6977,8 @@ _LoadTrainerPic:
 ; unreferenced
 ResetCryModifiers:
 	xor a
-	ld [wFrequencyModifier], a
-	ld [wTempoModifier], a
+;	ld [wFrequencyModifier], a
+;	ld [wTempoModifier], a
 	jp PlaySound
 
 ; animates the mon "growing" out of the pokeball
@@ -7287,6 +7312,42 @@ SubThreeByteNum:
 	inc de
 .noCarry
 	inc de
+	ret
+	
+PrintEnemyMonGender: ; called during battle
+	; get gender
+	ld a, [wEnemyMonSpecies]
+	ld de, wEnemyMonDVs
+	call PrintGenderCommon
+	coord hl, 9, 1
+	ld [hl], a
+	ret
+
+PrintPlayerMonGender: ; called during battle
+	; get gender
+	ld a, [wBattleMonSpecies]
+	ld de, wBattleMonDVs
+	call PrintGenderCommon
+	coord hl, 17, 8
+	ld [hl], a
+	ret
+
+PrintGenderCommon: ; used by both routines
+	ld [wGenderTemp], a
+	farcall GetMonGender
+	ld a, [wGenderTemp]
+	and a
+	jr z, .noGender
+	dec a
+	jr z, .male
+	; else female
+	ld a, "♀"
+	ret
+.male
+	ld a, "♂"
+	ret
+.noGender
+	ld a, " "
 	ret
 
 ; return the address of the BattleMon's party struct attribute in hl

@@ -1,31 +1,26 @@
-_MtMoon3Text_49f24::
-	text "You want the"
-	line "DOME FOSSIL?"
-	done
-
-_MtMoon3Text_49f64::
-	text "You want the"
-	line "HELIX FOSSIL?"
-	done
-
-_MtMoon3Text_49f6f::
-	text "<PLAYER> got the"
+_MtMoon3DomeText::
+	text "<PLAYER> got a"
+	line "@"
+	text_ram wStringBuffer
+	text "!@"
+	text_end
+	
+_MtMoon3HelixText::
+	text "<PLAYER> got a"
 	line "@"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
 _MtMoon3Text_49f7f::
-	text "Look, you've got"
+	text "You've got"
 	line "no room for this.@"
 	text_end
 
 _MtMoon3Text_49f85::
-	text "Hey, stop!"
-
-	para "I found these"
-	line "fossils! They're"
-	cont "both mine!"
+	text "Hmm? Fossils?"
+	line "Oh no, those"
+	cont "aren't mine.."
 	done
 
 _MtMoon3Text_49f8a::
@@ -33,30 +28,27 @@ _MtMoon3Text_49f8a::
 	line "I'll share!"
 	prompt
 
-_MtMoon3Text_49f8f::
-	text "We'll each take"
-	line "one!"
-	cont "No being greedy!"
-	done
-
 _MtMoon3Text_49f94::
-	text "Far away, on"
-	line "CINNABAR ISLAND,"
+	text "There's a Dome"
+	line "Fossil and a"
+	cont "Helix Fossil."
+	
+	para "They're both cool"
+	line "and all, but I"
+	cont "want Old Amber!"
+	
+	para "Far away, on"
+	line "Cinnabar Island,"
 	cont "there's a #MON"
-	cont "LAB."
+	cont "Lab."
 
 	para "They do research"
 	line "on regenerating"
 	cont "fossils."
 	done
 
-_MtMoon3Text_49f99::
-	text "All right. Then"
-	line "this is mine!@"
-	text_end
-
 _MtMoon3BattleText2::
-	text "TEAM ROCKET will"
+	text "Team Rocket will"
 	line "find the fossils,"
 	cont "revive and sell"
 	cont "them for cash!"
@@ -69,12 +61,12 @@ _MtMoon3EndBattleText2::
 
 _MtMoon3AfterBattleText2::
 	text "You made me mad!"
-	line "TEAM ROCKET will"
+	line "Team Rocket will"
 	cont "blacklist you!"
 	done
 
 _MtMoon3BattleText3::
-	text "We, TEAM ROCKET,"
+	text "We, Team Rocket,"
 	line "are #MON"
 	cont "gangsters!"
 	done

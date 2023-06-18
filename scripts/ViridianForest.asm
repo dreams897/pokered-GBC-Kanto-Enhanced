@@ -27,6 +27,7 @@ ViridianForest_TextPointers:
 	dw ViridianForestText12
 	dw ViridianForestText13
 	dw ViridianForestText14
+	dw ViridianForestTree1
 
 ViridianForestTrainerHeaders:
 	def_trainers 2
@@ -123,3 +124,10 @@ ViridianForestText13:
 ViridianForestText14:
 	text_far _ViridianForestText14
 	text_end
+	
+ViridianForestTree1:
+	text_asm
+	ld a, 13
+	ld [wWhichTrade], a
+	callfar BerryTreeScript
+	jp TextScriptEnd

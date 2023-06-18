@@ -7,8 +7,8 @@ _BrockPostBattleAdviceText::
 	line "very gifted as a"
 	cont "#MON trainer!"
 
-	para "Go to the GYM in"
-	line "CERULEAN and test"
+	para "Go to the Gym in"
+	line "Cerulean and test"
 	cont "your abilities!"
 	done
 
@@ -38,7 +38,7 @@ _TM34ExplanationText::
 	cont "carefully!"
 
 	para "TM34 contains"
-	line "BIDE!"
+	line "Bide!"
 
 	para "Your #MON will"
 	line "absorb damage in"
@@ -57,25 +57,25 @@ _ReceivedBoulderBadgeText::
 
 	para "As proof of your"
 	line "victory, here's"
-	cont "the BOULDERBADGE!"
+	cont "the Boulder Badge!"
 
 	para "<PLAYER> received"
-	line "the BOULDERBADGE!@"
+	line "the Boulder Badge!@"
 	text_end
 
 _BrockBoulerBadgeInfoText::
 	text_start
 
 	para "That's an official"
-	line "#MON LEAGUE"
-	cont "BADGE!"
+	line "#MON League"
+	cont "Badge!"
 
 	para "Its bearer's"
 	line "#MON become"
 	cont "more powerful!"
 
 	para "The technique"
-	line "FLASH can now be"
+	line "Flash can now be"
 	cont "used any time!"
 	prompt
 
@@ -85,7 +85,7 @@ _PewterGymBattleText1::
 
 	para "You're still light"
 	line "years from facing"
-	cont "BROCK!"
+	cont "Brock!"
 	done
 
 _PewterGymEndBattleText1::
@@ -99,7 +99,24 @@ _PewterGymEndBattleText1::
 _PewterGymAfterBattleText1::
 	text "You're pretty hot,"
 	line "but not as hot"
-	cont "as BROCK!"
+	cont "as Brock!"
+	done
+	
+_PewterGymBattleText2::
+	text "Just got back"
+	line "from Mt. Moon!"
+	done
+
+_PewterGymEndBattleText2::
+	text "Darn!"
+	
+	para "Should have caught"
+	line "more #MON!"
+	prompt
+
+_PewterGymAfterBattleText2::
+	text "Watch out for"
+	line "Brock's Onix!"
 	done
 
 _PewterGymGuidePreAdviceText::

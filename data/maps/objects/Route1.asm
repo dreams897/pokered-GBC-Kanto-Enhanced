@@ -9,6 +9,7 @@ Route1_Object:
 	def_object_events
 	object_event  5, 24, SPRITE_YOUNGSTER, WALK, UP_DOWN, 1 ; person
 	object_event 15, 13, SPRITE_YOUNGSTER, WALK, LEFT_RIGHT, 2 ; person
+	object_event  4, 3,  SPRITE_BERRY_TREE, STAY, DOWN, 3 ; person
 
 	def_warps_to ROUTE_1
 

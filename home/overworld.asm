@@ -41,7 +41,7 @@ EnterMap::
 OverworldLoop::
 	call DelayFrame
 OverworldLoopLessDelay::
-	call DelayFrame
+	;call DelayFrame ; shinpokerednote: ADDED: 60fps mode enabled by commenting this (but needs additional tweaks to run correctly)
 	call LoadGBPal
 	ld a, [wd736]
 	bit 6, a ; jumping down a ledge?
@@ -261,7 +261,7 @@ OverworldLoopLessDelay::
 	jp c, OverworldLoop
 
 .noCollision
-	ld a, $08
+	ld a, $10 ; shinpokerednote: 60fps: counter is doubled
 	ld [wWalkCounter], a
 	jr .moveAhead2
 
@@ -282,8 +282,29 @@ OverworldLoopLessDelay::
 	ld a, [wd736]
 	bit 6, a ; jumping a ledge?
 	jr nz, .normalPlayerSpriteAdvancement
+	; Bike is normally 2x walking speed
+	; Holding B makes the bike even faster
+	ld a, [hJoyHeld]
+	and B_BUTTON
+	jr z, .notMachBike
 	call DoBikeSpeedup
+	call DoBikeSpeedup
+.notMachBike
+	call DoBikeSpeedup
+	jr .notRunning
 .normalPlayerSpriteAdvancement
+	; surf at 2x walking speed
+	ld a, [wWalkBikeSurfState]
+	cp $02
+	jr z, .surfFaster
+	; Holding B makes you run at 2x walking speed
+	ld a, [hJoyHeld]
+	and B_BUTTON
+	jr z, .notRunning
+.surfFaster
+	call DoBikeSpeedup
+.notRunning
+	;original .normalPlayerSpriteAdvancement continues here
 	call AdvancePlayerSprite
 	ld a, [wWalkCounter]
 	and a
@@ -771,12 +792,11 @@ HandleBlackOut::
 	jp SpecialEnterMap
 
 StopMusic::
-	ld [wAudioFadeOutControl], a
-	ld a, SFX_STOP_ALL_MUSIC
-	ld [wNewSoundID], a
-	call PlaySound
+	ld [wMusicFade], a
+	xor a
+	ld [wMusicFadeID], a
 .wait
-	ld a, [wAudioFadeOutControl]
+	ld a, [wMusicFade]
 	and a
 	jr nz, .wait
 	jp StopAllSounds
@@ -1244,9 +1264,16 @@ CollisionCheckOnLand::
 	call CheckTilePassable
 	jr nc, .noCollision
 .collision
-	ld a, [wChannelSoundIDs + CHAN5]
-	cp SFX_COLLISION ; check if collision sound is already playing
-	jr z, .setCarry
+
+;	ld a, [wChannelSoundIDs + CHAN5]
+;	cp SFX_COLLISION ; check if collision sound is already playing
+;	jr z, .setCarry
+
+	; ch5 on?
+	ld hl, wChannel5 + wChannel1Flags1 - wChannel1 ; + CHANNEL_FLAGS1
+	bit 0, [hl]
+	jr nz, .setCarry
+
 	ld a, SFX_COLLISION
 	call PlaySound ; play collision sound (if it's not already playing)
 .setCarry
@@ -1455,7 +1482,12 @@ AdvancePlayerSprite::
 	ld [wXCoord], a
 .afterUpdateMapCoords
 	ld a, [wWalkCounter] ; walking animation counter
-	cp $07
+;;;;;;;;;; shinpokerednote: 60fps
+	push bc
+	ld b, $0F
+	cp b
+	pop bc
+;;;;;;;;;;
 	jp nz, .scrollBackgroundAndSprites
 ; if this is the first iteration of the animation
 	ld a, c
@@ -1515,10 +1547,6 @@ AdvancePlayerSprite::
 	or $98
 	ld [wMapViewVRAMPointer + 1], a
 .adjustXCoordWithinBlock
-	ld a, c
-	and a
-	jr z, .pointlessJump ; mistake?
-.pointlessJump
 	ld hl, wXBlockCoord
 	ld a, [hl]
 	add c
@@ -1602,8 +1630,8 @@ AdvancePlayerSprite::
 	ld b, a
 	ld a, [wSpritePlayerStateData1XStepVector]
 	ld c, a
-	sla b
-	sla c
+	;sla b ; shinpokerednote: 60fps mode doesn't need this
+	;sla c
 	ldh a, [hSCY]
 	add b
 	ldh [hSCY], a ; update background scroll Y
@@ -1925,9 +1953,16 @@ CollisionCheckOnWater::
 	jr z, .stopSurfing ; stop surfing if the tile is passable
 	jr .loop
 .collision
-	ld a, [wChannelSoundIDs + CHAN5]
-	cp SFX_COLLISION ; check if collision sound is already playing
-	jr z, .setCarry
+
+;	ld a, [wChannelSoundIDs + CHAN5]
+;	cp SFX_COLLISION ; check if collision sound is already playing
+;	jr z, .setCarry
+
+	; ch5 on?
+	ld hl, wChannel5 + wChannel1Flags1 - wChannel1 ; + CHANNEL_FLAGS1
+	bit 0, [hl]
+	jr nz, .setCarry
+
 	ld a, SFX_COLLISION
 	call PlaySound ; play collision sound (if it's not already playing)
 .setCarry
@@ -1979,6 +2014,17 @@ RunMapScript::
 LoadWalkingPlayerSpriteGraphics::
 	ld de, RedSprite
 	ld hl, vNPCSprites
+	ld a, [wPlayerGender] ; from Vortiene
+	and a			; check if boy
+	jr z, .ContinueLoadSprites1
+	cp a, 2			; check if enby
+	jr z, .AreEnby1
+	ld de, GreenSprite
+	jr .ContinueLoadSprites1
+.AreEnby1
+	ld de, OrangeSprite
+.ContinueLoadSprites1
+	ld hl, vNPCSprites
 	jr LoadPlayerSpriteGraphicsCommon
 
 LoadSurfingPlayerSpriteGraphics::
@@ -1988,6 +2034,16 @@ LoadSurfingPlayerSpriteGraphics::
 
 LoadBikePlayerSpriteGraphics::
 	ld de, RedBikeSprite
+	ld a, [wPlayerGender]
+	and a
+	jr z, .ContinueLoadSprites2
+	cp a, 2			; check if enby
+	jr z, .AreEnby2
+	ld de, GreenBikeSprite
+	jr .ContinueLoadSprites2
+.AreEnby2
+	ld de, OrangeBikeSprite
+.ContinueLoadSprites2
 	ld hl, vNPCSprites
 
 LoadPlayerSpriteGraphicsCommon::
@@ -2279,6 +2335,10 @@ LoadMapHeader::
 	ld a, [hli]
 	ld [wMapMusicSoundID], a ; music 1
 	ld a, [hl]
+
+; give vanilla red a fair shot at running our savs
+	ld a, BANK("Audio Engine 1")
+
 	ld [wMapMusicROMBank], a ; music 2
 	pop af
 	ldh [hLoadedROMBank], a
@@ -2334,7 +2394,7 @@ LoadMapData::
 	ld a, [wFlags_D733]
 	bit 1, a
 	jr nz, .restoreRomBank
-	call UpdateMusic6Times
+;	call UpdateMusic6Times
 	call PlayDefaultMusicFadeOutCurrent
 .restoreRomBank
 	pop af

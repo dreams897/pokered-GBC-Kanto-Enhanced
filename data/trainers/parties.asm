@@ -232,6 +232,8 @@ SuperNerdData:
 	db 37, GROWLITHE, VULPIX, 0
 
 HikerData:
+; Pewter City Gym
+	db 9, MACHOP, ZUBAT, 0
 ; Mt. Moon 1F
 	db 10, GEODUDE, GEODUDE, ONIX, 0
 ; Route 25

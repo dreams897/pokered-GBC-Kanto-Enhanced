@@ -10,12 +10,14 @@ Route2_Object:
 	warp_event  3, 43, VIRIDIAN_FOREST_SOUTH_GATE, 3
 
 	def_bg_events
-	bg_event  5, 65, 3 ; Route2Text3
-	bg_event 11, 11, 4 ; Route2Text4
+	bg_event  5, 65, 5 ; Route2Text3
+	bg_event 11, 11, 6 ; Route2Text4
 
 	def_object_events
-	object_event 13, 54, SPRITE_POKE_BALL, STAY, NONE, 1, MOON_STONE
-	object_event 13, 45, SPRITE_POKE_BALL, STAY, NONE, 2, HP_UP
+	object_event 14, 55, SPRITE_BERRY_TREE, STAY, DOWN, 1 ; person
+	object_event 14, 46, SPRITE_BERRY_TREE, STAY, DOWN, 2 ; person
+	object_event 16, 16, SPRITE_BERRY_TREE, STAY, DOWN, 3 ; person
+	object_event 8, 40, SPRITE_BERRY_TREE, STAY, DOWN, 4 ; person
 
 	def_warps_to ROUTE_2
 

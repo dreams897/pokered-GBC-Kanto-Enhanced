@@ -154,7 +154,7 @@ IF GEN_2_GRAPHICS
 	db PAL_MEWTWO
 	db PAL_MEW
 TrainerPalettes: ; Gen II trainer sprites are given their own palettes
-	db PAL_HERO
+	db PAL_RED
 	db PAL_YOUNGSTER
 	db PAL_BUGCATCHER
 	db PAL_LASS

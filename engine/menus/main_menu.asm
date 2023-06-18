@@ -125,10 +125,10 @@ MainMenu:
 	jp SpecialEnterMap
 
 InitOptions:
-	ld a, TEXT_DELAY_FAST
-	ld [wLetterPrintingDelayFlags], a
-	ld a, TEXT_DELAY_MEDIUM
-	ld [wOptions], a
+	ld a,1 ; no delay
+	ld [wLetterPrintingDelayFlags],a
+	ld a,1 ; fast speed
+	ld [wOptions],a
 	ret
 
 LinkMenu:
@@ -332,18 +332,18 @@ SpecialEnterMap::
 	jp EnterMap
 
 ContinueText:
-	db "CONTINUE"
+	db "Continue"
 	next ""
 	; fallthrough
 
 NewGameText:
-	db   "NEW GAME"
-	next "OPTION@"
+	db   "New Game"
+	next "Options@"
 
 CableClubOptionsText:
-	db   "TRADE CENTER"
-	next "COLOSSEUM"
-	next "CANCEL@"
+	db   "Trade Center"
+	next "Colosseum"
+	next "Cancel@"
 
 DisplayContinueGameInfo:
 	xor a
@@ -426,10 +426,10 @@ PrintPlayTime:
 	jp PrintNumber
 
 SaveScreenInfoText:
-	db   "PLAYER"
-	next "BADGES    "
-	next "#DEX    "
-	next "TIME@"
+	db   "Player"
+	next "Badges    "
+	next "#Dex    "
+	next "Time@"
 
 DisplayOptionMenu:
 	hlcoord 0, 0
@@ -584,19 +584,19 @@ DisplayOptionMenu:
 	jp .eraseOldMenuCursor
 
 TextSpeedOptionText:
-	db   "TEXT SPEED"
-	next " FAST  MEDIUM SLOW@"
+	db   "Text Speed"
+	next " Fast  Medium Slow@"
 
 BattleAnimationOptionText:
-	db   "BATTLE ANIMATION"
-	next " ON       OFF@"
+	db   "Battle Animation"
+	next " On       Off@"
 
 BattleStyleOptionText:
-	db   "BATTLE STYLE"
-	next " SHIFT    SET@"
+	db   "Battle Style"
+	next " Shift    Set@"
 
 OptionMenuCancelText:
-	db "CANCEL@"
+	db "Cancel@"
 
 ; sets the options variable according to the current placement of the menu cursors in the options menu
 SetOptionsFromCursorPositions:

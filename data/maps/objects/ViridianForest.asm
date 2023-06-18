@@ -26,5 +26,6 @@ ViridianForest_Object:
 	object_event 12, 29, SPRITE_POKE_BALL, STAY, NONE, 6, POTION
 	object_event  1, 31, SPRITE_POKE_BALL, STAY, NONE, 7, POKE_BALL
 	object_event 27, 40, SPRITE_YOUNGSTER, STAY, NONE, 8 ; person
+	object_event 30, 5, SPRITE_BERRY_TREE, STAY, NONE, 15 ; person
 
 	def_warps_to VIRIDIAN_FOREST

@@ -272,6 +272,10 @@ IF GEN_2_GRAPHICS
 	const PAL_CHANNELER     ; $E8
 	const PAL_AGATHA        ; $E9
 	const PAL_LANCE         ; $EA
-	const PAL_HERO          ; $EB
+	const PAL_RED           ; $EB
+	const PAL_GREEN
+	const PAL_ORANGE
+	const PAL_JESSIE	; $EC
+	const PAL_JAMES		; $ED
 ENDC
 DEF NUM_SGB_PALS EQU const_value

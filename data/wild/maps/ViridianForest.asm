@@ -3,9 +3,9 @@ ViridianForestWildMons:
 IF DEF(_RED)
 	db  4, WEEDLE
 	db  5, KAKUNA
-	db  3, WEEDLE
+	db  3, VENONAT
 	db  5, WEEDLE
-	db  4, KAKUNA
+	db  4, VENONAT
 	db  6, KAKUNA
 	db  4, METAPOD
 	db  3, CATERPIE

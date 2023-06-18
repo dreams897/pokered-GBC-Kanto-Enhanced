@@ -40,6 +40,15 @@ DEF START_MONEY EQU $3000
 	ld hl, wPlayerCoins
 	ld [hli], a
 	ld [hl], a
+	
+	; Initialize Berry Tree flags and step counter
+	ld hl, wBerryTreeFlags
+	; assumption: only 2 bytes used for flags
+	ld [hli], a
+	ld [hli], a
+	; assumption: step counter immediately follows berry tree flags
+	ld [hli], a
+	ld [hl], a
 
 	ld hl, wGameProgressFlags
 	ld bc, wGameProgressFlagsEnd - wGameProgressFlags

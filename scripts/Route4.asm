@@ -16,6 +16,7 @@ Route4_TextPointers:
 	dw Route4Text1
 	dw Route4Text2
 	dw PickUpItemText
+	dw Route4Tree1
 	dw PokeCenterSignText
 	dw Route4Text5
 	dw Route4Text6
@@ -55,3 +56,10 @@ Route4Text5:
 Route4Text6:
 	text_far _Route4Text6
 	text_end
+	
+Route4Tree1:
+	text_asm
+	ld a, 8 ; Tree number
+	ld [wWhichTrade],a
+	callfar BerryTreeScript
+	jp TextScriptEnd

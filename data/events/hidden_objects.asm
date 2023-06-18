@@ -660,7 +660,7 @@ VermilionCityHiddenObjects:
 	db -1 ; end
 
 CeruleanCityHiddenObjects:
-	hidden_object 15,  8, RARE_CANDY, HiddenItems
+	hidden_object 15,  8, POKE_FLUTE, HiddenItems
 	db -1 ; end
 
 Route4HiddenObjects:

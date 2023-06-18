@@ -380,12 +380,42 @@ FishingAnim:
 	call DelayFrames
 	ld hl, wd736
 	set 6, [hl] ; reserve the last 4 OAM entries
+	ld a, [wPlayerGender]	; load gender
+	and a					; check if gender=male
+	jr z, .BoySpriteLoad
+	cp a, 2		; check if enby
+	jr z, .EnbySpriteLoad
+	ld de, GreenSprite
+	ld hl, vNPCSprites
+	ld bc, (BANK(GreenSprite) << 8) + $0c
+	jr .KeepLoadingSpriteStuff
+.EnbySpriteLoad
+	ld de, OrangeSprite
+	ld hl, vNPCSprites
+	ld bc, (BANK(OrangeSprite) << 8) + $0c
+	jr .KeepLoadingSpriteStuff
+.BoySpriteLoad
 	ld de, RedSprite
-	ld hl, vNPCSprites tile $00
-	lb bc, BANK(RedSprite), 12
+	ld hl, vNPCSprites
+	lb bc, BANK(RedSprite), $c
+.KeepLoadingSpriteStuff
 	call CopyVideoData
+	ld a, [wPlayerGender]	; load gender
+	and a      				; check if gender=male
+	jr z, .BoyTiles ; skip loading Green's stuff if you're Red
+	cp a, 2
+	jr z, .EnbyTiles
+	ld a, $4
+	ld hl, GreenFishingTiles
+	jr .ContinueRoutine ; go back to main routine after loading Green's stuff
+.EnbyTiles
+	ld a, $4
+	ld hl, OrangeFishingTiles
+	jr .ContinueRoutine ; go back to main routine after loading Orange's stuff
+.BoyTiles ; alternately, load Red's stuff
 	ld a, $4
 	ld hl, RedFishingTiles
+.ContinueRoutine
 	call LoadAnimSpriteGfx
 	ld a, [wSpritePlayerStateData1ImageIndex]
 	ld c, a
@@ -487,11 +517,25 @@ RedFishingTiles:
 	fishing_gfx RedFishingTilesBack,  2, $06
 	fishing_gfx RedFishingTilesSide,  2, $0a
 	fishing_gfx RedFishingRodTiles,   3, $fd
+GreenFishingTiles:
+	fishing_gfx GreenFishingTilesFront, 2, $02
+	fishing_gfx GreenFishingTilesBack,  2, $06
+	fishing_gfx GreenFishingTilesSide,  2, $0a
+	fishing_gfx RedFishingRodTiles,     3, $fd
+OrangeFishingTiles:
+	fishing_gfx OrangeFishingTilesFront, 2, $02
+	fishing_gfx OrangeFishingTilesBack,  2, $06
+	fishing_gfx OrangeFishingTilesSide,  2, $0a
+	fishing_gfx RedFishingRodTiles,      3, $fd
 
 _HandleMidJump::
 	ld a, [wPlayerJumpingYScreenCoordsIndex]
 	ld c, a
 	inc a
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; shinpokerednote: 60fps - only update every other tick
+	call Ledge60fps
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	cp $10
 	jr nc, .finishedJump
 	ld [wPlayerJumpingYScreenCoordsIndex], a
@@ -518,6 +562,18 @@ _HandleMidJump::
 	res 7, [hl] ; not simulating joypad states any more
 	xor a
 	ld [wJoyIgnore], a
+	ret
+
+Ledge60fps:
+	push hl
+	push af
+	ld h, $c2
+	ld l, $0a
+	ld a, [hl]
+	xor $01
+	pop af
+	sub [hl]
+	pop hl
 	ret
 
 PlayerJumpingYScreenCoords:

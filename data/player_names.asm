@@ -1,31 +1,59 @@
 IF DEF(_RED)
-DefaultNamesPlayer:
-	db   "NEW NAME"
-	next "RED"
-	next "ASH"
-	next "JACK"
+DefaultNamesBoy:
+	db   "New Name"
+	next "Red"
+	next "Ash"
+	next "Jack"
+	db   "@"
+	
+DefaultNamesGirl:
+	db   "New Name"
+	next "Green"
+	next "Leaf"
+	next "Ashley"
+	db   "@"
+
+DefaultNamesEnby:
+	db   "New Name"
+	next "Orange"
+	next "Ace"
+	next "West"
 	db   "@"
 
 DefaultNamesRival:
-	db   "NEW NAME"
-	next "BLUE"
-	next "GARY"
-	next "JOHN"
+	db   "New Name"
+	next "Blue"
+	next "Gary"
+	next "John"
 	db   "@"
 ENDC
 
 IF DEF(_BLUE)
-DefaultNamesPlayer:
-	db   "NEW NAME"
-	next "BLUE"
-	next "GARY"
-	next "JOHN"
+DefaultNamesBoy:
+	db   "New Name"
+	next "Blue"
+	next "Gary"
+	next "John"
+	db   "@"
+	
+DefaultNamesGirl:
+	db   "New Name"
+	next "Green"
+	next "Leaf"
+	next "Ashley"
+	db   "@"
+
+DefaultNamesEnby:
+	db   "New Name"
+	next "Orange"
+	next "Ace"
+	next "West"
 	db   "@"
 
 DefaultNamesRival:
-	db   "NEW NAME"
-	next "RED"
-	next "ASH"
-	next "JACK"
+	db   "New Name"
+	next "Red"
+	next "Ash"
+	next "Jack"
 	db   "@"
 ENDC

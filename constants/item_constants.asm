@@ -92,6 +92,17 @@ DEF SAFARI_ROCK EQU $16 ; overload
 	const MAX_ETHER     ; $51
 	const ELIXER        ; $52
 	const MAX_ELIXER    ; $53
+	; Berries start here
+	const ORAN_BERRY    ; $62
+	const SITRUS_BERRY  ; $63
+	const LEPPA_BERRY   ; $64
+	const PECHA_BERRY   ; $65
+	const RAWST_BERRY   ; $66
+	const ASPEAR_BERRY  ; $67
+	const CHESTO_BERRY  ; $68
+	const CHERI_BERRY   ; $69
+	const LUM_BERRY     ; $6A
+	const ACAI_BERRY    ; $6B
 DEF NUM_ITEMS EQU const_value - 1
 
 ; elevator floors use item IDs

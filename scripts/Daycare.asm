@@ -2,7 +2,10 @@ Daycare_Script:
 	jp EnableAutoTextBoxDrawing
 
 Daycare_TextPointers:
-	dw DayCareMText1
+	dw DayCareMText1 ; Day Care Lady
+	dw DayCareMText2 ; Day Care Man
+	dw DayCareMText3 ; Ditto
+	dw DayCareMText4 ; Bulbasaur
 
 DayCareMText1:
 	text_asm
@@ -267,3 +270,23 @@ DayCareHeresYourMonText:
 DayCareNotEnoughMoneyText:
 	text_far _DayCareNotEnoughMoneyText
 	text_end
+	
+DayCareMText2:
+	text_far _DayCareMText2
+	text_end
+	
+DayCareMText3: ; Ditto
+	text_far _DayCareMText3
+	text_asm
+	ld a, DITTO
+	call PlayCry
+	call WaitForSoundToFinish
+	jp TextScriptEnd
+	
+DayCareMText4: ; Bulbasaur
+	text_far _DayCareMText4
+	text_asm
+	ld a, BULBASAUR
+	call PlayCry
+	call WaitForSoundToFinish
+	jp TextScriptEnd

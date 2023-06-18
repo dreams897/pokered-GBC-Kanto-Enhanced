@@ -10,6 +10,8 @@ _DayCareComeAgainText::
 _DayCareNoRoomForMonText::
 	text "You have no room"
 	line "for this #MON!"
+	cont "You can use the"
+	cont "PC in the corner."
 	done
 
 _DayCareOnlyHaveOneMonText::
@@ -32,3 +34,22 @@ _DayCareNotEnoughMoneyText::
 	text "Hey, you don't"
 	line "have enough ¥!"
 	done
+	
+_DayCareMText2::
+    text "Hello there! I'm"
+    line "the Day Care Man!"
+    
+    para "Come back and see"
+    line "me another time."
+    done
+    
+_DayCareMText3::
+    text "It's a shiny Ditto"
+    line "that belongs to"
+    cont "the Day Care Man!"
+    done
+    
+_DayCareMText4::
+    text "Bulbasaur: Bubba!"
+    line "Zoar!"
+    done
