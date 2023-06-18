@@ -480,7 +480,7 @@ SetPal_TitleScreen:
 	farcall LoadSGBPalette
 
 IF GEN_2_GRAPHICS
-	ld d, PAL_HERO
+	ld d, PAL_RED
 ELSE
 	ld d, PAL_REDMON
 ENDC
@@ -849,7 +849,7 @@ SetPal_TrainerCard:
 
 	; Red's palette
 IF GEN_2_GRAPHICS
-	ld d, PAL_HERO
+	ld d, PAL_RED
 ELSE
 	ld d, PAL_REDMON
 ENDC

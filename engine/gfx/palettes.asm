@@ -79,7 +79,7 @@ IF GEN_2_GRAPHICS ; Trainers are given individualized palettes
 	; OPP_GARY, so ignore it)
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
-	ld a, PAL_HERO
+	ld a, PAL_RED
 	ret z
 
 	ld a, [wTrainerClass] ; Get trainer ID
@@ -118,7 +118,7 @@ DetermineBackSpritePaletteID:
 	jr nz, .getPaletteID ; Check if trainer?
 
 IF GEN_2_GRAPHICS
-	ld a, PAL_HERO
+	ld a, PAL_RED
 ELSE
 	ld a, PAL_REDMON
 ENDC
