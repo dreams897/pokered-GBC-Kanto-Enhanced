@@ -86,6 +86,8 @@ ColorOverworldSprite::
 	ld d, wSpriteStateData1 >> 8
 	ld a, [de] ; Load A with picture ID
 	dec a
+	and a
+	jr z, .playerSprite
 
 	ld de, SpritePaletteAssignments
 	add e
@@ -94,7 +96,16 @@ ColorOverworldSprite::
 	inc d
 .noCarry
 	ld a, [de] ; Get the picture ID's palette
+	jr .continue
 
+.playerSprite
+	ld a, [wPlayerGender]
+	and a
+	ld a, SPR_PAL_ORANGE
+	jr z, .continue
+	ld a, SPR_PAL_GREEN
+
+.continue
 	; If it's 8, that means no particular palette is assigned
 	cp SPR_PAL_RANDOM
 	jr nz, .norandomColor
@@ -314,13 +325,10 @@ SpritePaletteAssignments: ; Characters on the overworld
 	db SPR_PAL_BLUE
 
 	; 0x03: SPRITE_OAK
-	db SPR_PAL_BROWN
+	db SPR_PAL_GREEN
 
 	; 0x04: SPRITE_BUG_CATCHER
 	db SPR_PAL_RANDOM
-
-	; 0x05: SPRITE_SLOWBRO
-	db SPR_PAL_ORANGE
 
 	; 0x06: SPRITE_LASS
 	db SPR_PAL_RANDOM
@@ -386,7 +394,7 @@ SpritePaletteAssignments: ; Characters on the overworld
 	db SPR_PAL_RANDOM
 
 	; 0x1b: SPRITE_ERIKA
-	db SPR_PAL_RANDOM
+	db SPR_PAL_GREEN
 
 	; 0x1c: SPRITE_MOM_GEISHA
 	db SPR_PAL_RANDOM
@@ -448,13 +456,13 @@ SpritePaletteAssignments: ; Characters on the overworld
 	; 0x2f: SPRITE_FISHER2
 	db SPR_PAL_RANDOM
 
-	; 0x30: SPRITE_BLACKBELT
-	db SPR_PAL_RANDOM
-
+	; 0x31: SPRITE_KOGA
+	db SPR_PAL_BLUE
+	
 	; 0x31: SPRITE_GUARD ($30)
 	db SPR_PAL_BLUE
-
-	; 0x32: $32
+	
+	; 0x30: SPRITE_BLACKBELT
 	db SPR_PAL_RANDOM
 
 	; 0x33: SPRITE_MOM
@@ -472,7 +480,7 @@ SpritePaletteAssignments: ; Characters on the overworld
 	; 0x37: SPRITE_GAMEBOY_KID_COPY
 	db SPR_PAL_RANDOM
 
-	; 0x38: SPRITE_CLEFAIRY
+	; 0x38: SPRITE_FAIRY
 	db SPR_PAL_ORANGE
 
 	; 0x39: SPRITE_AGATHA
@@ -483,14 +491,77 @@ SpritePaletteAssignments: ; Characters on the overworld
 
 	; 0x3b: SPRITE_LORELEI
 	db SPR_PAL_ORANGE
+	
+	; SPRITE_GREEN
+	db SPR_PAL_GREEN
+	
+	; SPRITE_GREEN_BIKE
+	db SPR_PAL_GREEN
+	
+	; SPRITE_ORANGE
+	db SPR_PAL_ORANGE
+	
+	; SPRITE_ORANGE_BIKE
+	db SPR_PAL_ORANGE
+	
+	; SPRITE_BILL
+	db SPR_PAL_ORANGE
 
+	; SPRITE_BLAINE
+	db SPR_PAL_BROWN
+	
+	; SPRITE_BROCK
+	db SPR_PAL_BROWN
+	
+	; SPRITE_BULBASAUR
+	db SPR_PAL_GREEN
+	
+	; SPRITE_CHANSEY
+	db SPR_PAL_ORANGE
+	
+	; SPRITE_DITTO
+	db SPR_PAL_BLUE
+	
+	; SPRITE_JAMES
+	db SPR_PAL_BLUE
+	
+	; SPRITE_JESSIE
+	db SPR_PAL_ORANGE
+	
+	; SPRITE_JIGGLYPUFF
+	db SPR_PAL_ORANGE
+	
+	; SPRITE_LAPRAS
+	db SPR_PAL_BLUE
+	
+	; 0x05: SPRITE_MONSTER
+	db SPR_PAL_ORANGE
+	
+	; SPRITE_MISTY
+	db SPR_PAL_ORANGE
+	
+	; SPRITE_SABRINA
+	db SPR_PAL_BROWN
+	
 	; 0x3c: SPRITE_SEEL
 	db SPR_PAL_BLUE
+	
+	; SPRITE_SURGE
+	db SPR_PAL_BROWN
 
 	; 0x3d: SPRITE_BALL
 	db SPR_PAL_ORANGE
+	
+	; SPRITE_BALL2
+	db SPR_PAL_ORANGE
+	
+	; SPRITE_TRUCK
+	db SPR_PAL_ORANGE
+	
+	; SPRITE_BERRY_TREE
+	db SPR_PAL_TREE
 
-	; 0x3e: SPRITE_OMANYTE
+	; 0x3e: SPRITE_FOSSIL
 	db SPR_PAL_ROCK
 
 	; 0x3f: SPRITE_BOULDER
@@ -501,26 +572,20 @@ SpritePaletteAssignments: ; Characters on the overworld
 
 	; 0x41: SPRITE_BOOK_MAP_DEX
 	db SPR_PAL_ORANGE
+	
+	; SPRITE_TOWNMAP
+	db SPR_PAL_BLUE
 
 	; 0x42: SPRITE_CLIPBOARD
 	db SPR_PAL_BROWN
 
 	; 0x43: SPRITE_SNORLAX
-	db SPR_PAL_ORANGE
-
-	; 0x44: SPRITE_OLD_AMBER_COPY
-	db SPR_PAL_ROCK
+	db SPR_PAL_BROWN
 
 	; 0x45: SPRITE_OLD_AMBER
 	db SPR_PAL_ROCK
 
-	; 0x46: SPRITE_LYING_OLD_MAN_UNUSED_1
-	db SPR_PAL_BROWN
-
-	; 0x47: SPRITE_LYING_OLD_MAN_UNUSED_2
-	db SPR_PAL_BROWN
-
-	; 0x48: SPRITE_LYING_OLD_MAN
+	; 0x48: SPRITE_GAMBLER_ASLEEP
 	db SPR_PAL_BROWN
 
 

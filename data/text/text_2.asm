@@ -1789,6 +1789,6 @@ _ContCharText::
 	text_end
 	
 _BoyGirlText::
-	text "Play as a boy or"
-	line "as a girl?"
+	text "First, who"
+	line "are you?"
 	done

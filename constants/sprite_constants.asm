@@ -96,6 +96,4 @@ DEF FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_SNORLAX                 ; $56
 	const SPRITE_OLD_AMBER               ; $57
 	const SPRITE_GAMBLER_ASLEEP          ; $60
-	const SPRITE_UNUSED_GAMBLER_ASLEEP_1 ; $58
-	const SPRITE_UNUSED_GAMBLER_ASLEEP_2 ; $59
 DEF NUM_SPRITES EQU const_value - 1

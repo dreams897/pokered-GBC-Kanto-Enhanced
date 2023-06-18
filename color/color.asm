@@ -849,10 +849,18 @@ SetPal_TrainerCard:
 
 	; Red's palette
 IF GEN_2_GRAPHICS
+	pop bc
+	ld a, b
+	and a
+	jr z, .male
+	ld d, PAL_GREEN
+	jr .female
+.male
 	ld d, PAL_RED
 ELSE
 	ld d, PAL_REDMON
 ENDC
+.female
 	ld e, 4
 	farcall LoadSGBPalette
 

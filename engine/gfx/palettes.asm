@@ -118,6 +118,12 @@ DetermineBackSpritePaletteID:
 	jr nz, .getPaletteID ; Check if trainer?
 
 IF GEN_2_GRAPHICS
+	ld a, [wPlayerGender]
+	and a
+	jr z, .male
+	ld a, PAL_GREEN
+	ret
+.male
 	ld a, PAL_RED
 ELSE
 	ld a, PAL_REDMON

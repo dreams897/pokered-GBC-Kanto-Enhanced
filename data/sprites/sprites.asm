@@ -97,6 +97,4 @@ SpriteSheetPointerTable:
 	overworld_sprite SnorlaxSprite, 4           ; SPRITE_SNORLAX		; $56
 	overworld_sprite OldAmberSprite, 4          ; SPRITE_OLD_AMBER		; $57
 	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_GAMBLER_ASLEEP	; $60
-	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_UNUSED_GAMBLER_ASLEEP_1 $58
-	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_UNUSED_GAMBLER_ASLEEP_2 $59
 	assert_table_length NUM_SPRITES
