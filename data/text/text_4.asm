@@ -18,7 +18,7 @@ _PlayerBlackedOutText::
 	prompt
 
 _RepelWoreOffText::
-	text "REPEL's effect"
+	text "Repel's effect"
 	line "wore off."
 	done
 

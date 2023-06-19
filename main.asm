@@ -968,5 +968,9 @@ JynxPicFront::        INCBIN "gfx/pokemon/front/jynx.pic"
 JynxPicBack::         INCBIN "gfx/pokemon/back/jynxb.pic"
 MarowakPicFront::     INCBIN "gfx/pokemon/front/marowak.pic"
 MarowakPicBack::      INCBIN "gfx/pokemon/back/marowakb.pic"
-ENDC
 
+
+SECTION "field moves", ROMX
+INCLUDE "engine/overworld/automatic_repel.asm"
+
+ENDC
