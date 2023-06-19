@@ -49,16 +49,4 @@ RunNPCMovementScript::
 
 EndNPCMovementScript::
 	farjp _EndNPCMovementScript
-
-DebugPressedOrHeldB::
-IF DEF(_DEBUG)
-	ld a, [wd732]
-	bit 1, a
-	ret z
-	ldh a, [hJoyHeld]
-	bit BIT_B_BUTTON, a
-	ret nz
-	ldh a, [hJoyPressed]
-	bit BIT_B_BUTTON, a
-ENDC
 	ret
