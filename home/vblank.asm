@@ -25,7 +25,10 @@ VBlank::
 	call RedrawRowOrColumn
 	call VBlankCopy
 	call VBlankCopyDouble
-	;call UpdateMovingBgTiles
+       ;call UpdateMovingBgTiles
+	ld a, [hSkipOAMUpdates]
+	bit 0, a
+	jr nz, .skipOAM
 	call hDMARoutine
 	rst $10 ; HAX: VBlank hook (loads palettes)
 	nop
@@ -42,6 +45,7 @@ VBlank::
 	nop
 	nop
 	;call PrepareOAMData
+.skipOAM
 	nop
 	nop
 	nop
