@@ -480,9 +480,6 @@ SpritePaletteAssignments: ; Characters on the overworld
 	; 0x37: SPRITE_GAMEBOY_KID_COPY
 	db SPR_PAL_RANDOM
 
-	; 0x38: SPRITE_FAIRY
-	db SPR_PAL_ORANGE
-
 	; 0x39: SPRITE_AGATHA
 	db SPR_PAL_BLUE
 
@@ -521,6 +518,9 @@ SpritePaletteAssignments: ; Characters on the overworld
 	
 	; SPRITE_DITTO
 	db SPR_PAL_BLUE
+	
+	; 0x38: SPRITE_FAIRY
+	db SPR_PAL_ORANGE
 	
 	; SPRITE_JAMES
 	db SPR_PAL_BLUE
