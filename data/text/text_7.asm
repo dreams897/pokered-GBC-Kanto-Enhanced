@@ -138,12 +138,11 @@ _Thanks2Text::
 	done
 
 _AfterTrade2Text::
-	text "The @"
+	text "Hello there! Your"
+	line "old @"
 	text_ram wInGameTradeGiveMonName
-	text " you"
-	line "traded to me"
-
-	para "went and evolved!"
+	text " is"
+	cont "magnificent!"
 	done
 
 _WannaTrade3Text::
