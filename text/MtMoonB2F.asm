@@ -36,13 +36,16 @@ _MtMoon3Text_49f94::
 	para "They're both cool"
 	line "and all, but I"
 	cont "want Old Amber!"
+	done
 	
-	para "Far away, on"
+_MtMoon3Text_49f95::
+	text "Far away, on"
 	line "Cinnabar Island,"
 	cont "there's a #MON"
-	cont "Lab that does"
-	cont "research on"
-	cont "regenerating"
+	cont "Lab."
+
+	para "They do research"
+	line "on regenerating"
 	cont "fossils."
 	done
 

@@ -134,6 +134,10 @@ MtMoon3Text_49f8a:
 MtMoon3Text_49f94:
 	text_far _MtMoon3Text_49f94
 	text_end
+	
+MtMoon3Text_49f95:
+	text_far _MtMoon3Text_49f95
+	text_end
 
 MtMoon3BattleText2:
 	text_far _MtMoon3BattleText2

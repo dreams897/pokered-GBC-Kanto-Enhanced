@@ -43,7 +43,7 @@ OakSpeech:
 	call SetDefaultNames
 	predef InitPlayerData2
 	ld hl, wNumBoxItems
-	ld a, BICYCLE
+	ld a, MASTER_BALL
 	ld [wcf91], a
 	ld a, 1
 	ld [wItemQuantity], a
