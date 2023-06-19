@@ -67,12 +67,7 @@ Route12GateUpstairsText_495c4:
 GateUpstairsScript_PrintIfFacingUp:
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	cp SPRITE_FACING_UP
-	jr z, .up
-	ld a, TRUE
-	jr .done
+	ld hl, TVWrongSideText
 .up
 	call PrintText
-	xor a
-.done
-	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	jp TextScriptEnd

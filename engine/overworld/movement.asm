@@ -384,7 +384,7 @@ UpdateSpriteInWalkingAnimation:
 	and $7f
 	ld [hl], a                       ; x#SPRITESTATEDATA2_MOVEMENTDELAY:
 	                                 ; set next movement delay to a random value in [0,$7f]
-	                                 ; note that value 0 actually makes the delay $100 (bug?)
+	inc [hl]
 	dec h ; HIGH(wSpriteStateData1)
 	ldh a, [hCurrentSpriteOffset]
 	inc a
@@ -497,7 +497,6 @@ InitializeSpriteStatus:
 	ld a, $8
 	ld [hli], a   ; [x#SPRITESTATEDATA2_YDISPLACEMENT] = 8
 	ld [hl], a    ; [x#SPRITESTATEDATA2_XDISPLACEMENT] = 8
-	ret
 
 ; calculates the sprite's screen position from its map position and the player position
 InitializeSpriteScreenPosition:
@@ -666,12 +665,12 @@ CanWalkOntoTile:
 	ld a, [hli]        ; x#SPRITESTATEDATA1_YPIXELS
 	add $4             ; align to blocks (Y pos is always 4 pixels off)
 	add d              ; add Y delta
-	cp $80             ; if value is >$80, the destination is off screen (either $81 or $FF underflow)
+	cp $81             ; if value is >$81, the destination is off screen (either $82 or $FF underflow)
 	jr nc, .impassable ; don't walk off screen
 	inc l
 	ld a, [hl]         ; x#SPRITESTATEDATA1_XPIXELS
 	add e              ; add X delta
-	cp $90             ; if value is >$90, the destination is off screen (either $91 or $FF underflow)
+	cp $91             ; if value is >$91, the destination is off screen (either $92 or $FF underflow)
 	jr nc, .impassable ; don't walk off screen
 	push de
 	push bc
@@ -693,28 +692,26 @@ CanWalkOntoTile:
 	bit 7, d           ; check if going upwards (d=$ff)
 	jr nz, .upwards
 	add d
-	; bug: these tests against $5 probably were supposed to prevent
-	; sprites from walking out too far, but this line makes sprites get
-	; stuck whenever they walked upwards 5 steps
-	; on the other hand, the amount a sprite can walk out to the
-	; right of bottom is not limited (until the counter overflows)
-	cp $5
-	jr c, .impassable  ; if [x#SPRITESTATEDATA2_YDISPLACEMENT]+d < 5, don't go
+	cp $E
+	jr nc, .impassable
 	jr .checkHorizontal
 .upwards
 	sub $1
-	jr c, .impassable  ; if [x#SPRITESTATEDATA2_YDISPLACEMENT] == 0, don't go
+	cp $3
+	jr c, .impassable
 .checkHorizontal
 	ld d, a
 	ld a, [hl]         ; x#SPRITESTATEDATA2_XDISPLACEMENT (initialized at $8, keep track of where a sprite did go)
 	bit 7, e           ; check if going left (e=$ff)
 	jr nz, .left
 	add e
-	cp $5              ; compare, but no conditional jump like in the vertical check above (bug?)
+	cp $E
+	jr nc, .impassable
 	jr .passable
 .left
 	sub $1
-	jr c, .impassable  ; if [x#SPRITESTATEDATA2_XDISPLACEMENT] == 0, don't go
+	cp $3
+	jr c, .impassable
 .passable
 	ld [hld], a        ; update x#SPRITESTATEDATA2_XDISPLACEMENT
 	ld [hl], d         ; update x#SPRITESTATEDATA2_YDISPLACEMENT
