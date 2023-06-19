@@ -40,10 +40,9 @@ _MtMoon3Text_49f94::
 	para "Far away, on"
 	line "Cinnabar Island,"
 	cont "there's a #MON"
-	cont "Lab."
-
-	para "They do research"
-	line "on regenerating"
+	cont "Lab that does"
+	cont "research on"
+	cont "regenerating"
 	cont "fossils."
 	done
 

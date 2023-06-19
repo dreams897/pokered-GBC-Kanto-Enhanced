@@ -1714,11 +1714,12 @@ ENDU
 
 wSerialPlayerDataBlock:: ; ds $1a8
 
+wPseudoItemID:: db
 ; When a real item is being used, this is 0.
 ; When a move is acting as an item, this is the ID of the item it's acting as.
 ; For example, out-of-battle Dig is executed using a fake Escape Rope item. In
 ; that case, this would be ESCAPE_ROPE.
-wPseudoItemID:: db
+	ds 1
 
 wUnusedD153:: db
 
@@ -2403,5 +2404,5 @@ ENDC
 SECTION "Stack", WRAM0
 
 ; the stack grows downward
-	ds $85 - 1
+	ds $84 - 1
 wStack:: db
