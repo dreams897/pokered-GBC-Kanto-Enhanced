@@ -22,6 +22,12 @@ _RepelWoreOffText::
 	line "wore off."
 	done
 
+_NoBicycleText1::
+	text "Pressing SELECT"
+	line "uses the Bicycle"
+	cont "if you have one."
+	prompt
+
 _PokemartBuyingGreetingText::
 	text "Take your time."
 	done

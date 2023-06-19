@@ -130,6 +130,7 @@ SECTION "Doors and Ledges", ROMX
 INCLUDE "engine/overworld/auto_movement.asm"
 INCLUDE "engine/overworld/doors.asm"
 INCLUDE "engine/overworld/ledges.asm"
+INCLUDE "engine/overworld/bike_shortcut.asm"
 
 
 SECTION "Pokémon Names", ROMX

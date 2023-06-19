@@ -6,7 +6,7 @@ TryRideBike::
 	ld [wPseudoItemID],a
 	ld [wd11e],a ; store item ID for GetItemName
 	call GetItemName
-	call CopyStringToCF4B ; copy name to wcf4b
+	call CopyToStringBuffer ; copy name to wStringBuffer
 .tryForBike
 	ld b,BICYCLE
 	call IsItemInBag
@@ -36,8 +36,8 @@ TryRideBike::
 	ret
 
 TextNoBike:
-	TX_FAR _NoBicycleText1
-	db "@"
+	text_far _NoBicycleText1
+	text_end
 
 EnableBikeShortcutText: ; Gets everything setup to let you display text properly
 	call EnableAutoTextBoxDrawing
@@ -47,6 +47,6 @@ EnableBikeShortcutText: ; Gets everything setup to let you display text properly
 	ret
 
 CloseBikeShortcutText: ; Closes the text out properly to prevent glitches
-	ld a,[H_LOADEDROMBANK]
+	ld a,[hLoadedROMBank]
 	push af
 	jp CloseTextDisplay

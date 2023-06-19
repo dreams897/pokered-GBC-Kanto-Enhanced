@@ -26,7 +26,7 @@ _DisplayRepelWoreOffText::
 	ld a, b
 	ld [wd11e], a
 	call GetItemName
-	call CopyStringToCF4B
+	call CopyToStringBuffer
 	ld hl, UseAnotherText
 	call PrintText
 	call YesNoChoice
