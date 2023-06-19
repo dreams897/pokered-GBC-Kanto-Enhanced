@@ -32,7 +32,7 @@ Route2Tree3:
 	
 Route2Tree4:
 	text_asm
-	ld a, 3
+	ld a, 12
 	ld [wWhichTrade],a
 	callfar BerryTreeScript
 	jp TextScriptEnd
