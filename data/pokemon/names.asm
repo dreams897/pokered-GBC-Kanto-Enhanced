@@ -41,7 +41,7 @@ MonsterNames::
 	db "Graveler@@"
 	db "Chansey@@@"
 	db "Machoke@@@"
-	db "MR.MIME@@@"
+	db "Mr.Mime@@@"
 	db "Hitmonlee@"
 	db "Hitmonchan"
 	db "Arbok@@@@@"
