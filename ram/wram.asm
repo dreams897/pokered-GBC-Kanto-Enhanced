@@ -1141,6 +1141,10 @@ wWalkCounter:: db
 ; background tile number in front of the player (either 1 or 2 steps ahead)
 wTileInFrontOfPlayer:: db
 
+wShinyMonFlag::
+; Bit 0 is set if the mon should be Shiny.
+; Bit 1 is set for enemy mon animation, reset for player mon animation
+
 wGenderTemp::
 ; temporary buffer used when checking/displaying a Pokemon's gender
 	ds 9

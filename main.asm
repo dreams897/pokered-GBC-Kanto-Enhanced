@@ -105,6 +105,8 @@ INCLUDE "color/status_screen.asm"
 IF GEN_2_GRAPHICS
 EXPBarGraphics:  INCBIN "gfx/gs/exp_bar.2bpp"
 EXPBarGraphicsEnd:
+ShinySparkleGraphics: INCBIN "gfx/battle/shiny_sparkle.2bpp"
+EXPBarShinySparkleGraphicsEnd:
 ENDC
 
 
@@ -282,6 +284,173 @@ INCLUDE "engine/battle/move_effects/one_hit_ko.asm"
 SECTION "Diploma", ROMX
 
 INCLUDE "engine/events/diploma.asm"
+
+IsMonShiny:
+; Input: de = address in RAM for DVs
+; Reset zero flag if mon is shiny
+; 1 in 1024 wild Pokémon is shiny.
+
+	ld h, d
+	ld l, e
+
+; Attack must be odd (1, 3, 5, 7, 9, 11, 13, or 15) (1 in 2)
+	ld a, [hl]
+	and 1 << 4
+	jr z, .NotShiny
+
+; Defense must be 2, 3, 7, or 11 (1 in 4)
+	ld a, [hli]
+	and $f
+	cp 2
+	jr z, .MaybeShiny1
+	cp 3
+	jr z, .MaybeShiny1
+	cp 7
+	jr z, .MaybeShiny1
+	cp 11
+	jr nz, .NotShiny
+
+; Speed must be 5 or 13 (1 in 8)
+.MaybeShiny1
+	ld a, [hl]
+	and $f << 4
+	cp 5 << 4
+	jr z, .MaybeShiny2
+	cp 13 << 4
+	jr nz, .NotShiny
+
+; Special must be 15 (1 in 16)
+.MaybeShiny2
+	ld a, [hl]
+	and $f
+	cp 15
+	jr nz, .NotShiny
+
+.Shiny
+	; set zero flag
+	and a ; a cannot be 0, so zero flag is set with thing command
+	ret
+.NotShiny
+	; reset zero flag
+	xor a
+	ret
+
+EvolutionSetWholeScreenPalette_:
+	; check if evolving mon is shiny
+	ld hl, wShinyMonFlag
+	res 0, [hl]
+	ld b, Bank(IsMonShiny)
+	ld hl, IsMonShiny
+	push de
+	ld de, wLoadedMonDVs
+	call Bankswitch
+	pop de
+	jr z, .setPAL
+	ld hl, wShinyMonFlag
+	set 0, [hl]
+.setPAL
+	ld c, d
+	ld b, SET_PAL_POKEMON_WHOLE_SCREEN
+	jp RunPaletteCommand
+
+PlayShinySparkleAnimation:
+	; flash the screen
+	ld a, [rBGP]
+	push af
+	ld a,%00011011 ; 0, 1, 2, 3 (inverted colors)
+	ld [rBGP],a
+	ld c,4
+	call DelayFrames
+	pop af
+	ld [rBGP],a ; restore initial palette
+	; play animation
+	ld b, $b + 1
+.loop
+	dec b
+	jr z,.animationFinished
+	ld c, ((ShinySparkleCoordsEnd - ShinySparkleCoords) / 3) + 1
+	ld a, [wShinyMonFlag]
+	bit 1, a
+	ld de,ShinySparkleCoords
+	jr z, .ok
+	ld de,EnemyShinySparkleCoords
+.ok
+	ld hl,wShadowOAM
+.innerLoop
+	dec c
+	jr z,.delayFrames
+	ld a, [de]
+	cp b
+	jr c, .sparkleInactive
+	sub b
+	cp 4
+	jr nc, .sparkleInactive
+	push bc
+	ld b, a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, $C9 ; first sparkle tile
+	add 3
+	sub b
+	ld [hli], a
+	xor a
+	ld [hli], a
+	pop bc
+	jr .innerLoop
+.sparkleInactive
+	inc de
+	inc de
+	inc de
+	xor a
+	ld [hli], a
+	ld [hli], a
+	ld [hli], a
+	ld [hli], a
+	jr .innerLoop
+.delayFrames
+	push bc
+	ld c,2
+	call DelayFrames
+	ld a, SFX_SILPH_SCOPE
+	call PlaySound
+	pop bc
+	jr .loop
+.animationFinished
+	xor a
+	ld hl, wShadowOAM
+	ld bc, 4 * ((ShinySparkleCoordsEnd - ShinySparkleCoords) / 3)
+	jp FillMemory
+
+ShinySparkleCoords:
+; First byte is the frame where the animation starts (higher = sooner)
+; Second and third bytes are y/x coordinates
+	db $0B, 70, 48
+	db $0A, 75, 60
+	db $09, 86, 64
+	db $08, 99, 60
+	db $07, 103, 48
+	db $06, 99, 36
+	db $05, 86, 30
+	db $04, 75, 36
+ShinySparkleCoordsEnd:
+
+EnemyShinySparkleCoords:
+; First byte is the frame where the animation starts (higher = sooner)
+; Second and third bytes are y/x coordinates
+	db $0B, 70 - 48, 48 + 80
+	db $0A, 75 - 48, 60 + 80
+	db $09, 86 - 48, 64 + 80
+	db $08, 99 - 48, 60 + 80
+	db $07, 103 - 48, 48 + 80
+	db $06, 99 - 48, 36 + 80
+	db $05, 86 - 48, 30 + 80
+	db $04, 75 - 48, 36 + 80
+EnemyShinySparkleCoordsEnd:
 
 
 SECTION "Trainer Sight", ROMX
