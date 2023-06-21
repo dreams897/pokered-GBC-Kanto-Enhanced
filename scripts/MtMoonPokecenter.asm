@@ -43,6 +43,9 @@ MagikarpSalesmanText:
 	ld hl, .NoMoneyText
 	jr .printText
 .enoughMoney
+	; this Magikarp is shiny
+	ld hl, wExtraFlags
+	set 0, [hl]
 	lb bc, MAGIKARP, 5
 	call GivePokemon
 	jr nc, .done

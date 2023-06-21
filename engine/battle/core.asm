@@ -101,6 +101,18 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 	inc a
 	ldh [hAutoBGTransferEnabled], a
 	call Delay3
+	; is mon shiny?
+	ld b, Bank(IsMonShiny)
+	ld hl, IsMonShiny
+	ld de, wEnemyMonDVs
+	call Bankswitch
+	ld hl, wShinyMonFlag
+	jr nz, .shiny
+	res 0, [hl]
+	jr .setPAL
+.shiny
+	set 0, [hl]
+.setPAL
 	call HideSprites
 	ld b, SET_PAL_BATTLE_AFTER_BLACK
 	call RunPaletteCommand
@@ -1445,6 +1457,18 @@ EnemySendOutFirstMon:
 	ldh [hStartTileID], a
 	hlcoord 15, 6
 	predef AnimateSendingOutMon
+	; is mon shiny, play animation
+	ld b, Bank(IsMonShiny)
+	ld hl, IsMonShiny
+	ld de, wEnemyMonDVs
+	call Bankswitch
+	jr z, .playCry
+	ld hl, wShinyMonFlag
+	set 1, [hl]
+	ld hl, PlayShinySparkleAnimation
+	ld b, Bank(PlayShinySparkleAnimation)
+	call Bankswitch
+.playCry
 	ld a, [wEnemyMonSpecies2]
 	call PlayCry
 	call DrawEnemyHUDAndHPBar
@@ -1775,6 +1799,18 @@ SendOutMon:
 	call PlayMoveAnimation
 	hlcoord 4, 11
 	predef AnimateSendingOutMon
+	; is mon is shiny, play animation
+	ld b, Bank(IsMonShiny)
+	ld hl, IsMonShiny
+	ld de, wBattleMonDVs
+	call Bankswitch
+	jr z, .playCry
+	ld hl, wShinyMonFlag
+	res 1, [hl]
+	ld hl, PlayShinySparkleAnimation
+	ld b, Bank(PlayShinySparkleAnimation)
+	call Bankswitch
+.playCry
 	ld a, [wcf91]
 	call PlayCry
 	call PrintEmptyString
@@ -1840,11 +1876,13 @@ DrawPlayerHUDAndHPBar:
 IF GEN_2_GRAPHICS
 	call PlaceString ; Note: "CenterMonName" not called to be consistent with gen 2
 	call PrintPlayerMonGender
+	call PrintPlayerMonShiny
 	call PrintEXPBarAt1711
 ELSE
 	call CenterMonName
 	call PlaceString
 	call PrintPlayerMonGender
+	call PrintPlayerMonShiny
 ENDC
 	ld hl, wBattleMonSpecies
 	ld de, wLoadedMon
@@ -1906,6 +1944,7 @@ DrawEnemyHUDAndHPBar:
 	call CenterMonName
 	call PlaceString
 	call PrintEnemyMonGender
+	call PrintEnemyMonShiny
 IF GEN_2_GRAPHICS
 	hlcoord 6, 1
 ELSE
@@ -6156,6 +6195,18 @@ LoadEnemyMonData:
 	ld a, ATKDEFDV_TRAINER
 	ld b, SPDSPCDV_TRAINER
 	jr z, .storeDVs
+; forced shiny wildmon DVs
+	call BattleRandom
+	bit 0, a
+	ld a, ATKDEFDV_SHINY
+	jr z, .go_ahead
+	ld a, ATKDEFDV_SHINY_FEMALE
+.go_ahead
+	ld b, SPDSPCDV_SHINY
+	ld hl, wExtraFlags
+	bit 0, [hl]
+	res 0, [hl]
+	jr nz, .storeDVs
 ; random DVs for wild mon
 	call BattleRandom
 	ld b, a
@@ -7348,6 +7399,30 @@ PrintGenderCommon: ; used by both routines
 	ld a, "♂"
 	ret
 .noGender
+	ld a, " "
+	ret
+	
+PrintEnemyMonShiny: ; show shiny symbol beside gender symbol
+	; check if mon is shiny
+	ld de, wEnemyMonDVs
+	call PrintShinyCommon
+	coord hl, 10, 1
+	ld [hl], a
+	ret
+
+PrintPlayerMonShiny: ; show shiny symbol beside gender symbol
+	; check if mon is shiny
+	ld de, wBattleMonDVs
+	call PrintShinyCommon
+	coord hl, 18, 8
+	ld [hl], a
+	ret
+
+PrintShinyCommon: ; used by both routines
+	farcall IsMonShiny
+	ld a, "[SHINY]"
+	ret nz
+	; else, it's normal
 	ld a, " "
 	ret
 

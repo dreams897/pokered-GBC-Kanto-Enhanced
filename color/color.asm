@@ -78,49 +78,114 @@ SetPal_Battle:
 	ret
 
 SetPal_Battle_Common:
-	ld a, [wPlayerBattleStatus3]
-	bit TRANSFORMED, a
-	jr z, .getBattleMonPal
+	ld hl, wShinyMonFlag
+	res 0, [hl]
+	ld a, [wBattleMonSpecies]
+	and a
+	jr z, .getPALID
+	; is mon shiny?
+	ld b, BANK(IsMonShiny)
+	ld hl, IsMonShiny
+	ld de, wBattleMonDVs
+	call Bankswitch
+	jr z, .getPALID
+	ld hl, wShinyMonFlag
+	set 0, [hl]
+.getPALID
+ 	ld a, [wPlayerBattleStatus3]
+	bit TRANSFORMED,a
+	jr z,.getBattleMonPal
 
-	; If transformed, don't trust the "DetermineBackSpritePaletteID" function.
-	ld a, $02
-	ldh [rSVBK], a
-	ld a, [W2_BattleMonPalette]
-	ld b, a
+	; If transformed, don't trust the "DeterminePaletteIDBack" function.
+	ld a,$02
+	ld [rSVBK],a
+	ld a,[W2_BattleMonPalette]
+	ld b,a
 	xor a
-	ldh [rSVBK], a
-	jr .getEnemyMonPal
+	ld [rSVBK],a
+	jr .loadPlayerPal
 
 .getBattleMonPal
 	ld a, [wBattleMonSpecies]        ; player Pokemon ID
 	call DetermineBackSpritePaletteID
+	ld d, a
+
+.loadPlayerPal
+	; Save ID
+	ld a, [wBattleMonSpecies]
 	ld b, a
 
-.getEnemyMonPal
-	ld a, [wEnemyMonSpecies2]         ; enemy Pokemon ID (without transform effect?)
-	call DeterminePaletteID
-	ld c, a
-
-	ld a, $02
-	ldh [rSVBK], a
+	ld a,$02
+	ld [rSVBK],a
 
 	; Save the player mon's palette in case it transforms later
-	ld a, b
-	ld [W2_BattleMonPalette], a
+	ld a,d
+	ld [W2_BattleMonPalette],a
 
 	; Player palette
-	push bc
-	ld d, b
-	ld e, 0
+	ld a,b
+	ld e,0
+	and a
+	jr z, .loadTrainerPal
+	ld a, [wShinyMonFlag]
+	bit 0, a
+	jr z, .notShiny
+	farcall LoadShinyPokemonPalette
+	jr .getEnemyMonPal
+.notShiny
 	farcall LoadSGBPalette
+	jr .getEnemyMonPal
+.loadTrainerPal
+	farcall LoadSGBPalette
+
+.getEnemyMonPal
+	xor a
+	ld [rSVBK],a
+
+	ld hl, wShinyMonFlag
+	res 0, [hl]
+	ld a, [wEnemyMonSpecies2]
+	and a
+	jr z, .getPALID2
+	; is mon shiny?
+	ld b, BANK(IsMonShiny)
+	ld hl, IsMonShiny
+	ld de, wEnemyMonDVs
+	call Bankswitch
+	jr z, .getPALID2
+	ld hl, wShinyMonFlag
+	set 0, [hl]
+.getPALID2
+
+	ld a, [wEnemyMonSpecies2]         ; enemy Pokemon ID (without transform effect?)
+	call DeterminePaletteID
+	ld d, a
+
+	; Save ID
+	ld a, [wEnemyMonSpecies2]
+	ld b, a
+
+	ld a,$02
+	ld [rSVBK],a
 
 	; Enemy palette
-	pop bc
-	ld d, c
-	ld e, 1
+	ld a,b
+	ld e,1
+	and a
+	jr z, .loadTrainerPal2
+	ld a, [wShinyMonFlag]
+	bit 0, a
+	jr z, .notShiny2
+	farcall LoadShinyPokemonPalette
+	jr .loadLifebarPal
+.notShiny2
 	farcall LoadSGBPalette
-
+	jr .loadLifebarPal
+.loadTrainerPal2
+	farcall LoadSGBPalette
+	
 	; Player lifebar
+.loadLifebarPal
 	ld a, [wPlayerHPBarColor]
 	add PAL_GREENBAR
 	ld d, a
@@ -267,6 +332,7 @@ SetPal_TownMap:
 	ret
 
 ; Status screen
+; [wShinyMonFlag] must be appropriately set before this is called
 SetPal_StatusScreen:
 	ld a, [wcf91]
 	cp NUM_POKEMON_INDEXES + 1
@@ -296,9 +362,16 @@ ENDC
 
 	; Load pokemon palette
 	pop af
-	ld d, a
-	ld e, 0
+	ld d,a
+	ld e,0
+	ld a, [wShinyMonFlag]
+	bit 0, a
+	jr z, .notShiny
+	farcall LoadShinyPokemonPalette
+	jr .afterMon
+.notShiny
 	farcall LoadSGBPalette
+.afterMon
 
 
 	; Set palette map
@@ -713,6 +786,8 @@ SetPal_PartyMenu:
 ; 0: calculate palette based on loaded pokemon
 ; 1: make palettes black
 ; 2: previously used during trades, now unused.
+;
+; [wShinyMonFlag] must be appropriately set before this is called
 SetPal_PokemonWholeScreen:
 	ld a, c
 	dec a
@@ -727,12 +802,19 @@ SetPal_PokemonWholeScreen:
 	call DetermineBackSpritePaletteID
 
 .loadPalette
-	ld d, a
-	ld a, 2
-	ldh [rSVBK], a
+	ld d,a
+	ld a,2
+	ld [rSVBK],a
 
-	ld e, 0
+	ld e,0
+	ld a, [wShinyMonFlag]
+	bit 0, a
+	jr z, .notShiny
+	farcall LoadShinyPokemonPalette
+	jr .afterMon
+.notShiny
 	farcall LoadSGBPalette
+.afterMon
 
 	ld d, PAL_MEWMON
 	ld e, 1

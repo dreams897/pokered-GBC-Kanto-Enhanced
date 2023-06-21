@@ -55,5 +55,29 @@ startPaletteTransfer:
 	pop af
 	ldh [rSVBK], a
 	ret
+	
+LoadPokemonPalette:
+	ld hl, PokemonPaletteTable
+	jr LoadSGBPalette
+
+LoadShinyPokemonPalette:
+	ld hl, ShinyPokemonPaletteTable
+	jr LoadSGBPalette
+
+LoadTrainerPalette:
+	ld hl, TrainerPaletteTable
+	;jr LoadSGBPalette
+	
+LoadPokemonPalette_Sprite:
+	ld hl, PokemonPaletteTable
+	jr LoadSGBPalette_Sprite
+
+LoadShinyPokemonPalette_Sprite:
+	ld hl, ShinyPokemonPaletteTable
+	jr LoadSGBPalette_Sprite
+
+LoadTrainerPalette_Sprite:
+	ld hl, TrainerPaletteTable
+	;jr LoadSGBPalette_Sprite
 
 INCLUDE "data/sgb/sgb_palettes.asm"

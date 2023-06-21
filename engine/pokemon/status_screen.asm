@@ -128,6 +128,18 @@ ENDC
 	predef DrawHP
 	ld hl, wStatusScreenHPBarColor
 	call GetHealthBarColor
+	; is mon supposed to be shiny?
+	ld b, Bank(IsMonShiny)
+	ld hl, IsMonShiny
+	ld de, wLoadedMonDVs
+	call Bankswitch
+	ld hl, wShinyMonFlag
+	jr nz, .shiny
+	res 0, [hl]
+	jr .setPAL
+.shiny
+	set 0, [hl]
+.setPAL
 	ld b, SET_PAL_STATUS_SCREEN
 	call StatusScreenHook ; HAX: Draws EXP bar if GEN_2_GRAPHICS is set
 	hlcoord 16, 6
@@ -169,6 +181,7 @@ ENDC
 	ld de, wLoadedMonOTID
 	lb bc, LEADING_ZEROES | 2, 5
 	call PrintNumber ; ID Number
+	call PrintShinySymbol
 	ld a, [wLoadedMonSpecies]
 	ld [wGenderTemp], a
 	call PrintGenderStatusScreen
@@ -250,6 +263,19 @@ DrawLineBox:
 	dec c
 	jr nz, .PrintHorizLine
 	ld [hl], $6f ; ← (halfarrow ending)
+	ret
+	
+PrintShinySymbol:
+	; check if mon is shiny
+	ld b, Bank(IsMonShiny)
+	ld hl, IsMonShiny
+	ld de, wLoadedMonDVs
+	call Bankswitch
+	ret z
+	; draw the shiny symbol
+	coord hl, 0, 0
+	ld a, "[SHINY]"
+	ld [hl], a
 	ret
 	
 PrintGenderStatusScreen: ; called on status screen
