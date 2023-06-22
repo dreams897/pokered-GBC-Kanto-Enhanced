@@ -12,23 +12,21 @@ ENDC
 GetRedPalID:
 	call ClearScreen
 IF GEN_2_GRAPHICS
-	ld a, [wPlayerGender]
-	and a
-	jr z, .male
-	cp a, $02
-	jr z, .AreEnby
-	ld a, PAL_GREEN
-	jr .ContinueWithLoading
-.AreEnby
-	ld a, PAL_ORANGE
+        ld a, [wPlayerGender]
+        and a ; equivalent to cp 0, but faster
+        jr z, .male
+        cp 1 ; check if female
+        jr z, .female
+        ld a, PAL_ORANGE
+        jr .continue
 .male
-	ld a, PAL_RED
-ELSE
-	ld a, PAL_REDMON
-ENDC
+        ld a, PAL_RED
+        jr .continue
 .female
-.ContinueWithLoading
-	jr GotPalID
+        ld a, PAL_GREEN
+ENDC
+.continue
+    jr GotPalID
 
 GetRivalPalID:
 	call ClearScreen
