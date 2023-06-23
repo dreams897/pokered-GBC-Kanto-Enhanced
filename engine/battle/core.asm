@@ -6406,11 +6406,11 @@ LoadPlayerBackPic:
 	and a
 	jr z, .RedBack
 	cp a, 2			; check if enby
-	jr z, .OrangeBack
+	jr z, .PurpleBack
 	ld de, GreenPicBack
 	jr .next
-.OrangeBack
-	ld de, OrangePicBack
+.PurpleBack
+	ld de, PurplePicBack
 	jr .next
 .RedBack
 	ld de, RedPicBack
@@ -6418,7 +6418,7 @@ LoadPlayerBackPic:
 	ld a, BANK(RedPicBack)
 	ASSERT BANK(RedPicBack) == BANK(OldManPicBack)
 	ASSERT BANK(GreenPicBack) == BANK(OldManPicBack)
-	ASSERT BANK(OrangePicBack) == BANK(OldManPicBack)
+	ASSERT BANK(PurplePicBack) == BANK(OldManPicBack)
 	call UncompressSpriteFromDE
 	
 IF GEN_2_GRAPHICS

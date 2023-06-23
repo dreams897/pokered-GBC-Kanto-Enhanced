@@ -15,7 +15,7 @@ DefaultNamesGirl:
 
 DefaultNamesEnby:
 	db   "New Name"
-	next "Orange"
+	next "Purple"
 	next "Ace"
 	next "West"
 	db   "@"
@@ -45,7 +45,7 @@ DefaultNamesGirl:
 
 DefaultNamesEnby:
 	db   "New Name"
-	next "Orange"
+	next "Purple"
 	next "Ace"
 	next "West"
 	db   "@"

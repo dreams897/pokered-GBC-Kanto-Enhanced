@@ -66,8 +66,8 @@ SpriteSheetPointerTable:
 	overworld_sprite LoreleiSprite, 12          ; SPRITE_LORELEI		; $3a
 	overworld_sprite GreenSprite, 12            ; SPRITE_GREEN		; $43
 	overworld_sprite GreenBikeSprite, 12	    ; SPRITE_GREEN_BIKE
-	overworld_sprite OrangeSprite, 12           ; SPRITE_ORANGE		; $49
-	overworld_sprite OrangeBikeSprite, 12       ; SPRITE_ORANGE_BIKE	; $49
+	overworld_sprite PurpleSprite, 12           ; SPRITE_PURPLE		; $49
+	overworld_sprite PurpleBikeSprite, 12       ; SPRITE_PURPLE_BIKE	; $49
 	overworld_sprite BillSprite, 12             ; SPRITE_BILL		; $3c
 	overworld_sprite BlaineSprite, 12           ; SPRITE_BLAINE		; $3d
 	overworld_sprite BrockSprite, 12            ; SPRITE_BROCK		; $3f

@@ -390,9 +390,9 @@ FishingAnim:
 	ld bc, (BANK(GreenSprite) << 8) + $0c
 	jr .KeepLoadingSpriteStuff
 .EnbySpriteLoad
-	ld de, OrangeSprite
+	ld de, PurpleSprite
 	ld hl, vNPCSprites
-	ld bc, (BANK(OrangeSprite) << 8) + $0c
+	ld bc, (BANK(PurpleSprite) << 8) + $0c
 	jr .KeepLoadingSpriteStuff
 .BoySpriteLoad
 	ld de, RedSprite
@@ -410,8 +410,8 @@ FishingAnim:
 	jr .ContinueRoutine ; go back to main routine after loading Green's stuff
 .EnbyTiles
 	ld a, $4
-	ld hl, OrangeFishingTiles
-	jr .ContinueRoutine ; go back to main routine after loading Orange's stuff
+	ld hl, PurpleFishingTiles
+	jr .ContinueRoutine ; go back to main routine after loading Purple's stuff
 .BoyTiles ; alternately, load Red's stuff
 	ld a, $4
 	ld hl, RedFishingTiles
@@ -522,10 +522,10 @@ GreenFishingTiles:
 	fishing_gfx GreenFishingTilesBack,  2, $06
 	fishing_gfx GreenFishingTilesSide,  2, $0a
 	fishing_gfx RedFishingRodTiles,     3, $fd
-OrangeFishingTiles:
-	fishing_gfx OrangeFishingTilesFront, 2, $02
-	fishing_gfx OrangeFishingTilesBack,  2, $06
-	fishing_gfx OrangeFishingTilesSide,  2, $0a
+PurpleFishingTiles:
+	fishing_gfx PurpleFishingTilesFront, 2, $02
+	fishing_gfx PurpleFishingTilesBack,  2, $06
+	fishing_gfx PurpleFishingTilesSide,  2, $0a
 	fishing_gfx RedFishingRodTiles,      3, $fd
 
 _HandleMidJump::

@@ -17,7 +17,7 @@ IF GEN_2_GRAPHICS
         jr z, .male
         cp 1 ; check if female
         jr z, .female
-        ld a, PAL_ORANGE
+        ld a, PAL_PURPLE
         jr .continue
 .male
         ld a, PAL_RED

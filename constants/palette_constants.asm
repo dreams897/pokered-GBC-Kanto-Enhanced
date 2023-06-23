@@ -274,7 +274,7 @@ IF GEN_2_GRAPHICS
 	const PAL_LANCE         ; $EA
 	const PAL_RED           ; $EB
 	const PAL_GREEN
-	const PAL_ORANGE
+	const PAL_PURPLE
 	const PAL_JESSIE	; $EC
 	const PAL_JAMES		; $ED
 	const PAL_SHINY_BULBASAUR  ; $25

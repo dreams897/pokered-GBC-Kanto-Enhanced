@@ -97,14 +97,14 @@ ENDC
 	and a      				; check gender - and a is equivalent to `cp a, 0` (but faster)
 						; if a=0->gender=male, ergo jump to the vanilla part of the code
 	jr z, .ContinueWithOakIntro1
-	cp a, 2					; check gender: if a=2->gender=enby, jump to the Orange subroutine, otherwise continue below
-	jp z, .LoadOrangePicFront1
+	cp a, 2					; check gender: if a=2->gender=enby, jump to the Purple subroutine, otherwise continue below
+	jp z, .LoadPurplePicFront1
 	ld de, GreenPicFront
 	lb bc, BANK(GreenPicFront), $00
 	jr .ContinueWithOakIntro1
-.LoadOrangePicFront1
-	ld de, OrangePicFront
-	lb bc, BANK(OrangePicFront), $00
+.LoadPurplePicFront1
+	ld de, PurplePicFront
+	lb bc, BANK(PurplePicFront), $00
 .ContinueWithOakIntro1:
 	call IntroDisplayPicCenteredOrUpperRight
 	call MovePicLeft
@@ -129,13 +129,13 @@ ENDC
 	and a      ; check gender -> if male, jump to vanilla code
 	jr z, .ContinueWithOakIntro2
 	cp a, 2
-	jp z, .LoadOrangePicFront2
+	jp z, .LoadPurplePicFront2
 	ld de, GreenPicFront
 	lb bc, BANK(GreenPicFront), $00
 	jr .ContinueWithOakIntro2
-.LoadOrangePicFront2
-	ld de, OrangePicFront
-	lb bc, BANK(OrangePicFront), $00
+.LoadPurplePicFront2
+	ld de, PurplePicFront
+	lb bc, BANK(PurplePicFront), $00
 .ContinueWithOakIntro2:
 	call IntroDisplayPicCenteredOrUpperRight
 	call GBFadeInFromWhite
@@ -168,13 +168,13 @@ ENDC
 	and a      ; check gender -> if male, jump to vanilla code
 	jr z, .ContinueWithOakIntro3
 	cp a, 2
-	jp z, .LoadOrangePicFront3
+	jp z, .LoadPurplePicFront3
 	ld de, GreenSprite
 	lb bc, BANK(GreenSprite), $0C
 	jr .ContinueWithOakIntro3
-.LoadOrangePicFront3
-	ld de, OrangeSprite
-	lb bc, BANK(OrangeSprite), $0C
+.LoadPurplePicFront3
+	ld de, PurpleSprite
+	lb bc, BANK(PurpleSprite), $0C
 .ContinueWithOakIntro3:
 	ld hl,vSprites
 	call CopyVideoData

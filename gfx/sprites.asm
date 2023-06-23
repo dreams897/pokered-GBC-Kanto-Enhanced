@@ -74,8 +74,8 @@ BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
 GreenSprite::            INCBIN "gfx/sprites/green.2bpp"
 GreenBikeSprite::	 INCBIN "gfx/sprites/green_bike.2bpp"
-OrangeSprite::		 INCBIN "gfx/sprites/orange.2bpp"
-OrangeBikeSprite::	 INCBIN "gfx/sprites/orange_bike.2bpp"
+PurpleSprite::		 INCBIN "gfx/sprites/purple.2bpp"
+PurpleBikeSprite::	 INCBIN "gfx/sprites/purple_bike.2bpp"
 
 SECTION "NPC Sprites 3", ROMX
 

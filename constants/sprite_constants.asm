@@ -61,8 +61,8 @@
 	const SPRITE_LORELEI                 ; $3b
 	const SPRITE_GREEN		     ; $43
 	const SPRITE_GREEN_BIKE
-	const SPRITE_ORANGE		     ; $49
-	const SPRITE_ORANGE_BIKE
+	const SPRITE_PURPLE		     ; $49
+	const SPRITE_PURPLE_BIKE
 	
 ; ; New walking sprites added here
 	const SPRITE_BILL		     ; $3d

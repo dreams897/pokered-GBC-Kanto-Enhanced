@@ -2030,7 +2030,7 @@ LoadWalkingPlayerSpriteGraphics::
 	ld de, GreenSprite
 	jr .ContinueLoadSprites1
 .AreEnby1
-	ld de, OrangeSprite
+	ld de, PurpleSprite
 .ContinueLoadSprites1
 	ld hl, vNPCSprites
 	jr LoadPlayerSpriteGraphicsCommon
@@ -2050,7 +2050,7 @@ LoadBikePlayerSpriteGraphics::
 	ld de, GreenBikeSprite
 	jr .ContinueLoadSprites2
 .AreEnby2
-	ld de, OrangeBikeSprite
+	ld de, PurpleBikeSprite
 .ContinueLoadSprites2
 	ld hl, vNPCSprites
 

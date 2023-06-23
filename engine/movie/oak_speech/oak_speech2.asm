@@ -53,13 +53,13 @@ ChoosePlayerName:
 	and a      ; Added gender check
 	jr z, .ContinueWithRoutine
 	cp a, $02
-	jr z, .LoadOrangePicFront
+	jr z, .LoadPurplePicFront
 	ld de, GreenPicFront
 	ld b, BANK(GreenPicFront)
 	jr .ContinueWithRoutine
-.LoadOrangePicFront
-	ld de, OrangePicFront
-	ld b, BANK(OrangePicFront)
+.LoadPurplePicFront
+	ld de, PurplePicFront
+	ld b, BANK(PurplePicFront)
 .ContinueWithRoutine
 	call IntroDisplayPicCenteredOrUpperRight
 .done

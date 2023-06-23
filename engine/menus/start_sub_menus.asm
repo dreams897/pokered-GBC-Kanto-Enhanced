@@ -487,8 +487,8 @@ DrawTrainerInfo:
 	lb bc, BANK(GreenPicFront), $01
 	jr .ContinueWithLoading
 .AreEnby
-	ld de, OrangePicFront
-	lb bc, BANK(OrangePicFront), $01
+	ld de, PurplePicFront
+	lb bc, BANK(PurplePicFront), $01
 .ContinueWithLoading
 	predef DisplayPicCenteredOrUpperRight
 	call DisableLCD

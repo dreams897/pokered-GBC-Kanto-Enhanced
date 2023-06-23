@@ -192,8 +192,8 @@ HoFLoadPlayerPics:
 	ld a, BANK(GreenPicFront)
 	jr .Routine ; skip the enby and boy stuff and go to main routine1
 .EnbyStuff1
-	ld de, OrangePicFront
-	ld a, BANK(OrangePicFront)
+	ld de, PurplePicFront
+	ld a, BANK(PurplePicFront)
 	jr .Routine ; skip the boy stuff and go to main routine1
 .BoyStuff1
 	ld de, RedPicFront
@@ -215,8 +215,8 @@ HoFLoadPlayerPics:
 	ld a, BANK(GreenPicBack)
 	jr .Routine2 ; skip the enby and boy stuff and go to the main routine2
 .EnbyStuff2
-	ld de, OrangePicBack
-	ld a, BANK(OrangePicBack)
+	ld de, PurplePicBack
+	ld a, BANK(PurplePicBack)
 	jr .Routine2 ; skip the boy stuff and go to the main routine2
 .BoyStuff2
 	ld de, RedPicBack

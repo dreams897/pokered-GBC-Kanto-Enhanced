@@ -14,7 +14,7 @@ DefaultNamesGirlList:
 
 DefaultNamesEnbyList:
 	db "New Name@"
-	db "Orange@"
+	db "Purple@"
 	db "Ace@"
 	db "West@"
 	db   "@"
@@ -42,7 +42,7 @@ DefaultNamesGirlList:
 
 DefaultNamesEnbyList:
 	db "New Name@"
-	db "Orange@"
+	db "Purple@"
 	db "Ace@"
 	db "West@"
 	db   "@"
