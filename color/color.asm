@@ -96,7 +96,7 @@ SetPal_Battle_Common:
 	bit TRANSFORMED,a
 	jr z,.getBattleMonPal
 
-	; If transformed, don't trust the "DeterminePaletteIDBack" function.
+	; If transformed, don't trust the "DetermineBackSpritePaletteID" function.
 	ld a,$02
 	ld [rSVBK],a
 	ld a,[W2_BattleMonPalette]
@@ -126,7 +126,7 @@ SetPal_Battle_Common:
 	ld a,b
 	ld e,0
 	and a
-	jr z, .loadTrainerPal
+	
 	ld a, [wShinyMonFlag]
 	bit 0, a
 	jr z, .notShiny
@@ -135,8 +135,6 @@ SetPal_Battle_Common:
 .notShiny
 	farcall LoadSGBPalette
 	jr .getEnemyMonPal
-.loadTrainerPal
-	farcall LoadSGBPalette
 
 .getEnemyMonPal
 	xor a
@@ -172,7 +170,6 @@ SetPal_Battle_Common:
 	ld a,b
 	ld e,1
 	and a
-	jr z, .loadTrainerPal2
 	ld a, [wShinyMonFlag]
 	bit 0, a
 	jr z, .notShiny2
@@ -181,9 +178,7 @@ SetPal_Battle_Common:
 .notShiny2
 	farcall LoadSGBPalette
 	jr .loadLifebarPal
-.loadTrainerPal2
-	farcall LoadSGBPalette
-	
+
 	; Player lifebar
 .loadLifebarPal
 	ld a, [wPlayerHPBarColor]
@@ -332,7 +327,6 @@ SetPal_TownMap:
 	ret
 
 ; Status screen
-; [wShinyMonFlag] must be appropriately set before this is called
 SetPal_StatusScreen:
 	ld a, [wcf91]
 	cp NUM_POKEMON_INDEXES + 1
@@ -362,8 +356,8 @@ ENDC
 
 	; Load pokemon palette
 	pop af
-	ld d,a
-	ld e,0
+	ld d, a
+	ld e, 0
 	ld a, [wShinyMonFlag]
 	bit 0, a
 	jr z, .notShiny
@@ -786,8 +780,6 @@ SetPal_PartyMenu:
 ; 0: calculate palette based on loaded pokemon
 ; 1: make palettes black
 ; 2: previously used during trades, now unused.
-;
-; [wShinyMonFlag] must be appropriately set before this is called
 SetPal_PokemonWholeScreen:
 	ld a, c
 	dec a
@@ -802,11 +794,11 @@ SetPal_PokemonWholeScreen:
 	call DetermineBackSpritePaletteID
 
 .loadPalette
-	ld d,a
-	ld a,2
-	ld [rSVBK],a
+	ld d, a
+	ld a, 2
+	ldh [rSVBK], a
 
-	ld e,0
+	ld e, 0
 	ld a, [wShinyMonFlag]
 	bit 0, a
 	jr z, .notShiny
@@ -931,18 +923,10 @@ SetPal_TrainerCard:
 
 	; Red's palette
 IF GEN_2_GRAPHICS
-	pop bc
-	ld a, b
-	and a
-	jr z, .male
-	ld d, PAL_GREEN
-	jr .female
-.male
 	ld d, PAL_RED
 ELSE
 	ld d, PAL_REDMON
 ENDC
-.female
 	ld e, 4
 	farcall LoadSGBPalette
 
