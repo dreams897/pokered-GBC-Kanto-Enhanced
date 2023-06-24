@@ -8,6 +8,19 @@ PrintBeginningBattleText:
 	cp POKEMON_TOWER_7F + 1
 	jr c, .pokemonTower
 .notPokemonTower
+; play animation if mon is shiny
+	ld b, Bank(IsMonShiny)
+	ld hl, IsMonShiny
+	ld de, wEnemyMonDVs
+	call Bankswitch
+	jr z, .playCry
+	; play shiny animation
+	ld hl, wShinyMonFlag
+	set 1, [hl]
+	ld hl, PlayShinySparkleAnimation
+	ld b, Bank(PlayShinySparkleAnimation)
+	call Bankswitch
+.playCry
 	ld a, [wEnemyMonSpecies2]
 	call PlayCry
 	ld hl, WildMonAppearedText
