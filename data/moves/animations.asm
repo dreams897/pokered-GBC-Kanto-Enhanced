@@ -1145,9 +1145,8 @@ SubstituteAnim:
 	db -1 ; end
 	
 ExtremeSpeedAnim:
-	battle_anim COUNTER, SE_SLIDE_MON_OFF
-	battle_anim TAKE_DOWN, SE_DARK_SCREEN_FLASH
-	battle_anim SWIFT, SUBANIM_1_LEAVES_TOSS, 1, 1
+	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
+	battle_anim TAKE_DOWN, SUBANIM_1_LEAVES_TOSS, 1, 1
 	battle_anim NO_MOVE, SE_RESET_MON_POSITION
 	db -1 ; end
 
