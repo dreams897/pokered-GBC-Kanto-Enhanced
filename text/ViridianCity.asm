@@ -18,7 +18,7 @@ _ViridianCityText_19122::
 	done
 
 _ViridianCityText_19127::
-	text "VIRIDIAN GYM's"
+	text "Viridian GYM's"
 	line "LEADER returned!"
 	done
 
@@ -54,7 +54,7 @@ _ViridianCityText_1917a::
 	line "Pewter City, I"
 	cont "have to take the"
 	cont "winding trail in"
-	cont "VIRIDIAN FOREST."
+	cont "Viridian Forest."
 	done
 
 _ViridianCityText_19191::
@@ -139,7 +139,7 @@ _ViridianCityText_19219::
 	done
 
 _ViridianCityText8::
-	text "VIRIDIAN City "
+	text "Viridian City "
 	line "The Eternally"
 	cont "Green Paradise"
 	done
@@ -171,7 +171,7 @@ _ViridianCityText10::
 	done
 
 _ViridianCityText13::
-	text "VIRIDIAN City"
+	text "Viridian City"
 	line "#MON GYM"
 	done
 

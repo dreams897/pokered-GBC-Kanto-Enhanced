@@ -109,7 +109,7 @@ _GaryText_76125::
 
 	para "I came when I"
 	line "heard you beat"
-	cont "the ELITE FOUR!"
+	cont "the Elite Four!"
 
 	para "But, when I got"
 	line "here, you had"

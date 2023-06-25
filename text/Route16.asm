@@ -14,7 +14,7 @@ _Route16AfterBattleText1::
 	done
 
 _Route16BattleText2::
-	text "Nice BIKE!"
+	text "Nice Bike!"
 	line "Hand it over!"
 	done
 
@@ -25,7 +25,7 @@ _Route16EndBattleText2::
 
 _Route16AfterBattleText2::
 	text "Forget it, who"
-	line "needs your BIKE!"
+	line "needs your Bike!"
 	done
 
 _Route16BattleText3::
@@ -110,7 +110,7 @@ _Route16Text11::
 
 _Route16Text8::
 	text "Enjoy the slope!"
-	line "CYCLING ROAD"
+	line "Cycling Road"
 	done
 
 _Route16Text9::

@@ -21,7 +21,7 @@ _BillsHouseText_1e865::
 
 _BillsHouseText_1e86a::
 	text "When I'm in the"
-	line "TELEPORTER, go to"
+	line "Teleporter, go to"
 	cont "my PC and run the"
 	cont "Cell Separation"
 	cont "System!"
@@ -67,7 +67,7 @@ _SSTicketNoRoomText::
 
 _BillsHouseText_1e8cb::
 	text "That cruise ship,"
-	line "S.S.ANNE, is in"
+	line "S.S. Anne, is in"
 	cont "Vermilion City."
 	cont "Its passengers"
 	cont "are all trainers!"

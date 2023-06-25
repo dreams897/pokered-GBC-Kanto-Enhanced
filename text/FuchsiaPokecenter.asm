@@ -11,7 +11,7 @@ _FuchsiaPokecenterText1::
 _FuchsiaPokecenterText3::
 	text "There's a narrow"
 	line "trail west of"
-	cont "VIRIDIAN City."
+	cont "Viridian City."
 
 	para "It goes to #MON"
 	line "League HQ."

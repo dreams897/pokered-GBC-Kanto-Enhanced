@@ -118,6 +118,6 @@ _ViridianForestText13::
 
 _ViridianForestText14::
 	text "LEAVING"
-	line "VIRIDIAN FOREST"
+	line "Viridian Forest"
 	cont "Pewter City AHEAD"
 	done

@@ -10,7 +10,7 @@ _Route3Text1::
 
 _Route3BattleText1::
 	text "Hey! I met you in"
-	line "VIRIDIAN FOREST!"
+	line "Viridian Forest!"
 	done
 
 _Route3EndBattleText1::

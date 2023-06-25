@@ -197,7 +197,7 @@ _ViridianGymAfterBattleText7::
 	done
 
 _ViridianGymBattleText8::
-	text "VIRIDIAN GYM was"
+	text "Viridian GYM was"
 	line "closed for a long"
 	cont "time, but now our"
 	cont "LEADER is back!"
@@ -220,7 +220,7 @@ _ViridianGymGuidePreBattleText::
 	line "making!"
 
 	para "Even I don't know"
-	line "VIRIDIAN LEADER's"
+	line "Viridian LEADER's"
 	cont "identity!"
 
 	para "This will be the"

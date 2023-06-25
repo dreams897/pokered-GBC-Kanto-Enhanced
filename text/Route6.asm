@@ -38,7 +38,7 @@ _Route6EndBattleText3::
 _Route6AfterBattleText3::
 	text "I like bugs, so"
 	line "I'm going back to"
-	cont "VIRIDIAN FOREST."
+	cont "Viridian Forest."
 	done
 
 _Route6BattleText4::

@@ -11,7 +11,7 @@ _Route17EndBattleText1::
 _Route17AfterBattleText1::
 	text "Good stuff is"
 	line "lying around on"
-	cont "CYCLING ROAD!"
+	cont "Cycling Road!"
 	done
 
 _Route17BattleText2::
@@ -45,7 +45,7 @@ _Route17AfterBattleText3::
 	done
 
 _Route17BattleText4::
-	text "We're BIKERs!"
+	text "We're BikeRs!"
 	line "Highway stars!"
 	done
 
@@ -119,7 +119,7 @@ _Route17AfterBattleText8::
 	done
 
 _Route17BattleText9::
-	text "Nice BIKE!"
+	text "Nice Bike!"
 	line "How's it handle?"
 	done
 
@@ -190,6 +190,6 @@ _Route17Text15::
 	done
 
 _Route17Text16::
-	text "CYCLING ROAD"
+	text "Cycling Road"
 	line "Slope ends here!"
 	done

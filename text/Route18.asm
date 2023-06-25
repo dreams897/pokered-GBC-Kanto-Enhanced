@@ -10,7 +10,7 @@ _Route18EndBattleText1::
 
 _Route18AfterBattleText1::
 	text "I wish I had a"
-	line "BIKE!"
+	line "Bike!"
 	done
 
 _Route18BattleText2::
@@ -52,7 +52,7 @@ _Route18Text4::
 	done
 
 _Route18Text5::
-	text "CYCLING ROAD"
+	text "Cycling Road"
 	line "No pedestrians"
 	cont "permitted!"
 	done

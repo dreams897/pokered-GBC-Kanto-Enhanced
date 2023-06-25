@@ -4,7 +4,7 @@ _IndigoPlateauLobbyText2::
 
 	para "At #MON League,"
 	line "you have to face"
-	cont "the ELITE FOUR in"
+	cont "the Elite Four in"
 	cont "succession."
 
 	para "If you lose, you"

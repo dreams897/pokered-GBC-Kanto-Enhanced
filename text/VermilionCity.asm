@@ -14,7 +14,7 @@ _VermilionCityTextDidYouSee::
 	done
 
 _VermilionCityTextSSAnneDeparted::
-	text "So, S.S.ANNE has"
+	text "So, S.S. Anne has"
 	line "departed!"
 
 	para "She'll be back in"
@@ -39,7 +39,7 @@ _SSAnneFlashedTicketText::
 	line "the S.S.TICKET!"
 
 	para "Great! Welcome to"
-	line "S.S.ANNE!"
+	line "S.S. Anne!"
 	done
 
 _SSAnneNoTicketText::
@@ -79,7 +79,7 @@ _VermilionCityText14::
 	done
 
 _VermilionCityText6::
-	text "S.S.ANNE is a"
+	text "S.S. Anne is a"
 	line "famous luxury"
 	cont "cruise ship."
 
