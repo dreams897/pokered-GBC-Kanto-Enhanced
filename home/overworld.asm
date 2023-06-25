@@ -102,7 +102,12 @@ OverworldLoopLessDelay::
 	call IsSpriteOrSignInFrontOfPlayer
 	ldh a, [hSpriteIndexOrTextID]
 	and a
-	jp z, OverworldLoop
+	jr nz, .displayDialogue
+
+	; Check for field moves that interact with the bg.
+	predef TryFieldMove
+	jp OverworldLoop
+	
 .displayDialogue
 	predef GetTileAndCoordsInFrontOfPlayer
 	call UpdateSprites

@@ -324,6 +324,9 @@ wWhichTradeMonSelectionMenu::
 ; 2 = current box
 ; 3 = daycare
 ; 4 = in-battle mon
+
+wIsTrainerBattle::
+	ds 1
 ;
 ; AddPartyMon uses it slightly differently.
 ; If the lower nybble is 0, the mon is added to the player's party, else the enemy's.
@@ -2084,6 +2087,10 @@ wRoute18Gate1FCurScript:: db
 	ds 6
 wGameProgressFlagsEnd::
 
+wChainHeadbuttStreak::
+wChainFishingStreak::
+	ds 1
+
 wPlayerGender::
 	; $00 = male
 	; $01 = female
@@ -2408,5 +2415,5 @@ ENDC
 SECTION "Stack", WRAM0
 
 ; the stack grows downward
-	ds $84 - 1
+	ds $82 - 1
 wStack:: db

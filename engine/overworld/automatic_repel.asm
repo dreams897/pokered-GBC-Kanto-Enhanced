@@ -63,9 +63,5 @@ _DisplayRepelWoreOffText::
 .done
 	ret
 
-RepelWoreOffText:: ; Moved out of Bank 0
-	TX_FAR _RepelWoreOffText
-	db "@"
-
 UseAnotherText:
 	text "Use another one?@@"

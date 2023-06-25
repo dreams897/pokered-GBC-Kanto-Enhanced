@@ -37,6 +37,7 @@ UsedCut:
 	call GBPalWhiteOutWithDelay3
 	call ClearSprites
 	call RestoreScreenTilesAndReloadTilePatterns
+	call ReloadMapData
 	ld a, SCREEN_HEIGHT_PX
 	ldh [hWY], a
 	call Delay3
@@ -46,6 +47,8 @@ UsedCut:
 	call Delay3
 	xor a
 	ldh [hWY], a
+	
+Cut2:: ; added for Field Move hack
 	ld hl, UsedCutText
 	call PrintText
 	call LoadScreenTilesFromBuffer2
@@ -63,7 +66,7 @@ UsedCut:
 	ld a, SFX_CUT
 	call PlaySound
 	ld a, $90
-	ldh [hWY], a
+	ld [hWY], a
 	call UpdateSprites
 	jp RedrawMapView
 

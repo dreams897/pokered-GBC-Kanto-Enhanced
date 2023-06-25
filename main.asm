@@ -473,6 +473,11 @@ SECTION "Saffron Guards", ROMX
 
 INCLUDE "engine/events/saffron_guards.asm"
 
+SECTION "field moves", ROMX
+INCLUDE "engine/overworld/automatic_repel.asm"
+INCLUDE "engine/overworld/field_moves.asm"
+INCLUDE "engine/overworld/headbutt.asm"
+
 
 SECTION "Starter Dex", ROMX
 
@@ -1138,9 +1143,5 @@ JynxPicFront::        INCBIN "gfx/pokemon/front/jynx.pic"
 JynxPicBack::         INCBIN "gfx/pokemon/back/jynxb.pic"
 MarowakPicFront::     INCBIN "gfx/pokemon/front/marowak.pic"
 MarowakPicBack::      INCBIN "gfx/pokemon/back/marowakb.pic"
-
-
-SECTION "field moves", ROMX
-INCLUDE "engine/overworld/automatic_repel.asm"
 
 ENDC

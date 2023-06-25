@@ -17,6 +17,11 @@ HiddenItems:
 	ld [wd11e], a
 	call GetItemName
 	tx_pre_jump FoundHiddenItemText
+	
+; added for field move hack
+.nope
+	predef TryFieldMove
+	ret
 
 INCLUDE "data/events/hidden_item_coords.asm"
 
