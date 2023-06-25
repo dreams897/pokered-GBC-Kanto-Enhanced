@@ -14,7 +14,7 @@ TrainerNamePointers:
 	dw wTrainerName
 	dw .BurglarName
 	dw .EngineerName
-	dw .UnusedJugglerName
+	dw .SwimmerFemale
 	dw wTrainerName
 	dw .SwimmerName
 	dw wTrainerName
@@ -59,8 +59,8 @@ TrainerNamePointers:
 .SuperNerdName:     db "Super Nerd@"
 .BurglarName:       db "Burglar@"
 .EngineerName:      db "Engineer@"
-.UnusedJugglerName: db "Juggler@"
-.SwimmerName:       db "Swimmer@"
+.SwimmerFemale:     db "Swimmer♀@"
+.SwimmerName:       db "Swimmer♂@"
 .BeautyName:        db "Beauty@"
 .RockerName:        db "Rocker@"
 .JugglerName:       db "Juggler@"

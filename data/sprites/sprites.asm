@@ -84,6 +84,7 @@ SpriteSheetPointerTable:
 	overworld_sprite SabrinaSprite, 12          ; SPRITE_SABRINA		; $4a
 	overworld_sprite SeelSprite, 12             ; SPRITE_SEEL		; $3b
 	overworld_sprite SurgeSprite, 12            ; SPRITE_SURGE		; $4b
+	overworld_sprite SwimmerFemaleSprite, 12    ; SPRITE_SWIMMER_F		; 
 	overworld_sprite PokeBallSprite, 4          ; SPRITE_POKE_BALL		; $4c
 	overworld_sprite PokeBall2Sprite, 4         ; SPRITE_POKE_BALL2		; $4d
 	overworld_sprite TruckSprite, 4             ; SPRITE_TRUCK		; $4e

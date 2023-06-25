@@ -11,7 +11,7 @@ TrainerDataPointers:
 	dw BikerData
 	dw BurglarData
 	dw EngineerData
-	dw UnusedJugglerData
+	dw SwimmerFemaleData
 	dw FisherData
 	dw SwimmerData
 	dw CueBallData
@@ -162,8 +162,6 @@ JrTrainerMData:
 	db 29, NIDORAN_M, NIDORINO, 0
 
 JrTrainerFData:
-; Cerulean Gym
-	db 19, GOLDEEN, 0
 ; Route 6
 	db 16, RATTATA, PIKACHU, 0
 	db 16, PIDGEY, PIDGEY, PIDGEY, 0
@@ -310,8 +308,9 @@ EngineerData:
 	db 21, MAGNEMITE, 0
 	db 18, MAGNEMITE, MAGNEMITE, MAGNETON, 0
 
-UnusedJugglerData:
-; none
+SwimmerFemaleData:
+; Cerulean Gym
+	db 19, GOLDEEN, 0
 
 FisherData:
 ; SS Anne 2F Rooms

@@ -81,6 +81,7 @@
 	const SPRITE_SABRINA		     ; $4a
 	const SPRITE_SEEL                    ; $3c
 	const SPRITE_SURGE		     ; $4b
+	const SPRITE_SWIMMER_F
 	
 DEF FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_POKE_BALL               ; $4c

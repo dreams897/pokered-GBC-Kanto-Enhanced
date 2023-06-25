@@ -95,4 +95,5 @@ MistySprite::		 INCBIN "gfx/sprites/misty.2bpp"
 SabrinaSprite::		 INCBIN "gfx/sprites/sabrina.2bpp"
 SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
 SurgeSprite:: 		 INCBIN "gfx/sprites/surge.2bpp"
+SwimmerFemaleSprite::    INCBIN "gfx/sprites/swimmer_f.2bpp"
 

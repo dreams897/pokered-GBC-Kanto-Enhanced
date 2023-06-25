@@ -548,6 +548,9 @@ SpritePaletteAssignments: ; Characters on the overworld
 	
 	; SPRITE_SURGE
 	db SPR_PAL_BROWN
+	
+	; SPRITE_SWIMMER_F
+	db SPR_PAL_BLUE
 
 	; 0x3d: SPRITE_BALL
 	db SPR_PAL_ORANGE
