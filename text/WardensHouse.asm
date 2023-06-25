@@ -19,7 +19,7 @@ _WardenGibberishText3::
 
 _WardenTeethText1::
 	text "<PLAYER> gave the"
-	line "GOLD TEETH to the"
+	line "Gold Teeth to the"
 	cont "WARDEN!@"
 	text_end
 
@@ -60,7 +60,7 @@ _HM04ExplanationText::
 	cont "side of battle."
 
 	para "Oh yes, did you"
-	line "find SECRET HOUSE"
+	line "find Secret House"
 	cont "in SAFARI ZONE?"
 
 	para "If you do, you"

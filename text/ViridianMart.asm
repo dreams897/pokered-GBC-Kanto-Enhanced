@@ -1,6 +1,6 @@
 _ViridianMartText1::
 	text "Okay! Say hi to"
-	line "PROF.OAK for me!"
+	line "Prof. Oak for me!"
 	done
 
 _ViridianMartText4::

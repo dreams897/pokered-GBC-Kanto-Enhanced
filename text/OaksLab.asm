@@ -56,7 +56,7 @@ _OaksLabReceivedMonText::
 	text_end
 
 _OaksLabLastMonText::
-	text "That's PROF.OAK's"
+	text "That's Prof. Oak's"
 	line "last #MON!"
 	done
 
@@ -175,7 +175,7 @@ _OaksLabText8::
 	done
 
 _OaksLabText_1d340::
-	text "PROF.OAK is the"
+	text "Prof. Oak is the"
 	line "authority on"
 	cont "#MON!"
 
@@ -360,5 +360,5 @@ _OaksLabText27::
 
 _OaksLabText_1d405::
 	text "I study #MON as"
-	line "PROF.OAK's AIDE."
+	line "Prof. Oak's Aid."
 	done

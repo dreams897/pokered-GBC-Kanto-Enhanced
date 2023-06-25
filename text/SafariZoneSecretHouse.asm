@@ -3,7 +3,7 @@ _SecretHouseText_4a350::
 
 	para "You're the first"
 	line "person to reach"
-	cont "the SECRET HOUSE!"
+	cont "the Secret House!"
 
 	para "I was getting"
 	line "worried that no"
