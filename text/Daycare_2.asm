@@ -19,7 +19,7 @@ _DayCareOnlyHaveOneMonText::
 	line "#MON with you."
 	done
 
-_DayCareCantAcceptMonWithHMText::
+_DayCareCantAcceptMonWithHMtext::
 	text "I can't accept a"
 	line "#MON that"
 	cont "knows an HM move."
@@ -35,7 +35,7 @@ _DayCareNotEnoughMoneyText::
 	line "have enough ¥!"
 	done
 	
-_DayCareMText2::
+_DayCareMtext2::
     text "Hello there! I'm"
     line "the Day Care Man!"
     
@@ -43,13 +43,13 @@ _DayCareMText2::
     line "me another time."
     done
     
-_DayCareMText3::
+_DayCareMtext3::
     text "It's a shiny Ditto"
     line "that belongs to"
     cont "the Day Care Man!"
     done
     
-_DayCareMText4::
+_DayCareMtext4::
     text "Bulbasaur: Bubba!"
     line "Zoar!"
     done

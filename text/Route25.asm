@@ -94,14 +94,14 @@ _Route25EndBattleText6::
 	prompt
 
 _Route25AfterBattleText6::
-	text "You came from MT."
-	line "MOON? May I have"
+	text "You came from Mt."
+	line "Moon? May I have"
 	cont "a CLEFAIRY?"
 	done
 
 _Route25BattleText7::
 	text "I just got down"
-	line "from MT.MOON,"
+	line "from Mt.Moon,"
 	cont "but I'm ready!"
 	done
 

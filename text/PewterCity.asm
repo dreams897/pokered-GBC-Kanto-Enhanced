@@ -4,8 +4,8 @@ _PewterCityText1::
 	cont "from the moon!"
 
 	para "They appeared "
-	line "after MOON STONE"
-	cont "fell on MT.MOON."
+	line "after Moon STONE"
+	cont "fell on Mt.Moon."
 	done
 
 _PewterCityText2::
@@ -27,8 +27,8 @@ _PewterCityText_193f1::
 
 _PewterCityText_193f6::
 	text "Weren't those"
-	line "fossils from MT."
-	cont "MOON amazing?"
+	line "fossils from Mt."
+	cont "Moon amazing?"
 	done
 
 _PewterCityText_193fb::
@@ -90,8 +90,8 @@ _PewterCityText7::
 
 	para "Thieves have been"
 	line "stealing #MON"
-	cont "fossils at MT."
-	cont "MOON! Please call"
+	cont "fossils at Mt."
+	cont "Moon! Please call"
 	cont "Pewter POLICE"
 	cont "with any info!"
 	done

@@ -144,7 +144,7 @@ _Route8AfterBattleText9::
 	text "I heard that"
 	line "CLEFAIRY evolves"
 	cont "when it's exposed"
-	cont "to a MOON STONE."
+	cont "to a Moon STONE."
 	done
 
 _Route8Text10::

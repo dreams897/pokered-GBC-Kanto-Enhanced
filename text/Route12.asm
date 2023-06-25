@@ -51,7 +51,7 @@ _Route12AfterBattleText2::
 
 _Route12BattleText3::
 	text "Have you found a"
-	line "MOON STONE?"
+	line "Moon STONE?"
 	done
 
 _Route12EndBattleText3::
@@ -61,7 +61,7 @@ _Route12EndBattleText3::
 _Route12AfterBattleText3::
 	text "I could have made"
 	line "my #MON evolve"
-	cont "with MOON STONE!"
+	cont "with Moon STONE!"
 	done
 
 _Route12BattleText4::
