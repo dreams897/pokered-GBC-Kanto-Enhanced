@@ -81,10 +81,6 @@ Route22Script0:
 
 .firstRivalBattle
 	ld a, $1
-	ld [wEmotionBubbleSpriteIndex], a
-	xor a ; EXCLAMATION_BUBBLE
-	ld [wWhichEmotionBubble], a
-	predef EmotionBubble
 	ld a, [wWalkBikeSurfState]
 	and a
 	jr z, .asm_50f4e
@@ -234,10 +230,6 @@ Route22Script3:
 
 Route22Script_5104e:
 	ld a, $2
-	ld [wEmotionBubbleSpriteIndex], a
-	xor a ; EXCLAMATION_BUBBLE
-	ld [wWhichEmotionBubble], a
-	predef EmotionBubble
 	ld a, [wWalkBikeSurfState]
 	and a
 	jr z, .skipYVisibilityTesta
