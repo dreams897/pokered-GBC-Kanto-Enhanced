@@ -1,10 +1,10 @@
 _PewterCityText1::
 	text "It's rumored that"
-	line "CLEFAIRYs came"
+	line "Clefairys came"
 	cont "from the moon!"
 
 	para "They appeared "
-	line "after Moon STONE"
+	line "after Moon Stone"
 	cont "fell on Mt.Moon."
 	done
 
@@ -14,15 +14,15 @@ _PewterCityText2::
 	cont "trainers here!"
 
 	para "They're all like"
-	line "BUG CATCHERs,"
-	cont "but Pewter GYM's"
+	line "Bug Catchers,"
+	cont "but Pewter Gym's"
 	cont "Brock is totally"
 	cont "into it!"
 	done
 
 _PewterCityText_193f1::
 	text "Did you check out"
-	line "the MUSEUM?"
+	line "the Museum?"
 	done
 
 _PewterCityText_193f6::
@@ -57,7 +57,7 @@ _PewterCityText_1942c::
 	done
 
 _PewterCityText_19431::
-	text "I'm spraying REPEL"
+	text "I'm spraying Repel"
 	line "to keep #MON"
 	cont "out of my garden!"
 	done
@@ -92,26 +92,26 @@ _PewterCityText7::
 	line "stealing #MON"
 	cont "fossils at Mt."
 	cont "Moon! Please call"
-	cont "Pewter POLICE"
+	cont "Pewter Police"
 	cont "with any info!"
 	done
 
 _PewterCityText10::
-	text "Pewter MUSEUM"
-	line "OF SCIENCE"
+	text "Pewter Museum"
+	line "Of Science"
 	done
 
 _PewterCityText11::
 	text "Pewter City"
-	line "#MON GYM"
-	cont "LEADER: Brock"
+	line "#MON Gym"
+	cont "Leader: Brock"
 
 	para "The Rock Solid"
 	line "#MON Trainer!"
 	done
 
 _PewterCityText12::
-	text "Pewter City"
+	text "Pewter City:"
 	line "A Stone Gray"
 	cont "City"
 	done
