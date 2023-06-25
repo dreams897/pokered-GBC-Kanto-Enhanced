@@ -20,7 +20,7 @@ _CeladonMart5Text2::
 	line "Attack power."
 
 	para "IRON increases"
-	line "DEFENSE!"
+	line "Defense!"
 	done
 
 _CeladonMart5Text5::

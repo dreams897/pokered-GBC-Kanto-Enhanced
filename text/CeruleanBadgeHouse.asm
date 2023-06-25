@@ -68,7 +68,7 @@ _CeruleanHouse2Text_74ea5::
 	prompt
 
 _CeruleanHouse2Text_74eaa::
-	text "The DEFENSE of all"
+	text "The Defense of all"
 	line "#MON increases"
 	cont "a little bit."
 

@@ -12,7 +12,7 @@ _KogaPostBattleAdviceText::
 _KogaSoulBadgeInfoText::
 	text "Now that you have"
 	line "the SOULBadge,"
-	cont "the DEFENSE of"
+	cont "the Defense of"
 	cont "your #MON"
 	cont "increases!"
 
