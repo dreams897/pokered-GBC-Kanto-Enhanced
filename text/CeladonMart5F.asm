@@ -17,7 +17,7 @@ _CeladonMart5Text2::
 	cont "enhancers."
 
 	para "PROTEIN increases"
-	line "ATTACK power."
+	line "Attack power."
 
 	para "IRON increases"
 	line "DEFENSE!"

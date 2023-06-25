@@ -24,7 +24,7 @@ _CeruleanHouse2Text_74e81::
 	done
 
 _CeruleanHouse2Text_74e96::
-	text "The ATTACK of all"
+	text "The Attack of all"
 	line "#MON increases"
 	cont "a little bit."
 

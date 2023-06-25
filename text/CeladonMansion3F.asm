@@ -11,7 +11,7 @@ _GraphicArtistText::
 
 _WriterText::
 	text "I wrote the story!"
-	line "Isn't ERIKA cute?"
+	line "Isn't Erika cute?"
 
 	para "I like Misty a"
 	line "lot too!"

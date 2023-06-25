@@ -5,8 +5,8 @@ _LavenderMartText2::
 	cont "#MON during a"
 	cont "single battle."
 
-	para "X ATTACK, X"
-	line "DEFEND, X SPEED"
+	para "X Attack, X"
+	line "Defend, X SPEED"
 	cont "and X Special are"
 	cont "what I'm after."
 
