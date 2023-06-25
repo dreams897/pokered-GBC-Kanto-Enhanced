@@ -195,7 +195,7 @@ _SaffronGymAfterBattleText5::
 _SaffronGymBattleText6::
 	text "SABRINA is young,"
 	line "but she's also"
-	cont "our LEADER!"
+	cont "our Leader!"
 
 	para "You won't reach"
 	line "her easily!"
@@ -208,19 +208,19 @@ _SaffronGymEndBattleText6::
 
 _SaffronGymAfterBattleText6::
 	text "There used to be"
-	line "2 #MON GYMs in"
+	line "2 #MON Gyms in"
 	cont "SAFFRON."
 
 	para "The FIGHTING DOJO"
 	line "next door lost"
-	cont "its GYM status"
+	cont "its Gym status"
 	cont "when we went and"
 	cont "creamed them!"
 	done
 
 _SaffronGymBattleText7::
 	text "SAFFRON #MON"
-	line "GYM is famous for"
+	line "Gym is famous for"
 	cont "its psychics!"
 
 	para "You want to see"

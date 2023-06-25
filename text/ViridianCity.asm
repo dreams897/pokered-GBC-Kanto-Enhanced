@@ -10,16 +10,16 @@ _ViridianCityText1::
 	done
 
 _ViridianCityText_19122::
-	text "This #MON GYM"
+	text "This #MON Gym"
 	line "is always closed."
 
 	para "I wonder who the"
-	line "LEADER is?"
+	line "Leader is?"
 	done
 
 _ViridianCityText_19127::
-	text "Viridian GYM's"
-	line "LEADER returned!"
+	text "Viridian Gym's"
+	line "Leader returned!"
 	done
 
 _ViridianCityText_1914d::
@@ -172,10 +172,10 @@ _ViridianCityText10::
 
 _ViridianCityText13::
 	text "Viridian City"
-	line "#MON GYM"
+	line "#MON Gym"
 	done
 
 _ViridianCityText14::
-	text "The GYM's doors"
+	text "The Gym's doors"
 	line "are locked..."
 	done

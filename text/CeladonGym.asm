@@ -8,8 +8,8 @@ _ErikaPreBattleText::
 	cont "off. Welcome."
 
 	para "My name is ERIKA."
-	line "I am the LEADER"
-	cont "of Celadon GYM."
+	line "I am the Leader"
+	cont "of Celadon Gym."
 
 	para "I teach the art of"
 	line "flower arranging."
@@ -154,7 +154,7 @@ _CeladonGymEndBattleText5::
 _CeladonGymAfterBattleText5::
 	text "We only use grass-"
 	line "type #MON at"
-	cont "our GYM!"
+	cont "our Gym!"
 
 	para "We also use them"
 	line "for making flower"
@@ -173,7 +173,7 @@ _CeladonGymEndBattleText6::
 	prompt
 
 _CeladonGymAfterBattleText6::
-	text "Our LEADER, ERIKA,"
+	text "Our Leader, ERIKA,"
 	line "might be quiet,"
 	cont "but she's also"
 	cont "very skilled!"
@@ -199,7 +199,7 @@ _CeladonGymAfterBattleText7::
 
 _CeladonGymBattleText8::
 	text "Welcome to"
-	line "Celadon GYM!"
+	line "Celadon Gym!"
 
 	para "You better not"
 	line "underestimate"

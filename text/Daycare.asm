@@ -1,5 +1,5 @@
 _DayCareIntroText::
-	text "I run a DAYCARE."
+	text "I run a Day Care."
 	line "Would you like me"
 	cont "to raise one of"
 	cont "your #MON?"

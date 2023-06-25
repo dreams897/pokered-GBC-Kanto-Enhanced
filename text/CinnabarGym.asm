@@ -2,8 +2,8 @@ _BlainePreBattleText::
 	text "Hah!"
 
 	para "I am Blaine! I"
-	line "am the LEADER of"
-	cont "Cinnabar GYM!"
+	line "am the Leader of"
+	cont "Cinnabar Gym!"
 
 	para "My fiery #MON"
 	line "will incinerate"
@@ -35,7 +35,7 @@ _BlaineVolcanoBadgeInfoText::
 
 	para "The VOLCANOBadge"
 	line "heightens the"
-	cont "SPECIAL abilities"
+	cont "Special abilities"
 	cont "of your #MON!"
 
 	para "Here, you can"
@@ -160,7 +160,7 @@ _CinnabarGymAfterBattleText5::
 
 _CinnabarGymBattleText6::
 	text "I've been to many"
-	line "GYMs, but this is"
+	line "Gyms, but this is"
 	cont "my favorite!"
 	done
 

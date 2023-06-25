@@ -72,7 +72,7 @@ _FuchsiaGymAfterBattleText1::
 _FuchsiaGymBattleText2::
 	text "I wanted to become"
 	line "a ninja, so I"
-	cont "joined this GYM!"
+	cont "joined this Gym!"
 	done
 
 _FuchsiaGymEndBattleText2::
@@ -174,7 +174,7 @@ _FuchsiaGymGuidePreBattleText::
 	text "Yo! Champ in"
 	line "making!"
 
-	para "FUCHSIA GYM is"
+	para "FUCHSIA Gym is"
 	line "riddled with"
 	cont "invisible walls!"
 

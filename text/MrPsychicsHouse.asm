@@ -16,7 +16,7 @@ _TM29ExplanationText::
 	text "TM29 is PSYCHIC!"
 
 	para "It can lower the"
-	line "target's SPECIAL"
+	line "target's Special"
 	cont "abilities."
 	done
 

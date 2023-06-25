@@ -4,7 +4,7 @@ _CeladonMart5Text1::
 	cont "bought only here."
 
 	para "Use CALCIUM to"
-	line "increase SPECIAL"
+	line "increase Special"
 	cont "abilities."
 
 	para "Use CARBOS to"

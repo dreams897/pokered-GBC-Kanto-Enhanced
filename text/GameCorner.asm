@@ -90,8 +90,8 @@ _CeladonGameCornerText_48dca::
 	line "things to do,"
 	cont "champ in making!"
 
-	para "Celadon GYM's"
-	line "LEADER is ERIKA!"
+	para "Celadon Gym's"
+	line "Leader is ERIKA!"
 	cont "She uses grass-"
 	cont "type #MON!"
 

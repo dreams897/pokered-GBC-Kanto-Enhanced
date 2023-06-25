@@ -3,7 +3,7 @@ _FightingDojoText_5ce8e::
 
 	para "I am the KARATE"
 	line "MASTER! I am the"
-	cont "LEADER here!"
+	cont "Leader here!"
 
 	para "You wish to"
 	line "challenge us?"

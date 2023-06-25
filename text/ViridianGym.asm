@@ -75,7 +75,7 @@ _TM27ExplanationText::
 	cont "one hit!"
 
 	para "I made it when I"
-	line "ran the GYM here,"
+	line "ran the Gym here,"
 	cont "too long ago..."
 	done
 
@@ -98,7 +98,7 @@ _ViridianGymEndBattleText1::
 _ViridianGymAfterBattleText1::
 	text "You need power to"
 	line "keep up with our"
-	cont "GYM LEADER!"
+	cont "Gym Leader!"
 	done
 
 _ViridianGymBattleText2::
@@ -130,7 +130,7 @@ _ViridianGymEndBattleText3::
 _ViridianGymAfterBattleText3::
 	text "Do you know the"
 	line "identity of our"
-	cont "GYM LEADER?"
+	cont "Gym Leader?"
 	done
 
 _ViridianGymBattleText4::
@@ -160,7 +160,7 @@ _ViridianGymEndBattleText5::
 	prompt
 
 _ViridianGymAfterBattleText5::
-	text "The LEADER will"
+	text "The Leader will"
 	line "scold me!"
 	done
 
@@ -197,10 +197,10 @@ _ViridianGymAfterBattleText7::
 	done
 
 _ViridianGymBattleText8::
-	text "Viridian GYM was"
+	text "Viridian Gym was"
 	line "closed for a long"
 	cont "time, but now our"
-	cont "LEADER is back!"
+	cont "Leader is back!"
 	done
 
 _ViridianGymEndBattleText8::
@@ -212,7 +212,7 @@ _ViridianGymAfterBattleText8::
 	text "You can go onto"
 	line "#MON League"
 	cont "only by defeating"
-	cont "our GYM LEADER!"
+	cont "our Gym Leader!"
 	done
 
 _ViridianGymGuidePreBattleText::
@@ -220,12 +220,12 @@ _ViridianGymGuidePreBattleText::
 	line "making!"
 
 	para "Even I don't know"
-	line "Viridian LEADER's"
+	line "Viridian Leader's"
 	cont "identity!"
 
 	para "This will be the"
 	line "toughest of all"
-	cont "the GYM LEADERs!"
+	cont "the Gym Leaders!"
 
 	para "I heard that the"
 	line "trainers here"
@@ -236,5 +236,5 @@ _ViridianGymGuidePreBattleText::
 _ViridianGymGuidePostBattleText::
 	text "Blow me away!"
 	line "GIOVANNI was the"
-	cont "GYM LEADER here?"
+	cont "Gym Leader here?"
 	done
