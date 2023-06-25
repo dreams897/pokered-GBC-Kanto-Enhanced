@@ -14,7 +14,7 @@ _FuchsiaPokecenterText3::
 	cont "VIRIDIAN CITY."
 
 	para "It goes to #MON"
-	line "LEAGUE HQ."
+	line "League HQ."
 	cont "The HQ governs"
 	cont "all trainers."
 	done

@@ -54,11 +54,11 @@ _GiovanniEarthBadgeInfoText::
 
 	para "With it, you can"
 	line "enter the #MON"
-	cont "LEAGUE!"
+	cont "League!"
 
 	para "It is my gift for"
 	line "your #MON"
-	cont "LEAGUE challenge!"
+	cont "League challenge!"
 	done
 
 _ReceivedTM27Text::
@@ -175,7 +175,7 @@ _ViridianGymEndBattleText6::
 	prompt
 
 _ViridianGymAfterBattleText6::
-	text "#MON LEAGUE?"
+	text "#MON League?"
 	line "You? Don't get"
 	cont "cocky!"
 	done
@@ -210,7 +210,7 @@ _ViridianGymEndBattleText8::
 
 _ViridianGymAfterBattleText8::
 	text "You can go onto"
-	line "#MON LEAGUE"
+	line "#MON League"
 	cont "only by defeating"
 	cont "our GYM LEADER!"
 	done

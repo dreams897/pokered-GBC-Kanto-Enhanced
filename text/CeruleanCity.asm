@@ -197,7 +197,7 @@ _CeruleanCityText10::
 	cont "strong #MON"
 	cont "live in there!"
 
-	para "The #MON LEAGUE"
+	para "The #MON League"
 	line "champion is the"
 	cont "only person who"
 	cont "is allowed in!"

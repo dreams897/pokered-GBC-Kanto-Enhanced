@@ -22,7 +22,7 @@ _GaryChampionIntroText::
 	para "And now!"
 
 	para "I'm the #MON"
-	line "LEAGUE champion!"
+	line "League champion!"
 
 	para "<PLAYER>! Do you"
 	line "know what that"
@@ -42,7 +42,7 @@ _GaryDefeatedText::
 
 	para "After all that"
 	line "work to become"
-	cont "LEAGUE champ?"
+	cont "League champ?"
 
 	para "My reign is over"
 	line "already?"
@@ -75,7 +75,7 @@ _GaryText_76103::
 
 	para "Darn it! You're"
 	line "the new #MON"
-	cont "LEAGUE champion!"
+	cont "League champion!"
 
 	para "Although I don't"
 	line "like to admit it."
@@ -89,7 +89,7 @@ _GaryText_76120::
 	text "OAK: So, you won!"
 	line "Congratulations!"
 	cont "You're the new"
-	cont "#MON LEAGUE"
+	cont "#MON League"
 	cont "champion!"
 
 	para "You've grown up so"

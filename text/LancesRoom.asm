@@ -22,7 +22,7 @@ _LanceBeforeBattleText::
 	para "Well, are you"
 	line "ready to lose?"
 
-	para "Your LEAGUE"
+	para "Your League"
 	line "challenge ends"
 	cont "with me, <PLAYER>!"
 	done
@@ -42,7 +42,7 @@ _LanceAfterBattleText::
 	cont "you, <PLAYER>!"
 
 	para "You are now the"
-	line "#MON LEAGUE"
+	line "#MON League"
 	cont "champion!"
 
 	para "...Or, you would"
@@ -59,6 +59,6 @@ _LanceAfterBattleText::
 	cont "FOUR before you!"
 
 	para "He is the real"
-	line "#MON LEAGUE"
+	line "#MON League"
 	cont "champion!@"
 	text_end

@@ -194,7 +194,7 @@ _SilphCo7Text_51ed2::
 	cont "how they evolve!"
 
 	para "I'm going to the"
-	line "#MON LEAGUE"
+	line "#MON League"
 	cont "to boot out the"
 	cont "ELITE FOUR!"
 

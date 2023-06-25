@@ -1,6 +1,6 @@
 _LoreleiBeforeBattleText::
 	text "Welcome to"
-	line "#MON LEAGUE!"
+	line "#MON League!"
 
 	para "I am LORELEI of"
 	line "the ELITE FOUR!"
@@ -33,7 +33,7 @@ _LoreleiAfterBattleText::
 
 	para "You only got a"
 	line "taste of #MON"
-	cont "LEAGUE power!"
+	cont "League power!"
 	done
 
 _LoreleiDontRunAwayText::
