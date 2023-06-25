@@ -51,10 +51,10 @@ _Lab3Text3::
 
 	para "We plan to explore"
 	line "the cavern close"
-	cont "to CERULEAN."
+	cont "to Cerulean."
 
 	para "From: #MON"
-	line "RESEARCH TEAM"
+	line "RESEARCH Team"
 
 	para "..."
 	done

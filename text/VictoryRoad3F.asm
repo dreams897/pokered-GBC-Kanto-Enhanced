@@ -10,7 +10,7 @@ _VictoryRoad3EndBattleText2::
 
 _VictoryRoad3AfterBattleText2::
 	text "You beat GIOVANNI"
-	line "of TEAM ROCKET?"
+	line "of Team Rocket?"
 	done
 
 _VictoryRoad3BattleText3::

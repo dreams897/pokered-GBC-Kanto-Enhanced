@@ -15,7 +15,7 @@ _ReceivedTM18Text::
 	text_end
 
 _TM18ExplanationText::
-	text "TM18 is COUNTER!"
+	text "TM18 is Counter!"
 	line "Not like the one"
 	cont "I'm leaning on,"
 	cont "mind you!"
@@ -41,19 +41,19 @@ _CeladonMart3Text3::
 
 	para "My buddy's going"
 	line "to trade me his"
-	cont "KANGASKHAN for my"
-	cont "GRAVELER!"
+	cont "Kangaskhan for my"
+	cont "Graveler!"
 	done
 
 _CeladonMart3Text4::
-	text "Come on GRAVELER!"
+	text "Come on Graveler!"
 
-	para "I love GRAVELER!"
+	para "I love Graveler!"
 	line "I collect them!"
 
 	para "Huh?"
 
-	para "GRAVELER turned"
+	para "Graveler turned"
 	line "into a different"
 	cont "#MON!"
 	done

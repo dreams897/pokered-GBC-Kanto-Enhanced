@@ -20,7 +20,7 @@ _Route25BattleText2::
 	text "Dad took me to a"
 	line "great party on"
 	cont "S.S.ANNE at"
-	cont "VERMILION CITY!"
+	cont "VERMILION City!"
 	done
 
 _Route25EndBattleText2::
@@ -135,7 +135,7 @@ _Route25AfterBattleText8::
 
 _Route25BattleText9::
 	text "You're going to"
-	line "see BILL? First,"
+	line "see Bill? First,"
 	cont "let's fight!"
 	done
 
@@ -147,10 +147,10 @@ _Route25EndBattleText9::
 _Route25AfterBattleText9::
 	text "The trail below"
 	line "is a shortcut to"
-	cont "CERULEAN CITY."
+	cont "Cerulean City."
 	done
 
 _Route25Text11::
 	text "SEA COTTAGE"
-	line "BILL lives here!"
+	line "Bill lives here!"
 	done

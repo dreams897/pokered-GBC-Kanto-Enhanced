@@ -82,8 +82,8 @@ _CeladonCityText8::
 	done
 
 _CeladonCityText9::
-	text "Keep out of TEAM"
-	line "ROCKET's way!"
+	text "Keep out of Team"
+	line "Rocket's way!"
 	done
 
 _CeladonCityText10::
@@ -103,13 +103,13 @@ _CeladonCityText10::
 	done
 
 _CeladonCityText11::
-	text "CELADON CITY"
+	text "CELADON City"
 	line "The City of"
 	cont "Rainbow Dreams"
 	done
 
 _CeladonCityText13::
-	text "CELADON CITY"
+	text "CELADON City"
 	line "#MON GYM"
 	cont "LEADER: ERIKA"
 
@@ -148,7 +148,7 @@ _CeladonCityText17::
 	done
 
 _CeladonCityText18::
-	text "ROCKET GAME CORNER"
+	text "Rocket GAME CORNER"
 	line "The playground"
 	cont "for grown-ups!"
 	done

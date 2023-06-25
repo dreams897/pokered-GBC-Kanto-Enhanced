@@ -88,7 +88,7 @@ _VermilionCityText6::
 	done
 
 _VermilionCityText7::
-	text "VERMILION CITY"
+	text "VERMILION City"
 	line "The Port of"
 	cont "Exquisite Sunsets"
 	done
@@ -114,7 +114,7 @@ _VermilionCityText11::
 	done
 
 _VermilionCityText12::
-	text "VERMILION CITY"
+	text "VERMILION City"
 	line "#MON GYM"
 	cont "LEADER: LT.SURGE"
 

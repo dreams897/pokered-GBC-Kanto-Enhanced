@@ -34,7 +34,7 @@ _LavenderTownText3::
 	para "I think they're"
 	line "the spirits of"
 	cont "#MON that the"
-	cont "ROCKETs killed."
+	cont "Rockets killed."
 	done
 
 _LavenderTownText4::

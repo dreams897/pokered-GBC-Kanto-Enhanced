@@ -85,13 +85,13 @@ _SilphCo10Text_62335::
 	line "You ruined our"
 	cont "plans for SILPH!"
 
-	para "But, TEAM ROCKET"
+	para "But, Team Rocket"
 	line "will never fall!"
 
 	para "<PLAYER>! Never"
 	line "forget that all"
 	cont "#MON exist"
-	cont "for TEAM ROCKET!"
+	cont "for Team Rocket!"
 
 	para "I must go, but I"
 	line "shall return!"

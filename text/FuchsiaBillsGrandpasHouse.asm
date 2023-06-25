@@ -9,7 +9,7 @@ _FuchsiaHouse1Text1::
 
 _FuchsiaHouse1Text2::
 	text "Hmm? You've met"
-	line "BILL?"
+	line "Bill?"
 
 	para "He's my grandson!"
 
@@ -19,7 +19,7 @@ _FuchsiaHouse1Text2::
 	done
 
 _FuchsiaHouse1Text3::
-	text "BILL files his"
+	text "Bill files his"
 	line "own #MON data"
 	cont "on his PC!"
 

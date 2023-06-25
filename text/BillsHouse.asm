@@ -3,7 +3,7 @@ _BillsHouseText_1e865::
 	line "#MON..."
 	cont "...No I'm not!"
 
-	para "Call me BILL!"
+	para "Call me Bill!"
 	line "I'm a true blue"
 	cont "#MANIAC! Hey!"
 	cont "What's with that"
@@ -38,7 +38,7 @@ _BillsHouseText_1e86f::
 	prompt
 
 _BillThankYouText::
-	text "BILL: Yeehah!"
+	text "Bill: Yeehah!"
 	line "Thanks, bud! I"
 	cont "owe you one!"
 
@@ -68,7 +68,7 @@ _SSTicketNoRoomText::
 _BillsHouseText_1e8cb::
 	text "That cruise ship,"
 	line "S.S.ANNE, is in"
-	cont "VERMILION CITY."
+	cont "VERMILION City."
 	cont "Its passengers"
 	cont "are all trainers!"
 
@@ -81,7 +81,7 @@ _BillsHouseText_1e8cb::
 	done
 
 _BillsHouseText_1e8da::
-	text "BILL: Look, bud,"
+	text "Bill: Look, bud,"
 	line "just check out"
 	cont "some of my rare"
 	cont "#MON on my PC!"

@@ -32,7 +32,7 @@ _FuchsiaCityText5::
 	done
 
 _FuchsiaCityText11::
-	text "FUCHSIA CITY"
+	text "FUCHSIA City"
 	line "Behold! It's"
 	cont "Passion Pink!"
 	done
@@ -53,7 +53,7 @@ _FuchsiaCityText17::
 	done
 
 _FuchsiaCityText18::
-	text "FUCHSIA CITY"
+	text "FUCHSIA City"
 	line "#MON GYM"
 	cont "LEADER: KOGA"
 
@@ -76,7 +76,7 @@ _FuchsiaCityVoltorbText::
 	prompt
 
 _FuchsiaCityKangaskhanText::
-	text "Name: KANGASKHAN"
+	text "Name: Kangaskhan"
 
 	para "A maternal #MON"
 	line "that raises its"

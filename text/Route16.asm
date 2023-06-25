@@ -115,6 +115,6 @@ _Route16Text8::
 
 _Route16Text9::
 	text "ROUTE 16"
-	line "CELADON CITY -"
-	cont "FUCHSIA CITY"
+	line "CELADON City -"
+	cont "FUCHSIA City"
 	done

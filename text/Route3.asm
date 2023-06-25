@@ -4,7 +4,7 @@ _Route3Text1::
 	cont "Groan..."
 
 	para "That tunnel from"
-	line "CERULEAN takes a"
+	line "Cerulean takes a"
 	cont "lot out of you!"
 	done
 

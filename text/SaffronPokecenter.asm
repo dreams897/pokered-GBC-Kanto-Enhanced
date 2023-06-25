@@ -8,5 +8,5 @@ _SaffronPokecenterText3::
 	text "SILPH CO. is very"
 	line "famous. That's"
 	cont "why it attracted"
-	cont "TEAM ROCKET!"
+	cont "Team Rocket!"
 	done

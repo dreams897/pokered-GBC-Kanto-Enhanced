@@ -51,7 +51,7 @@ _ViridianCityText_19175::
 
 _ViridianCityText_1917a::
 	text "When I go shop in"
-	line "PEWTER CITY, I"
+	line "PEWTER City, I"
 	cont "have to take the"
 	cont "winding trail in"
 	cont "VIRIDIAN FOREST."
@@ -139,7 +139,7 @@ _ViridianCityText_19219::
 	done
 
 _ViridianCityText8::
-	text "VIRIDIAN CITY "
+	text "VIRIDIAN City "
 	line "The Eternally"
 	cont "Green Paradise"
 	done
@@ -171,7 +171,7 @@ _ViridianCityText10::
 	done
 
 _ViridianCityText13::
-	text "VIRIDIAN CITY"
+	text "VIRIDIAN City"
 	line "#MON GYM"
 	done
 

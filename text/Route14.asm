@@ -169,5 +169,5 @@ _Route14AfterBattleText10::
 _Route14Text11::
 	text "ROUTE 14"
 	line "West to FUCHSIA"
-	cont "CITY"
+	cont "City"
 	done

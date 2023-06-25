@@ -31,5 +31,5 @@ _Route4Text5::
 _Route4Text6::
 	text "ROUTE 4"
 	line "MT.MOON -"
-	cont "CERULEAN CITY"
+	cont "Cerulean City"
 	done

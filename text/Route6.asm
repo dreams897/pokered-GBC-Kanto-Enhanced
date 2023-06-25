@@ -92,6 +92,6 @@ _Route6AfterBattleText6::
 
 _Route6Text7::
 	text "UNDERGROUND PATH"
-	line "CERULEAN CITY -"
-	cont "VERMILION CITY"
+	line "Cerulean City -"
+	cont "VERMILION City"
 	done

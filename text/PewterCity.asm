@@ -102,7 +102,7 @@ _PewterCityText10::
 	done
 
 _PewterCityText11::
-	text "PEWTER CITY"
+	text "PEWTER City"
 	line "#MON GYM"
 	cont "LEADER: BROCK"
 
@@ -111,7 +111,7 @@ _PewterCityText11::
 	done
 
 _PewterCityText12::
-	text "PEWTER CITY"
+	text "PEWTER City"
 	line "A Stone Gray"
 	cont "City"
 	done

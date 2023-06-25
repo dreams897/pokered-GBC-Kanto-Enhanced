@@ -15,7 +15,7 @@ _SaffronCityText3::
 
 _SaffronCityText4::
 	text "SAFFRON belongs"
-	line "to TEAM ROCKET!"
+	line "to Team Rocket!"
 	done
 
 _SaffronCityText5::
@@ -36,13 +36,13 @@ _SaffronCityText7::
 	done
 
 _SaffronCityText8::
-	text "You beat TEAM"
-	line "ROCKET all alone?"
+	text "You beat Team"
+	line "Rocket all alone?"
 	cont "That's amazing!"
 	done
 
 _SaffronCityText9::
-	text "Yeah! TEAM ROCKET"
+	text "Yeah! Team Rocket"
 	line "is gone!"
 	cont "It's safe to go"
 	cont "out again!"
@@ -69,7 +69,7 @@ _SaffronCityText12::
 	text_end
 
 _SaffronCityText13::
-	text "I saw ROCKET"
+	text "I saw Rocket"
 	line "BOSS escaping"
 	cont "SILPH's building."
 	done
@@ -91,7 +91,7 @@ _SaffronCityText15::
 	done
 
 _SaffronCityText16::
-	text "SAFFRON CITY"
+	text "SAFFRON City"
 	line "Shining, Golden"
 	cont "Land of Commerce"
 	done
@@ -101,7 +101,7 @@ _SaffronCityText17::
 	done
 
 _SaffronCityText18::
-	text "SAFFRON CITY"
+	text "SAFFRON City"
 	line "#MON GYM"
 	cont "LEADER: SABRINA"
 

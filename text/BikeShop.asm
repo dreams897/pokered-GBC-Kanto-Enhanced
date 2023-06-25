@@ -27,7 +27,7 @@ _BikeShopText_1d81f::
 _BikeShopText_1d824::
 	text "<PLAYER> exchanged"
 	line "the BIKE VOUCHER"
-	cont "for a BICYCLE.@"
+	cont "for a Bicycle.@"
 	text_end
 
 _BikeShopComeAgainText::
@@ -37,7 +37,7 @@ _BikeShopComeAgainText::
 
 _BikeShopText_1d82f::
 	text "How do you like"
-	line "your new BICYCLE?"
+	line "your new Bicycle?"
 
 	para "You can take it"
 	line "on CYCLING ROAD"

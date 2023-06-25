@@ -33,8 +33,8 @@ _Route11GateUpstairsText_494d5::
 	line "binoculars."
 
 	para "The only way to"
-	line "get from CERULEAN"
-	cont "CITY to LAVENDER"
+	line "get from Cerulean"
+	cont "City to LAVENDER"
 	cont "is by way of the"
 	cont "ROCK TUNNEL."
 	done

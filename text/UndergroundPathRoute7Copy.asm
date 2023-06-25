@@ -9,9 +9,9 @@ _UGPathRoute7EntranceUnusedText_5d773::
 	done
 
 _UGPathRoute7EntranceUnusedText_5d778::
-	text "TEAM ROCKET had a"
+	text "Team Rocket had a"
 	line "secret hideout in"
-	cont "CELADON CITY?"
+	cont "CELADON City?"
 	done
 
 _UGPathRoute7EntranceUnusedText_5d77d::
@@ -29,7 +29,7 @@ _UGPathRoute7EntranceUnusedText_5d782::
 	cont "to LAVENDER."
 
 	para "If you're heading"
-	line "to CERULEAN, go"
+	line "to Cerulean, go"
 	cont "to the building"
 	cont "across the road."
 	done
