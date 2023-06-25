@@ -51,7 +51,7 @@ _ViridianCityText_19175::
 
 _ViridianCityText_1917a::
 	text "When I go shop in"
-	line "PEWTER City, I"
+	line "Pewter City, I"
 	cont "have to take the"
 	cont "winding trail in"
 	cont "VIRIDIAN FOREST."

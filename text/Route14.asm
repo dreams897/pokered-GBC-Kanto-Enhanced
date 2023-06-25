@@ -34,7 +34,7 @@ _Route14AfterBattleText2::
 
 _Route14BattleText3::
 	text "TMs are on sale"
-	line "in CELADON!"
+	line "in Celadon!"
 	cont "But, only a few"
 	cont "people have HMs!"
 	done

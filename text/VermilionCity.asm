@@ -83,12 +83,12 @@ _VermilionCityText6::
 	line "famous luxury"
 	cont "cruise ship."
 
-	para "We visit VERMILION"
+	para "We visit Vermilion"
 	line "once a year."
 	done
 
 _VermilionCityText7::
-	text "VERMILION City"
+	text "Vermilion City"
 	line "The Port of"
 	cont "Exquisite Sunsets"
 	done
@@ -104,7 +104,7 @@ _VermilionCityText8::
 	line "ROCK TUNNEL to"
 	cont "LAVENDER TOWN."
 
-	para "VERMILION POLICE"
+	para "Vermilion POLICE"
 	done
 
 _VermilionCityText11::
@@ -114,7 +114,7 @@ _VermilionCityText11::
 	done
 
 _VermilionCityText12::
-	text "VERMILION City"
+	text "Vermilion City"
 	line "#MON GYM"
 	cont "LEADER: LT.SURGE"
 
@@ -123,5 +123,5 @@ _VermilionCityText12::
 	done
 
 _VermilionCityText13::
-	text "VERMILION HARBOR"
+	text "Vermilion HARBOR"
 	done

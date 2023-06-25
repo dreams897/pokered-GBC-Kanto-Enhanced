@@ -68,7 +68,7 @@ _SSTicketNoRoomText::
 _BillsHouseText_1e8cb::
 	text "That cruise ship,"
 	line "S.S.ANNE, is in"
-	cont "VERMILION City."
+	cont "Vermilion City."
 	cont "Its passengers"
 	cont "are all trainers!"
 

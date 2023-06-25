@@ -1,7 +1,7 @@
 _Route5Text1::
 	text "UNDERGROUND PATH"
 	line "Cerulean City -"
-	cont "VERMILION City"
+	cont "Vermilion City"
 	done
 	
 _DaycareSign::

@@ -17,6 +17,6 @@ _VermilionHouse1Text3::
 	line "has problems with"
 	cont "Team Rocket."
 
-	para "VERMILION appears"
+	para "Vermilion appears"
 	line "to be safe."
 	done

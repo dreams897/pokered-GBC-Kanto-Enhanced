@@ -47,7 +47,7 @@ _Route18AfterBattleText3::
 
 _Route18Text4::
 	text "ROUTE 18"
-	line "CELADON City -"
+	line "Celadon City -"
 	cont "FUCHSIA City"
 	done
 

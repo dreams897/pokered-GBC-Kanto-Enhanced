@@ -120,7 +120,7 @@ _Route20AfterBattleText8::
 
 _Route20BattleText9::
 	text "I swam here from"
-	line "CINNABAR ISLAND!"
+	line "Cinnabar Island!"
 	done
 
 _Route20EndBattleText9::
@@ -132,11 +132,11 @@ _Route20AfterBattleText9::
 	text "#MON have"
 	line "taken over an"
 	cont "abandoned mansion"
-	cont "on CINNABAR!"
+	cont "on Cinnabar!"
 	done
 
 _Route20BattleText10::
-	text "CINNABAR, in the"
+	text "Cinnabar, in the"
 	line "west, has a LAB"
 	cont "for #MON."
 	done
@@ -146,11 +146,11 @@ _Route20EndBattleText10::
 	prompt
 
 _Route20AfterBattleText10::
-	text "CINNABAR is a "
+	text "Cinnabar is a "
 	line "volcanic island!"
 	done
 
 _Route20Text12::
 _Route20Text11::
-	text "SEAFOAM ISLANDS"
+	text "SEAFOAM IslandS"
 	done

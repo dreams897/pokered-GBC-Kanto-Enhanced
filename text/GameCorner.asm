@@ -9,7 +9,7 @@ _CeladonGameCornerText1::
 
 _CeladonGameCornerText_48d22::
 	text "Welcome to Rocket"
-	line "GAME CORNER!"
+	line "Game Corner!"
 
 	para "Do you need some"
 	line "game coins?"
@@ -90,7 +90,7 @@ _CeladonGameCornerText_48dca::
 	line "things to do,"
 	cont "champ in making!"
 
-	para "CELADON GYM's"
+	para "Celadon GYM's"
 	line "LEADER is ERIKA!"
 	cont "She uses grass-"
 	cont "type #MON!"

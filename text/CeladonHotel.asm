@@ -11,7 +11,7 @@ _CeladonHotelText2::
 	line "with my brother"
 	cont "and boy friend."
 
-	para "CELADON is such a"
+	para "Celadon is such a"
 	line "pretty city!"
 	done
 

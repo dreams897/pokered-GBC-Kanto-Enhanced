@@ -1,6 +1,6 @@
 _CeladonCityText1::
 	text "I got my KOFFING"
-	line "in CINNABAR!"
+	line "in Cinnabar!"
 
 	para "It's nice, but it"
 	line "breathes poison"
@@ -14,7 +14,7 @@ _CeladonCityText2::
 	done
 
 _CeladonCityText3::
-	text "The GAME CORNER"
+	text "The Game Corner"
 	line "is bad for our"
 	cont "city's image!"
 	done
@@ -98,18 +98,18 @@ _CeladonCityText10::
 	cont "critical hits!"
 
 	para "Get your items at"
-	line "CELADON DEPT."
+	line "Celadon DEPT."
 	cont "STORE!"
 	done
 
 _CeladonCityText11::
-	text "CELADON City"
+	text "Celadon City"
 	line "The City of"
 	cont "Rainbow Dreams"
 	done
 
 _CeladonCityText13::
-	text "CELADON City"
+	text "Celadon City"
 	line "#MON GYM"
 	cont "LEADER: ERIKA"
 
@@ -118,12 +118,12 @@ _CeladonCityText13::
 	done
 
 _CeladonCityText14::
-	text "CELADON MANSION"
+	text "Celadon MANSION"
 	done
 
 _CeladonCityText15::
 	text "Find what you"
-	line "need at CELADON"
+	line "need at Celadon"
 	cont "DEPT. STORE!"
 	done
 
@@ -137,7 +137,7 @@ _CeladonCityText16::
 	cont "fire and water!"
 
 	para "Get your items at"
-	line "CELADON DEPT."
+	line "Celadon DEPT."
 	cont "STORE!"
 	done
 
@@ -148,7 +148,7 @@ _CeladonCityText17::
 	done
 
 _CeladonCityText18::
-	text "Rocket GAME CORNER"
+	text "Rocket Game Corner"
 	line "The playground"
 	cont "for grown-ups!"
 	done

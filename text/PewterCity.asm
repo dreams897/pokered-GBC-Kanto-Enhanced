@@ -15,7 +15,7 @@ _PewterCityText2::
 
 	para "They're all like"
 	line "BUG CATCHERs,"
-	cont "but PEWTER GYM's"
+	cont "but Pewter GYM's"
 	cont "BROCK is totally"
 	cont "into it!"
 	done
@@ -92,17 +92,17 @@ _PewterCityText7::
 	line "stealing #MON"
 	cont "fossils at MT."
 	cont "MOON! Please call"
-	cont "PEWTER POLICE"
+	cont "Pewter POLICE"
 	cont "with any info!"
 	done
 
 _PewterCityText10::
-	text "PEWTER MUSEUM"
+	text "Pewter MUSEUM"
 	line "OF SCIENCE"
 	done
 
 _PewterCityText11::
-	text "PEWTER City"
+	text "Pewter City"
 	line "#MON GYM"
 	cont "LEADER: BROCK"
 
@@ -111,7 +111,7 @@ _PewterCityText11::
 	done
 
 _PewterCityText12::
-	text "PEWTER City"
+	text "Pewter City"
 	line "A Stone Gray"
 	cont "City"
 	done

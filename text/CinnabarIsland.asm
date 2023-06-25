@@ -4,7 +4,7 @@ _CinnabarIslandText8::
 	done
 
 _CinnabarIslandText1::
-	text "CINNABAR GYM's"
+	text "Cinnabar GYM's"
 	line "BLAINE is an odd"
 	cont "man who has lived"
 	cont "here for decades."
@@ -18,7 +18,7 @@ _CinnabarIslandText2::
 	done
 
 _CinnabarIslandText3::
-	text "CINNABAR ISLAND"
+	text "Cinnabar Island"
 	line "The Fiery Town of"
 	cont "Burning Desire"
 	done
@@ -28,7 +28,7 @@ _CinnabarIslandText6::
 	done
 
 _CinnabarIslandText7::
-	text "CINNABAR ISLAND"
+	text "Cinnabar Island"
 	line "#MON GYM"
 	cont "LEADER: BLAINE"
 

@@ -101,7 +101,7 @@ _Route19EndBattleText7::
 _Route19AfterBattleText7::
 	text "It's still a long"
 	line "way to go to"
-	cont "SEAFOAM ISLANDS."
+	cont "SEAFOAM IslandS."
 	done
 
 _Route19BattleText8::
@@ -116,7 +116,7 @@ _Route19EndBattleText8::
 _Route19AfterBattleText8::
 	text "My boy friend"
 	line "wanted to swim to"
-	cont "SEAFOAM ISLANDS."
+	cont "SEAFOAM IslandS."
 	done
 
 _Route19BattleText9::
@@ -153,5 +153,5 @@ _Route19AfterBattleText10::
 _Route19Text11::
 	text "SEA ROUTE 19"
 	line "FUCHSIA City -"
-	cont "SEAFOAM ISLANDS"
+	cont "SEAFOAM IslandS"
 	done

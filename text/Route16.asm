@@ -55,7 +55,7 @@ _Route16EndBattleText4::
 _Route16AfterBattleText4::
 	text "You can also get"
 	line "to FUCHSIA from"
-	cont "VERMILION using a"
+	cont "Vermilion using a"
 	cont "coastal road."
 	done
 
@@ -115,6 +115,6 @@ _Route16Text8::
 
 _Route16Text9::
 	text "ROUTE 16"
-	line "CELADON City -"
+	line "Celadon City -"
 	cont "FUCHSIA City"
 	done

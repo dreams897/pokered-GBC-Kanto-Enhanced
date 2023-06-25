@@ -15,7 +15,7 @@ _CeladonDinerText2::
 _CeladonDinerText3::
 	text "Psst! There's a"
 	line "basement under"
-	cont "the GAME CORNER."
+	cont "the Game Corner."
 	done
 
 _CeladonDinerText4::
