@@ -191,6 +191,8 @@ PewterCity_TextPointers:
 	dw PewterCityText12
 	dw PewterCityText13
 	dw PewterCityText14
+	dw PewterCityTree1
+	dw PewterCityTree2
 
 PewterCityText1:
 	text_far _PewterCityText1
@@ -316,6 +318,20 @@ PewterCityText10:
 PewterCityText11:
 	text_far _PewterCityText11
 	text_end
+
+PewterCityTree1:
+	text_asm
+	ld a, 3 ; tree number
+	ld [wWhichTrade],a
+	farcall BerryTreeScript
+	jp TextScriptEnd
+	
+PewterCityTree2:
+	text_asm
+	ld a, 4 ; tree number
+	ld [wWhichTrade],a
+	farcall BerryTreeScript
+	jp TextScriptEnd
 
 PewterCityText12:
 	text_far _PewterCityText12

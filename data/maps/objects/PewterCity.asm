@@ -25,5 +25,7 @@ PewterCity_Object:
 	object_event 27, 17, SPRITE_SUPER_NERD, STAY, NONE, 3 ; person
 	object_event 26, 25, SPRITE_SUPER_NERD, WALK, LEFT_RIGHT, 4 ; person
 	object_event 35, 16, SPRITE_YOUNGSTER, STAY, DOWN, 5 ; person
+	object_event  6,  4, SPRITE_BERRY_TREE, STAY, DOWN, 15 ; person
+	object_event 31,  4, SPRITE_BERRY_TREE, STAY, DOWN, 16 ; person
 
 	def_warps_to PEWTER_CITY
