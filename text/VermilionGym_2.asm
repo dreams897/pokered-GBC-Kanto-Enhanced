@@ -11,7 +11,7 @@ _LTSurgePostBattleAdviceText::
 	done
 
 _LTSurgeThunderBadgeInfoText::
-	text "The THUNDERBADGE"
+	text "The THUNDERBadge"
 	line "cranks up your"
 	cont "#MON's SPEED!"
 
@@ -52,7 +52,7 @@ _ReceivedThunderBadgeText::
 	line "deal, kid!"
 
 	para "Fine then, take"
-	line "the THUNDERBADGE!"
+	line "the THUNDERBadge!"
 	prompt
 
 _VermilionGymBattleText1::

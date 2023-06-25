@@ -14,7 +14,7 @@ _Route16GateUpstairsText_4983b::
 	line "binoculars."
 
 	para "It's Celadon Dept."
-	line "STORE!"
+	line "Store!"
 	done
 
 _Route16GateUpstairsText_49847::

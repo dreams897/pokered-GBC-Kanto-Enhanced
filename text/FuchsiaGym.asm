@@ -22,5 +22,5 @@ _ReceivedSoulBadgeText::
 	cont "your worth!"
 
 	para "Here! Take the"
-	line "SOULBADGE!"
+	line "SOULBadge!"
 	prompt

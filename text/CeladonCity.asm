@@ -1,5 +1,5 @@
 _CeladonCityText1::
-	text "I got my KOFFING"
+	text "I got my Koffing"
 	line "in Cinnabar!"
 
 	para "It's nice, but it"
@@ -8,7 +8,7 @@ _CeladonCityText1::
 	done
 
 _CeladonCityText2::
-	text "Heheh! This GYM"
+	text "Heheh! This Gym"
 	line "is great! It's"
 	cont "full of women!"
 	done
@@ -48,13 +48,13 @@ _ReceivedTM41Text::
 
 _TM41ExplanationText::
 	text "TM41 teaches"
-	line "SOFTBOILED!"
+	line "Softboiled!"
 
 	para "Only one #MON"
 	line "can use it!"
 
 	para "That #MON is"
-	line "CHANSEY!"
+	line "Chansey!"
 	done
 
 _TM41NoRoomText::
@@ -64,15 +64,15 @@ _TM41NoRoomText::
 
 _CeladonCityText6::
 	text "This is my trusted"
-	line "pal, POLIWRATH!"
+	line "pal, Poliwrath!"
 
 	para "It evolved from"
-	line "POLIWHIRL when I"
-	cont "used WATER STONE!"
+	line "Poliwhirl when I"
+	cont "used Water stone!"
 	done
 
 _CeladonCityText7::
-	text "POLIWRATH: Ribi"
+	text "Poliwrath: Ribi"
 	line "ribit!@"
 	text_end
 
@@ -89,29 +89,29 @@ _CeladonCityText9::
 _CeladonCityText10::
 	text "TRAINER TIPS"
 
-	para "X ACCURACY boosts"
+	para "X Accuracy boosts"
 	line "the accuracy of"
 	cont "techniques!"
 
-	para "DIRE HIT jacks up"
+	para "Dire Hit jacks up"
 	line "the likelihood of"
 	cont "critical hits!"
 
 	para "Get your items at"
 	line "Celadon Dept."
-	cont "STORE!"
+	cont "Store!"
 	done
 
 _CeladonCityText11::
-	text "Celadon City"
+	text "Celadon City:"
 	line "The City of"
 	cont "Rainbow Dreams"
 	done
 
 _CeladonCityText13::
 	text "Celadon City"
-	line "#MON GYM"
-	cont "LEADER: ERIKA"
+	line "#MON Gym"
+	cont "Leader: Erika"
 
 	para "The Nature Loving"
 	line "Princess!"
@@ -124,21 +124,21 @@ _CeladonCityText14::
 _CeladonCityText15::
 	text "Find what you"
 	line "need at Celadon"
-	cont "Dept. STORE!"
+	cont "Dept. Store!"
 	done
 
 _CeladonCityText16::
 	text "TRAINER TIPS"
 
-	para "GUARD SPEC."
+	para "Guard Spec."
 	line "protects #MON"
-	cont "against SPECIAL"
+	cont "against Special"
 	cont "attacks such as"
 	cont "fire and water!"
 
 	para "Get your items at"
 	line "Celadon Dept."
-	cont "STORE!"
+	cont "Store!"
 	done
 
 _CeladonCityText17::

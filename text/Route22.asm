@@ -7,7 +7,7 @@ _Route22RivalBeforeBattleText1::
 
 	para "Forget it! You"
 	line "probably don't"
-	cont "have any BADGEs!"
+	cont "have any Badges!"
 
 	para "The guard won't"
 	line "let you through!"
@@ -56,7 +56,7 @@ _Route22RivalBeforeBattleText2::
 	line "#MON League?"
 
 	para "You collected all"
-	line "the BADGEs too?"
+	line "the Badges too?"
 	cont "That's cool!"
 
 	para "Then I'll whip you"

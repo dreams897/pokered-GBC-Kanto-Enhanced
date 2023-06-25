@@ -27,7 +27,7 @@ _ReceivedMarshBadgeText::
 	cont "to win!"
 
 	para "You earned the"
-	line "MARSHBADGE!@"
+	line "MARSHBadge!@"
 	text_end
 
 _SabrinaPostBattleAdviceText::
@@ -38,7 +38,7 @@ _SabrinaPostBattleAdviceText::
 	done
 
 _KogaMarshBadgeInfoText::
-	text "The MARSHBADGE"
+	text "The MARSHBadge"
 	line "makes #MON up"
 	cont "to L70 obey you!"
 

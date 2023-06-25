@@ -87,7 +87,7 @@ _Route17EndBattleText6::
 _Route17AfterBattleText6::
 	text "Maybe some #MON"
 	line "need element"
-	cont "STONEs to evolve."
+	cont "stones to evolve."
 	done
 
 _Route17BattleText7::

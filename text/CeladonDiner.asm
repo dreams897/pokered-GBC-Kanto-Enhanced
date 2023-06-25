@@ -9,7 +9,7 @@ _CeladonDinerText2::
 	text "My #MON are"
 	line "weak, so I often"
 	cont "have to go to the"
-	cont "DRUG STORE."
+	cont "DRUG Store."
 	done
 
 _CeladonDinerText3::

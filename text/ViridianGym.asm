@@ -24,7 +24,7 @@ _ReceivedEarthBadgeText::
 	cont "intense fight!"
 	cont "You have won!"
 	cont "As proof, here is"
-	cont "the EARTHBADGE!@"
+	cont "the EARTHBadge!@"
 	text_end
 
 _GiovanniPostBattleAdviceText::
@@ -44,7 +44,7 @@ _GiovanniPostBattleAdviceText::
 	text_end
 
 _GiovanniEarthBadgeInfoText::
-	text "The EARTHBADGE"
+	text "The EARTHBadge"
 	line "makes #MON of"
 	cont "any level obey!"
 

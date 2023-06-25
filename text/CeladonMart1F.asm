@@ -1,7 +1,7 @@
 _CeladonMart1Text1::
 	text "Hello! Welcome to"
 	line "Celadon Dept."
-	cont "STORE."
+	cont "Store."
 
 	para "The board on the"
 	line "right describes"
@@ -19,7 +19,7 @@ _CeladonMart1Text2::
 
 	para "4F: WISEMAN GIFTS"
 
-	para "5F: DRUG STORE"
+	para "5F: DRUG Store"
 
 	para "ROOFTOP SQUARE:"
 	line "VENDING MACHINES"

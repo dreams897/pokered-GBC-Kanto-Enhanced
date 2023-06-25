@@ -18,7 +18,7 @@ _ReceivedVolcanoBadgeText::
 	line "burnt out!"
 
 	para "You have earned"
-	line "the VOLCANOBADGE!@"
+	line "the VOLCANOBadge!@"
 	text_end
 
 _BlainePostBattleAdviceText::
@@ -33,7 +33,7 @@ _BlainePostBattleAdviceText::
 _BlaineVolcanoBadgeInfoText::
 	text "Hah!"
 
-	para "The VOLCANOBADGE"
+	para "The VOLCANOBadge"
 	line "heightens the"
 	cont "SPECIAL abilities"
 	cont "of your #MON!"

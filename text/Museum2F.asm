@@ -1,5 +1,5 @@
 _Museum2FText1::
-	text "Moon STONE?"
+	text "Moon stone?"
 
 	para "What's so special"
 	line "about it?"
@@ -41,5 +41,5 @@ _Museum2FText6::
 _Museum2FText7::
 	text "Meteorite that"
 	line "fell on Mt.Moon."
-	cont "(Moon STONE?)"
+	cont "(Moon stone?)"
 	done
