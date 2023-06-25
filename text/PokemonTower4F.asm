@@ -1,11 +1,11 @@
 _PokemonTower4BattleText1::
-	text "GHOST! No!"
+	text "Ghost! No!"
 	line "Kwaaah!"
 	done
 
 _PokemonTower4EndBattleText1::
 	text "Where"
-	line "is the GHOST?"
+	line "is the Ghost?"
 	prompt
 
 _PokemonTower4AfterBattleText1::
@@ -25,7 +25,7 @@ _PokemonTower4EndBattleText2::
 _PokemonTower4AfterBattleText2::
 	text "We can't crack"
 	line "the identity of"
-	cont "the GHOSTs."
+	cont "the Ghosts."
 	done
 
 _PokemonTower4BattleText3::

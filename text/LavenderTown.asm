@@ -1,6 +1,6 @@
 _LavenderTownText_4413c::
 	text "Do you believe in"
-	line "GHOSTs?"
+	line "Ghosts?"
 	done
 
 _LavenderTownText_44141::
@@ -28,7 +28,7 @@ _LavenderTownText2::
 	done
 
 _LavenderTownText3::
-	text "GHOSTs appeared"
+	text "Ghosts appeared"
 	line "in #MON TOWER."
 
 	para "I think they're"

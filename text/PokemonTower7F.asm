@@ -8,7 +8,7 @@ _TowerRescueFujiText::
 
 	para "I came to calm"
 	line "the soul of"
-	cont "CUBONE's mother."
+	cont "Cubone's mother."
 
 	para "I think MAROWAK's"
 	line "spirit has gone"

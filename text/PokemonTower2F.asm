@@ -31,7 +31,7 @@ _PokemonTower2Text_6063c::
 	text "How's your #DEX"
 	line "coming, pal?"
 	cont "I just caught a"
-	cont "CUBONE!"
+	cont "Cubone!"
 
 	para "I can't find the"
 	line "grown-up MAROWAK"
@@ -49,7 +49,7 @@ _PokemonTower2Text_6063c::
 _PokemonTower2Text2::
 	text "Even we could not"
 	line "identify the"
-	cont "wayward GHOSTs!"
+	cont "wayward Ghosts!"
 
 	para "A SILPH SCOPE"
 	line "might be able to"
