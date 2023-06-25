@@ -164,5 +164,6 @@ MoveNames::
 	li "Super Fang"
 	li "Slash"
 	li "Substitute"
+	li "ExtremeSpeed"
 	li "Struggle"
 	assert_list_length NUM_ATTACKS

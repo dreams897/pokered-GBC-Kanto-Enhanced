@@ -164,6 +164,7 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
+	dw ExtremeSpeedAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1141,6 +1142,13 @@ SubstituteAnim:
 	battle_anim SUBSTITUTE, SE_SLIDE_MON_OFF
 	battle_anim NO_MOVE, SUBANIM_0_BALL_POOF, 0, 8
 	battle_anim NO_MOVE, SE_SUBSTITUTE_MON
+	db -1 ; end
+	
+ExtremeSpeedAnim:
+	battle_anim COUNTER, SE_SLIDE_MON_OFF
+	battle_anim TAKE_DOWN, SE_DARK_SCREEN_FLASH
+	battle_anim SWIFT, SUBANIM_1_LEAVES_TOSS, 1, 1
+	battle_anim NO_MOVE, SE_RESET_MON_POSITION
 	db -1 ; end
 
 BallTossAnim:
