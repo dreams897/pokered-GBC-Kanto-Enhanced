@@ -327,7 +327,7 @@ MainInBattleLoop:
 	and a
 	ret nz ; return if pokedoll was used to escape from battle
 	ld a, [wBattleMonStatus]
-	and (1 << FRZ) | SLP_MASK
+	and (1 << FRZ)
 	jr nz, .selectEnemyMove ; if so, jump
 	ld a, [wPlayerBattleStatus1]
 	and (1 << STORING_ENERGY) | (1 << USING_TRAPPING_MOVE) ; check player is using Bide or using a multi-turn attack like wrap
@@ -805,6 +805,7 @@ FaintEnemyPokemon:
 ; was congruent to 0 modulo 256.
 	xor a
 	ld [wPlayerBideAccumulatedDamage], a
+	ld [wPlayerBideAccumulatedDamage + 1], a
 	ld hl, wEnemyStatsToDouble ; clear enemy statuses
 	ld [hli], a
 	ld [hli], a
@@ -2834,7 +2835,7 @@ AnyMoveToSelect:
 	or c
 	jr .handleDisabledMovePPLoop
 .allMovesChecked
-	and a ; any PP left?
+	and $3f ; any PP left?
 	ret nz ; return if a move has PP left
 .noMovesLeft
 	ld hl, NoMovesLeftText
@@ -3433,6 +3434,7 @@ CheckPlayerStatusConditions:
 .WakeUp
 	ld hl, WokeUpText
 	call PrintText
+	jr z, .FrozenCheck
 .sleepDone
 	xor a
 	ld [wPlayerUsedMove], a
@@ -5002,6 +5004,8 @@ ApplyAttackToPlayerPokemon:
 ; it's possible for the enemy to do 0 damage with Psywave, but the player always does at least 1 damage
 .loop
 	call BattleRandom
+	and a
+	jr z, .loop
 	cp b
 	jr nc, .loop
 	ld b, a
@@ -5912,6 +5916,7 @@ CheckEnemyStatusConditions:
 .wokeUp
 	ld hl, WokeUpText
 	call PrintText
+	jr z, .checkIfFrozen
 .sleepDone
 	xor a
 	ld [wEnemyUsedMove], a
