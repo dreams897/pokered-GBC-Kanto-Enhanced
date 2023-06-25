@@ -193,7 +193,7 @@ _CeruleanCityText9::
 
 _CeruleanCityText10::
 	text "This is Cerulean"
-	line "CAVE! Horribly"
+	line "Cave! Horribly"
 	cont "strong #MON"
 	cont "live in there!"
 
@@ -228,7 +228,7 @@ _CeruleanCityText16::
 _CeruleanCityText17::
 	text "Cerulean City"
 	line "#MON GYM"
-	cont "LEADER: MISTY"
+	cont "LEADER: Misty"
 
 	para "The Tomboyish"
 	line "Mermaid!"

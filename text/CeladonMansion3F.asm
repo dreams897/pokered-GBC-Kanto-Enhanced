@@ -13,7 +13,7 @@ _WriterText::
 	text "I wrote the story!"
 	line "Isn't ERIKA cute?"
 
-	para "I like MISTY a"
+	para "I like Misty a"
 	line "lot too!"
 
 	para "Oh, and SABRINA,"

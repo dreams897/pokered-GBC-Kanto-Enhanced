@@ -5,7 +5,7 @@ _CinnabarIslandText8::
 
 _CinnabarIslandText1::
 	text "Cinnabar GYM's"
-	line "BLAINE is an odd"
+	line "Blaine is an odd"
 	cont "man who has lived"
 	cont "here for decades."
 	done
@@ -30,7 +30,7 @@ _CinnabarIslandText6::
 _CinnabarIslandText7::
 	text "Cinnabar Island"
 	line "#MON GYM"
-	cont "LEADER: BLAINE"
+	cont "LEADER: Blaine"
 
 	para "The Hot-Headed"
 	line "Quiz Master!"

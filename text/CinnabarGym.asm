@@ -1,7 +1,7 @@
 _BlainePreBattleText::
 	text "Hah!"
 
-	para "I am BLAINE! I"
+	para "I am Blaine! I"
 	line "am the LEADER of"
 	cont "Cinnabar GYM!"
 
@@ -139,7 +139,7 @@ _CinnabarGymAfterBattleText4::
 	done
 
 _CinnabarGymBattleText5::
-	text "I know why BLAINE"
+	text "I know why Blaine"
 	line "became a trainer!"
 	done
 
@@ -148,13 +148,13 @@ _CinnabarGymEndBattleText5::
 	prompt
 
 _CinnabarGymAfterBattleText5::
-	text "BLAINE was lost"
+	text "Blaine was lost"
 	line "in the mountains"
 	cont "when a fiery bird"
 	cont "#MON appeared."
 
 	para "Its light enabled"
-	line "BLAINE to find"
+	line "Blaine to find"
 	cont "his way down!"
 	done
 
@@ -196,7 +196,7 @@ _CinnabarGymGuidePreBattleText::
 	line "making!"
 
 	para "The hot-headed"
-	line "BLAINE is a fire"
+	line "Blaine is a fire"
 	cont "#MON pro!"
 
 	para "Douse his spirits"
