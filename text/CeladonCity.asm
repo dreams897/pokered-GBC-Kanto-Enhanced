@@ -98,7 +98,7 @@ _CeladonCityText10::
 	cont "critical hits!"
 
 	para "Get your items at"
-	line "Celadon DEPT."
+	line "Celadon Dept."
 	cont "STORE!"
 	done
 
@@ -124,7 +124,7 @@ _CeladonCityText14::
 _CeladonCityText15::
 	text "Find what you"
 	line "need at Celadon"
-	cont "DEPT. STORE!"
+	cont "Dept. STORE!"
 	done
 
 _CeladonCityText16::
@@ -137,7 +137,7 @@ _CeladonCityText16::
 	cont "fire and water!"
 
 	para "Get your items at"
-	line "Celadon DEPT."
+	line "Celadon Dept."
 	cont "STORE!"
 	done
 

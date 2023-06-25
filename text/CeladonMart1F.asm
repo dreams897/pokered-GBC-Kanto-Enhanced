@@ -1,6 +1,6 @@
 _CeladonMart1Text1::
 	text "Hello! Welcome to"
-	line "Celadon DEPT."
+	line "Celadon Dept."
 	cont "STORE."
 
 	para "The board on the"
