@@ -419,7 +419,7 @@ ArcanineEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 0
+	db 40, EXTREME_SPEED
 
 MewEvosMoves:
 ; Evolutions
@@ -912,6 +912,7 @@ DragoniteEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 1,  EXTREME_SPEED
 	db 10, THUNDER_WAVE
 	db 20, AGILITY
 	db 35, SLAM

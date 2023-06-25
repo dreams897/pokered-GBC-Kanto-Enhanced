@@ -1145,9 +1145,9 @@ SubstituteAnim:
 	db -1 ; end
 	
 ExtremeSpeedAnim:
+	battle_anim FLY, SUBANIM_1_STAR_BIG_MOVING, 1, 3
 	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
-	battle_anim TAKE_DOWN, SUBANIM_1_LEAVES_TOSS, 1, 1
-	battle_anim NO_MOVE, SE_RESET_MON_POSITION
+	battle_anim CUT, SE_DARK_SCREEN_FLASH
 	db -1 ; end
 
 BallTossAnim:
