@@ -55,9 +55,14 @@ Lobby_GFX::         INCBIN "gfx/tilesets/lobby.2bpp"
 Lobby_Block::       INCBIN "gfx/blocksets/lobby.bst"
 Ship_GFX::          INCBIN "gfx/tilesets/ship.2bpp"
 Ship_Block::        INCBIN "gfx/blocksets/ship.bst"
+
+SECTION "Tilesets 4", ROMX
+
 Lab_GFX::           INCBIN "gfx/tilesets/lab.2bpp"
 Lab_Block::         INCBIN "gfx/blocksets/lab.bst"
 Club_GFX::          INCBIN "gfx/tilesets/club.2bpp"
 Club_Block::        INCBIN "gfx/blocksets/club.bst"
 Underground_GFX::   INCBIN "gfx/tilesets/underground.2bpp"
 Underground_Block:: INCBIN "gfx/blocksets/underground.bst"
+Casino_GFX::        INCBIN "gfx/tilesets/casino.2bpp"
+Casino_Block::      INCBIN "gfx/blocksets/casino.bst"

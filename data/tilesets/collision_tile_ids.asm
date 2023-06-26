@@ -68,3 +68,6 @@ Facility_Coll::
 
 Plateau_Coll::
 	coll_tiles $1b, $23, $2c, $2d, $3b, $45
+	
+Casino_Coll::
+	coll_tiles $11, $14, $17, $1a, $1c, $20, $30, $31, $32, $33, $38, $40, $41, $42, $43, $45
