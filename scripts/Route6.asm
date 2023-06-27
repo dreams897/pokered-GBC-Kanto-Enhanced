@@ -19,6 +19,8 @@ Route6_TextPointers:
 	dw Route6Text4
 	dw Route6Text5
 	dw Route6Text6
+	dw Route6Tree1
+	dw Route6Tree2
 	dw Route6Text7
 
 Route6TrainerHeaders:
@@ -144,3 +146,17 @@ Route6AfterBattleText6:
 Route6Text7:
 	text_far _Route6Text7
 	text_end
+	
+Route6Tree1:
+	text_asm
+	ld a, 5 ; Which berry tree
+	ld [wWhichTrade], a
+	callfar BerryTreeScript
+	jp TextScriptEnd
+	
+Route6Tree2:
+	text_asm
+	ld a, 6 ; Which berry tree
+	ld [wWhichTrade], a
+	callfar BerryTreeScript
+	jp TextScriptEnd
