@@ -365,6 +365,7 @@ OverworldLoopLessDelay::
 	ld hl, wCurrentMapScriptFlags
 	set 5, [hl]
 	set 6, [hl]
+	set 3, [hl] ; PureRGBnote: ADDED: new bit indicating we reloaded a map from a battle
 	xor a
 	ldh [hJoyHeld], a
 	ld a, [wCurMap]
@@ -782,6 +783,13 @@ ExtraWarpCheck::
 
 MapEntryAfterBattle::
 	farcall IsPlayerStandingOnWarp ; for enabling warp testing after collisions
+;;;;;;;;;; PureRGBnote: ADDED: skip fading in in maps that use a specific bit in their header - allows tile block replacements to go unseen
+	ld a, [wMapConnections]
+	bit 4, a
+	ret nz
+;;;;;;;;;;
+	; fall through
+MapFadeAfterBattle::
 	ld a, [wMapPalOffset]
 	and a
 	jp z, GBFadeInFromWhite
@@ -2022,7 +2030,20 @@ RunMapScript::
 	push de
 	jp hl ; jump to script
 .return
-	ret
+;;;;;;;;;; PureRGBnote: ADDED: code that will fade back in after battle in specific maps with a bit in their header
+;;;;;;;;;; used to keep tileblock replacements unseen
+	ld hl, wCurrentMapScriptFlags
+	bit 3, [hl]
+	res 3, [hl]
+	ret z
+	ld a, [wMapConnections]
+	bit 4, a
+	ret z
+	ld a, [wIsInBattle]
+	cp $ff
+	ret z
+	jp MapFadeAfterBattle
+;;;;;;;;;;
 
 LoadWalkingPlayerSpriteGraphics::
 	ld de, RedSprite
