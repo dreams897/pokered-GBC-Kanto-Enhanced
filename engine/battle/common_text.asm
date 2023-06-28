@@ -27,6 +27,9 @@ PrintBeginningBattleText:
 	ld a, [wMoveMissed]
 	and a
 	jr z, .notFishing
+	ld hl, FellOutOfTreeText
+	cp 2
+	jr z, .notFishing
 	ld hl, HookedMonAttackedText
 .notFishing
 	jr .wildBattle
@@ -89,6 +92,10 @@ WildMonAppearedText:
 
 HookedMonAttackedText:
 	text_far _HookedMonAttackedText
+	text_end
+	
+FellOutOfTreeText:
+	text_far _FellOutOfTreeText
 	text_end
 
 EnemyAppearedText:
