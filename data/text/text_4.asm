@@ -20,6 +20,7 @@ _PlayerBlackedOutText::
 _RepelWoreOffText::
 	text "Repel's effect"
 	line "wore off."
+	para "Use another one?"
 	done
 
 _NoBicycleText1::

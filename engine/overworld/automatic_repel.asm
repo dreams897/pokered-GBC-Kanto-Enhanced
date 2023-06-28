@@ -27,8 +27,6 @@ _DisplayRepelWoreOffText::
 	ld [wd11e], a
 	call GetItemName
 	call CopyToStringBuffer
-	ld hl, UseAnotherText
-	call PrintText
 	call YesNoChoice
 	ld a, [wCurrentMenuItem]
 	and a
@@ -63,5 +61,3 @@ _DisplayRepelWoreOffText::
 .done
 	ret
 
-UseAnotherText:
-	text "Use another one?@@"
