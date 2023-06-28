@@ -177,6 +177,8 @@ IsHeadbuttTile:
 	ld a, [wTileInFrontOfPlayer]
 	cp $50
 	jr z, .yes
+	cp $3A
+	jr z, .yes
 .no
 	and a
 	ret

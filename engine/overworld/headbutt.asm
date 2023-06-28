@@ -23,6 +23,8 @@ UseHeadbuttOW::
 	ld a, [wTileInFrontOfPlayer]
 	cp $50 ; Tree corner
 	jr z, .useHeadbutt
+	cp $3A ; Tree corner 2
+	jr z, .useHeadbutt
 .noHeadbutt
 	ld hl, NothingToHeadbuttText
 	jp PrintText
