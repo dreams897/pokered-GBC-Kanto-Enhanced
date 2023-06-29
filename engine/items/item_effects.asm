@@ -892,7 +892,7 @@ ItemUseMedicine:
 	cp ACAI_BERRY
 	jp z, .useVitamin
 	cp PECHA_BERRY
-	jr z, .cureStatusAilment
+	jp nc, .cureStatusAilment
 	cp ORAN_BERRY
 	jp nc, .healHP
 	cp REVIVE
@@ -902,7 +902,7 @@ ItemUseMedicine:
 	cp HP_UP
 	jp nc, .useVitamin ; if it's a vitamin or Rare Candy
 	cp FULL_RESTORE
-	jr nc, .healHP ; if it's a Full Restore or one of the potions
+	jp nc, .healHP ; if it's a Full Restore or one of the potions
 ; fall through if it's one of the status-specific healing items
 .cureStatusAilment
 	ld bc, wPartyMon1Status - wPartyMon1
