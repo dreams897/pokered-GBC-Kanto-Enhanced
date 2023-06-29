@@ -32,7 +32,7 @@
 	const HAZE_EFFECT                ; $19
 	const BIDE_EFFECT                ; $1A
 	const THRASH_PETAL_DANCE_EFFECT  ; $1B
-	const SWITCH_AND_TELEPORT_EFFECT ; $1C
+	const TELEPORT_EFFECT 		 ; $1C
 	const TWO_TO_FIVE_ATTACKS_EFFECT ; $1D
 	const EFFECT_1E                  ; $1E unused
 	const FLINCH_SIDE_EFFECT1        ; $1F

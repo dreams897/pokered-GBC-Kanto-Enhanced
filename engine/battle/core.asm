@@ -1160,6 +1160,14 @@ ChooseNextMon:
 .monChosen
 	call HasMonFainted
 	jr z, .goBackToPartyMenu ; if mon fainted, you have to choose another
+	ld hl, wPlayerMonNumber
+	ld a, [wWhichPokemon]
+	cp [hl]
+	jr nz, .notSamePokemon
+	ld hl, AlreadyOutText
+	jp PrintText
+	jr .goBackToPartyMenu
+.notSamePokemon
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr nz, .notLinkBattle

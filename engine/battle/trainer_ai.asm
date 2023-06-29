@@ -580,8 +580,30 @@ AISwitchIfEnoughMons:
 	jp nc, SwitchEnemyMon
 	and a
 	ret
+	
+SwitchEnemyMonNoText:
+	call SwitchEnemyMonCommon
+	jp SwitchEnemyMonCommon2
 
 SwitchEnemyMon:
+	call SwitchEnemyMonCommon
+	ld hl, AIBattleWithdrawText
+	jp PrintText
+	jp SwitchEnemyMonCommon2
+
+SwitchEnemyMonCommon:
+;;;;; shinpokerednote: CHANGED: if player using trapping move, then end their move
+	ld a, [wPlayerBattleStatus1]
+	bit USING_TRAPPING_MOVE, a
+	jr z, .preparewithdraw
+	ld hl, wPlayerBattleStatus1
+	res USING_TRAPPING_MOVE, [hl] 
+	xor a
+	ld [wPlayerNumAttacksLeft], a
+	ld a, $FF
+	ld [wPlayerSelectedMove], a
+.preparewithdraw
+;;;;;
 
 ; prepare to withdraw the active monster: copy hp, number, and status to roster
 
@@ -593,10 +615,14 @@ SwitchEnemyMon:
 	ld e, l
 	ld hl, wEnemyMonHP
 	ld bc, 4
-	call CopyData
+	jp CopyData
+	ret
 
-	ld hl, AIBattleWithdrawText
-	call PrintText
+SwitchEnemyMonCommon2:
+;;;;;;;;;; PureRGBnote: ADDED: clear the previous selected move here to reset disable functionality on opponent switching pokemon.
+	xor a
+	ld [wEnemyLastSelectedMoveDisable], a 
+;;;;;;;;;;
 
 	; This wFirstMonsNotOutYet variable is abused to prevent the player from
 	; switching in a new mon in response to this switch.
@@ -609,6 +635,10 @@ SwitchEnemyMon:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z
+
+	;shinpokerednote: FIXED: the act of switching clears hWhoseTurn, so it needs to be set back to 1
+	ld a, 1
+	ldh [hWhoseTurn], a
 	scf
 	ret
 

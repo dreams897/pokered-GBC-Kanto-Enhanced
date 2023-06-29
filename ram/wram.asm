@@ -866,6 +866,8 @@ wRodResponse::
 	db
 ENDU
 
+wBattleFunctionalFlags:: db
+
 ; 0 = neither
 ; 1 = warp pad
 ; 2 = hole
@@ -1918,6 +1920,8 @@ wPlayerMovingDirection:: db
 ; the direction in which the player was moving before the player last stopped
 wPlayerLastStopDirection:: db
 
+wEnemyLastSelectedMoveDisable:: db ; store for disable functionality
+
 ; if the player is moving, the current direction
 ; if the player is not moving, the last the direction in which the player moved
 wPlayerDirection:: db
@@ -2415,5 +2419,5 @@ ENDC
 SECTION "Stack", WRAM0
 
 ; the stack grows downward
-	ds $82 - 1
+	ds $80 - 1
 wStack:: db
