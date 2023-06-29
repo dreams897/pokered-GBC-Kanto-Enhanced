@@ -27,7 +27,7 @@ _CurrentTooFastText::
 
 _CyclingIsFunText::
 	text "Cycling is fun!"
-	line "Forget SURFing!"
+	line "Why SURF?"
 	prompt
 
 _FlashLightsAreaText::
@@ -58,7 +58,7 @@ _NotHealthyEnoughText::
 	prompt
 
 _NewBadgeRequiredText::
-	text "No! A new BADGE"
+	text "No! A new Badge"
 	line "is required."
 	prompt
 
@@ -86,7 +86,7 @@ _SentToBoxText::
 	text_ram wBoxMonNicks
 	text " was"
 	cont "sent to #MON"
-	cont "BOX @"
+	cont "Box @"
 	text_ram wStringBuffer
 	text " on PC!"
 	done
@@ -95,10 +95,10 @@ _BoxIsFullText::
 	text "There's no more"
 	line "room for #MON!"
 
-	para "The #MON BOX"
+	para "The #MON Box"
 	line "is full and can't"
 	cont "accept any more!"
 
-	para "Change the BOX at"
+	para "Change the Box at"
 	line "a #MON Center!"
 	done
