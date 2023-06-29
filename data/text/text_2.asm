@@ -286,7 +286,7 @@ _BookcaseText::
 
 _NewBicycleText::
 	text "A shiny new"
-	line "BICYCLE!"
+	line "Bicycle!"
 	done
 
 _PushStartText::
@@ -295,8 +295,8 @@ _PushStartText::
 	done
 
 _SaveOptionText::
-	text "Hold down 'B'"
-	line "to run!"
+	text "Hold 'B' to"
+	line "move faster!"
 	done
 
 _StrengthsAndWeaknessesText::
@@ -313,8 +313,8 @@ _TimesUpText::
 	prompt
 
 _GameOverText::
-	text "PA: Your SAFARI"
-	line "GAME is over!"
+	text "PA: Your Safari"
+	line "Game is over!"
 	done
 
 _CinnabarGymQuizIntroText::
@@ -1540,8 +1540,8 @@ _AccessedHoFPCText::
 	text "Accessed #MON"
 	line "League's site."
 
-	para "Accessed the HALL"
-	line "OF FAME List."
+	para "Accessed the Hall"
+	line "Of Fame List."
 	prompt
 
 _SwitchOnText::
@@ -1697,9 +1697,9 @@ _OakSpeechText1::
 	line "Welcome to the"
 	cont "world of #MON!"
 
-	para "My name is. Oak!"
+	para "My name is Oak!"
 	line "People call me"
-	cont "the #MON Prof!"
+	cont "the #MON Prof.!"
 	prompt
 
 _OakSpeechText2A::
