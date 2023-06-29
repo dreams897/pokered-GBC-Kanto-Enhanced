@@ -34,7 +34,7 @@ _PokemonTower2Text_6063c::
 	cont "Cubone!"
 
 	para "I can't find the"
-	line "grown-up MAROWAK"
+	line "grown-up Marowak"
 	cont "yet!"
 
 	para "I doubt there are"
@@ -51,7 +51,7 @@ _PokemonTower2Text2::
 	line "identify the"
 	cont "wayward Ghosts!"
 
-	para "A SILPH SCOPE"
+	para "A Silph Scope"
 	line "might be able to"
 	cont "unmask them."
 	done

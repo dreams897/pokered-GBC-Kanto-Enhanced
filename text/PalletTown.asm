@@ -1,10 +1,10 @@
 _OakAppearsText::
-	text "OAK: Hey! Wait!"
+	text "Oak: Hey! Wait!"
 	line "Don't go out!@"
 	text_end
 
 _OakWalksUpText::
-	text "OAK: It's unsafe!"
+	text "Oak: It's unsafe!"
 	line "Wild #MON live"
 	cont "in tall grass!"
 
@@ -37,12 +37,12 @@ _PalletTownText3::
 	done
 
 _PalletTownText4::
-	text "OAK #MON"
-	line "RESEARCH LAB"
+	text "Oak #MON"
+	line "Research Lab"
 	done
 
 _PalletTownText5::
-	text "PALLET TOWN"
+	text "Pallet Town:"
 	line "Shades of your"
 	cont "journey await!"
 	done

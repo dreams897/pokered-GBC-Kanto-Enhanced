@@ -31,9 +31,9 @@ _Route9AfterBattleText2::
 	done
 
 _Route9BattleText3::
-	text "I'm taking ROCK"
-	line "TUNNEL to go to"
-	cont "LAVENDER..."
+	text "I'm taking Rock"
+	line "Tunnel to go to"
+	cont "Lavender..."
 	done
 
 _Route9EndBattleText3::
@@ -43,7 +43,7 @@ _Route9EndBattleText3::
 
 _Route9AfterBattleText3::
 	text "Are you off to"
-	line "ROCK TUNNEL too?"
+	line "Rock Tunnel too?"
 	done
 
 _Route9BattleText4::
@@ -151,7 +151,7 @@ _Route9AfterBattleText9::
 	done
 
 _Route9Text11::
-	text "ROUTE 9"
+	text "Route 9"
 	line "Cerulean City-"
-	cont "ROCK TUNNEL"
+	cont "Rock Tunnel"
 	done

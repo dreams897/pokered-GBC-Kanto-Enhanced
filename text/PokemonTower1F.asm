@@ -13,19 +13,19 @@ _PokemonTower1Text2::
 
 _PokemonTower1Text3::
 	text "I came to pray"
-	line "for my CLEFAIRY."
+	line "for my Clefairy."
 
 	para "Sniff! I can't"
 	line "stop crying..."
 	done
 
 _PokemonTower1Text4::
-	text "My GROWLITHE..."
+	text "My Growlithe..."
 	line "Why did you die?"
 	done
 
 _PokemonTower1Text5::
-	text "I am a CHANNELER!"
+	text "I am a Channeler!"
 	line "There are spirits"
 	cont "up to mischief!"
 	done
