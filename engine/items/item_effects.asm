@@ -898,7 +898,7 @@ ItemUseMedicine:
 	cp REVIVE
 	jp nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
-	jr z, .cureStatusAilment ; if it's a Full Heal
+	jp z, .cureStatusAilment ; if it's a Full Heal
 	cp HP_UP
 	jp nc, .useVitamin ; if it's a vitamin or Rare Candy
 	cp FULL_RESTORE
