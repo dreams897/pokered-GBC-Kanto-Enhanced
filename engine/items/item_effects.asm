@@ -890,19 +890,19 @@ ItemUseMedicine:
 .checkItemType
 	ld a, [wcf91]
 	cp ACAI_BERRY
-	jp nc,.useVitamin
+	jp z, .useVitamin
 	cp PECHA_BERRY
 	jr z, .cureStatusAilment
 	cp ORAN_BERRY
-	jp nc,.healHP
+	jp nc, .healHP
 	cp REVIVE
-	jp nc,.healHP ; if it's a Revive or Max Revive
+	jp nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
 	jr z, .cureStatusAilment ; if it's a Full Heal
 	cp HP_UP
 	jp nc, .useVitamin ; if it's a vitamin or Rare Candy
 	cp FULL_RESTORE
-	jp nc,.healHP ; if it's a Full Restore or one of the potions
+	jr nc, .healHP ; if it's a Full Restore or one of the potions
 ; fall through if it's one of the status-specific healing items
 .cureStatusAilment
 	ld bc, wPartyMon1Status - wPartyMon1
