@@ -109,11 +109,7 @@ AIMoveChoiceModificationFunctionPointers:
 	dw AIMoveChoiceModification3
 	dw AIMoveChoiceModification4 ; unused, does nothing
 
-; discourages moves that cause no damage but only a status ailment if player's mon already has one
 AIMoveChoiceModification1:
-	ld a, [wBattleMonStatus]
-	and a
-	ret z ; return if no status ailment on player's mon
 	ld hl, wBuffer - 1 ; temp move selection array (-1 byte offset)
 	ld de, wEnemyMonMoves ; enemy moves
 	ld b, NUM_MOVES + 1
@@ -126,9 +122,33 @@ AIMoveChoiceModification1:
 	ret z ; no more moves in move set
 	inc de
 	call ReadMove
+	ld a, [wEnemyMoveEffect]
+	cp DREAM_EATER_EFFECT
+	jp z, .checkAsleep
+	cp OHKO_EFFECT
+	jr z, .ohko
 	ld a, [wEnemyMovePower]
 	and a
 	jr nz, .nextMove
+	ld a, [wEnemyMoveEffect]
+	cp TELEPORT_EFFECT
+	jr z, .checkTeleportUsable
+	cp DISABLE_EFFECT
+	jr z, .checkDisabled
+	cp LEECH_SEED_EFFECT
+	jp z, .checkSeeded
+	cp FOCUS_ENERGY_EFFECT
+	jr z, .checkPumpedUp
+	cp LIGHT_SCREEN_EFFECT
+	jp z, .checkLightScreenUp
+	cp REFLECT_EFFECT
+	jp z, .checkReflectUp
+	cp CONFUSION_EFFECT
+	jp z, .checkConfused
+	cp HEAL_EFFECT
+	jp z, .checkFullHealth
+	cp MIRROR_MOVE_EFFECT
+	jp z, .checkNoMirrorMoveOnFirstTurn
 	ld a, [wEnemyMoveEffect]
 	push hl
 	push de
@@ -140,17 +160,196 @@ AIMoveChoiceModification1:
 	pop de
 	pop hl
 	jr nc, .nextMove
+.checkStatusImmunity
+	call CheckStatusImmunity
+	jr c, .discourage
+.notImmune
+	ld a, [wAITargetMonStatus] ; set to the pokemon's current status before it gets healed or before it switches out
+	and a
+	jr nz, .discourage ; if the AI thinks the player has a status, they should avoid using status moves 
+					   ; even if the player heals the status or switches out that turn
+	ld a, [wAIMoveSpamAvoider] ; set if we switched or healed this turn
+	cp 2 ; set to 2 if we switched
+	jr z, .nextMove ; if the AI thinks the player DOESNT have a status before they switch, we should avoid discouraging status moves
+	ld a, [wBattleMonStatus]
+	and a
+	jr z, .nextMove ; no need to discourage status moves if the player doesn't have a status
+.discourage
 	ld a, [hl]
 	add $5 ; heavily discourage move
 	ld [hl], a
 	jr .nextMove
+.ohko
+	call WillOHKOMoveAlwaysFail
+	jp nc, .nextMove
+	jr .discourage
+.checkTeleportUsable
+	push hl
+	push de
+	push bc
+	callfar CheckCanForceSwitchEnemy
+	pop bc
+	pop de
+	pop hl 
+	jp nz, .nextMove
+	; disourage teleport if there is only one pokemon left in the AI trainer's party (would fail in that case)
+	jr .discourage
+.checkDisabled
+	ld a, [wPlayerDisabledMove] ; non-zero if the player has a disabled move
+	and a
+	jp z, .nextMove ; if it's zero don't do anything
+	jr .discourage ; otherwise discourage using disable while opponent is disabled already
+.checkPumpedUp
+	ld a, [wEnemyBattleStatus2]
+	bit GETTING_PUMPED, a
+	jr nz, .discourage ; if the enemy has used focus energy don't use again
+	jp .nextMove
+.checkAsleep
+	ld a, [wAITargetMonStatus]
+	and SLP_MASK
+	jp nz, .nextMove ; if we just healed sleep or switched out a sleeping pokemon, 
+					 ; the AI shouldn't predict this perfectly when deciding whether to use dream eater
+	ld a, [wBattleMonStatus]
+	and SLP_MASK
+	jr z, .discourage ; heavily discourage, if the player isn't asleep avoid using dream eater
+	jp .nextMove
+.checkLightScreenUp
+	ld a, [wEnemyBattleStatus3]
+	bit HAS_LIGHT_SCREEN_UP, a
+	jr nz, .discourage ; if the enemy has a light screen up dont use the move again
+	jp .nextMove
+.checkReflectUp
+	ld a, [wEnemyBattleStatus3]
+	bit HAS_REFLECT_UP, a
+	jr nz, .discourage ; if the enemy has a reflect up dont use the move again
+	jp .nextMove
+.checkConfused
+	ld a, [wPlayerBattleStatus1]
+	bit CONFUSED, a
+	jr nz, .discourage ; if the player is confused, don't use confusion-inflicting moves
+	jp .nextMove
+.checkSeeded
+	call CheckSeeded
+	jp nc, .nextMove
+	jr .discourage
+.checkFullHealth ; avoid using moves like recover at full health.
+	push hl
+	push de
+	ld hl, wEnemyMonMaxHP
+	ld de, wEnemyMonHP
+	ld a, [de]
+	cp [hl]
+	jr nz, .notFullHealth
+	inc hl
+	inc de
+	ld a, [de]
+	cp [hl]
+	jr nz, .notFullHealth
+	pop de
+	pop hl
+	jp .discourage
+.notFullHealth
+	pop de
+	pop hl
+	jp .nextMove
+.checkNoMirrorMoveOnFirstTurn
+	ld a, [wPlayerLastSelectedMove]
+	and a
+	jp z, .discourage ; don't use mirror move if the player has never selected a move yet
+	jp .nextMove
+
 
 StatusAilmentMoveEffects:
-	db EFFECT_01 ; unused sleep effect
 	db SLEEP_EFFECT
 	db POISON_EFFECT
 	db PARALYZE_EFFECT
 	db -1 ; end
+
+;;;;;;;;;; PureRGBnote: ADDED: function for checking if the player can have leech seed applied and whether they already have it applied
+
+CheckSeeded:
+	push hl
+	ld a, [wPlayerBattleStatus2]
+	bit SEEDED, a
+	jr nz, .discourage ; if the enemy has used leech seed don't use again
+	ld a, [wAIMoveSpamAvoider]
+	cp 2 ; set to 2 if we switched out this turn
+	ld hl, wBattleMonType1
+	jr nz, .noSwitchOut
+	ld hl, wAITargetMonType1 ; stores what the AI thinks the player's type is when a switchout happens
+.noSwitchOut	
+	ld a, [hl]
+	cp GRASS
+	jr z, .discourage ; leech seed does not affect grass types
+	inc hl
+	ld a, [hl]
+	cp GRASS
+	jr z, .discourage ; leech seed does not affect grass types
+	pop hl
+	and a
+	ret
+.discourage
+	pop hl
+	scf
+	ret	
+
+;;;;;;;;;;
+
+;;;;;;;;;; PureRGBnote: ADDED: function for checking if the player's pokemon is unaffected by specific status moves.
+
+CheckStatusImmunity:
+	push bc
+	push hl
+	ld a, [wEnemyMoveEffect]
+	cp POISON_EFFECT
+	ld b, POISON
+	jr z, .getMonTypes
+	cp PARALYZE_EFFECT
+	jr z, .checkParalyze
+	jr .done
+.checkParalyze
+	ld a, [wEnemyMoveType]
+	cp ELECTRIC
+	ld b, GROUND
+	jr nz, .done
+.getMonTypes
+	ld a, [wAIMoveSpamAvoider] ; set if we healed status or switched out this turn
+	cp 2 ; it's 2 if we switched out
+	jr nz, .noSwitchOut
+	ld hl, wAITargetMonType1
+	jr .checkTypes
+.noSwitchOut
+	ld hl, wBattleMonType1
+.checkTypes
+	ld a, [hl]
+	cp b
+	jr z, .discourage
+	inc hl
+	ld a, [hl]
+	cp b
+	jr z, .discourage
+.done
+	pop hl
+	pop bc
+	and a
+	ret
+.discourage
+	pop hl
+	pop bc
+	scf
+	ret	
+;;;;;;;;;;
+
+;;;;;;;;;; PureRGBnote: ADDED: function that allows AI to avoid OHKO moves if they will never do anything to the player's pokemon due to speed differences
+WillOHKOMoveAlwaysFail:
+	call CompareSpeed
+	jr c, .userIsSlower
+	and a
+	ret
+.userIsSlower
+	scf
+	ret
+;;;;;;;;;;
 
 ; slightly encourage moves with specific effects.
 ; in particular, stat-modifying moves and other move effects
@@ -272,6 +471,30 @@ ReadMove:
 	pop de
 	pop hl
 	ret
+	
+;;;;;;;;;; PureRGBnote: ADDED: function that allows AI to be aware if they are slower than the opponent. Allows them to prefer priority moves.
+CompareSpeed:
+	push hl
+	push de
+	push bc
+	ld hl, wEnemyMonSpeed + 1
+	ld de, wBattleMonSpeed + 1
+.compareSpeed
+; check if current speed is higher than the target's
+	ld a, [de]
+	dec de
+	ld b, a
+	ld a, [hld]
+	sub b
+	ld a, [de]
+	ld b, a
+	ld a, [hl]
+	sbc b
+	pop bc
+	pop de
+	pop hl
+	ret
+;;;;;;;;;;
 
 INCLUDE "data/trainers/move_choices.asm"
 

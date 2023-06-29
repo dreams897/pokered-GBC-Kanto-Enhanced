@@ -474,6 +474,7 @@ wMoveMenuType:: db
 
 wPlayerSelectedMove:: db
 wEnemySelectedMove:: db
+wPlayerLastSelectedMove::db ; Last used move by the player, regardless of switching or fainting, etc. - used for mirror move functionality
 
 wLinkBattleRandomNumberListIndex:: db
 
@@ -1094,6 +1095,14 @@ wGymCityName:: ds 17
 wGymLeaderName:: ds NAME_LENGTH
 
 wItemList:: ds 16
+
+wAIMoveSpamAvoider:: db
+
+wAITargetMonType1:: db ; the type of the pokemon the AI should think it's attacking (stays as the previous pokemon when you switch pokemon)
+
+wPlayerLastSelectedMoveDisable:: db ; store for disable functionality
+
+wAITargetMonStatus:: db ; the current status of the pokemon the AI should think it's attacking (set when healing a pokemon's status or switching it out)
 
 wListPointer:: dw
 
@@ -2419,5 +2428,5 @@ ENDC
 SECTION "Stack", WRAM0
 
 ; the stack grows downward
-	ds $80 - 1
+	ds $77 - 1
 wStack:: db

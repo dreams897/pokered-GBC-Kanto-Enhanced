@@ -127,6 +127,11 @@ _TeleportedAway::
 	text "<USER>"
 	line "teleported away!"
 	prompt
+	
+_WithdrewFromBattle::
+	text "<USER>"
+	line "was withdrawn!"
+	prompt
 
 _RanFromBattleText::
 	text "<USER>"

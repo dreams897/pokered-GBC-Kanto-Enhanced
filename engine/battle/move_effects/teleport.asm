@@ -1,4 +1,3 @@
-; PureRGBnote: CHANGED: teleport was changed to switch the pokemon out in battle and give them back 25% HP on doing so.
 _TeleportEffect::	
 	ldh a, [hWhoseTurn]
 	and a
@@ -8,31 +7,8 @@ _TeleportEffect::
 	xor a
 	ld [wAnimationType], a
 	ld a, [wPlayerMoveNum]
-	jp TeleportedAwayText
+	ld hl, WithdrewFromBattle
 	call .playAnimAndPrintText
-	; need to save a bunch of values because we're going to switch pokemon BEFORE applying a heal effect
-	ldh a, [hWhoseTurn]
-	push af
-	ld a, [wPlayerMonNumber]
-	push af
-	ld a, [wPlayerMoveNum]
-	push af
-	call SaveScreenTilesToBuffer1
-	callfar ChooseNextMon
-	pop af
-	ld [wPlayerMoveNum], a
-	pop af
-	ld d, a
-	pop af
-	ld b, a
-	ldh a, [hWhoseTurn]
-	push af
-	ld a, b
-	ldh [hWhoseTurn], a
-	pop af
-	ldh [hWhoseTurn], a
-	xor a
-	ld [wPlayerMoveNum], a
 	ret
 .handleEnemy
 	ld a, [wIsInBattle]
@@ -44,7 +20,7 @@ _TeleportEffect::
 	xor a
 	ld [wAnimationType], a
 	ld a, [wEnemyMoveNum]
-	jp TeleportedAwayText
+	ld hl, WithdrewFromBattle
 	call .playAnimAndPrintText
 	jpfar SwitchEnemyMonNoText
 .wildBattle
@@ -67,7 +43,7 @@ _TeleportEffect::
 	inc a
 	ld [wEscapedFromBattle], a
 	ld a, [wEnemyMoveNum]
-	ld hl, RanFromBattleText
+	ld hl, TeleportedAwayText
 .playAnimAndPrintText
 	push hl
 ;;;;;;;;;; PureRGBnote: ADDED: set the flag that makes the animation code mark this move as seen in the movedex
@@ -77,25 +53,26 @@ _TeleportEffect::
 	ld [wAnimationID], a
 	callfar PlayBattleAnimationGotID
 	ld c, 20
-	jp DelayFrames
+	call DelayFrames
 	; pop af
 	pop hl
-	call PrintText
+	jp PrintText
 .failed
 	ld c, 50
-	jp DelayFrames
-	jpfar PrintButItFailedText_
+	call DelayFrames
+	jp nz, PrintText
+	jp PrintButItFailedText_
 
 RanFromBattleText:
 	text_far _RanFromBattleText
 	text_end
 
 TeleportedAwayText:
-	ld hl, TeleportedText
-	jp PrintText
-	
-TeleportedText:
 	text_far _TeleportedAway
+	text_end
+	
+WithdrewFromBattle:
+	text_far _WithdrewFromBattle
 	text_end
 
 ; returns nz if the player/opponent can switch
