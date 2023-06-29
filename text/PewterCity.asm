@@ -90,7 +90,7 @@ _PewterCityText7::
 
 	para "Thieves have been"
 	line "stealing #MON"
-	cont "fossils at Mt."
+	cont "fossils at Mt. "
 	cont "Moon! Please call"
 	cont "Pewter Police"
 	cont "with any info!"
@@ -98,7 +98,7 @@ _PewterCityText7::
 
 _PewterCityText10::
 	text "Pewter Museum"
-	line "Of Science"
+	line "of Science"
 	done
 
 _PewterCityText11::

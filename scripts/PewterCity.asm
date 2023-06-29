@@ -54,7 +54,7 @@ PewterCityScript1:
 	call PlayDefaultMusic
 	ld hl, wFlags_0xcd60
 	set 4, [hl]
-	ld a, $d
+	ld a, $f
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	ld a, $3c
@@ -122,7 +122,7 @@ PewterCityScript4:
 	call PlayDefaultMusic
 	ld hl, wFlags_0xcd60
 	set 4, [hl]
-	ld a, $e
+	ld a, $10
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	ld a, $3c
@@ -318,6 +318,10 @@ PewterCityText10:
 PewterCityText11:
 	text_far _PewterCityText11
 	text_end
+	
+PewterCityText12:
+	text_far _PewterCityText12
+	text_end
 
 PewterCityTree1:
 	text_asm
@@ -332,7 +336,3 @@ PewterCityTree2:
 	ld [wWhichTrade],a
 	farcall BerryTreeScript
 	jp TextScriptEnd
-
-PewterCityText12:
-	text_far _PewterCityText12
-	text_end
