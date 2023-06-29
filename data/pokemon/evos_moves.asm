@@ -1288,10 +1288,11 @@ VaporeonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+
 	db 27, QUICK_ATTACK
 	db 31, WATER_GUN
 	db 37, TAIL_WHIP
-	db 40, BITE
+	db 40, MUDDY_WATER
 	db 42, ACID_ARMOR
 	db 44, HAZE
 	db 48, MIST
