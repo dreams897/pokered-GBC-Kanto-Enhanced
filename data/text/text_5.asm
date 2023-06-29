@@ -37,7 +37,7 @@ _FlashLightsAreaText::
 
 _WarpToLastPokemonCenterText::
 	text "Warp to the last"
-	line "#MON CENTER."
+	line "#MON Center."
 	done
 
 _CannotUseTeleportNowText::
@@ -100,5 +100,5 @@ _BoxIsFullText::
 	cont "accept any more!"
 
 	para "Change the BOX at"
-	line "a #MON CENTER!"
+	line "a #MON Center!"
 	done

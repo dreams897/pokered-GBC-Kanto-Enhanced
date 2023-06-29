@@ -150,5 +150,5 @@ _Route8AfterBattleText9::
 _Route8Text10::
 	text "UNDERGROUND PATH"
 	line "Celadon City -"
-	cont "LAVENDER TOWN"
+	cont "Lavender Town"
 	done

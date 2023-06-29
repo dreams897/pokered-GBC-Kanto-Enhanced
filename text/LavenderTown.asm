@@ -38,7 +38,7 @@ _LavenderTownText3::
 	done
 
 _LavenderTownText4::
-	text "LAVENDER TOWN"
+	text "Lavender Town"
 	line "The Noble Purple"
 	cont "Town"
 	done

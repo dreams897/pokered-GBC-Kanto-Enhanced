@@ -6,7 +6,7 @@ UnusedBadgeNames::
 	db "ひんやりバッヂ@" ; CHILL BADGE
 	db "なかよしバッヂ@" ; FRIENDSHIP BADGE
 	db "バラバッヂ@" ; ROSE BADGE
-	db "ひのたまバッヂ@" ; FIREBALL BADGE
+	db "ひのたまバッヂ@" ; FIREBall BADGE
 	db "ゴールドバッヂ@" ; GOLD BADGE
 
 UnusedRankingNames:

@@ -54,7 +54,7 @@ _MartSignText::
 
 _PokeCenterSignText::
 	text "Heal Your #MON!"
-	line "#MON CENTER"
+	line "#MON Center"
 	done
 
 _FoundItemText::
@@ -71,7 +71,7 @@ _NoMoreRoomForItemText::
 
 _OaksAideHiText::
 	text "Hi! Remember me?"
-	line "I'm PROF.OAK's"
+	line "I'm Prof. Oak's"
 	cont "AIDE!"
 
 	para "If you caught @"

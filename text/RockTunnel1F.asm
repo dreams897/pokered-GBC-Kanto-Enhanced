@@ -111,5 +111,5 @@ _RockTunnel1AfterBattleText7::
 _RockTunnel1Text8::
 	text "ROCK TUNNEL"
 	line "Cerulean City -"
-	cont "LAVENDER TOWN"
+	cont "Lavender Town"
 	done

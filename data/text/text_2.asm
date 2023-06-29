@@ -156,7 +156,7 @@ _GymStatueText2::
 	done
 
 _ViridianCityPokecenterGuyText::
-	text "#MON CENTERs"
+	text "#MON Centers"
 	line "heal your tired,"
 	cont "hurt or fainted"
 	cont "#MON!"
@@ -165,7 +165,7 @@ _ViridianCityPokecenterGuyText::
 _PewterCityPokecenterGuyText::
 	text "Yawn!"
 
-	para "When JIGGLYPUFF"
+	para "When Jigglypuff"
 	line "sings, #MON"
 	cont "get drowsy..."
 
@@ -174,7 +174,7 @@ _PewterCityPokecenterGuyText::
 	done
 
 _CeruleanPokecenterGuyText::
-	text "BILL has lots of"
+	text "Bill has lots of"
 	line "#MON!"
 
 	para "He collects rare"
@@ -182,7 +182,7 @@ _CeruleanPokecenterGuyText::
 	done
 
 _LavenderPokecenterGuyText::
-	text "CUBONEs wear"
+	text "Cubones wear"
 	line "skulls, right?"
 
 	para "People will pay a"
@@ -198,8 +198,8 @@ _MtMoonPokecenterBenchGuyText::
 
 _RockTunnelPokecenterGuyText::
 	text "I heard that"
-	line "GHOSTs haunt"
-	cont "LAVENDER TOWN!"
+	line "ghosts haunt"
+	cont "Lavender Town!"
 	done
 
 _UnusedBenchGuyText1::
@@ -213,9 +213,9 @@ _UnusedBenchGuyText2::
 	done
 
 _UnusedBenchGuyText3::
-	text "SILPH's manager"
+	text "Silph's manager"
 	line "is hiding in the"
-	cont "SAFARI ZONE."
+	cont "Safari Zone."
 	done
 
 _VermilionPokecenterGuyText::
@@ -235,15 +235,15 @@ _VermilionPokecenterGuyText::
 	done
 
 _CeladonCityPokecenterGuyText::
-	text "If I had a BIKE,"
+	text "If I had a Bike,"
 	line "I would go to"
-	cont "CYCLING ROAD!"
+	cont "Cycling Road!"
 	done
 
 _FuchsiaCityPokecenterGuyText::
 	text "If you're studying "
 	line "#MON, visit"
-	cont "the SAFARI ZONE."
+	cont "the Safari Zone."
 
 	para "It has all sorts"
 	line "of rare #MON."
@@ -264,11 +264,11 @@ _SaffronCityPokecenterGuyText1::
 	text "It would be great"
 	line "if the ELITE FOUR"
 	cont "came and stomped"
-	cont "TEAM ROCKET!"
+	cont "Team Rocket!"
 	done
 
 _SaffronCityPokecenterGuyText2::
-	text "TEAM ROCKET took"
+	text "Team Rocket took"
 	line "off! We can go"
 	cont "out safely again!"
 	cont "That's great!"
@@ -391,14 +391,14 @@ _MagazinesText::
 	done
 
 _BillsHouseMonitorText::
-	text "TELEPORTER is"
+	text "Teleporter is"
 	line "displayed on the"
 	cont "PC monitor."
 	done
 
 _BillsHouseInitiatedText::
 	text "<PLAYER> initiated"
-	line "TELEPORTER's Cell"
+	line "Teleporter's Cell"
 	cont "Separator!@"
 	text_end
 
@@ -432,15 +432,15 @@ _OakLabEmailText::
 	cont "trainer!"
 
 	para "#MON League HQ"
-	line "INDIGO PLATEAU"
+	line "Indigo Plateau"
 
-	para "PS: PROF.OAK,"
+	para "PS: Prof. Oak,"
 	line "please visit us!"
 	cont "..."
 	done
 
 _GameCornerCoinCaseText::
-	text "A COIN CASE is"
+	text "A Coin Case is"
 	line "required!"
 	done
 
@@ -481,7 +481,7 @@ TMNotebookText::
 	line "HMs that can be"
 	cont "used repeatedly."
 
-	para "SILPH CO.@"
+	para "Silph Co.@"
 	text_end
 
 _TurnPageText::
@@ -489,7 +489,7 @@ _TurnPageText::
 	done
 
 _ViridianSchoolNotebookText5::
-	text "GIRL: Hey! Don't"
+	text "Girl: Hey! Don't"
 	line "look at my notes!@"
 	text_end
 
@@ -499,7 +499,7 @@ _ViridianSchoolNotebookText1::
 
 	para "First page..."
 
-	para "# BALLs are"
+	para "# Balls are"
 	line "used to catch"
 	cont "#MON."
 
@@ -569,7 +569,7 @@ _FightingDojoText::
 	done
 
 _IndigoPlateauHQText::
-	text "INDIGO PLATEAU"
+	text "Indigo Plateau"
 	line "#MON League HQ"
 	done
 
@@ -620,17 +620,17 @@ _LinkCableInfoText1::
 	cont "GAME BOY, talk to"
 	cont "the attendant on"
 	cont "the right in any"
-	cont "#MON CENTER."
+	cont "#MON Center."
 	prompt
 
 _LinkCableInfoText2::
-	text "COLOSSEUM lets"
+	text "Colosseum lets"
 	line "you play against"
 	cont "a friend."
 	prompt
 
 _LinkCableInfoText3::
-	text "TRADE CENTER is"
+	text "Trade Center is"
 	line "used for trading"
 	cont "#MON."
 	prompt
@@ -781,7 +781,7 @@ _DroppedHiddenCoinsText::
 	done
 
 _IndigoPlateauStatuesText1::
-	text "INDIGO PLATEAU"
+	text "Indigo Plateau"
 	prompt
 
 _IndigoPlateauStatuesText2::
@@ -824,7 +824,7 @@ _OutOfSafariBallsText::
 	text "PA: Ding-dong!"
 
 	para "You are out of"
-	line "SAFARI BALLs!"
+	line "Safari Balls!"
 	prompt
 
 _WildRanText::
@@ -987,7 +987,7 @@ _ScaredText::
 	prompt
 
 _GetOutText::
-	text "GHOST: Get out..."
+	text "Ghost: Get out..."
 	line "Get out..."
 	prompt
 
@@ -1260,13 +1260,13 @@ _TrainerWantsToFightText::
 	prompt
 
 _UnveiledGhostText::
-	text "SILPH SCOPE"
+	text "Silph Scope"
 	line "unveiled the"
-	cont "GHOST's identity!"
+	cont "Ghost's identity!"
 	prompt
 
 _GhostCantBeIDdText::
-	text "Darn! The GHOST"
+	text "Darn! The Ghost"
 	line "can't be ID'd!"
 	prompt
 
@@ -1620,7 +1620,7 @@ _MonWasReleasedText::
 	prompt
 
 _RequireCoinCaseText::
-	text "A COIN CASE is"
+	text "A Coin Case is"
 	line "required!@"
 	text_end
 
@@ -1666,12 +1666,12 @@ _GetDexRatedText::
 
 _ClosedOaksPCText::
 	text "Closed link to"
-	line "PROF.OAK's PC.@"
+	line "Prof. Oak's PC.@"
 	text_end
 
 _AccessedOaksPCText::
-	text "Accessed PROF."
-	line "OAK's PC."
+	text "Accessed Prof. "
+	line "Oak's PC."
 
 	para "Accessed #DEX"
 	line "Rating System."
@@ -1697,9 +1697,9 @@ _OakSpeechText1::
 	line "Welcome to the"
 	cont "world of #MON!"
 
-	para "My name is OAK!"
+	para "My name is. Oak!"
 	line "People call me"
-	cont "the #MON PROF!"
+	cont "the #MON Prof!"
 	prompt
 
 _OakSpeechText2A::

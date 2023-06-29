@@ -102,7 +102,7 @@ _VermilionCityText8::
 
 	para "Detour through"
 	line "ROCK TUNNEL to"
-	cont "LAVENDER TOWN."
+	cont "Lavender Town."
 
 	para "Vermilion POLICE"
 	done
