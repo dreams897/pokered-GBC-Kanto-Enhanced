@@ -233,7 +233,7 @@ MapHeaderPointers::
 	dw CeruleanCave1F_h
 	dw NameRatersHouse_h
 	dw CeruleanBadgeHouse_h
-	dw Route16Gate1F_h ; UNUSED_MAP_E7
+	dw CeruleanBerryHouse_h ; New Berry house
 	dw RockTunnelB1F_h
 	dw SilphCo9F_h
 	dw SilphCo10F_h

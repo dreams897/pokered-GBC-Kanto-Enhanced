@@ -1111,6 +1111,8 @@ FuchsiaMoveHouse_Blocks: INCBIN "maps/FuchsiaMoveHouse.blk"
 
 CeruleanBadgeHouse_Blocks: INCBIN "maps/CeruleanBadgeHouse.blk"
 
+CeruleanBerryHouse_Blocks: INCBIN "maps/CeruleanBerryHouse.blk"
+
 
 SECTION "Maps 20", ROMX
 
@@ -1133,6 +1135,10 @@ CeruleanCave1F_Blocks: INCBIN "maps/CeruleanCave1F.blk"
 INCLUDE "data/maps/headers/CeruleanBadgeHouse.asm"
 INCLUDE "scripts/CeruleanBadgeHouse.asm"
 INCLUDE "data/maps/objects/CeruleanBadgeHouse.asm"
+
+INCLUDE "data/maps/headers/CeruleanBerryHouse.asm"
+INCLUDE "scripts/CeruleanBerryHouse.asm"
+INCLUDE "data/maps/objects/CeruleanBerryHouse.asm"
 
 
 SECTION "Maps 21", ROMX
