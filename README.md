@@ -49,11 +49,8 @@ A: I'm probably going to make MISSINGNO a properly numbered Pokémon for less pr
 ### Q: Is Mew available?
 A: Mew is behind the truck and should be accessable after getting 4+ gym badges
 
-### Q: Is there a Move Deleter?
-A: I plan on adding a move deleter to the house between Fuchsia City's Gym and Pokémon Center (same as Luna's)
-
-### Q: Where is the Move Relearner?
-A: Same house as the Move Deleter.
+### Q: Is there a Move Deleter/Relearner?
+A: There is a new house in Fuchsia City with both a Move Deleter and Relearner added! Also the grandpa of Bill is still next to it.
 
 ### Q: Will shiny Pokémon be available?
 A: Yes, that is something I am currently working on adding
