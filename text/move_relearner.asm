@@ -8,7 +8,7 @@ _MoveRelearnerGreetingText::
 	cont "growing up."
 
 	para "For ¥500, I can"
-	line "make a #mon"
+	line "make a #MON"
 	cont "of yours remember"
 	cont "a move."
 	done

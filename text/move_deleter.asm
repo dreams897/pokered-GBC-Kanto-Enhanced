@@ -47,4 +47,5 @@ _MoveDeleterOneMoveText::
 	text "That #MON"
 	line "knows only one"
 	cont "move."
+	cont "Pick another?"
 	done
