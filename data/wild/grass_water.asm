@@ -1,6 +1,6 @@
 WildDataPointers:
 	table_width 2, WildDataPointers
-	dw NothingWildMons         ; PALLET_TOWN
+		dw NothingWildMons         ; PALLET_TOWN
 	dw NothingWildMons         ; VIRIDIAN_CITY
 	dw NothingWildMons         ; PEWTER_CITY
 	dw NothingWildMons         ; CERULEAN_CITY
@@ -108,7 +108,6 @@ WildDataPointers:
 	dw NothingWildMons
 	dw NothingWildMons
 	dw NothingWildMons
-	dw NothingWildMons
 	dw VictoryRoad1FWildMons
 	dw NothingWildMons
 	dw NothingWildMons
@@ -150,6 +149,7 @@ WildDataPointers:
 	dw PokemonTower5FWildMons
 	dw PokemonTower6FWildMons
 	dw PokemonTower7FWildMons
+	dw NothingWildMons
 	dw NothingWildMons
 	dw NothingWildMons
 	dw NothingWildMons
