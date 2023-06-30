@@ -204,7 +204,7 @@ _CeruleanCityText10::
 	done
 
 _CeruleanCityText12::
-	text "Cerulean City"
+	text "Cerulean City:"
 	line "A Mysterious,"
 	cont "Blue Aura"
 	cont "Surrounds It"
@@ -222,7 +222,7 @@ _CeruleanCityText13::
 _CeruleanCityText16::
 	text "Grass and caves"
 	line "handled easily!"
-	cont "Bike SHOP"
+	cont "Bike Shop"
 	done
 
 _CeruleanCityText17::
@@ -230,6 +230,6 @@ _CeruleanCityText17::
 	line "#MON Gym"
 	cont "Leader: Misty"
 
-	para "The Tomboyish"
-	line "Mermaid!"
+	para "The tomboyish"
+	line "mermaid!"
 	done
