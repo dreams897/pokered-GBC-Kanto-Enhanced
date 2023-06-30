@@ -478,6 +478,8 @@ SECTION "field moves", ROMX
 INCLUDE "engine/overworld/automatic_repel.asm"
 INCLUDE "engine/overworld/field_moves.asm"
 INCLUDE "engine/overworld/headbutt.asm"
+INCLUDE "scripts/move_deleter.asm"
+INCLUDE "scripts/move_relearner.asm"
 
 
 SECTION "Starter Dex", ROMX

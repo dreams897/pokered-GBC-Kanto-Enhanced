@@ -155,6 +155,7 @@ MapHeaderPointers::
 	dw LavenderCuboneHouse_h
 	dw FuchsiaMart_h
 	dw FuchsiaBillsGrandpasHouse_h
+	dw FuchsiaMoveHouse_h
 	dw FuchsiaPokecenter_h
 	dw WardensHouse_h
 	dw SafariZoneGate_h

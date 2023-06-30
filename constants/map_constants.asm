@@ -173,6 +173,7 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const LAVENDER_CUBONE_HOUSE,          4,  4 ; $97
 	map_const FUCHSIA_MART,                   4,  4 ; $98
 	map_const FUCHSIA_BILLS_GRANDPAS_HOUSE,   4,  4 ; $99
+	map_const FUCHSIA_MOVE_HOUSE,             4,  4 ; $9A
 	map_const FUCHSIA_POKECENTER,             7,  4 ; $9A
 	map_const WARDENS_HOUSE,                  5,  4 ; $9B
 	map_const SAFARI_ZONE_GATE,               4,  3 ; $9C

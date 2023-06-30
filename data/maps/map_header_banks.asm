@@ -155,6 +155,7 @@ MapHeaderBanks::
 	db BANK(LavenderCuboneHouse_h)
 	db BANK(FuchsiaMart_h)
 	db BANK(FuchsiaBillsGrandpasHouse_h)
+	db BANK(FuchsiaMoveHouse_h)
 	db BANK(FuchsiaPokecenter_h)
 	db BANK(WardensHouse_h)
 	db BANK(SafariZoneGate_h)

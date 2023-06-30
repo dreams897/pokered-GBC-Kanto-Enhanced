@@ -137,6 +137,11 @@ _RanFromBattleText::
 	text "<USER>"
 	line "ran from battle!"
 	prompt
+	
+_RanAwayScaredText::
+	text "<TARGET>"
+	line "ran away scared!"
+	prompt
 
 _WasBlownAwayText::
 	text "<TARGET>"

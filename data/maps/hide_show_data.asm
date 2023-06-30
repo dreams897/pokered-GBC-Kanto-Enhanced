@@ -158,6 +158,7 @@ MapHSPointers:
 	dw NoHS
 	dw NoHS
 	dw NoHS
+	dw NoHS
 	dw WardensHouseHS
 	dw NoHS
 	dw NoHS

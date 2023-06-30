@@ -1107,6 +1107,8 @@ FuchsiaBillsGrandpasHouse_Blocks: INCBIN "maps/FuchsiaBillsGrandpasHouse.blk"
 CinnabarPokecenter_Blocks:
 FuchsiaPokecenter_Blocks: INCBIN "maps/FuchsiaPokecenter.blk"
 
+FuchsiaMoveHouse_Blocks: INCBIN "maps/FuchsiaMoveHouse.blk"
+
 CeruleanBadgeHouse_Blocks: INCBIN "maps/CeruleanBadgeHouse.blk"
 
 
@@ -1134,6 +1136,10 @@ INCLUDE "data/maps/objects/CeruleanBadgeHouse.asm"
 
 
 SECTION "Maps 21", ROMX
+
+INCLUDE "data/maps/headers/FuchsiaMoveHouse.asm"
+INCLUDE "scripts/FuchsiaMoveHouse.asm"
+INCLUDE "data/maps/objects/FuchsiaMoveHouse.asm"
 
 INCLUDE "data/maps/headers/FuchsiaBillsGrandpasHouse.asm"
 INCLUDE "scripts/FuchsiaBillsGrandpasHouse.asm"
