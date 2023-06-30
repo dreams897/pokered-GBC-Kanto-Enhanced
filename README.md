@@ -18,7 +18,8 @@ Currently in developement, but is entirely playable if you build it.
 * Some color adjustments have been made (sprites, etc.) to improve the overal look and feel
 * Newer features such as "Berry Trees" have been added
 * All sprites (Pokémon, trainers, etc.) have been carefully selected to be the best available
-* A few gen 3 Pokémon sprites have been added for some that don't look good in gen 1 or 2 in my opinion such as Paras, Spearow, and Grimer, but still fit properly with others
+* A few gen 3 Pokémon sprites have been added for some that don't look good in gen 1 or 2 in my opinion such as Paras and Grimer, but still fit properly with others
+* Some areas such as Fuchsia City have been made more accessible and enjoyable (additionally new Safari Pokémon sprites!)
 * New animated Ditto sprite and Bulbasaur added to the Day Care!
 * The Day Care aims to be massively improved with new sprites, a PC in the corner, more accessable entrance, and will be added to the map/Fly
 * Tangela is now exclusive to the Safari Zone!
