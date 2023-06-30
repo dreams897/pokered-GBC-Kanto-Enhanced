@@ -4,7 +4,7 @@ _MoveRelearnerGreetingText::
 
 	para "I know every"
 	line "single move that"
-	cont "#mon learn"
+	cont "#MON learn"
 	cont "growing up."
 
 	para "For ¥500, I can"
