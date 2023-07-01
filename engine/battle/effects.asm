@@ -833,9 +833,6 @@ SwitchAndTeleportEffect:
 	ld c, 50
 	call DelayFrames
 	ld a, [wPlayerMoveNum]
-	cp TELEPORT
-	jp nz, PrintDidntAffectText
-	jp PrintButItFailedText_
 .playerMoveWasSuccessful
 	call ReadPlayerMonCurHPAndStatus
 	xor a
@@ -849,9 +846,6 @@ SwitchAndTeleportEffect:
 	call DelayFrames
 	ld hl, IsUnaffectedText
 	ld a, [wPlayerMoveNum]
-	cp TELEPORT
-	jp nz, PrintText
-	jp PrintButItFailedText_
 .handleEnemy
 	ld a, [wIsInBattle]
 	dec a
@@ -875,9 +869,6 @@ SwitchAndTeleportEffect:
 	ld c, 50
 	call DelayFrames
 	ld a, [wEnemyMoveNum]
-	cp TELEPORT
-	jp nz, PrintDidntAffectText
-	jp PrintButItFailedText_
 .enemyMoveWasSuccessful
 	call ReadPlayerMonCurHPAndStatus
 	xor a
@@ -891,9 +882,6 @@ SwitchAndTeleportEffect:
 	call DelayFrames
 	ld hl, IsUnaffectedText
 	ld a, [wEnemyMoveNum]
-	cp TELEPORT
-	jp nz, PrintText
-	jp ConditionalPrintButItFailed
 .playAnimAndPrintText
 	push af
 	call PlayBattleAnimation
@@ -902,8 +890,6 @@ SwitchAndTeleportEffect:
 	pop af
 	ld hl, RanAwayScaredText
 	cp ROAR
-	jr z, .printText
-	cp WHIRLWIND
 	jr z, .printText
 	ld hl, WasBlownAwayText
 .printText
