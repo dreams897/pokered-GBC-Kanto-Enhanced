@@ -17,3 +17,17 @@ _PewterHouse2Text2::
 	para "But, it's not a"
 	line "sure thing!"
 	done
+	
+_PewterHouse2Text3::
+	text "Berries can be"
+	line "given to #MON"
+	cont "depending on"
+	cont "their status."
+
+	para "But, I'm no"
+	line "expert!"
+	cont "There's a man"
+	cont "in Cerulean who"
+	cont "knows all about"
+	cont "Berry Trees."
+	done
