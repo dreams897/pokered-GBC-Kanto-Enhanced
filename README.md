@@ -11,6 +11,7 @@ Currently in developement, but is entirely playable if you build it.
 * New ENBY (non-binary) player choice added in addtion to boy/girl!
 * Girl/Green/Leaf sprite changed to fit gen 1
 * Only original 151 Pokémon are obtainable and will not be changed or expanded
+* All Starters can be obtained through in-game trades with NPCs in addition to your initial choice
 * Dark, Steel and Fairy type added for moves and a few Pokémon
 * Most text has been decapitalized except for Stats, the word "Pokémon", and HM moves
 * Pokémon have genders
@@ -23,7 +24,7 @@ Currently in developement, but is entirely playable if you build it.
 * New animated Ditto sprite and Bulbasaur added to the Day Care!
 * The Day Care aims to be massively improved with new sprites, a PC in the corner, more accessable entrance, and will be added to the map/Fly
 * Tangela is now exclusive to the Safari Zone!
-* New trades have been added, list coming soon
+* New trades have been added, see list below!
 * Wild Pokémon areas aim to be a balance between Red, Blue and Yellow
 
 ### Roadmap:
@@ -49,6 +50,16 @@ A: I'm probably going to make MISSINGNO a properly numbered Pokémon for less pr
 
 ### Q: Is Mew available?
 A: Mew is behind the truck and should be accessable after getting 4+ gym badges
+
+### Q: What are the new in-game trades?
+A: As follows:
+Give: Marowak Get: Haunter (evolves!)
+Give: Pikachu Get: Staryu
+Give: Hypno Get: Kadabra (evolves!)
+Give: Gloom Get: Bulbasaur
+Give: Rhyhorn Get: Graveler (evolves!)
+Give: Primeape Get: Machoke (evolves!)
+Give: Ninetails Get: Charmander
 
 ### Q: Is there a Move Deleter/Relearner?
 A: There is a new house in Fuchsia City with both a Move Deleter and Relearner added! Also the grandpa of Bill is still next to it.
