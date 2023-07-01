@@ -27,8 +27,11 @@ Museum2FText4:
 	text_end
 
 Museum2FText5:
-	text_far _Museum2FText5
-	text_end
+	text_asm
+	ld a, TRADE_FOR_SANDY
+	ld [wWhichTrade], a
+	predef DoInGameTradeDialogue
+	jp TextScriptEnd
 
 Museum2FText6:
 	text_far _Museum2FText6
