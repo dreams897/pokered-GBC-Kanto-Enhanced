@@ -103,20 +103,20 @@ _PewterGymAfterBattleText1::
 	done
 	
 _PewterGymBattleText2::
-	text "Just got back"
+	text "I just got back"
 	line "from Mt. Moon!"
 	done
 
 _PewterGymEndBattleText2::
 	text "Darn!"
 	
-	para "Should have caught"
-	line "more #MON!"
+	para "You're ready"
+	line "for Brock!"
 	prompt
 
 _PewterGymAfterBattleText2::
-	text "Watch out for"
-	line "Brock's Onix!"
+	text "I should've caught"
+	line "more #MON."
 	done
 
 _PewterGymGuidePreAdviceText::
@@ -142,7 +142,7 @@ _PewterGymGuideAdviceText::
 	text "The 1st #MON"
 	line "out in a match is"
 	cont "at the top of the"
-	cont "#MON LIST!"
+	cont "#MON List!"
 
 	para "By changing the"
 	line "order of #MON,"
