@@ -34,7 +34,7 @@ Inquire via [Discord](https://discord.gg/TwyGafPH) if you are interested!
 * Add shiny Pokémon
 * Add Pokémon DVs
 * Add DexNav that works similar to ItemFinder, but for a specific Pokémon.
-* Improve moves such as Teleport, Wrap, etc.
+* Improve moves such as Wrap, etc. and add some new moves (particularly Fairy type, etc.)
 * Improve look of the Town Map
 
 ## Frequently Asked Questions
