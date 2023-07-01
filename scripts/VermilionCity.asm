@@ -157,6 +157,8 @@ VermilionCityTextSSAnneDeparted:
 
 VermilionCityText3:
 	text_asm
+	ld a, [wObtainedBadges]
+	bit 3, a
 	CheckEvent EVENT_SS_ANNE_LEFT
 	jr nz, .shipHasDeparted
 	ld a, [wSpritePlayerStateData1FacingDirection]
@@ -235,6 +237,10 @@ VermilionCityText14:
 	text_end
 
 VermilionCityText6:
+	text_asm
+	ld a, [wObtainedBadges]
+	bit 3, a
+	ret
 	text_far _VermilionCityText6
 	text_end
 
