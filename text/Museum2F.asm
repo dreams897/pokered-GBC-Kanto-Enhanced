@@ -25,7 +25,7 @@ _Museum2FText4::
 	line "It's so cute!"
 
 	para "I asked my Daddy"
-	line "to catch me one!"
+	line "to find me one!"
 	done
 
 _Museum2FText5::
