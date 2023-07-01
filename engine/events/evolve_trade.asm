@@ -31,9 +31,6 @@ EvolveTradeMon:
 	ret nz
 
 .ok
-	ld a, [wPartyCount]
-	dec a
-	ld [wWhichPokemon], a
 	ld a, $1
 	ld [wForceEvolution], a
 	ld a, LINK_STATE_TRADING
