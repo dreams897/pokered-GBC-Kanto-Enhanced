@@ -547,7 +547,7 @@ SpritePaletteAssignments: ; Characters on the overworld
 	db SPR_PAL_BLUE
 	
 	; SPRITE_SURGE
-	db SPR_PAL_BROWN
+	db SPR_PAL_GREEN
 	
 	; SPRITE_SWIMMER_F
 	db SPR_PAL_BLUE
