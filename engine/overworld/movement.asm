@@ -123,7 +123,8 @@ UpdateNPCSprite:
 	ld hl, wMapSpriteData
 	add l
 	ld l, a
-	jr nc, .nc
+;;;;;;;;;;; FIXED: Account for carry
+	jr nc, .nc 
 	inc h
 .nc
 	ld a, [hl]        ; read movement byte 2
