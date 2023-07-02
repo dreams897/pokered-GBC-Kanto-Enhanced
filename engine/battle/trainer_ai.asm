@@ -131,7 +131,7 @@ AIMoveChoiceModification1:
 	and a
 	jr nz, .nextMove
 	ld a, [wEnemyMoveEffect]
-	cp TELEPORT_EFFECT
+	cp SWITCH_AND_TELEPORT_EFFECT
 	jr z, .checkTeleportUsable
 	cp DISABLE_EFFECT
 	jr z, .checkDisabled
@@ -187,7 +187,6 @@ AIMoveChoiceModification1:
 	push hl
 	push de
 	push bc
-	callfar CheckCanForceSwitchEnemy
 	pop bc
 	pop de
 	pop hl 

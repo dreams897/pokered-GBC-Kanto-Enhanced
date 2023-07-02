@@ -224,7 +224,6 @@ SECTION "Battle Core", ROMX
 
 INCLUDE "engine/battle/core.asm"
 ;INCLUDE "engine/battle/effects.asm"
-INCLUDE "engine/battle/move_effects/teleport.asm"
 
 
 SECTION "bank10", ROMX
