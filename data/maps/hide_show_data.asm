@@ -16,7 +16,7 @@ MapHSPointers:
 	dw SaffronCityHS
 	dw NoHS
 	dw NoHS
-	dw Route2HS
+	dw NoHS
 	dw NoHS
 	dw Route4HS
 	dw NoHS
@@ -293,9 +293,6 @@ SaffronCityHS:
 	db SAFFRON_CITY, $0D, HIDE
 	db SAFFRON_CITY, $0E, SHOW
 	db SAFFRON_CITY, $0F, HIDE
-Route2HS:
-	db ROUTE_2, $01, SHOW
-	db ROUTE_2, $02, SHOW
 Route4HS:
 	db ROUTE_4, $03, SHOW
 	db ROUTE_4, $04, SHOW
