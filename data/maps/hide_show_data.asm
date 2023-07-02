@@ -3,7 +3,7 @@
 MapHSPointers:
 ; entries correspond to map ids
 	table_width 2, MapHSPointers
-		dw PalletTownHS
+	dw PalletTownHS
 	dw ViridianCityHS
 	dw PewterCityHS
 	dw CeruleanCityHS
@@ -298,6 +298,7 @@ Route2HS:
 	db ROUTE_2, $02, SHOW
 Route4HS:
 	db ROUTE_4, $03, SHOW
+	db ROUTE_4, $04, SHOW
 Route9HS:
 	db ROUTE_9, $0A, SHOW
 Route12HS:
