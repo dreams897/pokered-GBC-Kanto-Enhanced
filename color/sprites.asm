@@ -101,9 +101,18 @@ ColorOverworldSprite::
 .playerSprite
 	ld a, [wPlayerGender]
 	and a
-	ld a, SPR_PAL_ORANGE
-	jr z, .continue
-	ld a, SPR_PAL_GREEN
+	jr z, .male
+	cp 1
+	jr z, .female
+	ld a, SPR_PAL_PURPLE
+        jr .continue
+.male
+        ld a, SPR_PAL_ORANGE
+        jr .continue
+.female
+        ld a, SPR_PAL_GREEN
+	
+	
 
 .continue
 	; If it's 8, that means no particular palette is assigned
