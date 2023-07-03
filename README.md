@@ -30,7 +30,7 @@ Currently in developement, but is entirely playable if you build it.
 ### Roadmap:
 
 * I would like to ideally make this in the Crystal engine, but would need help with that. 
-Inquire via [Discord](https://discord.gg/TwyGafPH) if you are interested!
+Inquire via [Discord](https://discord.gg/ENxcpewP) if you are interested!
 * Add shiny Pokémon
 * Add Pokémon DVs
 * Add DexNav that works similar to ItemFinder, but for a specific Pokémon.
@@ -92,7 +92,7 @@ A: They have been replaced by berry trees for technical reasons but have been ch
 * Rangi42 for making awe-inspiring maps and an awesome map editor
 * Gamefreak/Nintendo of course for making a great, but terribly flawed game
 
-[Discord Channel](https://discord.gg/TwyGafPH)
+[Discord Channel](https://discord.gg/ENxcpewP)
 
 This is a disassembly of Pokémon Red and Blue.
 
