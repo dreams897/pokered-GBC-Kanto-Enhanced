@@ -471,7 +471,19 @@ WriteAsymmetricMonPartySpriteOAM:
 	ld [hli], a
 	inc a
 	ld [wOAMBaseTile], a
-	xor a
+	ld a, [wPlayerGender]
+	and a
+	jr z, .male
+	cp 1
+	jr z, .female
+	ld a, SPR_PAL_PURPLE
+        jr .gotPal
+.male
+        jr .gotPal
+        xor a
+.female
+        ld a, SPR_PAL_GREEN
+.gotPal
 	ld [hli], a
 	inc d
 	ld a, 8
