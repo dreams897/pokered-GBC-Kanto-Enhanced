@@ -8,6 +8,8 @@ SpriteSheetPointerTable:
 	table_width 4, SpriteSheetPointerTable
 	; graphics, tile count
 	overworld_sprite RedSprite, 12              ; SPRITE_RED   	        ; $01
+	overworld_sprite GreenSprite, 12            ; SPRITE_GREEN		; $43
+	overworld_sprite PurpleSprite, 12           ; SPRITE_PURPLE		; $49
 	overworld_sprite BlueSprite, 12             ; SPRITE_BLUE  	        ; $02
 	overworld_sprite OakSprite, 12              ; SPRITE_OAK    		; $03
 	overworld_sprite YoungsterSprite, 12        ; SPRITE_YOUNGSTER  	; $04
@@ -64,10 +66,6 @@ SpriteSheetPointerTable:
 	overworld_sprite AgathaSprite, 12           ; SPRITE_AGATHA		; $38
 	overworld_sprite BrunoSprite, 12            ; SPRITE_BRUNO		; $39
 	overworld_sprite LoreleiSprite, 12          ; SPRITE_LORELEI		; $3a
-	overworld_sprite GreenSprite, 12            ; SPRITE_GREEN		; $43
-	overworld_sprite GreenBikeSprite, 12	    ; SPRITE_GREEN_BIKE
-	overworld_sprite PurpleSprite, 12           ; SPRITE_PURPLE		; $49
-	overworld_sprite PurpleBikeSprite, 12       ; SPRITE_PURPLE_BIKE	; $49
 	overworld_sprite BillSprite, 12             ; SPRITE_BILL		; $3c
 	overworld_sprite BlaineSprite, 12           ; SPRITE_BLAINE		; $3d
 	overworld_sprite BrockSprite, 12            ; SPRITE_BROCK		; $3f

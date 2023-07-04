@@ -329,6 +329,12 @@ ClearSpritePaletteMap:
 SpritePaletteAssignments: ; Characters on the overworld
 	; 0x01: SPRITE_RED
 	db SPR_PAL_ORANGE
+	
+	; SPRITE_GREEN
+	db SPR_PAL_GREEN
+	
+	; SPRITE_PURPLE
+	db SPR_PAL_PURPLE
 
 	; 0x02: SPRITE_BLUE
 	db SPR_PAL_BLUE
@@ -497,18 +503,6 @@ SpritePaletteAssignments: ; Characters on the overworld
 
 	; 0x3b: SPRITE_LORELEI
 	db SPR_PAL_ORANGE
-	
-	; SPRITE_GREEN
-	db SPR_PAL_GREEN
-	
-	; SPRITE_GREEN_BIKE
-	db SPR_PAL_GREEN
-	
-	; SPRITE_PURPLE
-	db SPR_PAL_PURPLE
-	
-	; SPRITE_PURPLE_BIKE
-	db SPR_PAL_PURPLE
 	
 	; SPRITE_BILL
 	db SPR_PAL_ORANGE

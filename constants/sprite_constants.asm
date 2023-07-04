@@ -3,6 +3,8 @@
 	const_def
 	const SPRITE_NONE                    ; $00
 	const SPRITE_RED                     ; $01
+	const SPRITE_GREEN		     ; $43
+	const SPRITE_PURPLE		     ; $49
 	const SPRITE_BLUE                    ; $02
 	const SPRITE_OAK                     ; $03
 	const SPRITE_YOUNGSTER               ; $04
@@ -59,10 +61,6 @@
 	const SPRITE_AGATHA                  ; $39
 	const SPRITE_BRUNO                   ; $3a
 	const SPRITE_LORELEI                 ; $3b
-	const SPRITE_GREEN		     ; $43
-	const SPRITE_GREEN_BIKE
-	const SPRITE_PURPLE		     ; $49
-	const SPRITE_PURPLE_BIKE
 	
 ; ; New walking sprites added here
 	const SPRITE_BILL		     ; $3d
