@@ -3,7 +3,7 @@ _MoltresBattleText::
 	text_end
 
 _VictoryRoad2BattleText1::
-	text "VICTORY ROAD is"
+	text "Victory Road is"
 	line "the final test"
 	cont "for trainers!"
 	done
@@ -47,7 +47,7 @@ _VictoryRoad2EndBattleText3::
 _VictoryRoad2AfterBattleText3::
 	text "You earned the"
 	line "right to be on"
-	cont "VICTORY ROAD!"
+	cont "Victory Road!"
 	done
 
 _VictoryRoad2BattleText4::
@@ -70,7 +70,7 @@ _VictoryRoad2AfterBattleText4::
 	done
 
 _VictoryRoad2BattleText5::
-	text "Is VICTORY ROAD"
+	text "Is Victory Road"
 	line "too tough?"
 	done
 

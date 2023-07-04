@@ -1,16 +1,16 @@
 _CeladonMart2Text3::
-	text "SUPER REPEL keeps"
+	text "Super Repel keeps"
 	line "weak #MON at"
 	cont "bay..."
 
 	para "Hmm, it's a more"
-	line "powerful REPEL!"
+	line "powerful Repel!"
 	done
 
 _CeladonMart2Text4::
 	text "For long outings,"
 	line "you should buy"
-	cont "REVIVE."
+	cont "Revive."
 	done
 
 _CeladonMart2Text5::

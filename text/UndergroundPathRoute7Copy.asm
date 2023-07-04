@@ -23,10 +23,10 @@ _UGPathRoute7EntranceUnusedText_5d77d::
 	done
 
 _UGPathRoute7EntranceUnusedText_5d782::
-	text "The UNDERGROUND"
-	line "PATH goes beneath"
-	cont "SAFFRON and leads"
-	cont "to LAVENDER."
+	text "The Underground"
+	line "Path goes beneath"
+	cont "Saffron and leads"
+	cont "to Lavender."
 
 	para "If you're heading"
 	line "to Cerulean, go"

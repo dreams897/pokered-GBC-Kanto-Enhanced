@@ -1,5 +1,5 @@
 _ViridianCityText1::
-	text "Those # BALLs"
+	text "Those # Balls"
 	line "at your waist!"
 	cont "You have #MON!"
 
@@ -36,10 +36,10 @@ _ViridianCityText_19152::
 _ViridianCityText_19157::
 	text "CATERPIE has no"
 	line "poison, but"
-	cont "WEEDLE does."
+	cont "Weedle does."
 
 	para "Watch out for its"
-	line "POISON STING!"
+	line "Poison Sting!"
 	done
 
 _ViridianCityText_19175::
@@ -71,7 +71,7 @@ _ViridianCityText_191ca::
 	cont "off in the sun."
 
 	para "I had this dream"
-	line "about a DROWZEE"
+	line "about a Drowzee"
 	cont "eating my dream."
 	cont "What's this?"
 	cont "Where did this TM"
@@ -89,7 +89,7 @@ _ReceivedTM42Text::
 
 _TM42Explanation::
 	text "TM42 contains"
-	line "DREAM EATER..."
+	line "Dream Eater..."
 	cont "...Snore..."
 	done
 
@@ -139,7 +139,7 @@ _ViridianCityText_19219::
 	done
 
 _ViridianCityText8::
-	text "Viridian City "
+	text "Viridian City:"
 	line "The Eternally"
 	cont "Green Paradise"
 	done
@@ -162,12 +162,12 @@ _ViridianCityText10::
 	para "The battle moves"
 	line "of #MON are"
 	cont "limited by their"
-	cont "POWER POINTs, PP."
+	cont "Power Points, PP."
 
 	para "To replenish PP,"
 	line "rest your tired"
 	cont "#MON at a"
-	cont "#MON CENTER!"
+	cont "#MON Center!"
 	done
 
 _ViridianCityText13::

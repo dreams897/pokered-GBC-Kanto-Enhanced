@@ -1,5 +1,5 @@
 _BrunoBeforeBattleText::
-	text "I am BRUNO of"
+	text "I am Bruno of"
 	line "the Elite Four!"
 
 	para "Through rigorous"
