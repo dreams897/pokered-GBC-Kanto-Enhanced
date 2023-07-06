@@ -1,6 +1,6 @@
 _Route12HouseText_564c0::
-	text "I'm the FISHING"
-	line "GURU's brother!"
+	text "I'm the Fishing"
+	line "Guru's brother!"
 
 	para "I simply Looove"
 	line "fishing!"
@@ -43,7 +43,7 @@ _Route12HouseText_564d4::
 	text "Hello there,"
 	line "<PLAYER>!"
 
-	para "Use the SUPER ROD"
+	para "Use the Good Rod"
 	line "in any water!"
 	cont "You can catch"
 	cont "different kinds"
