@@ -21,7 +21,7 @@ _OaksLabText41::
 
 _OaksLabText39::
 	text "Those are #"
-	line "BALLs. They"
+	line "Balls. They"
 	cont "contain #MON!"
 	done
 
@@ -81,7 +81,7 @@ _OaksLabText_1d2fa::
 	done
 
 _OaksLabDeliverParcelText1::
-	text "OAK: Oh, <PLAYER>!"
+	text "Oak: Oh, <PLAYER>!"
 
 	para "How is my old"
 	line "#MON?"
@@ -97,13 +97,13 @@ _OaksLabDeliverParcelText1::
 	line "something for me?"
 
 	para "<PLAYER> delivered"
-	line "OAK's PARCEL.@"
+	line "Oak's Parcel.@"
 	text_end
 
 _OaksLabDeliverParcelText2::
 	text_start
 	para "Ah! This is the"
-	line "custom # BALL"
+	line "custom # Ball"
 	cont "I ordered!"
 	cont "Thank you!"
 	done
@@ -126,7 +126,7 @@ _OaksLabGivePokeballsText1::
 	cont "#MON."
 
 	para "<PLAYER> got 5"
-	line "# BALLs!@"
+	line "# Ballss!@"
 	text_end
 
 _OaksLabGivePokeballsText2::
@@ -148,7 +148,7 @@ _OaksLabGivePokeballsText2::
 	done
 
 _OaksLabPleaseVisitText::
-	text "OAK: Come see me"
+	text "Oak: Come see me"
 	line "sometimes."
 
 	para "I want to know how"
@@ -157,7 +157,7 @@ _OaksLabPleaseVisitText::
 	done
 
 _OaksLabText_1d31d::
-	text "OAK: Good to see "
+	text "Oak: Good to see "
 	line "you! How is your "
 	cont "#DEX coming? "
 	cont "Here, let me take"
@@ -206,7 +206,7 @@ _OaksLabChooseMonText::
 	para "Haha!"
 
 	para "They are inside"
-	line "the # BALLs."
+	line "the # Balls."
 
 	para "When I was young,"
 	line "I was a serious"
@@ -350,7 +350,7 @@ _OaksLabText27::
 	cont "don't need you!"
 
 	para "I know! I'll"
-	line "borrow a TOWN MAP"
+	line "borrow a Town Map"
 	cont "from my sis!"
 
 	para "I'll tell her not"
