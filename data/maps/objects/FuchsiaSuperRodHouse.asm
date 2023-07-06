@@ -1,4 +1,4 @@
-FuchsiaGoodRodHouse_Object:
+FuchsiaSuperRodHouse_Object:
 	db $c ; border block
 
 	def_warp_events
@@ -11,4 +11,4 @@ FuchsiaGoodRodHouse_Object:
 	def_object_events
 	object_event  5,  3, SPRITE_FISHING_GURU, STAY, RIGHT, 1 ; person
 
-	def_warps_to FUCHSIA_GOOD_ROD_HOUSE
+	def_warps_to FUCHSIA_SUPER_ROD_HOUSE

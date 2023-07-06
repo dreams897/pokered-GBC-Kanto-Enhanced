@@ -166,7 +166,7 @@ MapHeaderPointers::
 	dw SeafoamIslandsB3F_h
 	dw SeafoamIslandsB4F_h
 	dw VermilionOldRodHouse_h
-	dw FuchsiaGoodRodHouse_h
+	dw FuchsiaSuperRodHouse_h
 	dw PokemonMansion1F_h
 	dw CinnabarGym_h
 	dw CinnabarLab_h
@@ -191,7 +191,7 @@ MapHeaderPointers::
 	dw Route16Gate1F_h
 	dw Route16Gate2F_h
 	dw Route16FlyHouse_h
-	dw Route12SuperRodHouse_h
+	dw Route12GoodRodHouse_h
 	dw Route18Gate1F_h
 	dw Route18Gate2F_h
 	dw SeafoamIslands1F_h

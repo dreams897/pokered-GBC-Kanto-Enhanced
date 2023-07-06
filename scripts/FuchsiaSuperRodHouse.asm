@@ -1,13 +1,13 @@
-FuchsiaGoodRodHouse_Script:
+FuchsiaSuperRodHouse_Script:
 	jp EnableAutoTextBoxDrawing
 
-FuchsiaGoodRodHouse_TextPointers:
+FuchsiaSuperRodHouse_TextPointers:
 	dw FuchsiaHouse3Text1
 
 FuchsiaHouse3Text1:
 	text_asm
 	ld a, [wd728]
-	bit 4, a ; got good rod?
+	bit 4, a ; got super rod?
 	jr nz, .got_item
 	ld hl, FuchsiaHouse3Text_561bd
 	call PrintText
@@ -15,11 +15,11 @@ FuchsiaHouse3Text1:
 	ld a, [wCurrentMenuItem]
 	and a
 	jr nz, .refused
-	lb bc, GOOD_ROD, 1
+	lb bc, SUPER_ROD, 1
 	call GiveItem
 	jr nc, .bag_full
 	ld hl, wd728
-	set 4, [hl] ; got good rod
+	set 4, [hl] ; got super rod
 	ld hl, FuchsiaHouse3Text_561c2
 	jr .done
 .bag_full
@@ -42,16 +42,6 @@ FuchsiaHouse3Text_561c2:
 	text_far _FuchsiaHouse3Text_561c2
 	sound_get_item_1
 	text_end
-
-UnusedText_561c8:
-	para "つり　こそ"
-	line "おとこの　ロマン　だ！"
-
-	para "へぼいつりざおは"
-	line "コイキングしか　つれ　なんだが"
-	line "この　いいつりざおなら"
-	line "もっと　いいもんが　つれるんじゃ！"
-	done
 
 FuchsiaHouse3Text_56212:
 	text_far _FuchsiaHouse3Text_56212
