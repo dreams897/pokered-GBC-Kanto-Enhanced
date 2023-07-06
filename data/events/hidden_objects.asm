@@ -23,6 +23,7 @@ HiddenObjectMaps:
 	db CELADON_HOTEL
 	db FUCHSIA_POKECENTER
 	db FUCHSIA_GYM
+	db FUCHSIA_SUPER_ROD_HOUSE
 	db CINNABAR_GYM
 	db CINNABAR_POKECENTER
 	db SAFFRON_GYM
@@ -73,6 +74,7 @@ HiddenObjectMaps:
 	db BIKE_SHOP
 	db ROUTE_11
 	db ROUTE_12
+	db ROUTE_12_GOOD_ROD_HOUSE
 	db POKEMON_MANSION_2F
 	db POKEMON_MANSION_B1F
 	db SILPH_CO_11F
@@ -82,6 +84,7 @@ HiddenObjectMaps:
 	db CELADON_CITY
 	db SEAFOAM_ISLANDS_B3F
 	db VERMILION_CITY
+	db VERMILION_OLD_ROD_HOUSE
 	db CERULEAN_CITY
 	db ROUTE_4
 	db DAYCARE
@@ -113,6 +116,7 @@ HiddenObjectPointers:
 	dw CeladonHotelHiddenObjects
 	dw FuchsiaPokecenterHiddenObjects
 	dw FuchsiaGymHiddenObjects
+	dw FuchsiaSuperRodHouseObjects
 	dw CinnabarGymHiddenObjects
 	dw CinnabarPokecenterHiddenObjects
 	dw SaffronGymHiddenObjects
@@ -163,6 +167,7 @@ HiddenObjectPointers:
 	dw BikeShopHiddenObjects
 	dw Route11HiddenObjects
 	dw Route12HiddenObjects
+	dw Route12GoodRodHouseObjects
 	dw Mansion2HiddenObjects
 	dw Mansion4HiddenObjects
 	dw SilphCo11FHiddenObjects
@@ -172,6 +177,7 @@ HiddenObjectPointers:
 	dw CeladonCityHiddenObjects
 	dw SeafoamIslands4HiddenObjects
 	dw VermilionCityHiddenObjects
+	dw VermilionOldRodHouseObjects
 	dw CeruleanCityHiddenObjects
 	dw Route4HiddenObjects
 	dw DaycareHiddenObjects
@@ -382,6 +388,12 @@ FuchsiaPokecenterHiddenObjects:
 FuchsiaGymHiddenObjects:
 	hidden_object  3, 15, SPRITE_FACING_UP, GymStatues
 	hidden_object  6, 15, SPRITE_FACING_UP, GymStatues
+	db -1 ; end
+	
+FuchsiaSuperRodHouseObjects:
+	hidden_object  0,  1, SPRITE_FACING_UP, OpenPokemonCenterPC
+	hidden_object  6,  1, SPRITE_FACING_UP, PrintBookcaseText
+	hidden_object  7,  1, SPRITE_FACING_UP, PrintBookcaseText
 	db -1 ; end
 
 CinnabarGymHiddenObjects:
@@ -626,6 +638,12 @@ Route11HiddenObjects:
 Route12HiddenObjects:
 	hidden_object  2, 63, HYPER_POTION, HiddenItems
 	db -1 ; end
+	
+Route12GoodRodHouseObjects:
+	hidden_object  0,  1, SPRITE_FACING_UP, OpenPokemonCenterPC
+	hidden_object  6,  1, SPRITE_FACING_UP, PrintBookcaseText
+	hidden_object  7,  1, SPRITE_FACING_UP, PrintBookcaseText
+	db -1 ; end
 
 SilphCo11FHiddenObjects:
 	hidden_object 10, 12, SPRITE_FACING_UP, OpenPokemonCenterPC
@@ -659,6 +677,12 @@ SeafoamIslands4HiddenObjects:
 
 VermilionCityHiddenObjects:
 	hidden_object 14, 11, MAX_ETHER, HiddenItems
+	db -1 ; end
+	
+VermilionOldRodHouseObjects:
+	hidden_object  0,  1, SPRITE_FACING_UP, OpenPokemonCenterPC
+	hidden_object  6,  1, SPRITE_FACING_UP, PrintBookcaseText
+	hidden_object  7,  1, SPRITE_FACING_UP, PrintBookcaseText
 	db -1 ; end
 
 CeruleanCityHiddenObjects:
