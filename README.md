@@ -16,6 +16,7 @@ Currently in developement, but is entirely playable if you build it.
 * Most text has been decapitalized except for Stats, the word "Pokémon", and HM moves
 * Pokémon have genders
 * Updated look of the "Kanto" overworld while keeping the maps very familar
+* Switched Good Rod and Super Rod locations
 * Some color adjustments have been made (sprites, etc.) to improve the overal look and feel
 * Newer features such as "Berry Trees" have been added
 * All sprites (Pokémon, trainers, etc.) have been carefully selected to be the best available
@@ -88,6 +89,7 @@ A: They have been replaced by berry trees for technical reasons but have been ch
 ### Credits:
 
 * RegularLuna for inspiring me to make this and some of the code is theirs
+* Rainbow Metal Pigeon for code help and support
 * Vortyne for some code taken from PureRGB as well as help and support
 * Rangi42 for making awe-inspiring maps and an awesome map editor
 * Gamefreak/Nintendo of course for making a great, but terribly flawed game
