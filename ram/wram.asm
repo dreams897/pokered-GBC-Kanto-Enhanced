@@ -327,6 +327,26 @@ wWhichTradeMonSelectionMenu::
 
 wIsTrainerBattle::
 	ds 1
+	
+wShinyMonFlag::
+; Bit 0 is set if the mon should be Shiny.
+; Bit 1 is set for enemy mon animation, reset for player mon animation
+
+wGenderTemp::
+; temporary buffer used when checking/displaying a Pokemon's gender
+	ds 9
+	
+wAIMoveSpamAvoider:: db
+
+wAITargetMonType1:: db ; the type of the pokemon the AI should think it's attacking (stays as the previous pokemon when you switch pokemon)
+
+wPlayerLastSelectedMoveDisable:: db ; store for disable functionality
+
+wAITargetMonStatus:: db ; the current status of the pokemon the AI should think it's attacking (set when healing a pokemon's status or switching it out)
+	
+wBattleFunctionalFlags:: db
+	
+wStartBattleLevels:: ds PARTY_LENGTH ; which is 6 bytes
 ;
 ; AddPartyMon uses it slightly differently.
 ; If the lower nybble is 0, the mon is added to the player's party, else the enemy's.
@@ -740,7 +760,6 @@ wSlotMachineWheel2TopTile:: db
 wSlotMachineWheel3BottomTile:: db
 wSlotMachineWheel3MiddleTile:: db
 wSlotMachineWheel3TopTile:: db
-wStartBattleLevels:: ds PARTY_LENGTH ; which is 6 bytes
 wPayoutCoins:: dw
 ; These flags are set randomly and control when the wheels stop.
 ; bit 6: allow the player to win in general
@@ -873,8 +892,6 @@ wSwappedMenuItem::
 wRodResponse::
 	db
 ENDU
-
-wBattleFunctionalFlags:: db
 
 ; 0 = neither
 ; 1 = warp pad
@@ -1103,14 +1120,6 @@ wGymLeaderName:: ds NAME_LENGTH
 
 wItemList:: ds 16
 
-wAIMoveSpamAvoider:: db
-
-wAITargetMonType1:: db ; the type of the pokemon the AI should think it's attacking (stays as the previous pokemon when you switch pokemon)
-
-wPlayerLastSelectedMoveDisable:: db ; store for disable functionality
-
-wAITargetMonStatus:: db ; the current status of the pokemon the AI should think it's attacking (set when healing a pokemon's status or switching it out)
-
 wListPointer:: dw
 
 ; used to store pointers, but never read
@@ -1161,14 +1170,6 @@ wWalkCounter:: db
 
 ; background tile number in front of the player (either 1 or 2 steps ahead)
 wTileInFrontOfPlayer:: db
-
-wShinyMonFlag::
-; Bit 0 is set if the mon should be Shiny.
-; Bit 1 is set for enemy mon animation, reset for player mon animation
-
-wGenderTemp::
-; temporary buffer used when checking/displaying a Pokemon's gender
-	ds 9
 
 ; The desired fade counter reload value is stored here prior to calling
 ; PlaySound in order to cause the current music to fade out before the new
@@ -2117,24 +2118,21 @@ wPlayerGender::
 	; $02 = enby
 	ds 1
 	
-; unused
-	ds 55
-
-UNION
-	ds 73
-NEXTU
-wChannel7:: channel_struct wChannel7
-wChannel8:: channel_struct wChannel8
-ENDU
-
 wExtraFlags::
 ; TODO: Move these in with Event Flags and an EngineFlags array
 ; bit 0 = Set means next Wildmon or Giftmon will be Shiny (Reset afterwards)
 ; bit 1 = Set means there is a baby at the Daycare
-; bit 2 = Set means traded mons obey like normal mons
-; bit 3 = Set means you've received Eon Ticket in Celadon Mansion
-; bit 4 = Set means you've received Mystic Ticket in Cinnabar Lab
 	ds 1
+	
+; unused
+	ds 55
+
+UNION
+	ds 72
+NEXTU
+wChannel7:: channel_struct wChannel7
+wChannel8:: channel_struct wChannel8
+ENDU
 
 wObtainedHiddenItemsFlags:: flag_array 112
 
@@ -2435,5 +2433,5 @@ ENDC
 SECTION "Stack", WRAM0
 
 ; the stack grows downward
-	ds $77 - 1
+	ds $75 - 1
 wStack:: db
