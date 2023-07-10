@@ -75,7 +75,7 @@ _BrockBoulerBadgeInfoText::
 	cont "more powerful!"
 
 	para "The technique"
-	line "Flash can now be"
+	line "FLASH can now be"
 	cont "used any time!"
 	prompt
 

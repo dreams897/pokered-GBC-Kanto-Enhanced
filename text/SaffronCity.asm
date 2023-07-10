@@ -4,7 +4,7 @@ _SaffronCityText1::
 	done
 
 _SaffronCityText2::
-	text "BOSS said he'll"
+	text "Boss said he'll"
 	line "take this town!"
 	done
 
@@ -14,7 +14,7 @@ _SaffronCityText3::
 	done
 
 _SaffronCityText4::
-	text "SAFFRON belongs"
+	text "Saffron belongs"
 	line "to Team Rocket!"
 	done
 
@@ -29,7 +29,7 @@ _SaffronCityText6::
 	done
 
 _SaffronCityText7::
-	text "With SILPH under"
+	text "With Silph under"
 	line "control, we can"
 	cont "exploit #MON"
 	cont "around the world!"
@@ -51,7 +51,7 @@ _SaffronCityText9::
 _SaffronCityText10::
 	text "People should be"
 	line "flocking back to"
-	cont "SAFFRON now."
+	cont "Saffron now."
 	done
 
 _SaffronCityText11::
@@ -65,13 +65,13 @@ _SaffronCityText11::
 	done
 
 _SaffronCityText12::
-	text "PIDGEOT: Bi bibii!@"
+	text "Pidgeot: Bi bibii!@"
 	text_end
 
 _SaffronCityText13::
 	text "I saw Rocket"
-	line "BOSS escaping"
-	cont "SILPH's building."
+	line "Boss escaping"
+	cont "Silph's building."
 	done
 
 _SaffronCityText14::
@@ -91,19 +91,19 @@ _SaffronCityText15::
 	done
 
 _SaffronCityText16::
-	text "SAFFRON City"
+	text "Saffron City"
 	line "Shining, Golden"
 	cont "Land of Commerce"
 	done
 
 _SaffronCityText17::
-	text "FIGHTING DOJO"
+	text "Fighting Dojo"
 	done
 
 _SaffronCityText18::
-	text "SAFFRON City"
+	text "Saffron City"
 	line "#MON Gym"
-	cont "Leader: SABRINA"
+	cont "Leader: Sabrina"
 
 	para "The Master of"
 	line "Psychic #MON!"
@@ -112,7 +112,7 @@ _SaffronCityText18::
 _SaffronCityText20::
 	text "TRAINER TIPS"
 
-	para "FULL HEAL cures"
+	para "Full Heal cures"
 	line "all ailments like"
 	cont "sleep and burns."
 
@@ -124,7 +124,7 @@ _SaffronCityText20::
 _SaffronCityText21::
 	text "TRAINER TIPS"
 
-	para "New GREAT BALL"
+	para "New Great Ball"
 	line "offers improved"
 	cont "capture rates."
 
@@ -134,17 +134,17 @@ _SaffronCityText21::
 	done
 
 _SaffronCityText22::
-	text "SILPH CO."
-	line "OFFICE BUILDING"
+	text "Silph Co."
+	line "Office Building"
 	done
 
 _SaffronCityText24::
-	text "MR.PSYCHIC's"
-	line "HOUSE"
+	text "Mr. Psychic's"
+	line "House"
 	done
 
 _SaffronCityText25::
-	text "SILPH's latest"
+	text "Silph's latest"
 	line "product!"
 
 	para "Release to be"

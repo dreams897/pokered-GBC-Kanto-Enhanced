@@ -6,7 +6,7 @@ _SilphCo5EndBattleText4::
 _SilphCo5AfterBattleText4::
 	text "You're only on 5F."
 	line "It's a long way"
-	cont "to my BOSS!"
+	cont "to my Boss!"
 	done
 
 _SilphCo5BattleText5::
@@ -22,23 +22,23 @@ _SilphCo5EndBattleText5::
 _SilphCo5AfterBattleText5::
 	text "Which reminds me."
 
-	para "KOFFING evolves"
-	line "into WEEZING!"
+	para "Koffing evolves"
+	line "into Weezing!"
 	done
 
 _SilphCo5Text9::
 	text "It's a #MON"
-	line "REPORT!"
+	line "Report!"
 
-	para "#MON LAB"
-	line "created PORYGON,"
+	para "#MON Lab"
+	line "created Porygon,"
 	cont "the first virtual"
 	cont "reality #MON."
 	done
 
 _SilphCo5Text10::
 	text "It's a #MON"
-	line "REPORT!"
+	line "Report!"
 
 	para "Over 160 #MON"
 	line "techniques have"
@@ -47,7 +47,7 @@ _SilphCo5Text10::
 
 _SilphCo5Text11::
 	text "It's a #MON"
-	line "REPORT!"
+	line "Report!"
 
 	para "4 #MON evolve"
 	line "only when traded"

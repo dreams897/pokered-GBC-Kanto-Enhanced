@@ -61,20 +61,20 @@ _OaksLabLastMonText::
 	done
 
 _OaksLabText_1d2f0::
-	text "OAK: Now, <PLAYER>,"
+	text "Oak: Now, <PLAYER>,"
 	line "which #MON do"
 	cont "you want?"
 	done
 
 _OaksLabText_1d2f5::
-	text "OAK: If a wild"
+	text "Oak: If a wild"
 	line "#MON appears,"
 	cont "your #MON can"
 	cont "fight against it!"
 	done
 
 _OaksLabText_1d2fa::
-	text "OAK: <PLAYER>,"
+	text "Oak: <PLAYER>,"
 	line "raise your young"
 	cont "#MON by making"
 	cont "it fight!"
@@ -115,7 +115,7 @@ _OaksLabAroundWorldText::
 	done
 
 _OaksLabGivePokeballsText1::
-	text "OAK: You can't get"
+	text "Oak: You can't get"
 	line "detailed data on"
 	cont "#MON by just"
 	cont "seeing them."
@@ -191,7 +191,7 @@ _OaksLabRivalWaitingText::
 	done
 
 _OaksLabChooseMonText::
-	text "OAK: <RIVAL>?"
+	text "Oak: <RIVAL>?"
 	line "Let me think..."
 
 	para "Oh, that's right,"
@@ -225,13 +225,13 @@ _OaksLabRivalInterjectionText::
 	done
 
 _OaksLabBePatientText::
-	text "OAK: Be patient!"
+	text "Oak: Be patient!"
 	line "<RIVAL>, you can"
 	cont "have one too!"
 	done
 
 _OaksLabLeavingText::
-	text "OAK: Hey! Don't go"
+	text "Oak: Hey! Don't go"
 	line "away yet!"
 	done
 
@@ -289,7 +289,7 @@ _OaksLabText22::
 	done
 
 _OaksLabText23::
-	text "OAK: Oh right! I"
+	text "Oak: Oh right! I"
 	line "have a request"
 	cont "of you two."
 	done
@@ -309,7 +309,7 @@ _OaksLabText24::
 	done
 
 _OaksLabText25::
-	text "OAK: <PLAYER> and"
+	text "Oak: <PLAYER> and"
 	line "<RIVAL>! Take"
 	cont "these with you!"
 

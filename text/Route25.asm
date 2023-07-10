@@ -96,7 +96,7 @@ _Route25EndBattleText6::
 _Route25AfterBattleText6::
 	text "You came from Mt."
 	line "Moon? May I have"
-	cont "a CLEFAIRY?"
+	cont "a Clefairy?"
 	done
 
 _Route25BattleText7::
@@ -112,7 +112,7 @@ _Route25EndBattleText7::
 
 _Route25AfterBattleText7::
 	text "Drat!"
-	line "A ZUBAT bit me"
+	line "A Zubat bit me"
 	cont "back in there."
 	done
 

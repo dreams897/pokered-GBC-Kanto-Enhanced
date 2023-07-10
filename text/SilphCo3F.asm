@@ -1,5 +1,5 @@
 _SilphCo3Text_59ff9::
-	text "I work for SILPH."
+	text "I work for Silph."
 	line "What should I do?"
 	done
 
@@ -22,13 +22,13 @@ _SilphCo3EndBattleText1::
 _SilphCo3AfterBattleText1::
 	text "A hint? You can"
 	line "open doors with a"
-	cont "CARD KEY!"
+	cont "Card Key!"
 	done
 
 _SilphCo3BattleText2::
 	text "I support Team"
 	line "Rocket more than"
-	cont "I support SILPH!"
+	cont "I support Silph!"
 	done
 
 _SilphCo3EndBattleText2::

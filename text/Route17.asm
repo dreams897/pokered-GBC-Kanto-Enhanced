@@ -31,7 +31,7 @@ _Route17AfterBattleText2::
 
 _Route17BattleText3::
 	text "You heading to"
-	line "FUCHSIA?"
+	line "Fuchsia?"
 	done
 
 _Route17EndBattleText3::
@@ -59,7 +59,7 @@ _Route17AfterBattleText4::
 	done
 
 _Route17BattleText5::
-	text "Let VOLTORB"
+	text "Let Voltorb"
 	line "electrify you!"
 	done
 
@@ -69,9 +69,9 @@ _Route17EndBattleText5::
 	prompt
 
 _Route17AfterBattleText5::
-	text "I got my VOLTORB"
+	text "I got my Voltorb"
 	line "at the abandoned"
-	cont "POWER PLANT."
+	cont "Power Plant."
 	done
 
 _Route17BattleText6::
@@ -176,9 +176,9 @@ _Route17Text13::
 	done
 
 _Route17Text14::
-	text "ROUTE 17"
+	text "Route 17"
 	line "Celadon City -"
-	cont "FUCHSIA City"
+	cont "Fuchsia City"
 	done
 
 _Route17Text15::
@@ -186,7 +186,7 @@ _Route17Text15::
 
 	para "Don't throw the"
 	line "game, throw #"
-	cont "BALLs instead!"
+	cont "Balls instead!"
 	done
 
 _Route17Text16::

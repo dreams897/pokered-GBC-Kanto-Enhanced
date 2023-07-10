@@ -295,8 +295,8 @@ _PushStartText::
 	done
 
 _SaveOptionText::
-	text "Hold 'B' to"
-	line "move faster!"
+	text "Hold B"
+	line "to run!"
 	done
 
 _StrengthsAndWeaknessesText::
@@ -368,7 +368,7 @@ _CinnabarQuizQuestionsText5::
 
 _CinnabarQuizQuestionsText6::
 	text "TM28 contains"
-	line "TOMBSTONER?"
+	line "Tombstoner?"
 	done
 
 _CinnabarGymQuizCorrectText::
@@ -638,7 +638,7 @@ _LinkCableInfoText3::
 _ViridianSchoolBlackboardText1::
 	text "The blackboard"
 	line "describes #MON"
-	cont "STATUS changes"
+	cont "Status changes"
 	cont "during battles."
 	prompt
 
@@ -656,7 +656,7 @@ _ViridianBlackboardSleepText::
 	line "asleep even after"
 	cont "battles."
 
-	para "Use AWAKENING to"
+	para "Use Awakening to"
 	line "wake them up!"
 	prompt
 
@@ -668,7 +668,7 @@ _ViridianBlackboardPoisonText::
 	para "Poison lingers"
 	line "after battles."
 
-	para "Use an ANTIDOTE"
+	para "Use an Antidote"
 	line "to cure poison!"
 	prompt
 
@@ -680,7 +680,7 @@ _ViridianBlackboardPrlzText::
 	para "Paralysis remains"
 	line "after battles."
 
-	para "Use PARLYZ HEAL"
+	para "Use Parlyz Heal"
 	line "for treatment!"
 	prompt
 
@@ -693,7 +693,7 @@ _ViridianBlackboardBurnText::
 	para "Burns remain"
 	line "after battles."
 
-	para "Use BURN HEAL to"
+	para "Use Burn Heal to"
 	line "cure a burn!"
 	prompt
 

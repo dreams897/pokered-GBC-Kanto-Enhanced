@@ -1,6 +1,6 @@
 _SafariZoneEntranceText1::
 	text "Welcome to the"
-	line "SAFARI ZONE!"
+	line "Safari Zone!"
 	done
 
 SafariZoneEntranceText_9e6e4::
@@ -18,11 +18,11 @@ SafariZoneEntranceText_9e747::
 	line "please!"
 
 	para "We only use a"
-	line "special # BALL"
+	line "special # Ball"
 	cont "here."
 
 	para "<PLAYER> received"
-	line "30 SAFARI BALLs!@"
+	line "30 Safari Balls!@"
 	text_end
 
 _SafariZoneEntranceText_75360::
@@ -70,23 +70,23 @@ _SafariZoneEntranceText_753e6::
 	done
 
 _SafariZoneEntranceText_753eb::
-	text "SAFARI ZONE has 4"
+	text "Safari Zone has 4"
 	line "zones in it."
 
 	para "Each zone has"
 	line "different kinds"
 	cont "of #MON. Use"
-	cont "SAFARI BALLs to"
+	cont "Safari Balls to"
 	cont "catch them!"
 
 	para "When you run out"
-	line "of time or SAFARI"
-	cont "BALLs, it's game"
+	line "of time or Safari"
+	cont "Balls, it's game"
 	cont "over for you!"
 
 	para "Before you go,"
 	line "open an unused"
-	cont "#MON BOX so"
+	cont "#MON Box so"
 	cont "there's room for"
 	cont "new #MON!"
 	done

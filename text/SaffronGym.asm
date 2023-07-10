@@ -27,7 +27,7 @@ _ReceivedMarshBadgeText::
 	cont "to win!"
 
 	para "You earned the"
-	line "MARSHBadge!@"
+	line "Marsh Badge!@"
 	text_end
 
 _SabrinaPostBattleAdviceText::
@@ -38,7 +38,7 @@ _SabrinaPostBattleAdviceText::
 	done
 
 _KogaMarshBadgeInfoText::
-	text "The MARSHBadge"
+	text "The Marsh Badge"
 	line "makes #MON up"
 	cont "to L70 obey you!"
 
@@ -63,7 +63,7 @@ _ReceivedTM46Text::
 _TM46ExplanationText::
 	text_start
 
-	para "TM46 is PSYWAVE!"
+	para "TM46 is Psywave!"
 	line "It uses powerful"
 	cont "psychic waves to"
 	cont "inflict damage!"
@@ -78,7 +78,7 @@ _SaffronGymGuidePreBattleText::
 	text "Yo! Champ in"
 	line "making!"
 
-	para "SABRINA's #MON"
+	para "Sabrina's #MON"
 	line "use psychic power"
 	cont "instead of force!"
 
@@ -101,7 +101,7 @@ _SaffronGymGuidePostBattleText::
 	done
 
 _SaffronGymBattleText1::
-	text "SABRINA is younger"
+	text "Sabrina is younger"
 	line "than I, but I"
 	cont "respect her!"
 	done
@@ -118,7 +118,7 @@ _SaffronGymAfterBattleText1::
 	cont "will wins!"
 
 	para "If you wish"
-	line "to beat SABRINA,"
+	line "to beat Sabrina,"
 	cont "focus on winning!"
 	done
 
@@ -170,9 +170,9 @@ _SaffronGymEndBattleText4::
 	prompt
 
 _SaffronGymAfterBattleText4::
-	text "SABRINA just wiped"
-	line "out the KARATE"
-	cont "MASTER next door!"
+	text "Sabrina just wiped"
+	line "out the Karate"
+	cont "Master next door!"
 	done
 
 _SaffronGymBattleText5::
@@ -193,7 +193,7 @@ _SaffronGymAfterBattleText5::
 	done
 
 _SaffronGymBattleText6::
-	text "SABRINA is young,"
+	text "Sabrina is young,"
 	line "but she's also"
 	cont "our Leader!"
 
@@ -211,7 +211,7 @@ _SaffronGymAfterBattleText6::
 	line "2 #MON Gyms in"
 	cont "SAFFRON."
 
-	para "The FIGHTING DOJO"
+	para "The Fighting Dojo"
 	line "next door lost"
 	cont "its Gym status"
 	cont "when we went and"
@@ -219,12 +219,12 @@ _SaffronGymAfterBattleText6::
 	done
 
 _SaffronGymBattleText7::
-	text "SAFFRON #MON"
+	text "Saffron #MON"
 	line "Gym is famous for"
 	cont "its psychics!"
 
 	para "You want to see"
-	line "SABRINA!"
+	line "Sabrina!"
 	cont "I can tell!"
 	done
 

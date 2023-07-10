@@ -54,7 +54,7 @@ _Route16EndBattleText4::
 
 _Route16AfterBattleText4::
 	text "You can also get"
-	line "to FUCHSIA from"
+	line "to Fuchsia from"
 	cont "Vermilion using a"
 	cont "coastal road."
 	done
@@ -96,7 +96,7 @@ _Route16Text7::
 	done
 
 _Route16Text10::
-	text "SNORLAX woke up!"
+	text "Snorlax woke up!"
 
 	para "It attacked in a"
 	line "grumpy rage!"
@@ -104,7 +104,7 @@ _Route16Text10::
 
 _Route16Text11::
 	text "With a big yawn,"
-	line "SNORLAX returned"
+	line "Snorlax returned"
 	cont "to the mountains!"
 	done
 
@@ -116,5 +116,5 @@ _Route16Text8::
 _Route16Text9::
 	text "ROUTE 16"
 	line "Celadon City -"
-	cont "FUCHSIA City"
+	cont "Fuchsia City"
 	done

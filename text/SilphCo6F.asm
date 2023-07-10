@@ -73,11 +73,11 @@ _SilphCo6AfterBattleText2::
 
 _SilphCo6BattleText3::
 	text "That rotten"
-	line "PRESIDENT!"
+	line "President!"
 
 	para "He shouldn't have"
 	line "sent me to the"
-	cont "TIKSI BRANCH!"
+	cont "Tiksi Branch!"
 	done
 
 _SilphCo6EndBattleText3::
@@ -85,7 +85,7 @@ _SilphCo6EndBattleText3::
 	prompt
 
 _SilphCo6AfterBattleText3::
-	text "TIKSI BRANCH?"
+	text "Tiksi Branch?"
 	line "It's in Russian"
 	cont "no man's land!"
 	done

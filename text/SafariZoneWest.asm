@@ -1,5 +1,5 @@
 _SafariZoneWestText5::
-	text "REST HOUSE"
+	text "Rest House"
 	done
 
 _SafariZoneWestText6::
@@ -12,7 +12,7 @@ _SafariZoneWestText6::
 	cont "here somewhere."
 
 	para "Reward offered!"
-	line "Contact: WARDEN"
+	line "Contact: Warden"
 	done
 
 _SafariZoneWestText7::
@@ -26,6 +26,6 @@ _SafariZoneWestText7::
 	done
 
 _SafariZoneWestText8::
-	text "AREA 3"
-	line "EAST: CENTER AREA"
+	text "Area 3"
+	line "East: Center Area"
 	done

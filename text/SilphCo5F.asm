@@ -28,7 +28,7 @@ _SilphCo5AfterBattleText2::
 
 _SilphCo5BattleText3::
 	text "We study #"
-	line "BALL technology"
+	line "Ball technology"
 	cont "on this floor!"
 	done
 
@@ -40,7 +40,7 @@ _SilphCo5EndBattleText3::
 _SilphCo5AfterBattleText3::
 	text "We worked on the"
 	line "ultimate #"
-	cont "BALL which would"
+	cont "Ball which would"
 	cont "catch anything!"
 	done
 

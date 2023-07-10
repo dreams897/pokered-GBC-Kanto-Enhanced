@@ -11,7 +11,7 @@ _SilphCo4Text_19de5::
 _SilphCo4BattleText2::
 	text "Team Rocket has"
 	line "taken command of"
-	cont "SILPH CO.!"
+	cont "Silph Co.!"
 	done
 
 _SilphCo4EndBattleText2::
@@ -20,7 +20,7 @@ _SilphCo4EndBattleText2::
 
 _SilphCo4AfterBattleText2::
 	text "Fwahahaha!"
-	line "My BOSS has been"
+	line "My Boss has been"
 	cont "after this place!"
 	done
 
@@ -37,8 +37,8 @@ _SilphCo4EndBattleText3::
 _SilphCo4AfterBattleText3::
 	text "The doors are"
 	line "electronically"
-	cont "locked! A CARD"
-	cont "KEY opens them!"
+	cont "locked! A Card"
+	cont "Key opens them!"
 	done
 
 _SilphCo4BattleText4::
@@ -52,5 +52,5 @@ _SilphCo4EndBattleText4::
 
 _SilphCo4AfterBattleText4::
 	text "I better tell the"
-	line "BOSS on 11F!"
+	line "Boss on 11F!"
 	done
