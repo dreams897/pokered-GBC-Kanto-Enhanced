@@ -177,5 +177,6 @@ Moves:
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
 	move EXTREME_SPEED, NO_ADDITIONAL_EFFECT,       80, NORMAL,        100, 5
 	move MUDDY_WATER,  NO_ADDITIONAL_EFFECT,   	90, WATER,         85, 10
+	move MOON_BLAST,   SPECIAL_DOWN_SIDE_EFFECT,    95, FAIRY,        100, 15
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

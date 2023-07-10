@@ -241,6 +241,7 @@ ClefairyEvosMoves:
 	db 24, MINIMIZE
 	db 31, METRONOME
 	db 39, DEFENSE_CURL
+	db 44, MOON_BLAST
 	db 48, LIGHT_SCREEN
 	db 0
 
@@ -1645,7 +1646,7 @@ ClefableEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 0
+	db 1, MOON_BLAST
 
 WeezingEvosMoves:
 ; Evolutions
@@ -2074,6 +2075,7 @@ OddishEvosMoves:
 	db 17, STUN_SPORE
 	db 19, SLEEP_POWDER
 	db 24, ACID
+	db 28, MOON_BLAST
 	db 33, PETAL_DANCE
 	db 46, SOLARBEAM
 	db 0
@@ -2087,6 +2089,7 @@ GloomEvosMoves:
 	db 17, STUN_SPORE
 	db 19, SLEEP_POWDER
 	db 28, ACID
+	db 32, MOON_BLAST
 	db 38, PETAL_DANCE
 	db 52, SOLARBEAM
 	db 0
@@ -2095,6 +2098,7 @@ VileplumeEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 1, MOON_BLAST
 	db 15, POISONPOWDER
 	db 17, STUN_SPORE
 	db 19, SLEEP_POWDER

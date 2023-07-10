@@ -166,6 +166,7 @@ AttackAnimationPointers:
 	dw SubstituteAnim
 	dw ExtremeSpeedAnim
 	dw MuddyWaterAnim
+	dw MoonBlastAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1156,6 +1157,14 @@ MuddyWaterAnim:
 	battle_anim HYDRO_PUMP, SUBANIM_0_WATER_COLUMNS, 0, 4
 	battle_anim NO_MOVE, SUBANIM_1_BLOB_DRIP_ENEMY, 1, 3
 	db -1 ; end
+	
+MoonBlastAnim:
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim SEISMIC_TOSS, SUBANIM_1_SPHERE_BIG_FALL, 1, 1
+	battle_anim NO_MOVE, SE_SHOW_ENEMY_MON_PIC
+	battle_anim NO_MOVE, SE_SHAKE_SCREEN
+	db -1 ; end
+	
 
 BallTossAnim:
 	battle_anim NO_MOVE, SUBANIM_0_BALL_TOSS_HIGH, 0, 3

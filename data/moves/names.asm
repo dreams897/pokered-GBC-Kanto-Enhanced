@@ -166,5 +166,6 @@ MoveNames::
 	li "Substitute"
 	li "ExtremeSpeed"
 	li "Muddy Water"
+	li "Moonblast"
 	li "Struggle"
 	assert_list_length NUM_ATTACKS
