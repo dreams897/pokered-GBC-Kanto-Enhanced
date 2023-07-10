@@ -1,7 +1,7 @@
 _VermilionHouse1Text1::
 	text "I'm getting my"
 	line "Pidgey to fly a"
-	cont "letter to SAFFRON"
+	cont "letter to Saffron"
 	cont "in the north!"
 	done
 

@@ -1,6 +1,6 @@
 _BikeShopText_1d810::
 	text "Hi! Welcome to"
-	line "our Bike SHOP."
+	line "our Bike Shop."
 
 	para "Have we got just"
 	line "the Bike for you!"

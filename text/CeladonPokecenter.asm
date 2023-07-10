@@ -1,5 +1,5 @@
 _CeladonPokecenterText2::
-	text "# FLUTE awakens"
+	text "# Flute awakens"
 	line "#MON with a"
 	cont "sound that only"
 	cont "they can hear!"
@@ -8,5 +8,5 @@ _CeladonPokecenterText2::
 _CeladonPokecenterText3::
 	text "I rode uphill on"
 	line "Cycling Road from"
-	cont "FUCHSIA!"
+	cont "Fuchsia!"
 	done

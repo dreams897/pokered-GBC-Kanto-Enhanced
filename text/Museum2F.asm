@@ -40,6 +40,6 @@ _Museum2FText6::
 
 _Museum2FText7::
 	text "Meteorite that"
-	line "fell on Mt.Moon."
-	cont "(Moon stone?)"
+	line "fell on Mt. Moon."
+	cont "(Moon Stone?)"
 	done

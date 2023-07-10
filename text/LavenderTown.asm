@@ -29,7 +29,7 @@ _LavenderTownText2::
 
 _LavenderTownText3::
 	text "Ghosts appeared"
-	line "in #MON TOWER."
+	line "in #MON Tower."
 
 	para "I think they're"
 	line "the spirits of"
@@ -38,7 +38,7 @@ _LavenderTownText3::
 	done
 
 _LavenderTownText4::
-	text "Lavender Town"
+	text "Lavender Town:"
 	line "The Noble Purple"
 	cont "Town"
 	done
@@ -53,12 +53,12 @@ _LavenderTownText5::
 	done
 
 _LavenderTownText8::
-	text "LAVENDER VOLUNTEER"
-	line "#MON HOUSE"
+	text "Lavender Volunteer"
+	line "#MON House"
 	done
 
 _LavenderTownText9::
 	text "May the Souls of"
 	line "#MON Rest Easy"
-	cont "#MON TOWER"
+	cont "#MON Tower"
 	done

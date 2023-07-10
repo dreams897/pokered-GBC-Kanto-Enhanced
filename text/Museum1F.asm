@@ -26,7 +26,7 @@ _Museum1FText_5c22e::
 
 	para "Oh, whatever!"
 	line "Do you know what"
-	cont "AMBER is?"
+	cont "Amber is?"
 	done
 
 _Museum1FText_5c233::
@@ -34,7 +34,7 @@ _Museum1FText_5c233::
 	line "somewhere trying"
 	cont "to resurrect"
 	cont "ancient #MON"
-	cont "from AMBER."
+	cont "from Amber."
 	done
 
 _Museum1FText_5c238::
@@ -61,7 +61,7 @@ _Museum1FText_5c251::
 _Museum1FText_5c28e::
 	text "Ssh! I think that"
 	line "this chunk of"
-	cont "AMBER contains"
+	cont "Amber contains"
 	cont "#MON DNA!"
 
 	para "It would be great"
@@ -76,18 +76,18 @@ _Museum1FText_5c28e::
 	line "to ask!"
 
 	para "Take this to a"
-	line "#MON LAB and"
+	line "#MON Lab and"
 	cont "get it examined!"
 	prompt
 
 _ReceivedOldAmberText::
 	text "<PLAYER> received"
-	line "OLD AMBER!@"
+	line "Old Amber!@"
 	text_end
 
 _Museum1FText_5c299::
 	text "Ssh! Get the OLD"
-	line "AMBER checked!"
+	line "Amber checked!"
 	done
 
 _Museum1FText_5c29e::

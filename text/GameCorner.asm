@@ -35,13 +35,13 @@ _CeladonGameCornerText_48d31::
 	done
 
 _CeladonGameCornerText_48d36::
-	text "Oops! Your COIN"
-	line "CASE is full."
+	text "Oops! Your Coin"
+	line "Case is full."
 	done
 
 _CeladonGameCornerText_48d3b::
 	text "You don't have a"
-	line "COIN CASE!"
+	line "Coin Case!"
 	done
 
 _CeladonGameCornerText3::
@@ -186,5 +186,5 @@ _CeladonGameCornerText_48f09::
 
 _CeladonGameCornerText_48f19::
 	text "Oops! Forgot the"
-	line "COIN CASE!"
+	line "Coin Case!"
 	done
