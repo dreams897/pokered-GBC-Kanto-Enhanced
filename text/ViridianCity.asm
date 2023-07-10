@@ -34,7 +34,7 @@ _ViridianCityText_19152::
 	done
 
 _ViridianCityText_19157::
-	text "CATERPIE has no"
+	text "Caterpie has no"
 	line "poison, but"
 	cont "Weedle does."
 
