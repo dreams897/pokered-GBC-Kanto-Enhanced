@@ -540,6 +540,9 @@ SpritePaletteAssignments: ; Characters on the overworld
 	; 0x05: SPRITE_MONSTER
 	db SPR_PAL_ORANGE
 	
+	; SPRITE_PIKACHU
+	db SPR_PAL_ORANGE
+	
 	; SPRITE_MISTY
 	db SPR_PAL_ORANGE
 	

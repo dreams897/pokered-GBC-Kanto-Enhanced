@@ -78,6 +78,7 @@ SpriteSheetPointerTable:
 	overworld_sprite JigglypuffSprite, 12       ; SPRITE_JIGGLYPUFF		; $48
         overworld_sprite LaprasSprite, 12           ; SPRITE_LAPRAS		; $46
         overworld_sprite MonsterSprite, 12          ; SPRITE_MONSTER    	; $05
+        overworld_sprite PikachuSprite, 12          ; SPRITE_PIKACHU
         overworld_sprite MistySprite, 12            ; SPRITE_MISTY		; $47
 	overworld_sprite SabrinaSprite, 12          ; SPRITE_SABRINA		; $4a
 	overworld_sprite SeelSprite, 12             ; SPRITE_SEEL		; $3b

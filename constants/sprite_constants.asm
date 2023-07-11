@@ -75,6 +75,7 @@
 	const SPRITE_JIGGLYPUFF		     ; $46
 	const SPRITE_LAPRAS		     ; $47
 	const SPRITE_MONSTER                 ; $05
+	const SPRITE_PIKACHU
 	const SPRITE_MISTY		     ; $48
 	const SPRITE_SABRINA		     ; $4a
 	const SPRITE_SEEL                    ; $3c
