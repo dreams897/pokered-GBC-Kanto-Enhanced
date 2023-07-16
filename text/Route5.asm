@@ -1,5 +1,5 @@
 _Route5Text1::
-	text "UNDERGROUND PATH"
+	text "Underground Path"
 	line "Cerulean City -"
 	cont "Vermilion City"
 	done

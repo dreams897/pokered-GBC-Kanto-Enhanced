@@ -42,7 +42,7 @@ _RocketHideout1EndBattleText4::
 	prompt
 
 _RocketHideout1AfterBattleTxt4::
-	text "SILPH SCOPE?"
+	text "Silph Scope?"
 	line "I don't know"
 	cont "where it is!"
 	done
@@ -60,7 +60,7 @@ _RocketHideout1EndBattleText5::
 _RocketHideout1AfterBattleTxt5::
 	text "OK, I'll talk!"
 	line "Take the elevator"
-	cont "to see my BOSS!"
+	cont "to see my Boss!"
 	done
 
 _RocketHideout1BattleText6::

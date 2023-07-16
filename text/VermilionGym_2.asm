@@ -13,7 +13,7 @@ _LTSurgePostBattleAdviceText::
 _LTSurgeThunderBadgeInfoText::
 	text "The Thunder Badge"
 	line "cranks up your"
-	cont "#MON's SPEED!"
+	cont "#MON's Speed!"
 
 	para "It also lets your"
 	line "#MON FLY any"

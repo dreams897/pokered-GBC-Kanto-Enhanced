@@ -1,7 +1,7 @@
 _Route4Text1::
 	text "Ouch! I tripped"
 	line "over a rocky"
-	cont "#MON, GEODUDE!"
+	cont "#MON, Geodude!"
 	done
 
 _Route4BattleText1::
@@ -24,12 +24,12 @@ _Route4AfterBattleText1::
 	done
 
 _Route4Text5::
-	text "Mt.Moon"
+	text "Mt. Moon"
 	line "Tunnel Entrance"
 	done
 
 _Route4Text6::
-	text "ROUTE 4"
+	text "Route 4"
 	line "Mt.Moon -"
 	cont "Cerulean City"
 	done

@@ -1,5 +1,5 @@
 _TowerRescueFujiText::
-	text "MR.FUJI: Heh? You"
+	text "Mr. Fuji: Heh? You"
 	line "came to save me?"
 
 	para "Thank you. But, I"
@@ -10,7 +10,7 @@ _TowerRescueFujiText::
 	line "the soul of"
 	cont "Cubone's mother."
 
-	para "I think MAROWAK's"
+	para "I think Marowak's"
 	line "spirit has gone"
 	cont "to the afterlife."
 
@@ -20,8 +20,8 @@ _TowerRescueFujiText::
 
 	para "Follow me to my"
 	line "home, #MON"
-	cont "HOUSE at the foot"
-	cont "of this tower."
+	cont "House at the foot"
+	cont "of this Tower."
 	done
 
 _PokemonTower7BattleText1::

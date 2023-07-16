@@ -14,7 +14,7 @@ _GiovanniPreBattleText::
 
 	para "Once more, you"
 	line "shall face"
-	cont "GIOVANNI, the"
+	cont "Giovanni, the"
 	cont "greatest trainer!"
 	done
 
@@ -24,7 +24,7 @@ _ReceivedEarthBadgeText::
 	cont "intense fight!"
 	cont "You have won!"
 	cont "As proof, here is"
-	cont "the EARTHBadge!@"
+	cont "the Earth Badge!@"
 	text_end
 
 _GiovanniPostBattleAdviceText::
@@ -44,7 +44,7 @@ _GiovanniPostBattleAdviceText::
 	text_end
 
 _GiovanniEarthBadgeInfoText::
-	text "The EARTHBadge"
+	text "The Earth Badge"
 	line "makes #MON of"
 	cont "any level obey!"
 
@@ -235,6 +235,6 @@ _ViridianGymGuidePreBattleText::
 
 _ViridianGymGuidePostBattleText::
 	text "Blow me away!"
-	line "GIOVANNI was the"
+	line "Giovanni was the"
 	cont "Gym Leader here?"
 	done

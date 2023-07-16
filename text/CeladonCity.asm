@@ -144,7 +144,7 @@ _CeladonCityText16::
 _CeladonCityText17::
 	text "Coins exchanged"
 	line "for prizes!"
-	cont "PRIZE EXCHANGE"
+	cont "Prize Exchange"
 	done
 
 _CeladonCityText18::

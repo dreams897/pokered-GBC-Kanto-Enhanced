@@ -20,12 +20,12 @@ _Route21BattleText2::
 
 _Route21EndBattleText2::
 	text "Darn"
-	line "MAGIKARP!"
+	line "Magikarp!"
 	prompt
 
 _Route21AfterBattleText2::
 	text "I seem to only"
-	line "catch MAGIKARP!"
+	line "catch Magikarp!"
 	done
 
 _Route21BattleText3::

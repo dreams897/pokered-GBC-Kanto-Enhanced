@@ -151,6 +151,6 @@ _Route25AfterBattleText9::
 	done
 
 _Route25Text11::
-	text "SEA COTTAGE"
+	text "Sea Cottage"
 	line "Bill lives here!"
 	done

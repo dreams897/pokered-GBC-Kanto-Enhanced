@@ -103,6 +103,6 @@ _Museum1FText_5c2ad::
 	done
 
 _Museum1FText_5c2bc::
-	text "The AMBER is"
+	text "The Amber is"
 	line "clear and gold!"
 	done

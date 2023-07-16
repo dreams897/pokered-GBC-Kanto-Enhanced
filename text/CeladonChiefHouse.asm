@@ -5,7 +5,7 @@ _CeladonHouseText1::
 	done
 
 _CeladonHouseText2::
-	text "CHIEF!"
+	text "Chief!"
 
 	para "We just shipped"
 	line "2000 #MON as"

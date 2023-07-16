@@ -1,5 +1,5 @@
 _SSAnne10Text8::
-	text "MACHOKE: Gwoh!"
+	text "Machoke: Gwoh!"
 	line "Goggoh!@"
 	text_end
 
@@ -31,7 +31,7 @@ _SSAnne10EndBattleText2::
 
 _SSAnne10AfterBattleText2::
 	text "Did you see the"
-	line "FISHING GURU in"
+	line "Fishing Guru in"
 	cont "Vermilion City?"
 	done
 
@@ -105,7 +105,7 @@ _SSAnne10AfterBattleText6::
 	done
 
 _SSAnne10Text7::
-	text "My buddy, MACHOKE,"
+	text "My buddy, Machoke,"
 	line "is super strong!"
 
 	para "He has enough"

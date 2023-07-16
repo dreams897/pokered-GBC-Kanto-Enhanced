@@ -115,7 +115,7 @@ _Route20EndBattleText8::
 _Route20AfterBattleText8::
 	text "Will my pearls"
 	line "grow bigger"
-	cont "inside CLOYSTER?"
+	cont "inside Cloyster?"
 	done
 
 _Route20BattleText9::
@@ -137,7 +137,7 @@ _Route20AfterBattleText9::
 
 _Route20BattleText10::
 	text "Cinnabar, in the"
-	line "west, has a LAB"
+	line "west, has a Lab"
 	cont "for #MON."
 	done
 
@@ -152,5 +152,5 @@ _Route20AfterBattleText10::
 
 _Route20Text12::
 _Route20Text11::
-	text "SEAFOAM IslandS"
+	text "Seaform IslandS"
 	done

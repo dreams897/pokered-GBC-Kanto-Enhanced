@@ -39,7 +39,7 @@ _Route3EndBattleText2::
 _Route3AfterBattleText2::
 	text "Are you storing"
 	line "your #MON on"
-	cont "PC? Each BOX can"
+	cont "PC? Each Box can"
 	cont "hold 20 #MON!"
 	done
 
@@ -74,7 +74,7 @@ _Route3AfterBattleText4::
 	text "If a #MON BOX"
 	line "on the PC gets"
 	cont "full, just switch"
-	cont "to another BOX!"
+	cont "to another Box!"
 	done
 
 _Route3BattleText5::
@@ -136,10 +136,10 @@ _Route3EndBattleText8::
 
 _Route3AfterBattleText8::
 	text "Route 4 is at the"
-	line "foot of Mt.Moon."
+	line "foot of Mt. Moon."
 	done
 
 _Route3Text10::
-	text "ROUTE 3"
-	line "Mt.Moon AHEAD"
+	text "Route 3"
+	line "Mt. Moon AHEAD"
 	done

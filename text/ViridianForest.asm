@@ -14,7 +14,7 @@ _ViridianForestBattleText1::
 
 _ViridianForestEndBattleText1::
 	text "No!"
-	line "CATERPIE can't"
+	line "Caterpie can't"
 	cont "cut it!"
 	prompt
 
@@ -64,7 +64,7 @@ _ViridianFrstAfterBattleText3::
 
 _ViridianForestText8::
 	text "I ran out of #"
-	line "BALLs to catch"
+	line "Balls to catch"
 	cont "#MON with!"
 
 	para "You should carry"
@@ -117,7 +117,7 @@ _ViridianForestText13::
 	done
 
 _ViridianForestText14::
-	text "LEAVING"
+	text "Leaving"
 	line "Viridian Forest"
-	cont "Pewter City AHEAD"
+	cont "Pewter City Ahead"
 	done

@@ -314,7 +314,7 @@ _OaksLabText25::
 	cont "these with you!"
 
 	para "<PLAYER> got"
-	line "#DEX from OAK!@"
+	line "#DEX from Oak!@"
 	text_end
 
 _OaksLabText26::

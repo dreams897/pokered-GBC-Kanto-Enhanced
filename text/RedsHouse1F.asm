@@ -1,5 +1,5 @@
 _MomWakeUpText::
-	text "MOM: Right."
+	text "Mom: Right."
 	line "All boys leave"
 	cont "home some day."
 	cont "It said so on TV."
@@ -10,13 +10,13 @@ _MomWakeUpText::
 	done
 
 _MomHealText1::
-	text "MOM: <PLAYER>!"
+	text "Mom: <PLAYER>!"
 	line "You should take a"
 	cont "quick rest."
 	prompt
 
 _MomHealText2::
-	text "MOM: Oh good!"
+	text "Mom: Oh good!"
 	line "You and your"
 	cont "#MON are"
 	cont "looking great!"

@@ -24,7 +24,7 @@ _LavenderTownText2::
 
 	para "Memorial services"
 	line "are held in"
-	cont "#MON TOWER."
+	cont "#MON Tower."
 	done
 
 _LavenderTownText3::
@@ -49,7 +49,7 @@ _LavenderTownText5::
 	para "Make the Invisible"
 	line "Plain to See!"
 
-	para "SILPH CO."
+	para "Silph Co."
 	done
 
 _LavenderTownText8::

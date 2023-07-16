@@ -2,14 +2,14 @@ _VermilionCityText1::
 	text "We're careful"
 	line "about pollution!"
 
-	para "We've heard GRIMER"
+	para "We've heard Grimer"
 	line "multiplies in"
 	cont "toxic sludge!"
 	done
 
 _VermilionCityTextDidYouSee::
 	text "Did you see S.S."
-	line "ANNE moored in"
+	line "Anne moored in"
 	cont "the harbor?"
 	done
 
@@ -28,7 +28,7 @@ _SSAnneWelcomeText4::
 
 _SSAnneWelcomeText9::
 	text "Welcome to S.S."
-	line "ANNE!"
+	line "Anne!"
 
 	para "Excuse me, do you"
 	line "have a ticket?"
@@ -36,7 +36,7 @@ _SSAnneWelcomeText9::
 
 _SSAnneFlashedTicketText::
 	text "<PLAYER> flashed"
-	line "the S.S.TICKET!"
+	line "the S.S. Ticket!"
 
 	para "Great! Welcome to"
 	line "S.S. Anne!"
@@ -45,7 +45,7 @@ _SSAnneFlashedTicketText::
 _SSAnneNoTicketText::
 	text "<PLAYER> doesn't"
 	line "have the needed"
-	cont "S.S.TICKET."
+	cont "S.S. Ticket."
 
 	para "Sorry!"
 
@@ -67,13 +67,13 @@ _VermilionCityText4::
 	done
 
 _VermilionCityText5::
-	text "MACHOP: Guoh!"
+	text "Machop: Guoh!"
 	line "Gogogoh!@"
 	text_end
 
 _VermilionCityText14::
 	text_start
-	para "A MACHOP is"
+	para "A Machop is"
 	line "stomping the land"
 	cont "flat."
 	done
@@ -96,19 +96,19 @@ _VermilionCityText7::
 _VermilionCityText8::
 	text "NOTICE!"
 
-	para "ROUTE 12 may be"
+	para "Route 12 may be"
 	line "blocked off by a"
 	cont "sleeping #MON."
 
 	para "Detour through"
-	line "ROCK TUNNEL to"
+	line "Rock Tunnel to"
 	cont "Lavender Town."
 
-	para "Vermilion POLICE"
+	para "Vermilion Police"
 	done
 
 _VermilionCityText11::
-	text "#MON FAN CLUB"
+	text "#MON Fan Club"
 	line "All #MON fans"
 	cont "welcome!"
 	done
@@ -116,12 +116,12 @@ _VermilionCityText11::
 _VermilionCityText12::
 	text "Vermilion City"
 	line "#MON Gym"
-	cont "Leader: LT.SURGE"
+	cont "Leader: Lt. Surge"
 
 	para "The Lightning "
 	line "American!"
 	done
 
 _VermilionCityText13::
-	text "Vermilion HARBOR"
+	text "Vermilion Harbor"
 	done

@@ -13,7 +13,7 @@ _ViridianForestExitText2::
 	line "the bushes on the"
 	cont "roadside?"
 
-	para "They can be cut"
+	para "They can be CUT"
 	line "down by a special"
 	cont "#MON move."
 	done

@@ -1,5 +1,5 @@
 _WardenGibberishText1::
-	text "WARDEN: Hif fuff"
+	text "Warden: Hif fuff"
 	line "hefifoo!"
 
 	para "Ha lof ha feef ee"
@@ -20,18 +20,18 @@ _WardenGibberishText3::
 _WardenTeethText1::
 	text "<PLAYER> gave the"
 	line "Gold Teeth to the"
-	cont "WARDEN!@"
+	cont "Warden!@"
 	text_end
 
 _WardenTeethText2::
 	text_start
 
-	para "The WARDEN popped"
+	para "The Warden popped"
 	line "in his teeth!"
 	prompt
 
 _WardenThankYouText::
-	text "WARDEN: Thanks,"
+	text "Warden: Thanks,"
 	line "kid! No one could"
 	cont "understand a word"
 	cont "that I said."
@@ -61,7 +61,7 @@ _HM04ExplanationText::
 
 	para "Oh yes, did you"
 	line "find Secret House"
-	cont "in SAFARI ZONE?"
+	cont "in Safari Zone?"
 
 	para "If you do, you"
 	line "win an HM!"

@@ -22,8 +22,8 @@ _SSAnne9Text_61c10::
 
 _SSAnne9Text_61c1f::
 	text "Have you gone to"
-	line "the SAFARI ZONE"
-	cont "in FUCHSIA City?"
+	line "the Safari Zone"
+	cont "in Fuchsia City?"
 
 	para "It had many rare"
 	line "kinds of #MON!!"
@@ -31,12 +31,12 @@ _SSAnne9Text_61c1f::
 
 _SSAnne9Text_61c2e::
 	text "Me and my Daddy"
-	line "think the SAFARI"
-	cont "ZONE is awesome!"
+	line "think the Safari"
+	cont "Zone is awesome!"
 	done
 
 _SSAnne9Text_61c3d::
-	text "The CAPTAIN looked"
+	text "The Captain looked"
 	line "really sick and"
 	cont "pale!"
 	done

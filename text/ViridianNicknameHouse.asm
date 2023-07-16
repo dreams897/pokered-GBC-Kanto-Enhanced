@@ -14,10 +14,10 @@ _ViridianHouseText2::
 	done
 
 _ViridianHouseText_1d5b1::
-	text "SPEARY: Tetweet!"
+	text "Speary: Tetweet!"
 	done
 
 _ViridianHouseText4::
-	text "SPEAROW"
-	line "Name: SPEARY"
+	text "Spearow"
+	line "Name: Speary"
 	done

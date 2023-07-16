@@ -31,7 +31,7 @@ _SafariZoneEntranceText_75360::
 	para "We'll call you on"
 	line "the PA when you"
 	cont "run out of time"
-	cont "or SAFARI BALLs!"
+	cont "or Safari Balls!"
 	done
 
 _SafariZoneEntranceText_75365::
@@ -50,7 +50,7 @@ SafariZoneEntranceText_9e814::
 
 _SafariZoneEntranceText_753bb::
 	text "Please return any"
-	line "SAFARI BALLs you"
+	line "Safari Balls you"
 	cont "have left."
 	done
 

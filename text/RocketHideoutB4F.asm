@@ -61,7 +61,7 @@ _RocketHide4AfterBattleText3::
 _RocketHideout4BattleText4::
 	text "The elevator"
 	line "doesn't work? Who"
-	cont "has the LIFT KEY?"
+	cont "has the Lift Key?"
 	done
 
 _RocketHideout4EndBattleText4::
@@ -70,5 +70,5 @@ _RocketHideout4EndBattleText4::
 
 _RocketHideout4Text_455ec::
 	text "Oh no! I dropped"
-	line "the LIFT KEY!"
+	line "the Lift Key!"
 	done

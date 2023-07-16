@@ -1,7 +1,7 @@
 _SilphCoPresidentText::
-	text "PRESIDENT: Thank"
+	text "President: Thank"
 	line "you for saving"
-	cont "SILPH!"
+	cont "Silph!"
 
 	para "I will never"
 	line "forget you saved"
@@ -27,7 +27,7 @@ _ReceivedSilphCoMasterBallText::
 	text_end
 
 _SilphCo10Text_6231c::
-	text "PRESIDENT: You"
+	text "President: You"
 	line "can't buy that"
 	cont "anywhere!"
 
@@ -62,7 +62,7 @@ _SilphCo11Text3::
 	text "Ah <PLAYER>!"
 	line "So we meet again!"
 
-	para "The PRESIDENT and"
+	para "The President and"
 	line "I are discussing"
 	cont "a vital business"
 	cont "proposition."
@@ -83,7 +83,7 @@ _SilphCo10Text_62330::
 _SilphCo10Text_62335::
 	text "Blast it all!"
 	line "You ruined our"
-	cont "plans for SILPH!"
+	cont "plans for Silph!"
 
 	para "But, Team Rocket"
 	line "will never fall!"
@@ -109,13 +109,13 @@ _SilphCo11EndBattleText1::
 
 _SilphCo11AfterBattleText1::
 	text "So, you want to"
-	line "see my BOSS?"
+	line "see my Boss?"
 	done
 
 _SilphCo11BattleText2::
 	text "Halt! Do you have"
 	line "an appointment"
-	cont "with my BOSS?"
+	cont "with my Boss?"
 	done
 
 _SilphCo11EndBattleText2::
@@ -125,7 +125,7 @@ _SilphCo11EndBattleText2::
 
 _SilphCo11AfterBattleText2::
 	text "Watch your step,"
-	line "my BOSS likes his"
+	line "my Boss likes his"
 	cont "#MON tough!"
 	done
 

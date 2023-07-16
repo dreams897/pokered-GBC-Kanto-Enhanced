@@ -44,14 +44,14 @@ _SilphCo6Text_1a294::
 
 _SilphCo6Text_1a2a6::
 	text "They must have"
-	line "targeted SILPH"
+	line "targeted Silph"
 	cont "for our #MON"
 	cont "products."
 	done
 
 _SilphCo6Text_1a2ab::
 	text "Come work for"
-	line "SILPH when you"
+	line "Silph when you"
 	cont "get older!"
 	done
 

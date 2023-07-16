@@ -1,5 +1,5 @@
 _SSAnne8Text8::
-	text "WIGGLYTUFF: Puup"
+	text "Wigglytuff: Puup"
 	line "pupuu!@"
 	text_end
 
@@ -72,7 +72,7 @@ _SSAnne8AfterBattleText4::
 
 	para "I demand that you"
 	line "heal them at a"
-	cont "#MON CENTER!"
+	cont "#MON Center!"
 	done
 
 _SSAnne8Text5::
@@ -88,7 +88,7 @@ _SSAnne8Text6::
 
 _SSAnne8Text7::
 	text "I always travel"
-	line "with WIGGLYTUFF!"
+	line "with Wigglytuff!"
 	done
 
 _SSAnne8Text9::
@@ -97,8 +97,8 @@ _SSAnne8Text9::
 	done
 
 _SSAnne8Text11::
-	text "Ssh! I'm a GLOBAL"
-	line "POLICE agent!"
+	text "Ssh! I'm a Global"
+	line "Police agent!"
 
 	para "I'm on the trail"
 	line "of Team Rocket!"

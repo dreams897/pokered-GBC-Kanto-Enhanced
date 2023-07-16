@@ -153,8 +153,8 @@ _Route13EndBattleText11::
 
 _Route13AfterBattleText11::
 	text "I wish I could"
-	line "fly like PIDGEY"
-	cont "and PIDGEOTTO..."
+	line "fly like Pidgey"
+	cont "and Pidgeotto..."
 	done
 
 _Route13Text11::
@@ -169,11 +169,11 @@ _Route13Text12::
 
 	para "Use SELECT to"
 	line "switch items in"
-	cont "the ITEM window!"
+	cont "the Item window!"
 	done
 
 _Route13Text13::
 	text "ROUTE 13"
-	line "North to SILENCE"
-	cont "BRIDGE"
+	line "North to Silence"
+	cont "Bridge"
 	done

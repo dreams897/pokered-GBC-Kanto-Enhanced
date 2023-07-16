@@ -56,8 +56,8 @@ _SaffronCityText10::
 
 _SaffronCityText11::
 	text "I flew here on my"
-	line "PIDGEOT when I"
-	cont "read about SILPH."
+	line "Pidgeot when I"
+	cont "read about Silph."
 
 	para "It's already over?"
 	line "I missed the"

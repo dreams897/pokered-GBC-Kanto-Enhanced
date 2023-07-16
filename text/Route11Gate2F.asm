@@ -3,7 +3,7 @@ _Route11GateUpstairsText_494a3::
 	line "the ground that"
 	cont "can't be seen."
 
-	para "ITEMFINDER will"
+	para "Itemfinder will"
 	line "detect an item"
 	cont "close to you."
 
@@ -34,7 +34,7 @@ _Route11GateUpstairsText_494d5::
 
 	para "The only way to"
 	line "get from Cerulean"
-	cont "City to LAVENDER"
+	cont "City to Lavender"
 	cont "is by way of the"
-	cont "ROCK TUNNEL."
+	cont "Rock Tunnel."
 	done

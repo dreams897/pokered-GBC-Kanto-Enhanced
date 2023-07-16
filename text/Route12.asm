@@ -4,14 +4,14 @@ _Route12Text1::
 	done
 
 _Route12Text13::
-	text "SNORLAX woke up!"
+	text "Snorlax woke up!"
 
 	para "It attacked in a"
 	line "grumpy rage!"
 	done
 
 _Route12Text14::
-	text "SNORLAX calmed"
+	text "Snorlax calmed"
 	line "down! With a big"
 	cont "yawn, it returned"
 	cont "to the mountains!"
@@ -124,16 +124,16 @@ _Route12EndBattleText7::
 	prompt
 
 _Route12AfterBattleText7::
-	text "I catch MAGIKARP"
+	text "I catch Magikarp"
 	line "all the time, but"
 	cont "they're so weak!"
 	done
 
 _Route12Text11::
-	text "ROUTE 12 "
-	line "North to LAVENDER"
+	text "Route 12 "
+	line "North to Lavender"
 	done
 
 _Route12Text12::
-	text "SPORT FISHING AREA"
+	text "Sport Fishing Area"
 	done
