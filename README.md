@@ -17,6 +17,7 @@ Currently in developement, but is entirely playable if you build it.
 * Pokémon have genders
 * Updated look of the "Kanto" overworld while keeping the maps very familar
 * Switched Good Rod and Super Rod locations
+* New text speed options: Instant, Fast, and Medium (Fast being the default)
 * Some color adjustments have been made (sprites, etc.) to improve the overal look and feel
 * Newer features such as "Berry Trees" have been added
 * All sprites (Pokémon, trainers, etc.) have been carefully selected to be the best available
