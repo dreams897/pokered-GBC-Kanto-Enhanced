@@ -25,9 +25,36 @@ _MomHealText2::
 
 _StandByMeText::
 	text "There's a movie"
-	line "on TV. Four boys"
-	cont "are walking on"
+	line "on TV."
+	
+	para "Four boys are"
+	line "walking on"
 	cont "railroad tracks."
+
+	para "I better go too."
+	done
+	
+_WizardOfOzText::
+	text "There's a movie"
+	line "on TV."
+	
+	para "A girl with her"
+	line "hair in pigtails"
+	cont "is walking up a"
+	cont "brick road."
+
+	para "I better go too."
+	done
+	
+_VirctorVictoriaText::
+	text "There's a movie"
+	line "on TV."
+	
+	para "A singer wearing"
+	line "a half-dress and"
+	cont "half-tuxedo"
+	cont "costume bows and"
+	cont "exits stage left."
 
 	para "I better go too."
 	done

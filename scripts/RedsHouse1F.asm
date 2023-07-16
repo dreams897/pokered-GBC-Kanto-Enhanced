@@ -57,14 +57,34 @@ RedsHouse1FTVText:
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	cp SPRITE_FACING_UP
 	ld hl, TVWrongSideText
-	jr nz, .got_text
-	ld hl, StandByMeText
-.got_text
+	jr nz,.done ; if player is not facing up
+	ld a, [wPlayerGender]
+	and a
+	jr z, .boy
+	cp 1
+	jr z, .girl
+	ld hl, VirctorVictoriaText
+	jr .done
+.boy
+	ld hl,StandByMeText
+	jr .done
+.girl
+	ld hl, WizardOfOzText
+.done
 	call PrintText
 	jp TextScriptEnd
+	
 
 StandByMeText:
 	text_far _StandByMeText
+	text_end
+	
+WizardOfOzText:
+	text_far _WizardOfOzText
+	text_end
+
+VirctorVictoriaText:
+	text_far _VirctorVictoriaText
 	text_end
 
 TVWrongSideText:
