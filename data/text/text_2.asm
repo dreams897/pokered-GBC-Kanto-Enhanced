@@ -146,11 +146,11 @@ _GymStatueText2::
 	text_ram wGymCityName
 	text_start
 	line "#MON GYM"
-	cont "LEADER: @"
+	cont "Leader: @"
 	text_ram wGymLeaderName
 	text_start
 
-	para "WINNING TRAINERS:"
+	para "Winning Trainers:"
 	line "<RIVAL>"
 	cont "<PLAYER>"
 	done
@@ -565,7 +565,7 @@ _WhatGoesAroundComesAroundText::
 	done
 
 _FightingDojoText::
-	text "FIGHTING DOJO"
+	text "Fighting Dojo"
 	done
 
 _IndigoPlateauHQText::
@@ -1177,23 +1177,23 @@ _IgnoredOrdersText::
 	prompt
 
 _SubstituteTookDamageText::
-	text "The SUBSTITUTE"
+	text "The Substitute"
 	line "took damage for"
 	cont "<TARGET>!"
 	prompt
 
 _SubstituteBrokeText::
 	text "<TARGET>'s"
-	line "SUBSTITUTE broke!"
+	line "Substitute broke!"
 	prompt
 
 _BuildingRageText::
 	text "<USER>'s"
-	line "RAGE is building!"
+	line "Rage is building!"
 	prompt
 
 _MirrorMoveFailedText::
-	text "The MIRROR MOVE"
+	text "The Mirror Move"
 	next "failed!"
 	prompt
 
@@ -1210,7 +1210,7 @@ _GainedText::
 	text_end
 
 _WithExpAllText::
-	text "with EXP.ALL,"
+	text "with EXP. All,"
 	cont "@"
 	text_end
 

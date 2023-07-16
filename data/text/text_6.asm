@@ -83,17 +83,17 @@ _VitaminNoEffectText::
 
 _ThrewBaitText::
 	text "<PLAYER> threw"
-	line "some BAIT."
+	line "some Bait."
 	done
 
 _ThrewRockText::
 	text "<PLAYER> threw a"
-	line "ROCK."
+	line "Rock."
 	done
 
 _PlayedFluteNoEffectText::
 	text "Played the #"
-	line "FLUTE."
+	line "Flute."
 
 	para "Now, that's a"
 	line "catchy tune!"
@@ -106,7 +106,7 @@ _FluteWokeUpText::
 
 _PlayedFluteHadEffectText::
 	text "<PLAYER> played the"
-	line "# FLUTE.@"
+	line "# Flute.@"
 	text_end
 
 _CoinCaseNumCoinsText::
@@ -117,13 +117,13 @@ _CoinCaseNumCoinsText::
 	prompt
 
 _ItemfinderFoundItemText::
-	text "Yes! ITEMFINDER"
+	text "Yes! Itemfinder"
 	line "indicates there's"
 	cont "an item nearby."
 	prompt
 
 _ItemfinderFoundNothingText::
-	text "Nope! ITEMFINDER"
+	text "Nope! Itemfinder"
 	line "isn't responding."
 	prompt
 
@@ -225,7 +225,7 @@ _NoSurfingHereText::
 	prompt
 
 _BoxFullCannotThrowBallText::
-	text "The #MON BOX"
+	text "The #MON Box"
 	line "is full! Can't"
 	cont "use that item!"
 	prompt

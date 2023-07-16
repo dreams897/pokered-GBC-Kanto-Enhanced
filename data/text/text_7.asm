@@ -6,25 +6,6 @@ _ItemUseText002::
 	text_ram wStringBuffer
 	text "!"
 	done
-
-_GotOnBicycleText1::
-	text "<PLAYER> got on the@"
-	text_end
-
-_GotOnBicycleText2::
-	text_ram wStringBuffer
-	text "!"
-	prompt
-
-_GotOffBicycleText1::
-	text "<PLAYER> got off@"
-	text_end
-
-_GotOffBicycleText2::
-	text "the @"
-	text_ram wStringBuffer
-	text "."
-	prompt
 	
 _NothingToHeadbuttText::
 	text "There's nothing"

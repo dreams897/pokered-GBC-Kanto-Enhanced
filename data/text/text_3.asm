@@ -5,7 +5,7 @@ _FileDataDestroyedText::
 
 _WouldYouLikeToSaveText::
 	text "Would you like to"
-	line "SAVE the game?"
+	line "Save the game?"
 	done
 
 _GameSavedText::
