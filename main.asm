@@ -105,10 +105,12 @@ INCLUDE "color/status_screen.asm"
 IF GEN_2_GRAPHICS
 EXPBarGraphics:  INCBIN "gfx/gs/exp_bar.2bpp"
 EXPBarGraphicsEnd:
+ENDC
+
+IF GEN_2_GRAPHICS
 ShinySparkleGraphics: INCBIN "gfx/battle/shiny_sparkle.2bpp"
 EXPBarShinySparkleGraphicsEnd:
 ENDC
-
 
 SECTION "Battle Engine 2", ROMX
 
@@ -132,7 +134,6 @@ SECTION "Doors and Ledges", ROMX
 INCLUDE "engine/overworld/auto_movement.asm"
 INCLUDE "engine/overworld/doors.asm"
 INCLUDE "engine/overworld/ledges.asm"
-INCLUDE "engine/overworld/bike_shortcut.asm"
 
 
 SECTION "Pokémon Names", ROMX
@@ -452,6 +453,12 @@ EnemyShinySparkleCoords:
 	db $04, 75 - 48, 36 + 80
 EnemyShinySparkleCoordsEnd:
 
+SECTION "field moves", ROMX
+
+INCLUDE "engine/overworld/automatic_repel.asm"
+INCLUDE "engine/overworld/field_moves.asm"
+INCLUDE "engine/overworld/headbutt.asm"
+
 
 SECTION "Trainer Sight", ROMX
 
@@ -473,17 +480,14 @@ SECTION "Saffron Guards", ROMX
 
 INCLUDE "engine/events/saffron_guards.asm"
 
-SECTION "field moves", ROMX
-INCLUDE "engine/overworld/automatic_repel.asm"
-INCLUDE "engine/overworld/field_moves.asm"
-INCLUDE "engine/overworld/headbutt.asm"
-INCLUDE "scripts/move_deleter.asm"
-INCLUDE "scripts/move_relearner.asm"
-
-
 SECTION "Starter Dex", ROMX
 
 INCLUDE "engine/events/starter_dex.asm"
+
+SECTION "move tutors", ROMX
+
+INCLUDE "scripts/move_deleter.asm"
+INCLUDE "scripts/move_relearner.asm"
 
 
 SECTION "Hidden Objects 3", ROMX
@@ -570,6 +574,7 @@ INCLUDE "data/moves/animations.asm"
 INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
 INCLUDE "engine/items/tm_prices.asm"
+INCLUDE "engine/overworld/bike_shortcut.asm"
 
 INCLUDE "color/animations.asm"
 
