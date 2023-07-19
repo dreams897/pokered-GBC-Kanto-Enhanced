@@ -1,6 +1,28 @@
-_MomWakeUpText::
+_MomWakeUpTextBoy::
 	text "Mom: Right."
 	line "All boys leave"
+	cont "home some day."
+	cont "It said so on TV."
+
+	para "Prof. Oak, next"
+	line "door, is looking"
+	cont "for you."
+	done
+	
+_MomWakeUpTextGirl::
+	text "Mom: Right."
+	line "All girls leave"
+	cont "home some day."
+	cont "It said so on TV."
+
+	para "Prof. Oak, next"
+	line "door, is looking"
+	cont "for you."
+	done
+	
+_MomWakeUpTextEnby::
+	text "Mom: Right."
+	line "Everyone leaves"
 	cont "home some day."
 	cont "It said so on TV."
 

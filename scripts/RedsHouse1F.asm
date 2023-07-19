@@ -10,16 +10,38 @@ RedsHouse1FMomText:
 	ld a, [wd72e]
 	bit 3, a ; received a Pokémon from Oak?
 	jr nz, .heal
-	ld hl, MomWakeUpText
+	ld a, [wPlayerGender]
+	and a
+	jr z, .boy
+	cp 1
+	jr z, .girl
+	ld hl, MomWakeUpTextEnby
+	call PrintText
+	jr .done
+.boy
+	ld hl, MomWakeUpTextBoy
+	call PrintText
+	jr .done
+.girl
+	ld hl, MomWakeUpTextGirl
 	call PrintText
 	jr .done
 .heal
 	call MomHealPokemon
 .done
 	jp TextScriptEnd
-
-MomWakeUpText:
-	text_far _MomWakeUpText
+	
+	
+MomWakeUpTextBoy:
+	text_far _MomWakeUpTextBoy
+	text_end
+	
+MomWakeUpTextGirl:
+	text_far _MomWakeUpTextGirl
+	text_end
+	
+MomWakeUpTextEnby:
+	text_far _MomWakeUpTextEnby
 	text_end
 
 MomHealPokemon:
