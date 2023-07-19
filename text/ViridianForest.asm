@@ -82,8 +82,8 @@ _ViridianForestText9::
 
 _ViridianForestText10::
 	text "For poison, use"
-	line "ANTIDOTE! Get it"
-	cont "at #MON MARTs!"
+	line "Antidote! Get it"
+	cont "at #MON Marts!"
 	done
 
 _ViridianForestText11::

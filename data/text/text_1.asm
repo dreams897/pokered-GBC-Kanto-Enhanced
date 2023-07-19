@@ -49,7 +49,7 @@ _BoulderText::
 _MartSignText::
 	text "All your item"
 	line "needs fulfilled!"
-	cont "#MON MART"
+	cont "#MON Mart"
 	done
 
 _PokeCenterSignText::
@@ -72,7 +72,7 @@ _NoMoreRoomForItemText::
 _OaksAideHiText::
 	text "Hi! Remember me?"
 	line "I'm Prof. Oak's"
-	cont "AIDE!"
+	cont "Aide!"
 
 	para "If you caught @"
 	text_decimal hOaksAideRequirement, 1, 3

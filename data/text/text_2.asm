@@ -133,12 +133,12 @@ _DexRatingText::
 _GymStatueText1::
 	text_ram wGymCityName
 	text_start
-	line "#MON GYM"
-	cont "LEADER: @"
+	line "#MON Gym"
+	cont "Leader: @"
 	text_ram wGymLeaderName
 	text_start
 
-	para "WINNING TRAINERS:"
+	para "Winning Trainers:"
 	line "<RIVAL>"
 	done
 
