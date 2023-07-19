@@ -1,23 +1,23 @@
 _FuchsiaCityText1::
 	text "Did you try the"
-	line "SAFARI GAME? Some"
+	line "Safari Game? Some"
 	cont "#MON can only"
 	cont "be caught there."
 	done
 
 _FuchsiaCityText2::
-	text "SAFARI ZONE has a"
+	text "Safari Zone has a"
 	line "zoo in front of"
 	cont "the entrance."
 
 	para "Out back is the"
-	line "SAFARI GAME for"
+	line "Safari Game for"
 	cont "catching #MON."
 	done
 
 _FuchsiaCityText3::
-	text "ERIK: Where's"
-	line "SARA? I said I'd"
+	text "Erik: Where's"
+	line "Sara? I said I'd"
 	cont "meet her here."
 	done
 
@@ -32,47 +32,47 @@ _FuchsiaCityText5::
 	done
 
 _FuchsiaCityText11::
-	text "FUCHSIA City"
+	text "Fuchsia City:"
 	line "Behold! It's"
 	cont "Passion Pink!"
 	done
 
 _FuchsiaCityText13::
-	text "SAFARI GAME"
-	line "#MON-U-CATCH!"
+	text "Safari Game"
+	line "#MON-u-catch!"
 	done
 
 _FuchsiaCityText16::
-	text "SAFARI ZONE"
-	line "WARDEN's HOME"
+	text "Safari Zone"
+	line "Warden's home"
 	done
 
 _FuchsiaCityText17::
-	text "#MON PARADISE"
-	line "SAFARI ZONE"
+	text "#MON Paradise"
+	line "Safari Zone"
 	done
 
 _FuchsiaCityText18::
-	text "FUCHSIA City"
+	text "Fuchsia City"
 	line "#MON Gym"
-	cont "Leader: KOGA"
+	cont "Leader: Koga"
 
 	para "The Poisonous"
 	line "Ninja Master"
 	done
 
 _FuchsiaCityChanseyText::
-	text "Name: CHANSEY"
+	text "Name: Chansey"
 
 	para "Catching one is"
 	line "all up to chance."
 	prompt
 
 _FuchsiaCityVoltorbText::
-	text "Name: VOLTORB"
+	text "Name: Voltorb"
 
 	para "The very image of"
-	line "a # BALL."
+	line "a # Ball."
 	prompt
 
 _FuchsiaCityKangaskhanText::
@@ -85,21 +85,21 @@ _FuchsiaCityKangaskhanText::
 	prompt
 
 _FuchsiaCitySlowpokeText::
-	text "Name: SLOWPOKE"
+	text "Name: Slowpoke"
 
 	para "Friendly and very"
 	line "slow moving."
 	prompt
 
 _FuchsiaCityLaprasText::
-	text "Name: LAPRAS"
+	text "Name: Lapras"
 
 	para "A.K.A. the king"
 	line "of the seas."
 	prompt
 
 _FuchsiaCityOmanyteText::
-	text "Name: OMANYTE"
+	text "Name: Omanyte"
 
 	para "A #MON that"
 	line "was resurrected"
@@ -107,7 +107,7 @@ _FuchsiaCityOmanyteText::
 	prompt
 
 _FuchsiaCityKabutoText::
-	text "Name: KABUTO"
+	text "Name: Kabuto"
 
 	para "A #MON that"
 	line "was resurrected"

@@ -1,6 +1,6 @@
 _KogaPostBattleAdviceText::
 	text "When afflicted by"
-	line "TOXIC, #MON"
+	line "Toxic, #MON"
 	cont "suffer more and"
 	cont "more as battle"
 	cont "progresses!"
@@ -11,7 +11,7 @@ _KogaPostBattleAdviceText::
 
 _KogaSoulBadgeInfoText::
 	text "Now that you have"
-	line "the SOULBadge,"
+	line "the Soul Badge,"
 	cont "the Defense of"
 	cont "your #MON"
 	cont "increases!"
@@ -34,7 +34,7 @@ _ReceivedTM06Text::
 _TM06ExplanationText::
 	text_start
 	para "TM06 contains"
-	line "TOXIC!"
+	line "Toxic!"
 
 	para "It is a secret"
 	line "technique over"
@@ -147,7 +147,7 @@ _FuchsiaGymAfterBattleText5::
 	done
 
 _FuchsiaGymBattleText6::
-	text "Master KOGA comes"
+	text "Master Koga comes"
 	line "from a long line"
 	cont "of ninjas!"
 
@@ -174,11 +174,11 @@ _FuchsiaGymGuidePreBattleText::
 	text "Yo! Champ in"
 	line "making!"
 
-	para "FUCHSIA Gym is"
+	para "Fuchsia Gym is"
 	line "riddled with"
 	cont "invisible walls!"
 
-	para "KOGA might appear"
+	para "Koga might appear"
 	line "close, but he's"
 	cont "blocked off!"
 

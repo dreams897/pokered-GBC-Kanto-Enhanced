@@ -1,8 +1,8 @@
 _FightingDojoText_5ce8e::
 	text "Grunt!"
 
-	para "I am the KARATE"
-	line "MASTER! I am the"
+	para "I am the Karate"
+	line "Master! I am the"
 	cont "Leader here!"
 
 	para "You wish to"
@@ -97,8 +97,8 @@ _FightingDojoBattleText4::
 	text "Hoohah!"
 
 	para "You're trespassing"
-	line "in our FIGHTING"
-	cont "DOJO!"
+	line "in our Fighting"
+	cont "Dojo!"
 	done
 
 _FightingDojoEndBattleText4::
