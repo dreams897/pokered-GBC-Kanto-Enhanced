@@ -40,5 +40,7 @@ FuchsiaCity_Object:
 	object_event 30, 12, SPRITE_MONSTER, WALK, LEFT_RIGHT, 8 ; person
 	object_event  8, 18, SPRITE_LAPRAS, WALK, ANY_DIR, 9 ; person
 	object_event  6,  5, SPRITE_FOSSIL, STAY, NONE, 10 ; person
+	object_event  6,  5, SPRITE_YOUNGSTER, STAY, DOWN, 11 ; person
+	object_event 12, 30, SPRITE_MONSTER, STAY, DOWN, 12 ; person
 
 	def_warps_to FUCHSIA_CITY

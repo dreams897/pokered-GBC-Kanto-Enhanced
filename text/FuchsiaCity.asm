@@ -117,3 +117,15 @@ _FuchsiaCityKabutoText::
 _FuchsiaCityText_19b2a::
 	text "..."
 	done
+	
+_FuchsiaCityYoungsterText::
+	text "My Slowpoke is"
+	line "using HEADBUTT"
+	cont "to look for"
+	cont "#MON in trees!"
+	done
+	
+_FuchsiaCitySlowpokeText2::
+	text "Slowpoke used"
+	line "HEADBUTT!"
+	done

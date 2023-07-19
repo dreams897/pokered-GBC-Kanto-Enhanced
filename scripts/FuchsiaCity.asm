@@ -12,6 +12,8 @@ FuchsiaCity_TextPointers:
 	dw FuchsiaCityText8
 	dw FuchsiaCityText9
 	dw FuchsiaCityText10
+	dw YoungsterText
+	dw SlowpokeText
 	dw FuchsiaCityText11
 	dw FuchsiaCityText12
 	dw FuchsiaCityText13
@@ -51,6 +53,17 @@ FuchsiaCityText9:
 FuchsiaCityText10:
 	text_far _FuchsiaCityText5
 	text_end
+	
+YoungsterText:
+	text_far _FuchsiaCityYoungsterText
+	text_end
+	
+SlowpokeText:
+	text_far _FuchsiaCitySlowpokeText2
+	text_asm
+	ld a, SLOWPOKE
+	call PlayCry
+	jp TextScriptEnd
 
 FuchsiaCityText12:
 FuchsiaCityText11:
