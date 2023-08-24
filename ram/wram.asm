@@ -324,10 +324,9 @@ wWhichTradeMonSelectionMenu::
 ; 2 = current box
 ; 3 = daycare
 ; 4 = in-battle mon
-
 wIsTrainerBattle::
 	ds 1
-	
+
 wShinyMonFlag::
 ; Bit 0 is set if the mon should be Shiny.
 ; Bit 1 is set for enemy mon animation, reset for player mon animation
@@ -335,19 +334,18 @@ wShinyMonFlag::
 wGenderTemp::
 ; temporary buffer used when checking/displaying a Pokemon's gender
 	ds 9
-	
+
 wAIMoveSpamAvoider:: db
 
 wAITargetMonType1:: db ; the type of the pokemon the AI should think it's attacking (stays as the previous pokemon when you switch pokemon)
 
 wPlayerLastSelectedMoveDisable:: db ; store for disable functionality
 
+wEnemyLastSelectedMoveDisable:: db ; store for disable functionality
+
 wAITargetMonStatus:: db ; the current status of the pokemon the AI should think it's attacking (set when healing a pokemon's status or switching it out)
-	
-wBattleFunctionalFlags:: db
-	
+
 wStartBattleLevels:: ds PARTY_LENGTH ; which is 6 bytes
-;
 ; AddPartyMon uses it slightly differently.
 ; If the lower nybble is 0, the mon is added to the player's party, else the enemy's.
 ; If the entire value is 0, then the player is allowed to name the mon.
@@ -431,7 +429,7 @@ wSlotMachineSavedROMBank:: db
 wMoveBuffer::
 wRelearnableMoves::
 	ds 164
-; Try not to use this stack. 
+; Try not to use this stack.
 ; A good amount of space is needed to store data for the move relearner.
 ; If it's like, 2, it'll lag like crazy and show garbage from elsewhere.
 
@@ -502,7 +500,6 @@ wMoveMenuType:: db
 wPlayerSelectedMove:: db
 wEnemySelectedMove:: db
 wPlayerLastSelectedMove::db ; Last used move by the player, regardless of switching or fainting, etc. - used for mirror move functionality
-
 wLinkBattleRandomNumberListIndex:: db
 
 ; number of times remaining that AI action can occur
@@ -1740,12 +1737,11 @@ ENDU
 
 wSerialPlayerDataBlock:: ; ds $1a8
 
-wPseudoItemID:: db
 ; When a real item is being used, this is 0.
 ; When a move is acting as an item, this is the ID of the item it's acting as.
 ; For example, out-of-battle Dig is executed using a fake Escape Rope item. In
 ; that case, this would be ESCAPE_ROPE.
-	ds 1
+wPseudoItemID:: db
 
 wUnusedD153:: db
 
@@ -1937,8 +1933,6 @@ wPlayerMovingDirection:: db
 ; the direction in which the player was moving before the player last stopped
 wPlayerLastStopDirection:: db
 
-wEnemyLastSelectedMoveDisable:: db ; store for disable functionality
-
 ; if the player is moving, the current direction
 ; if the player is not moving, the last the direction in which the player moved
 wPlayerDirection:: db
@@ -2108,27 +2102,8 @@ wRoute18Gate1FCurScript:: db
 	ds 6
 wGameProgressFlagsEnd::
 
-wChainHeadbuttStreak::
-wChainFishingStreak::
-	ds 1
-
-wPlayerGender::
-	; $00 = male
-	; $01 = female
-	; $02 = enby
-	ds 1
-	
-wExtraFlags::
-; TODO: Move these in with Event Flags and an EngineFlags array
-; bit 0 = Set means next Wildmon or Giftmon will be Shiny (Reset afterwards)
-; bit 1 = Set means there is a baby at the Daycare
-	ds 1
-	
-; unused
-	ds 55
-
 UNION
-	ds 72
+	ds 128
 NEXTU
 wChannel7:: channel_struct wChannel7
 wChannel8:: channel_struct wChannel8
@@ -2142,8 +2117,6 @@ wObtainedHiddenCoinsFlags:: flag_array 16
 ; $01 = biking
 ; $02 = surfing
 wWalkBikeSurfState:: db
-
-	ds 10
 
 wTownVisitedFlag:: flag_array NUM_CITY_MAPS
 
@@ -2190,7 +2163,21 @@ wWhichDungeonWarp:: db
 
 wUnusedD71F:: db
 
-	ds 8
+wChainHeadbuttStreak::
+wChainFishingStreak::
+	ds 1
+
+wPlayerGender::
+	; $00 = male
+	; $01 = female
+	; $02 = enby
+	ds 1
+
+wExtraFlags::
+; TODO: Move these in with Event Flags and an EngineFlags array
+; bit 0 = Set means next Wildmon or Giftmon will be Shiny (Reset afterwards)
+; bit 1 = Set means there is a baby at the Daycare
+	ds 1
 
 ; bit 0: using Strength outside of battle
 ; bit 1: set by IsSurfingAllowed when surfing's allowed, but the caller resets it after checking the result
@@ -2380,7 +2367,6 @@ wBerryTreeFlags::
 wBerryStepCounter:: ; deee
 	ds 2
 
-
 ; 0 if no pokemon is in the daycare
 ; 1 if pokemon is in the daycare
 wDayCareInUse:: db
@@ -2433,5 +2419,5 @@ ENDC
 SECTION "Stack", WRAM0
 
 ; the stack grows downward
-	ds $75 - 1
+	ds $99 - 1
 wStack:: db
