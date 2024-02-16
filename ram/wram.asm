@@ -428,7 +428,7 @@ wSlotMachineSavedROMBank:: db
 
 wMoveBuffer::
 wRelearnableMoves::
-	ds 164
+	ds 145
 ; Try not to use this stack.
 ; A good amount of space is needed to store data for the move relearner.
 ; If it's like, 2, it'll lag like crazy and show garbage from elsewhere.
@@ -2117,6 +2117,8 @@ wObtainedHiddenCoinsFlags:: flag_array 16
 ; $01 = biking
 ; $02 = surfing
 wWalkBikeSurfState:: db
+
+	ds 10
 
 wTownVisitedFlag:: flag_array NUM_CITY_MAPS
 
