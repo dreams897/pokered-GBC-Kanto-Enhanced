@@ -92,17 +92,17 @@ SetPal_Battle_Common:
 	ld hl, wShinyMonFlag
 	set 0, [hl]
 .getPALID
- 	ld a, [wPlayerBattleStatus3]
-	bit TRANSFORMED,a
-	jr z,.getBattleMonPal
+	ld a, [wPlayerBattleStatus3]
+	bit TRANSFORMED, a
+	jr z, .getBattleMonPal
 
 	; If transformed, don't trust the "DetermineBackSpritePaletteID" function.
-	ld a,$02
-	ld [rSVBK],a
-	ld a,[W2_BattleMonPalette]
-	ld b,a
+	ld a, $02
+	ldh [rSVBK], a
+	ld a, [W2_BattleMonPalette]
+	ld b, a
 	xor a
-	ld [rSVBK],a
+	ldh [rSVBK], a
 	jr .loadPlayerPal
 
 .getBattleMonPal
@@ -115,18 +115,18 @@ SetPal_Battle_Common:
 	ld a, [wBattleMonSpecies]
 	ld b, a
 
-	ld a,$02
-	ld [rSVBK],a
+	ld a, $02
+	ldh [rSVBK], a
 
 	; Save the player mon's palette in case it transforms later
-	ld a,d
-	ld [W2_BattleMonPalette],a
+	ld a, b
+	ld [W2_BattleMonPalette], a
 
 	; Player palette
-	ld a,b
-	ld e,0
+	push bc
+	ld a, b
+	ld e, 0
 	and a
-	
 	ld a, [wShinyMonFlag]
 	bit 0, a
 	jr z, .notShiny
@@ -167,8 +167,9 @@ SetPal_Battle_Common:
 	ld [rSVBK],a
 
 	; Enemy palette
-	ld a,b
-	ld e,1
+	pop bc
+	ld a, b
+	ld e, 1
 	and a
 	ld a, [wShinyMonFlag]
 	bit 0, a
