@@ -109,6 +109,8 @@ _AddPartyMon::
 	ld a, [wIsInBattle]
 	and a ; is this a wild mon caught in battle?
 	jr nz, .copyEnemyMonData
+
+; Not wild.
 ;forced shiny giftmon DVs
 	push hl
 	ld hl, wExtraFlags
@@ -118,8 +120,6 @@ _AddPartyMon::
 	ld a, ATKDEFDV_SHINY
 	ld b, SPDSPCDV_SHINY
 	jr nz,.next4
-
-; Not wild.
 	call Random ; generate random IVs
 	ld b, a
 	call Random
