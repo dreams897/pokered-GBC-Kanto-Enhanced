@@ -50,3 +50,18 @@ RunNPCMovementScript::
 EndNPCMovementScript::
 	farjp _EndNPCMovementScript
 	ret
+	
+DebugPressedOrHeldB:: ; dummy except in _DEBUG
+; This is used to skip Trainer battles, the
+; Safari Game step counter, and some NPC scripts.
+IF DEF(_DEBUG)
+	ld a, [wd732]
+	bit BIT_DEBUG_MODE, a
+	ret z
+	ldh a, [hJoyHeld]
+	bit BIT_B_BUTTON, a
+	ret nz
+	ldh a, [hJoyPressed]
+	bit BIT_B_BUTTON, a
+ENDC
+	ret
