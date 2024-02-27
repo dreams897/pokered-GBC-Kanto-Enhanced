@@ -585,7 +585,7 @@ DisplayOptionMenu:
 
 TextSpeedOptionText:
 	db   "Text Speed"
-	next " Instant Fast  Med@"
+	next " Instant Fast Med@"
 
 BattleAnimationOptionText:
 	db   "Battle Animation"
