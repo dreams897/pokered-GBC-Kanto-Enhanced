@@ -134,7 +134,7 @@ LoadTownMap_Nest:
 	ret
 
 MonsNestText:
-	db "'s NEST@"
+	db "'s Nest@"
 
 LoadTownMap_Fly::
 	call ClearSprites
@@ -479,7 +479,6 @@ WriteAsymmetricMonPartySpriteOAM:
 	ld a, SPR_PAL_PURPLE
         jr .gotPal
 .male
-        jr .gotPal
         xor a
 .female
         ld a, SPR_PAL_GREEN
