@@ -148,6 +148,7 @@ ROMX $1B
 	"Tilesets 3"
 ROMX $1C
 	"bank1C"
+	org $4af5
 	"BattleTransition_BlackScreen"
 	org $5fb6
 	"InitPartyMenuBlkPacket"
@@ -223,6 +224,7 @@ WRAM0
 	"Party Data"
 	"Main Data"
 	"Current Box Data"
+	org $df00
 	"Stack"
 VRAM
 	"VRAM"

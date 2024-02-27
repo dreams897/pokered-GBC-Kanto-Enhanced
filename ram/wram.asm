@@ -202,7 +202,7 @@ ENDU
 SECTION "Overworld Map", WRAM0
 
 UNION
-wOverworldMap:: ds 1300
+wOverworldMap:: ds 1210
 wOverworldMapEnd::
 
 NEXTU
@@ -309,7 +309,6 @@ wSerialExchangeNybbleTempReceiveData::
 wSerialSyncAndExchangeNybbleReceiveData:: db
 ; the final received nybble is stored here by Serial_ExchangeNybble
 wSerialExchangeNybbleReceiveData:: db
-	ds 3
 ; this nybble is sent when using Serial_SyncAndExchangeNybble or Serial_ExchangeNybble
 wSerialExchangeNybbleSendData:: db
 	ds 4
@@ -378,8 +377,6 @@ wNPCMovementScriptPointerTableNum:: db
 ; ROM bank of current NPC movement script
 wNPCMovementScriptBank:: db
 
-	ds 2
-
 ; This union spans 180 bytes.
 UNION
 wVermilionDockTileMapBuffer:: ds 5 * BG_MAP_WIDTH + SCREEN_WIDTH
@@ -428,7 +425,7 @@ wSlotMachineSavedROMBank:: db
 
 wMoveBuffer::
 wRelearnableMoves::
-	ds 145
+	ds 164
 ; Try not to use this stack.
 ; A good amount of space is needed to store data for the move relearner.
 ; If it's like, 2, it'll lag like crazy and show garbage from elsewhere.
@@ -456,8 +453,6 @@ wSimulatedJoypadStatesEnd::
 NEXTU
 wBoostExpByExpAll::
 wUnusedCC5B:: db
-
-	ds 59
 
 wNPCMovementDirections2:: ds 10
 ; used in Pallet Town scripted movement
@@ -504,8 +499,6 @@ wLinkBattleRandomNumberListIndex:: db
 
 ; number of times remaining that AI action can occur
 wAICount:: db
-
-	ds 2
 
 wEnemyMoveListIndex:: db
 
@@ -914,8 +907,6 @@ wRightGBMonSpecies:: db
 ; bit 6: tried pushing against boulder once (you need to push twice before it will move)
 wFlags_0xcd60:: db
 
-	ds 9
-
 ; This has overlapping related uses.
 ; When the player tries to use an item or use certain field moves, 0 is stored
 ; when the attempt fails and 1 is stored when the attempt succeeds.
@@ -1072,7 +1063,7 @@ wOnSGB:: db
 wDefaultPaletteCommand:: db
 
 UNION
-wPlayerHPBarColor:: dw
+wPlayerHPBarColor:: db
 
 NEXTU
 ; species of the mon whose palette is used for the whole screen
@@ -1959,14 +1950,16 @@ wBoxItems:: ds PC_ITEM_CAPACITY * 2 + 1
 
 ; bits 0-6: box number
 ; bit 7: whether the player has changed boxes before
-wCurrentBoxNum:: dw
+wCurrentBoxNum:: db
+
+	ds 1
 
 ; number of HOF teams
 wNumHoFTeams:: db
 
 wUnusedD5A3:: db
 
-wPlayerCoins:: ds 2 ; BCD
+wPlayerCoins:: dw ; BCD
 
 ; bit array of missable objects. set = removed
 wMissableObjectFlags:: flag_array $100
@@ -2421,5 +2414,5 @@ ENDC
 SECTION "Stack", WRAM0
 
 ; the stack grows downward
-	ds $99 - 1
+	ds $100 - 1
 wStack:: db
