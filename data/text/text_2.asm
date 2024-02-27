@@ -262,7 +262,7 @@ _CinnabarPokecenterGuyText::
 
 _SaffronCityPokecenterGuyText1::
 	text "It would be great"
-	line "if the ELITE FOUR"
+	line "if the Elite Four"
 	cont "came and stomped"
 	cont "Team Rocket!"
 	done
@@ -550,7 +550,7 @@ _ViridianSchoolNotebookText4::
 	para "Do so to earn the"
 	line "right to face..."
 
-	para "The ELITE FOUR of"
+	para "The Elite Four of"
 	line "#MON League!"
 	prompt
 
@@ -803,7 +803,7 @@ _PokemonBooksText::
 
 _DiglettSculptureText::
 	text "It's a sculpture"
-	line "of DIGLETT."
+	line "of Diglett."
 	done
 
 _ElevatorText::
@@ -812,7 +812,7 @@ _ElevatorText::
 	done
 
 _TownMapText::
-	text "A TOWN MAP.@"
+	text "A Town Map.@"
 	text_end
 
 _PokemonStuffText::
@@ -1444,7 +1444,7 @@ _TurnedOnPC1Text::
 	prompt
 
 _AccessedBillsPCText::
-	text "Accessed BILL's"
+	text "Accessed Bill's"
 	line "PC."
 
 	para "Accessed #MON"
@@ -1541,7 +1541,7 @@ _AccessedHoFPCText::
 	line "League's site."
 
 	para "Accessed the Hall"
-	line "Of Fame List."
+	line "of Fame List."
 	prompt
 
 _SwitchOnText::
