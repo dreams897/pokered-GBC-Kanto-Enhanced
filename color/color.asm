@@ -92,33 +92,41 @@ SetPal_Battle_Common:
 	ld hl, wShinyMonFlag
 	set 0, [hl]
 .getPALID
-	ld a, [wPlayerBattleStatus3]
-	bit TRANSFORMED, a
-	jr z, .getBattleMonPal
+ 	ld a, [wPlayerBattleStatus3]
+	bit TRANSFORMED,a
+	jr z,.getBattleMonPal
 
 	; If transformed, don't trust the "DetermineBackSpritePaletteID" function.
-	ld a, $02
-	ldh [rSVBK], a
-	ld a, [W2_BattleMonPalette]
-	ld b, a
+	ld a,$02
+	ld [rSVBK],a
+	ld a,[W2_BattleMonPalette]
+	ld b,a
 	xor a
-	ldh [rSVBK], a
-	jr .getEnemyMonPal
+	ld [rSVBK],a
+	jr .loadPlayerPal
 
 .getBattleMonPal
 	ld a, [wBattleMonSpecies]        ; player Pokemon ID
 	call DetermineBackSpritePaletteID
+	ld d, a
+
+.loadPlayerPal
+	; Save ID
+	ld a, [wBattleMonSpecies]
 	ld b, a
 
+	ld a,$02
+	ld [rSVBK],a
+
 	; Save the player mon's palette in case it transforms later
-	ld a, b
-	ld [W2_BattleMonPalette], a
+	ld a,d
+	ld [W2_BattleMonPalette],a
 
 	; Player palette
-	push bc
-	ld d, b
-	ld e, 0
+	ld a,b
+	ld e,0
 	and a
+	
 	ld a, [wShinyMonFlag]
 	bit 0, a
 	jr z, .notShiny
@@ -127,6 +135,7 @@ SetPal_Battle_Common:
 .notShiny
 	farcall LoadSGBPalette
 	jr .getEnemyMonPal
+
 .getEnemyMonPal
 	xor a
 	ld [rSVBK],a
@@ -145,16 +154,21 @@ SetPal_Battle_Common:
 	ld hl, wShinyMonFlag
 	set 0, [hl]
 .getPALID2
+
 	ld a, [wEnemyMonSpecies2]         ; enemy Pokemon ID (without transform effect?)
 	call DeterminePaletteID
-	ld c, a
-	ld a, $02
-	ldh [rSVBK], a
+	ld d, a
+
+	; Save ID
+	ld a, [wEnemyMonSpecies2]
+	ld b, a
+
+	ld a,$02
+	ld [rSVBK],a
 
 	; Enemy palette
-	pop bc
-	ld d, c
-	ld e, 1
+	ld a,b
+	ld e,1
 	and a
 	ld a, [wShinyMonFlag]
 	bit 0, a
@@ -313,7 +327,6 @@ SetPal_TownMap:
 	ret
 
 ; Status screen
-; [wShinyMonFlag] must be appropriately set before this is called
 SetPal_StatusScreen:
 	ld a, [wcf91]
 	cp NUM_POKEMON_INDEXES + 1
@@ -353,7 +366,6 @@ ENDC
 .notShiny
 	farcall LoadSGBPalette
 .afterMon
-
 
 
 	; Set palette map
@@ -768,7 +780,6 @@ SetPal_PartyMenu:
 ; 0: calculate palette based on loaded pokemon
 ; 1: make palettes black
 ; 2: previously used during trades, now unused.
-; [wShinyMonFlag] must be appropriately set before this is called
 SetPal_PokemonWholeScreen:
 	ld a, c
 	dec a
@@ -894,11 +905,9 @@ SetPal_GameFreakIntro:
 
 ; Trainer card
 SetPal_TrainerCard:
-	ld a, [wPlayerGender]
-	ld b, a
 	ld a, 2
 	ldh [rSVBK], a
-	push bc
+
 	ld d, PAL_MEWMON
 	ld e, 0
 	farcall LoadSGBPalette
@@ -914,16 +923,7 @@ SetPal_TrainerCard:
 
 	; Red's palette
 IF GEN_2_GRAPHICS
-	pop bc
-	ld a, b
-	and a
-	jr z, .male
-	ld d, PAL_GREEN
-	jr .female
-.male
 	ld d, PAL_RED
-.female
-	ld e,4
 ELSE
 	ld d, PAL_REDMON
 ENDC
@@ -1002,62 +1002,6 @@ SetPal_NameEntry:
 	ldh [rSVBK], a
 	ret
 
-; Set the whole screen to one palette
-; like SetPal_PokemonWholeScreen but
-; [wWholeScreenPaletteMonSpecies] is palette id
-; from SuperPalettes instead of mon id
-SetPal_WholeScreen:
-	ld a, [wWholeScreenPaletteMonSpecies]
-
-	ld d,a
-	ld a,2
-	ld [rSVBK],a
-
-	ld e,0
-	farcall LoadSGBPalette
-
-	ld d, PAL_MEWMON
-	ld e, 1
-	push de
-.loop
-	farcall LoadSGBPalette
-	pop de
-	ld a, e
-	inc a
-	ld e, a
-	push de
-	cp 8
-	jr nz, .loop
-	pop de
-
-	ld d, PAL_MEWMON
-	ld e, 0
-	push de
-.loop_sprites
-	farcall LoadSGBPalette_Sprite
-	pop de
-	ld a, e
-	inc a
-	ld e, a
-	push de
-	cp 8
-	jr nz, .loop_sprites
-	pop de
-
-	xor a
-	ld [W2_TileBasedPalettes],a
-	ld hl, W2_TilesetPaletteMap
-	ld bc, 20*18
-	call FillMemory
-
-	inc a ; ld a,1
-	ld [W2_ForceBGPUpdate],a ; Refresh palettes
-	ld a,3
-	ld [W2_StaticPaletteMapChanged],a
-
-	xor a
-	ld [rSVBK],a
-	ret
 
 ; Code for the pokemon in the titlescreen.
 ; There's no particular reason it needs to be in this bank.
