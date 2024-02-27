@@ -208,9 +208,3 @@ MACRO connection
 	db _y, _x
 	dw wOverworldMap + _win
 ENDM
-
-DEF def_script_pointers EQUS "const_def"
-
-DEF def_text_pointers EQUS "const_def 1"
-
-DEF object_const_def EQUS "const_def 1"

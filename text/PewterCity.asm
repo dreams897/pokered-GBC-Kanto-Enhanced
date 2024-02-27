@@ -1,4 +1,4 @@
-_PewterCityCooltrainerFText::
+_PewterCityText1::
 	text "It's rumored that"
 	line "Clefairys came"
 	cont "from the moon!"
@@ -8,7 +8,7 @@ _PewterCityCooltrainerFText::
 	cont "fell on Mt. Moon."
 	done
 
-_PewterCityCooltrainerMText::
+_PewterCityText2::
 	text "There aren't many"
 	line "serious #MON"
 	cont "trainers here!"
@@ -20,24 +20,24 @@ _PewterCityCooltrainerMText::
 	cont "into it!"
 	done
 
-_PewterCitySuperNerd1DidYouCheckOutMuseumText::
+_PewterCityText_193f1::
 	text "Did you check out"
 	line "the Museum?"
 	done
 
-_PewterCitySuperNerd1WerentThoseFossilsAmazingText::
+_PewterCityText_193f6::
 	text "Weren't those"
 	line "fossils from Mt."
 	cont "Moon amazing?"
 	done
 
-_PewterCitySuperNerd1YouHaveToGoText::
+_PewterCityText_193fb::
 	text "Really?"
 	line "You absolutely"
 	cont "have to go!"
 	done
 
-_PewterCitySuperNerd1ItsRightHereText::
+_PewterCityText13::
 	text "It's right here!"
 	line "You have to pay"
 	cont "to get in, but"
@@ -45,24 +45,24 @@ _PewterCitySuperNerd1ItsRightHereText::
 	cont "See you around!"
 	done
 
-_PewterCitySuperNerd2DoYouKnowWhatImDoingText::
+_PewterCityText_19427::
 	text "Psssst!"
 	line "Do you know what"
 	cont "I'm doing?"
 	done
 
-_PewterCitySuperNerd2ThatsRightText::
+_PewterCityText_1942c::
 	text "That's right!"
 	line "It's hard work!"
 	done
 
-_PewterCitySuperNerd2ImSprayingRepelText::
+_PewterCityText_19431::
 	text "I'm spraying Repel"
 	line "to keep #MON"
 	cont "out of my garden!"
 	done
 
-_PewterCityYoungsterYoureATrainerFollowMeText::
+_PewterCityText_1945d::
 	text "You're a trainer"
 	line "right? Brock's"
 	cont "looking for new"
@@ -70,13 +70,13 @@ _PewterCityYoungsterYoureATrainerFollowMeText::
 	cont "Follow me!"
 	done
 
-_PewterCityYoungsterGoTakeOnBrockText::
+_PewterCityText14::
 	text "If you have the"
 	line "right stuff, go"
 	cont "take on Brock!"
 	done
 
-_PewterCityTrainerTipsText::
+_PewterCityText6::
 	text "TRAINER TIPS"
 
 	para "Any #MON that"
@@ -85,7 +85,7 @@ _PewterCityTrainerTipsText::
 	cont "short, earns EXP!"
 	done
 
-_PewterCityPoliceNoticeSignText::
+_PewterCityText7::
 	text "NOTICE!"
 
 	para "Thieves have been"
@@ -96,12 +96,12 @@ _PewterCityPoliceNoticeSignText::
 	cont "with any info!"
 	done
 
-_PewterCityMuseumSignText::
+_PewterCityText10::
 	text "Pewter Museum"
 	line "of Science"
 	done
 
-_PewterCityGymSignText::
+_PewterCityText11::
 	text "Pewter City"
 	line "#MON Gym"
 	cont "Leader: Brock"
@@ -110,7 +110,7 @@ _PewterCityGymSignText::
 	line "#MON Trainer!"
 	done
 
-_PewterCitySignText::
+_PewterCityText12::
 	text "Pewter City:"
 	line "A Stone Gray"
 	cont "City"
